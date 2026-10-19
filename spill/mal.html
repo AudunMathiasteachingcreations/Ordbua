@@ -1,0 +1,1255 @@
+<title>Ordbua</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: én kolonne med snøkvite paneler over en levende fjordhimmel der sola går ned mens runden går. */
+:root {
+  color-scheme: light;
+  --ink: #13243c;
+  --ink-2: #4b5d75;
+  --snow: #f7fafd;
+  --frost: #e7eef6;
+  --line: #d3dde8;
+  --gold: #f4b53f;
+  --gold-deep: #c98a12;
+  --ok: #157a4b;
+  --ok-tint: #dcf3e7;
+  --bad: #bf3426;
+  --bad-tint: #fbe4e0;
+  --night: #0b1230;
+  --on-sky: #ffffff;
+  --on-sky-2: rgba(255, 255, 255, .82);
+  --focus: #2e78bd;
+  --shadow: 0 24px 60px -24px rgba(6, 12, 34, .6), 0 2px 6px rgba(6, 12, 34, .12);
+
+  --f-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --t-xs: .75rem;
+  --t-sm: .875rem;
+  --t-md: 1rem;
+  --t-lg: 1.25rem;
+  --t-xl: 1.75rem;
+  --radius: 22px;
+}
+
+/* Grunnstil som Claude-visningen ellers legger til, så fila virker like godt alene og på GitHub Pages */
+[hidden] { display: none !important; }
+html, body { min-height: 100%; }
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: var(--t-md);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+#himmel { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; display: block; }
+
+.app {
+  position: relative; z-index: 1;
+  min-height: 100vh;
+  display: flex; flex-direction: column; gap: 18px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 14px 40px;
+}
+.topp {
+  width: 100%; max-width: 780px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.merke {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--f-display); font-weight: 700; font-size: var(--t-md);
+  color: var(--on-sky); letter-spacing: .01em;
+  text-shadow: 0 1px 10px rgba(6, 20, 48, .35);
+}
+.merke svg { width: 30px; height: 30px; flex: none; }
+.lyd {
+  appearance: none; border: 0; cursor: pointer;
+  width: 42px; height: 42px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: rgba(247, 250, 253, .92); color: var(--ink);
+  box-shadow: 0 6px 18px -8px rgba(6, 12, 34, .5);
+}
+.lyd svg { width: 22px; height: 22px; }
+
+main { width: 100%; max-width: 780px; margin: 0 auto; }
+.skjerm { display: flex; flex-direction: column; gap: 18px; }
+
+.panel {
+  background: var(--snow); color: var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+h1, h2, .ordet, .res-score, .res-tittel { font-family: var(--f-display); text-wrap: balance; }
+.eyebrow, .hud-lbl, .demo-lbl, .eyebrow-sky {
+  font-size: var(--t-xs); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+}
+.eyebrow-sky { color: var(--on-sky-2); margin: 0; text-shadow: 0 1px 8px rgba(6, 20, 48, .4); }
+.vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.tal { font-variant-numeric: tabular-nums; }
+
+/* Knapper */
+.knapp {
+  appearance: none; border: 0; cursor: pointer;
+  font-family: var(--f-display); font-weight: 700; font-size: var(--t-md);
+  border-radius: 14px; padding: 13px 22px;
+  color: var(--ink);
+  transition: transform .08s ease, box-shadow .08s ease, background-color .15s ease;
+  touch-action: manipulation;
+}
+.knapp.hoved { background: var(--gold); box-shadow: 0 4px 0 var(--gold-deep); }
+.knapp.hoved:hover { background: #f7c35e; }
+.knapp.sekundar { background: var(--frost); box-shadow: 0 4px 0 var(--line); }
+.knapp.sekundar:hover { background: #dde7f1; }
+.knapp:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--gold-deep); }
+.knapp.sekundar:active { box-shadow: 0 1px 0 var(--line); }
+.knapp.stor { font-size: var(--t-lg); padding: 16px 30px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+/* ---------- Start ---------- */
+.start-hero { display: flex; flex-direction: column; gap: 8px; padding-top: 4vh; }
+.tittel {
+  margin: 0; color: var(--on-sky);
+  font-size: clamp(2.6rem, 9vw, 5rem); font-weight: 800; line-height: .95;
+  font-variation-settings: "opsz" 96; letter-spacing: -.02em;
+  text-shadow: 0 2px 24px rgba(8, 30, 70, .35);
+}
+.ingress { margin: 4px 0 0; max-width: 34em; color: var(--on-sky); font-size: var(--t-lg); line-height: 1.4; text-shadow: 0 1px 12px rgba(8, 30, 70, .45); }
+
+/* Retningsvalg: bokmål til nynorsk eller nynorsk til bokmål. All tekst bytter målform med valget. */
+.retning {
+  align-self: flex-start; max-width: 100%; margin: 12px 0 4px;
+  display: flex; gap: 6px; padding: 5px;
+  background: rgba(8, 22, 52, .34); border: 1px solid rgba(255, 255, 255, .22); border-radius: 16px;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.retning button {
+  appearance: none; border: 0; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  font-family: var(--f-display); font-weight: 700; font-size: var(--t-md); color: var(--on-sky);
+  background: transparent; padding: 10px 16px; border-radius: 12px; white-space: nowrap;
+  transition: background-color .15s ease, color .15s ease, box-shadow .15s ease;
+  touch-action: manipulation;
+}
+.retning button:hover { background: rgba(255, 255, 255, .13); }
+.retning button[aria-pressed="true"] { background: var(--gold); color: var(--ink); box-shadow: 0 3px 0 var(--gold-deep); }
+.retning svg { width: 17px; height: 17px; flex: none; }
+.byt-tekst { animation: byt .45s ease both; }
+.res-retning { margin-left: 10px; padding: 2px 9px; border-radius: 999px; background: rgba(255, 255, 255, .16); letter-spacing: .06em; }
+
+.start-panel { padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.start-panel > * { min-width: 0; }
+.demo {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 14px;
+  background: var(--night); color: var(--on-sky);
+  border-radius: 16px; padding: 18px 20px;
+  overflow: hidden;
+}
+.demo-side { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.demo-side:last-child { text-align: right; }
+.demo-lbl { color: rgba(255, 255, 255, .6); }
+.demo-ord { font-family: var(--f-display); font-weight: 800; font-size: clamp(1.6rem, 6vw, 2.4rem); line-height: 1.1; }
+.demo-nn { color: var(--gold); }
+.demo svg { width: 34px; height: 34px; color: rgba(255, 255, 255, .7); }
+.demo-ord.byt { animation: byt .5s ease both; }
+@keyframes byt { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+.fakta { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.fakta li { display: flex; align-items: baseline; gap: 10px; padding: 10px 14px; background: var(--frost); border-radius: 12px; }
+.fakta b { font-family: var(--f-display); font-size: var(--t-xl); font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; min-width: 4.2ch; white-space: nowrap; }
+.fakta span { color: var(--ink-2); }
+
+.poengkurve { margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.poengkurve figcaption { font-weight: 700; font-size: var(--t-sm); }
+.stolpar { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; align-items: end; height: 132px; }
+.stolpe { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 3px; height: 100%; min-width: 0; }
+.stolpe i { display: block; width: 100%; border-radius: 5px 5px 2px 2px; background: linear-gradient(180deg, var(--gold), #e9a12a); }
+.stolpe .v { font-size: 10px; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.stolpe-x { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; font-size: 11px; color: var(--ink-2); text-align: center; font-variant-numeric: tabular-nums; }
+.akse-tekst { font-size: var(--t-xs); color: var(--ink-2); margin: 0; }
+.feil-info { margin: 0; font-size: var(--t-sm); color: var(--ink-2); }
+
+.start-handling { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; }
+.hint { color: var(--ink-2); font-size: var(--t-sm); }
+.rekord-merke { margin-left: auto; font-size: var(--t-sm); color: var(--ink-2); }
+.rekord-merke b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.del-spel { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; }
+.del-spel svg { width: 19px; height: 19px; flex: none; }
+.start-del { grid-column: 1 / -1; }
+
+/* ---------- Spill ---------- */
+.hud { display: grid; grid-template-columns: 1.4fr 1.2fr 1fr 1fr; gap: 4px; padding: 10px 12px; }
+.hud > div { display: flex; flex-direction: column; gap: 2px; padding: 4px 8px; min-width: 0; }
+.hud > div + div { border-left: 1px solid var(--line); }
+.hud-lbl { color: var(--ink-2); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hud-verdi { font-family: var(--f-display); font-weight: 800; font-size: clamp(1.15rem, 4.6vw, 1.6rem); line-height: 1.1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tidbar { height: 6px; border-radius: 3px; background: var(--frost); overflow: hidden; margin-top: 4px; }
+.tidbar i { display: block; height: 100%; width: 100%; background: var(--ink); border-radius: 3px; transform-origin: left; }
+.hud-tid.lite .hud-verdi { color: var(--bad); animation: puls 1s ease-in-out infinite; }
+.hud-tid.lite .tidbar i { background: var(--bad); }
+@keyframes puls { 50% { opacity: .55; } }
+.rekke.het .hud-verdi { color: #d9480f; }
+.rekke .hud-verdi.dunk { animation: dunk .35s ease; }
+@keyframes dunk { 40% { transform: scale(1.35); } }
+
+.ordkort { position: relative; padding: 22px 24px 18px; display: flex; flex-direction: column; gap: 12px; overflow: hidden; }
+.ordkort::before {
+  content: ""; position: absolute; inset: 0 0 auto; height: 6px;
+  background: var(--ring, var(--ok)); transform-origin: left; transform: scaleX(var(--igjen, 1));
+}
+.ordkort-topp { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.ordkort-topp .eyebrow { color: var(--ink-2); }
+.ordklasse { display: inline-block; margin-left: 8px; font-size: var(--t-xs); color: var(--ink-2); background: var(--frost); padding: 2px 9px; border-radius: 999px; }
+.ring { position: relative; width: 64px; height: 64px; flex: none; }
+.ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ring circle { fill: none; stroke-width: 6; }
+.ring-bak { stroke: var(--frost); }
+.ring-fram { stroke: var(--ring, var(--ok)); stroke-linecap: round; }
+.ring span { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--f-display); font-weight: 800; font-size: 1.5rem; font-variant-numeric: tabular-nums; color: var(--ink); }
+.ordet {
+  margin: -6px 0 0; font-size: clamp(2.6rem, 11vw, 4.8rem); font-weight: 800; line-height: 1.05;
+  letter-spacing: -.015em; overflow-wrap: anywhere; font-variation-settings: "opsz" 96;
+}
+.ordet.inn { animation: inn .32s cubic-bezier(.2, .8, .2, 1) both; }
+@keyframes inn { from { opacity: 0; transform: translateY(14px) scale(.97); } to { opacity: 1; transform: none; } }
+
+.svar { display: flex; gap: 10px; }
+.svar input {
+  flex: 1; min-width: 0;
+  font-family: var(--f-body); font-size: 1.35rem; font-weight: 700; color: var(--ink);
+  background: #fff; border: 2px solid var(--line); border-radius: 14px; padding: 12px 16px;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.svar input::placeholder { color: #8b9aae; font-weight: 400; }
+.svar input:focus { outline: none; border-color: var(--focus); box-shadow: 0 0 0 4px rgba(46, 120, 189, .18); }
+.svar input.rist { animation: rist .3s ease; }
+@keyframes rist { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+.ordkort.feil .svar input { border-color: var(--bad); }
+.ordkort.rett .svar input { border-color: var(--ok); }
+
+.teikn { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.teikn span { font-size: var(--t-xs); color: var(--ink-2); margin-right: 2px; }
+.teikn button {
+  appearance: none; cursor: pointer; border: 1px solid var(--line); background: #fff; color: var(--ink);
+  font-family: var(--f-body); font-weight: 700; font-size: 1.05rem; width: 40px; height: 36px; border-radius: 10px;
+  touch-action: manipulation;
+}
+.teikn button:hover { background: var(--frost); }
+
+.tilbake { min-height: 3.25rem; display: flex; align-items: center; }
+.melding { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: var(--t-lg); line-height: 1.25; animation: inn .25s ease both; }
+.melding svg { width: 30px; height: 30px; flex: none; border-radius: 50%; padding: 5px; }
+.melding.ok { color: var(--ok); }
+.melding.ok svg { background: var(--ok-tint); }
+.melding.bad { color: var(--bad); }
+.melding.bad svg { background: var(--bad-tint); }
+.melding small { display: block; font-size: var(--t-sm); font-weight: 400; color: var(--ink-2); }
+.melding .fasit { font-family: var(--f-display); font-weight: 800; font-size: 1.6rem; line-height: 1.1; overflow-wrap: anywhere; }
+.melding.ok.blekn { animation: blekn 1.4s ease forwards; }
+@keyframes blekn { 0%, 60% { opacity: 1; } 100% { opacity: 0; } }
+
+.flyt {
+  position: absolute; z-index: 3; pointer-events: none;
+  font-family: var(--f-display); font-weight: 800; font-size: 1.6rem; color: var(--ok);
+  text-shadow: 0 2px 0 #fff;
+  animation: flyt 1s cubic-bezier(.2, .7, .3, 1) forwards;
+}
+.flyt.lite { color: var(--ink-2); font-size: 1.25rem; }
+@keyframes flyt { from { opacity: 0; transform: translateY(6px) scale(.8); } 20% { opacity: 1; transform: translateY(-6px) scale(1.1); } to { opacity: 0; transform: translateY(-60px) scale(1); } }
+
+.slutt-banner {
+  position: fixed; inset: 0; z-index: 5; display: grid; place-items: center; pointer-events: none;
+  font-family: var(--f-display); font-weight: 800; font-size: clamp(2.4rem, 10vw, 5rem); color: var(--on-sky);
+  text-shadow: 0 4px 30px rgba(0, 0, 0, .45);
+  animation: banner 1.5s ease both;
+}
+@keyframes banner { from { opacity: 0; transform: scale(.85); } 25% { opacity: 1; transform: scale(1.03); } 80% { opacity: 1; transform: none; } to { opacity: 0; } }
+
+/* ---------- Resultat ---------- */
+.res-hero { display: flex; flex-direction: column; gap: 6px; padding-top: 3vh; color: var(--on-sky); }
+.res-tittel { margin: 0; font-size: clamp(1.6rem, 5.5vw, 2.4rem); font-weight: 700; color: var(--gold); text-shadow: 0 2px 20px rgba(0, 0, 0, .4); }
+.res-score { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; line-height: 1; }
+.res-score .tal { font-size: clamp(3.4rem, 15vw, 7rem); font-weight: 800; letter-spacing: -.03em; font-variation-settings: "opsz" 96; text-shadow: 0 4px 40px rgba(110, 255, 190, .25); }
+.res-av { font-family: var(--f-body); font-size: var(--t-lg); color: var(--on-sky-2); }
+.res-rekord { margin: 6px 0 0; color: var(--on-sky-2); }
+.res-rekord.ny { display: inline-flex; align-self: flex-start; color: var(--ink); background: var(--gold); font-weight: 700; padding: 4px 12px; border-radius: 999px; }
+
+.res-panel { padding: 20px 22px; display: flex; flex-direction: column; gap: 18px; }
+.res-stat { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.res-stat li { background: var(--frost); border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.res-stat b { font-family: var(--f-display); font-size: var(--t-xl); font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.res-stat span { font-size: var(--t-sm); color: var(--ink-2); }
+.res-knappar { display: flex; flex-wrap: wrap; gap: 12px; }
+.del-boks { display: flex; flex-direction: column; gap: 6px; }
+.del-boks label { font-size: var(--t-sm); font-weight: 700; }
+.del-boks textarea { font-family: var(--f-body); font-size: var(--t-md); color: var(--ink); background: #fff; border: 2px solid var(--line); border-radius: 12px; padding: 10px 12px; resize: none; width: 100%; }
+
+.tabell-panel { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 12px; }
+.tabell-panel h2 { margin: 0; font-size: var(--t-xl); font-weight: 800; }
+.tabell-topp { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
+.filter { display: inline-flex; gap: 4px; padding: 4px; background: var(--frost); border-radius: 12px; }
+.filter button {
+  appearance: none; border: 0; cursor: pointer; background: transparent; color: var(--ink-2);
+  font-family: var(--f-body); font-weight: 700; font-size: var(--t-sm); padding: 8px 14px; border-radius: 9px;
+  touch-action: manipulation;
+}
+.filter button:hover { color: var(--ink); }
+.filter button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(6, 12, 34, .16); }
+.filter button span { margin-left: 5px; font-weight: 400; font-variant-numeric: tabular-nums; }
+.filter button b { font-weight: inherit; }
+.tabell-rull { overflow-x: auto; margin: 0 -8px; padding: 0 8px; }
+table { width: 100%; border-collapse: collapse; font-size: var(--t-sm); min-width: 480px; }
+th { text-align: left; font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-2); font-weight: 700; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.nr { color: var(--ink-2); font-variant-numeric: tabular-nums; }
+td .spurt { font-weight: 700; }
+td .ditt.galt { color: var(--bad); }
+td .ditt.tomt { color: var(--ink-2); font-style: italic; }
+td .fasit-lenke { color: var(--ink); font-weight: 700; text-decoration-color: var(--line); text-underline-offset: 3px; }
+td .fasit-lenke:hover { text-decoration-color: var(--focus); }
+td .alt { display: block; color: var(--ink-2); font-size: var(--t-xs); margin-top: 2px; }
+td .likt { display: table; margin-top: 4px; font-size: var(--t-xs); font-weight: 700; color: var(--ink); background: #fdf0d2; padding: 2px 7px; border-radius: 6px; line-height: 1.35; }
+.chip { display: inline-flex; align-items: center; gap: 5px; padding: 2px 9px 2px 6px; border-radius: 999px; font-weight: 700; font-size: var(--t-xs); white-space: nowrap; }
+.chip svg { width: 14px; height: 14px; }
+.chip.ok { color: var(--ok); background: var(--ok-tint); }
+.chip.bad { color: var(--bad); background: var(--bad-tint); }
+tr.rad-feil td { background: rgba(251, 228, 224, .35); }
+.oppsummering { margin: 0; font-weight: 700; font-size: var(--t-lg); }
+.tom-runde { color: var(--ink-2); margin: 0; }
+
+.toast {
+  position: fixed; z-index: 6; left: 50%; transform: translateX(-50%);
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  max-width: min(92vw, 440px);
+  background: var(--ink); color: #fff; padding: 12px 18px; border-radius: 14px; font-weight: 700;
+  box-shadow: var(--shadow); animation: inn .25s ease both;
+}
+
+@media (max-width: 440px) {
+  .retning { align-self: stretch; display: grid; grid-template-columns: 1fr 1fr; }
+  .retning button { padding: 10px 6px; gap: 5px; font-size: .9rem; }
+  .retning svg { width: 15px; height: 15px; }
+}
+@media (max-width: 640px) {
+  .start-panel { grid-template-columns: 1fr; padding: 18px; gap: 18px; }
+  .hud { grid-template-columns: 1.25fr 1.2fr .9fr .9fr; padding: 8px 6px; }
+  .hud > div { padding: 2px 6px; }
+  .ordkort { padding: 18px 16px 14px; }
+  .ring { width: 54px; height: 54px; }
+  .ring span { font-size: 1.25rem; }
+  .svar .knapp { padding: 12px 16px; }
+  .res-stat { grid-template-columns: repeat(2, 1fr); }
+  .res-panel, .tabell-panel { padding: 18px 16px; }
+  .rekord-merke { margin-left: 0; }
+  table { min-width: 0; }
+  th, td { padding: 8px 5px; }
+  th:first-child, td.nr { display: none; }
+  th { letter-spacing: .02em; font-size: 10.5px; }
+  .chip { padding: 4px; }
+  .chip svg { width: 16px; height: 16px; }
+  .chip-tekst { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}
+</style>
+
+<canvas id="himmel" aria-hidden="true"></canvas>
+
+<div class="app">
+  <header class="topp">
+    <div class="merke">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="22" cy="10" r="5" fill="#f4b53f"/>
+        <path d="M1 27 L10 12 L15 19 L20 13 L31 27 Z" fill="#f7fafd"/>
+        <path d="M10 12 L13 17 L11 16 L8.6 14.4 Z M20 13 L23 17 L21 16.4 L18.6 15 Z" fill="#c9d8e8"/>
+      </svg>
+      <span class="spelnamn">Ordbua</span>
+    </div>
+    <button class="lyd" id="lydKnapp" type="button" aria-pressed="true" aria-label="Lyd på">
+      <svg id="lydPaa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+      <svg id="lydAv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- START -->
+    <section id="start" class="skjerm">
+      <div class="start-hero">
+        <p class="eyebrow-sky" data-t="undertittel">Ordspel på tid</p>
+        <h1 class="tittel spelnamn">Ordbua</h1>
+        <div class="retning" id="retning" role="group" data-t-aria="retning" aria-label="Vel retning">
+          <button type="button" data-retning="nn" aria-pressed="true">Bokmål<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>nynorsk</button>
+          <button type="button" data-retning="bm" aria-pressed="false">Nynorsk<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>bokmål</button>
+        </div>
+        <p class="ingress" data-t="ingress"></p>
+      </div>
+      <div class="panel start-panel">
+        <div class="demo" aria-hidden="true">
+          <div class="demo-side"><span class="demo-lbl" id="demoFraLbl">Bokmål</span><span class="demo-ord" id="demoBm">ikke</span></div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          <div class="demo-side"><span class="demo-lbl" id="demoTilLbl">Nynorsk</span><span class="demo-ord demo-nn" id="demoNn">ikkje</span></div>
+        </div>
+        <ul class="fakta">
+          <li><b>2 min</b><span>per runde</span></li>
+          <li><b>10 s</b><span>per ord</span></li>
+          <li><b id="faktaOrd">515</b><span>ord i ordlista</span></li>
+        </ul>
+        <figure class="poengkurve">
+          <figcaption data-t="kurve"></figcaption>
+          <div class="stolpar" id="stolpar"></div>
+          <div class="stolpe-x" id="stolpeX"></div>
+          <p class="akse-tekst" data-t="akse"></p>
+          <p class="feil-info" data-t-html="feilInfo"></p>
+        </figure>
+        <div class="start-handling">
+          <button id="startKnapp" class="knapp hoved stor" type="button">Start runden</button>
+          <span class="hint">eller trykk Enter</span>
+          <span class="rekord-merke" id="startRekord" hidden></span>
+          <button id="delSpelKnapp" class="knapp sekundar del-spel" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><span data-t="delSpel">Del spelet</span></button>
+        </div>
+        <div class="del-boks start-del" id="delSpelBoks" hidden>
+          <label for="delSpelTekst">Teksten du deler</label>
+          <textarea id="delSpelTekst" rows="2" readonly></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPILL -->
+    <section id="spel" class="skjerm" hidden>
+      <div class="hud panel">
+        <div class="hud-tid" id="hudTidFelt"><span class="hud-lbl" data-t="tidIgjen">Tid att</span><span class="hud-verdi" id="hudTid">2:00</span><div class="tidbar"><i id="tidbar"></i></div></div>
+        <div><span class="hud-lbl">Poeng</span><span class="hud-verdi" id="hudPoeng">0</span></div>
+        <div><span class="hud-lbl" data-t="riktige">Rette</span><span class="hud-verdi" id="hudRiktige">0</span></div>
+        <div class="rekke" id="hudRekkeFelt"><span class="hud-lbl">På rad</span><span class="hud-verdi" id="hudRekke">0</span></div>
+      </div>
+      <div class="ordkort panel" id="ordkort">
+        <div class="ordkort-topp">
+          <div><span class="eyebrow" id="kjeldeLbl">Bokmål</span><span class="ordklasse" id="ordklasse"></span></div>
+          <div class="ring" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle class="ring-bak" cx="32" cy="32" r="27"/><circle class="ring-fram" id="ringFram" cx="32" cy="32" r="27"/></svg>
+            <span id="ringTal">10</span>
+          </div>
+        </div>
+        <p class="ordet" id="ordet" lang="nb" aria-live="polite"></p>
+        <form id="svarSkjema" class="svar" autocomplete="off">
+          <label for="svarFelt" class="vh" data-t="svarLabel">Skriv ordet på nynorsk</label>
+          <input id="svarFelt" type="text" lang="nn" placeholder="Skriv på nynorsk" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send">
+          <button class="knapp hoved" type="submit">Svar</button>
+        </form>
+        <div class="teikn" id="teikn"></div>
+        <div class="tilbake" id="tilbake" aria-live="assertive"></div>
+      </div>
+    </section>
+
+    <!-- RESULTAT -->
+    <section id="resultat" class="skjerm" hidden>
+      <div class="res-hero">
+        <p class="eyebrow-sky"><span data-t="rundenOver">Runden er over</span><span class="res-retning" id="resRetning"></span></p>
+        <p class="res-tittel" id="resRang"></p>
+        <p class="res-score"><span class="tal" id="resScore">0</span><span class="res-av">poeng</span></p>
+        <p class="res-rekord" id="resRekord"></p>
+      </div>
+      <div class="panel res-panel">
+        <ul class="res-stat">
+          <li><b id="statRiktige">0</b><span data-t="statRiktige">rette</span></li>
+          <li><b id="statFeil">0</b><span>feil</span></li>
+          <li><b id="statSnitt">–</b><span data-t="statSnitt">snittid på rette</span></li>
+          <li><b id="statRekke">0</b><span>flest på rad</span></li>
+        </ul>
+        <div class="res-knappar">
+          <button id="delKnapp" class="knapp hoved" type="button">Del poengsummen</button>
+          <button id="igjenKnapp" class="knapp sekundar" type="button" data-t="igjen">Spel igjen</button>
+          <button id="tilStartKnapp" class="knapp sekundar" type="button" data-t="tilStart">Tilbake til start</button>
+        </div>
+        <div class="del-boks" id="delBoks" hidden>
+          <label for="delTekst">Teksten du deler</label>
+          <textarea id="delTekst" rows="3" readonly></textarea>
+        </div>
+      </div>
+      <div class="panel tabell-panel">
+        <div class="tabell-topp">
+          <h2 data-t="svarTittel">Svara dine</h2>
+          <div class="filter" id="filter" role="group" aria-label="Vis svar">
+            <button type="button" data-filter="alle" aria-pressed="true">Alle<span id="antAlle">0</span></button>
+            <button type="button" data-filter="riktige" aria-pressed="false"><b data-t="filterRiktige">Rette</b><span id="antRiktige">0</span></button>
+            <button type="button" data-filter="feil" aria-pressed="false">Feil<span id="antFeil">0</span></button>
+          </div>
+        </div>
+        <div class="tabell-rull">
+          <table>
+            <thead><tr><th class="n">#</th><th id="thKjelde">Bokmål</th><th data-t="thSvar">Svaret ditt</th><th data-t="thFasit">Fasit (nynorsk)</th><th>Resultat</th></tr></thead>
+            <tbody id="svarRader"></tbody>
+          </table>
+        </div>
+        <p class="tom-runde" id="tomFilter" hidden></p>
+        <p class="oppsummering" id="oppsummering"></p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="slutt-banner" id="sluttBanner" data-t="slutt" hidden>Tida er ute!</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<!-- Ordlista settes inn her av bygg.py fra ordliste/ordliste.json -->
+<script type="application/json" id="ordliste">/*ORDLISTE*/</script>
+
+<script>
+(() => {
+  "use strict";
+
+  // ---------- Innstillinger (endre her) ----------
+  const KONFIG = {
+    rundeMs: 120000,          // 2 minutter per runde
+    ordMs: 10000,             // 10 sekunder per ord
+    // Poeng for riktig svar etter hvor mange hele sekunder som er igjen av de 10.
+    // Senket 18.10.2026 så høye summer blir vanskeligere (før: 8 000 til 2 000, med 6 000, 3 700 og 2 000 ved 8, 5 og 1 sekund igjen).
+    poengEtterSekunderIgjen: { 10: 6000, 9: 5000, 8: 4200, 7: 3500, 6: 2900, 5: 2400, 4: 2000, 3: 1600, 2: 1300, 1: 1000 },
+    poengFeil: 300,           // feil svar eller tiden ute
+    maksScore: 500000,        // tak for poengsummen (vises ikke i spillet); null = ingen tak
+    feilVisMs: 800,           // hvor lenge fasiten vises før neste ord (runde-klokka går)
+    andelLike: 0.35,          // omtrent så stor del av ordene i en runde skrives likt på bokmål og nynorsk; null = helt tilfeldig
+    spillUrl: "/*SPILL_URL*/", // lenka som er med når man deler
+    navn: "Ordbua"           // navnet på spillet (tittel, logo og delingstekst)
+  };
+
+  const ORDLISTE = JSON.parse(document.getElementById("ordliste").textContent);
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => Math.round(n).toLocaleString("nb-NO");
+  const fmtS = (ms) => (ms / 1000).toLocaleString("nb-NO", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " s";
+  const reduceMQ = matchMedia("(prefers-reduced-motion: reduce)");
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  const ICON_OK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+  const ICON_BAD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>';
+
+  // ---------- Tekst ----------
+  // All tekst står på målformen spilleren øver på: nynorsk når man oversetter til nynorsk, bokmål når man oversetter til bokmål.
+  const TEKST = {
+    nn: {
+      lang: "nn", kjeldeLang: "nb", kjelde: "Bokmål", maal: "Nynorsk", retningKort: "Bokmål → nynorsk",
+      undertittel: "Ordspel på tid",
+      ingress: "Du får eit ord på bokmål. Skriv det på nynorsk før sekunda renn ut, og klar så mange ord du kan på to minutt. Mange ord er like på bokmål og nynorsk, så nokre gonger er svaret det same ordet.",
+      retning: "Vel retning",
+      kurve: "Poeng for rett svar, etter kor raskt du svarar",
+      akse: "Sekund du brukar på ordet",
+      stolpe: (fra, til, p) => `${fra}–${til} sekund: ${p} poeng`,
+      feilInfo: `Feil svar, eller ikkje noko svar på 10 sekund: <b>${KONFIG.poengFeil} poeng</b>.`,
+      rekord: "Rekorden din: ",
+      tidIgjen: "Tid att", riktige: "Rette",
+      svarLabel: "Skriv ordet på nynorsk", skrivPaa: "Skriv på nynorsk",
+      manglar: "Manglar du teiknet?", teikn: ["æ", "ø", "å"], // ikke ê: ordlista bruker ver, viskeler og torever uten ê (20.10.2026)
+      rett: "Rett",
+      slutt: "Tida er ute!",
+      rundenOver: "Runden er over",
+      statRiktige: "rette", statSnitt: "snittid på rette",
+      igjen: "Spel igjen", tilStart: "Tilbake til start",
+      delSpel: "Del spelet", delSpelTekst: `Prøv ${KONFIG.navn}, eit ordspel på tid mellom bokmål og nynorsk!`,
+      svarTittel: "Svara dine", filterRiktige: "Rette",
+      thSvar: "Svaret ditt", thFasit: "Fasit (nynorsk)",
+      tidaGjekk: "(tida gjekk ut)", slaaOpp: "Slå opp i Nynorskordboka",
+      likt: "Likt på bokmål og nynorsk",
+      ogsaaBokmal: (w) => `«${w}» kan òg skrivast på bokmål`,
+      ogsaaRett: "Også rett: ",
+      ingenOrd: "Du svarte ikkje på noko ord i denne runden.",
+      ingenRette: "Ingen rette svar i denne runden.", ingenFeil: "Ingen feil i denne runden.",
+      avRette: (r, n) => `${r} av ${n} rette`,
+      forsteRekord: "Den første rekorden din!", nyRekord: "Ny personleg rekord!", rekordenDin: (p) => `Rekorden din er ${p} poeng.`,
+      kopiert: "Teksten er kopiert. Lim han inn der du vil dele han.", kopierSjolv: "Merk teksten i boksen og kopier han.",
+      delTekst: (p, r, n) => `Eg fekk ${p} poeng og ${r} av ${n} rette frå bokmål til nynorsk i ${KONFIG.navn}! Klarer du å slå meg?`,
+      rang: ["Ivar Aasen-nivå!", "Nynorsklegende", "Ordmeister", "Nynorskproff", "Stø i nynorsk", "På rett veg", "Godt i gang"]
+    },
+    bm: {
+      lang: "nb", kjeldeLang: "nn", kjelde: "Nynorsk", maal: "Bokmål", retningKort: "Nynorsk → bokmål",
+      undertittel: "Ordspill på tid",
+      ingress: "Du får et ord på nynorsk. Skriv det på bokmål før sekundene renner ut, og klar så mange ord du kan på to minutter. Mange ord er like på bokmål og nynorsk, så noen ganger er svaret det samme ordet.",
+      retning: "Velg retning",
+      kurve: "Poeng for riktig svar, etter hvor raskt du svarer",
+      akse: "Sekunder du bruker på ordet",
+      stolpe: (fra, til, p) => `${fra}–${til} sekunder: ${p} poeng`,
+      feilInfo: `Feil svar, eller ikke noe svar på 10 sekunder: <b>${KONFIG.poengFeil} poeng</b>.`,
+      rekord: "Rekorden din: ",
+      tidIgjen: "Tid igjen", riktige: "Riktige",
+      svarLabel: "Skriv ordet på bokmål", skrivPaa: "Skriv på bokmål",
+      manglar: "Mangler du tegnet?", teikn: ["æ", "ø", "å"],
+      rett: "Riktig",
+      slutt: "Tiden er ute!",
+      rundenOver: "Runden er over",
+      statRiktige: "riktige", statSnitt: "snittid på riktige",
+      igjen: "Spill igjen", tilStart: "Tilbake til start",
+      delSpel: "Del spillet", delSpelTekst: `Prøv ${KONFIG.navn}, et ordspill på tid mellom bokmål og nynorsk!`,
+      svarTittel: "Svarene dine", filterRiktige: "Riktige",
+      thSvar: "Ditt svar", thFasit: "Fasit (bokmål)",
+      tidaGjekk: "(tiden gikk ut)", slaaOpp: "Slå opp i Bokmålsordboka",
+      likt: "Likt på bokmål og nynorsk",
+      ogsaaBokmal: (w) => `«${w}» kan også skrives på bokmål`,
+      ogsaaNynorsk: (w) => `«${w}» kan også skrives på nynorsk`,
+      ogsaaRett: "Også riktig: ",
+      ingenOrd: "Du svarte ikke på noen ord i denne runden.",
+      ingenRette: "Ingen riktige svar i denne runden.", ingenFeil: "Ingen feil i denne runden.",
+      avRette: (r, n) => `${r} av ${n} riktige`,
+      forsteRekord: "Din første rekord!", nyRekord: "Ny personlig rekord!", rekordenDin: (p) => `Rekorden din er ${p} poeng.`,
+      kopiert: "Teksten er kopiert. Lim den inn der du vil dele den.", kopierSjolv: "Merk teksten i boksen og kopier den.",
+      delTekst: (p, r, n) => `Jeg fikk ${p} poeng og ${r} av ${n} riktige fra nynorsk til bokmål i ${KONFIG.navn}! Klarer du å slå meg?`,
+      rang: ["Knud Knudsen-nivå!", "Bokmålslegende", "Ordmester", "Bokmålsproff", "Stø i bokmål", "På rett vei", "Godt i gang"]
+    }
+  };
+
+  // ---------- Svarsjekk ----------
+  const norm = (s) => String(s).normalize("NFC").toLowerCase().replace(/[’‘`´]/g, "'").replace(/\s+/g, " ").trim();
+  const erLik = (o) => norm(o.nynorsk) === norm(o.bokmal);
+  // Bokmål til nynorsk: nynorskformen, andre godkjente nynorskformer og bokmålsformen når den også er riktig nynorsk.
+  // Nynorsk til bokmål: bokmålsordet, andre skrivemåter og oversettelser fra Bokmålsordboka og dinordbok.no,
+  // og nynorskformen når den også er lov på bokmål. Ord med samme nynorskform (kvar = hvor og hver) deler svarene.
+  const bmPerNynorsk = new Map();
+  for (const o of ORDLISTE) {
+    const bm = [o.bokmal, ...(o.bokmal_alternativer || [])];
+    if (o.nynorskform_lov_pa_bokmal === "ja") bm.push(o.nynorsk);
+    const k = norm(o.nynorsk);
+    bmPerNynorsk.set(k, (bmPerNynorsk.get(k) || []).concat(bm));
+  }
+  for (const o of ORDLISTE) {
+    const nn = [o.nynorsk, ...(o.godkjente_alternativer || [])];
+    if (o.bokmalsform_godtas === "ja") nn.push(o.bokmal);
+    o._altBm = bmPerNynorsk.get(norm(o.nynorsk));
+    o._ok = { nn: new Set(nn.map(norm)), bm: new Set(o._altBm.map(norm)) };
+  }
+  function pointsFor(elapsedMs) {
+    const left = clamp(10 - Math.floor(elapsedMs / 1000), 1, 10);
+    return KONFIG.poengEtterSekunderIgjen[left];
+  }
+
+  // ---------- Lagring (bare i denne nettleseren) ----------
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+  // Nøklene for nynorsk og lyd er fra før navnebyttet, så rekorder og lydvalg blir med videre.
+  const REKORD_KEY = { nn: "nynorskspillet.rekord.v2", bm: "nynorskspillet.rekord.bokmal.v1" }; // nn: ny nøkkel 18.10.2026, rekorder fra den gamle, høyere poengtabellen gjelder ikke
+  const LYD_KEY = "nynorskspillet.lyd";
+  const RETNING_KEY = "nynorskspillet.retning";
+
+  // ---------- Retning ----------
+  // "nn" = bokmål til nynorsk (standard), "bm" = nynorsk til bokmål
+  let retning = store.get(RETNING_KEY) === "bm" ? "bm" : "nn";
+  const T = () => TEKST[retning];
+  const sporsmal = (o) => retning === "nn" ? o.bokmal : o.nynorsk;
+  const fasit = (o) => retning === "nn" ? o.nynorsk : o.bokmal;
+  const fasitLenke = (o) => retning === "nn" ? o.nynorskordboka : "https://ordbokene.no/nob/bm/" + encodeURIComponent(o.bokmal);
+  // Merket under fasiten i svaroversikten, og ordet merket nevner (så det ikke står to ganger)
+  function merkelapp(o) {
+    const t = T();
+    if (erLik(o)) return [t.likt, null];
+    if (o.nynorskform_lov_pa_bokmal === "ja") return [t.ogsaaBokmal(o.nynorsk), o.nynorsk];
+    if (retning === "bm" && o.bokmalsform_godtas === "ja") return [t.ogsaaNynorsk(o.bokmal), o.bokmal];
+    return ["", null];
+  }
+
+  function brukSpraak() {
+    const t = T();
+    document.documentElement.lang = t.lang;
+    for (const el of document.querySelectorAll("[data-t]")) el.textContent = t[el.dataset.t];
+    for (const el of document.querySelectorAll("[data-t-html]")) el.innerHTML = t[el.dataset.tHtml];
+    for (const el of document.querySelectorAll("[data-t-aria]")) el.setAttribute("aria-label", t[el.dataset.tAria]);
+    for (const b of $("retning").querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.retning === retning));
+    $("demoFraLbl").textContent = t.kjelde; $("demoTilLbl").textContent = t.maal;
+    $("kjeldeLbl").textContent = t.kjelde; $("thKjelde").textContent = t.kjelde;
+    $("ordet").lang = t.kjeldeLang;
+    const inp = $("svarFelt"); inp.placeholder = t.skrivPaa; inp.lang = t.lang;
+    const teikn = $("teikn"); teikn.innerHTML = "";
+    const lbl = document.createElement("span"); lbl.textContent = t.manglar; teikn.append(lbl);
+    for (const c of t.teikn) { const b = document.createElement("button"); b.type = "button"; b.tabIndex = -1; b.textContent = c; teikn.append(b); }
+    for (const [i, col] of [...$("stolpar").children].entries()) col.title = t.stolpe(i, i + 1, fmt(KONFIG.poengEtterSekunderIgjen[10 - i]));
+  }
+
+  // ---------- Lyd ----------
+  let actx = null;
+  let soundOn = store.get(LYD_KEY) !== "av";
+  function audio() {
+    if (!actx) { try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { actx = null; } }
+    if (actx && actx.state === "suspended") actx.resume().catch(() => {});
+    return actx;
+  }
+  function tone(freq, start, dur, type = "sine", gain = 0.12, glideTo) {
+    const a = actx; if (!a || !soundOn) return;
+    const t0 = a.currentTime + start;
+    const o = a.createOscillator(), g = a.createGain();
+    o.type = type; o.frequency.setValueAtTime(freq, t0);
+    if (glideTo) o.frequency.exponentialRampToValueAtTime(glideTo, t0 + dur);
+    g.gain.setValueAtTime(0.0001, t0);
+    g.gain.exponentialRampToValueAtTime(gain, t0 + 0.012);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    o.connect(g).connect(a.destination); o.start(t0); o.stop(t0 + dur + 0.02);
+  }
+  const sfx = {
+    ok() { tone(784, 0, 0.12, "triangle", 0.14); tone(1175, 0.07, 0.18, "triangle", 0.12); },
+    bad() { tone(240, 0, 0.32, "sawtooth", 0.05, 120); tone(180, 0, 0.3, "triangle", 0.1, 110); },
+    tick() { tone(1400, 0, 0.035, "square", 0.025); },
+    start() { tone(523, 0, 0.12, "triangle"); tone(659, 0.1, 0.12, "triangle"); tone(784, 0.2, 0.2, "triangle"); },
+    end() { [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.12, 0.35, "triangle", 0.11)); }
+  };
+  function renderSoundBtn() {
+    $("lydKnapp").setAttribute("aria-pressed", String(soundOn));
+    $("lydKnapp").setAttribute("aria-label", soundOn ? "Lyd på" : "Lyd av");
+    $("lydPaa").hidden = !soundOn; $("lydAv").hidden = soundOn;
+  }
+  $("lydKnapp").addEventListener("click", () => {
+    soundOn = !soundOn; store.set(LYD_KEY, soundOn ? "på" : "av"); renderSoundBtn();
+    if (soundOn) { audio(); sfx.tick(); }
+  });
+  renderSoundBtn();
+
+  // ---------- Fjordhimmelen ----------
+  const cv = $("himmel"), cx = cv.getContext("2d");
+  let W = 0, H = 0;
+  const sky = { t: 0.06, target: 0.06 };
+
+  function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function ridgeShape(seed, rough) {
+    const r = rng(seed), n = 128, a = new Array(n + 1).fill(0);
+    a[0] = r() * 2 - 1; a[n] = r() * 2 - 1;
+    let step = n, scale = 1;
+    while (step > 1) {
+      const half = step / 2;
+      for (let i = half; i < n; i += step) a[i] = (a[i - half] + a[i + half]) / 2 + (r() * 2 - 1) * scale;
+      step = half; scale *= rough;
+    }
+    const lo = Math.min(...a), hi = Math.max(...a);
+    return a.map((v) => (v - lo) / (hi - lo));
+  }
+  const RIDGES = {
+    far: { s: ridgeShape(7, 0.56), base: 0.66, amp: 0.30, gap: 0.25 },
+    mid: { s: ridgeShape(23, 0.52), base: 0.74, amp: 0.20, gap: 0.5 },
+    near: { s: ridgeShape(41, 0.58), base: 0.805, amp: 0.15, gap: 0.8 }
+  };
+  const rs = rng(99);
+  const STARS = Array.from({ length: 150 }, () => ({ x: rs(), y: rs() * 0.62, r: rs() * 1.3 + 0.3, p: rs() * 6.28 }));
+  const CLOUDS = Array.from({ length: 6 }, (_, i) => ({ x: rs(), y: 0.08 + rs() * 0.3, s: 0.6 + rs() * 0.8, v: 0.000004 + rs() * 0.000006 }));
+  const SHIMMER = Array.from({ length: 40 }, () => ({ x: rs(), y: rs(), w: 0.02 + rs() * 0.06, p: rs() * 6.28 }));
+
+  const KEYS = [
+    { t: 0.00, top: "#2a72b8", hor: "#cfe7f5", far: "#9fbbd4", mid: "#6a8fb0", near: "#33536f", water: "#3f739d", sun: "#fff4d0" },
+    { t: 0.45, top: "#2f68ac", hor: "#f6dcb0", far: "#98a8c3", mid: "#64799b", near: "#2f4564", water: "#3d6893", sun: "#ffd27a" },
+    { t: 0.70, top: "#2a3b76", hor: "#f19462", far: "#7a6c92", mid: "#4d4b72", near: "#242b4b", water: "#373d69", sun: "#ff8a4c" },
+    { t: 0.88, top: "#131a41", hor: "#6a3b6f", far: "#39325f", mid: "#252342", near: "#131630", water: "#1b2047", sun: "#ff6a3d" },
+    { t: 1.00, top: "#050a1f", hor: "#1a2552", far: "#1e2950", mid: "#131b39", near: "#0a1026", water: "#0b142f", sun: "#ff6a3d" }
+  ];
+  const hex = (h) => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+  KEYS.forEach((k) => { for (const key in k) if (key !== "t") k[key] = hex(k[key]); });
+  const mixRGB = (a, b, f) => a.map((v, i) => v + (b[i] - v) * f);
+  const css = (c, al = 1) => `rgba(${c[0] | 0},${c[1] | 0},${c[2] | 0},${al})`;
+  const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
+  function palette(t) {
+    let i = 0; while (i < KEYS.length - 2 && t > KEYS[i + 1].t) i++;
+    const A = KEYS[i], B = KEYS[i + 1], f = clamp((t - A.t) / (B.t - A.t), 0, 1);
+    const out = {}; for (const k in A) if (k !== "t") out[k] = mixRGB(A[k], B[k], f);
+    return out;
+  }
+
+  function resize() {
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = window.innerWidth; H = window.innerHeight;
+    cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    needDraw = true;
+  }
+
+  function ridgePath(R, waterY) {
+    const n = R.s.length - 1, baseY = R.base * H, amp = R.amp * H;
+    cx.beginPath(); cx.moveTo(0, waterY + 2);
+    for (let i = 0; i <= n; i++) {
+      const x = (i / n) * W, u = i / n;
+      const env = 1 - R.gap * Math.pow(1 - Math.abs(2 * u - 1.1) / 1.1, 2.2); // en åpning der fjorden går inn
+      cx.lineTo(x, Math.min(waterY, baseY - amp * R.s[i] * env));
+    }
+    cx.lineTo(W, waterY + 2); cx.closePath();
+  }
+
+  function drawSky(time) {
+    const t = sky.t, P = palette(t);
+    const waterY = H * 0.82;
+
+    const g = cx.createLinearGradient(0, 0, 0, waterY);
+    g.addColorStop(0, css(P.top)); g.addColorStop(1, css(P.hor));
+    cx.fillStyle = g; cx.fillRect(0, 0, W, waterY + 1);
+
+    // stjerner
+    const sa = smooth(0.68, 0.95, t);
+    if (sa > 0.01) {
+      cx.fillStyle = "#fff";
+      for (const s of STARS) {
+        cx.globalAlpha = sa * (0.55 + 0.45 * Math.sin(time * 0.0015 + s.p));
+        cx.fillRect(s.x * W, s.y * H, s.r, s.r);
+      }
+      cx.globalAlpha = 1;
+    }
+
+    // nordlys
+    const aa = smooth(0.84, 1, t);
+    if (aa > 0.01) {
+      cx.save(); cx.globalCompositeOperation = "lighter";
+      for (let r = 0; r < 3; r++) {
+        const base = H * (0.2 + r * 0.075), amp = H * 0.045, len = H * (0.17 - r * 0.035);
+        const top = [], bot = [];
+        for (let x = 0; x <= W + 12; x += 12) {
+          const u = x / W;
+          const y = base + amp * Math.sin(u * Math.PI * (2.2 + r * 0.7) + time * 0.00025 * (1 + r * 0.5) + r * 2)
+                    + amp * 0.4 * Math.sin(u * 13 + time * 0.0006 + r);
+          bot.push([x, y]);
+          top.push([x, y - len * (0.6 + 0.4 * Math.sin(u * 7 + time * 0.0009 + r * 3))]);
+        }
+        const gr = cx.createLinearGradient(0, base + amp, 0, base - amp - len);
+        const hue = r === 1 ? [140, 120, 255] : [110, 255, 185];
+        gr.addColorStop(0, css(hue, 0.5 * aa)); gr.addColorStop(0.35, css([70, 220, 170], 0.22 * aa)); gr.addColorStop(1, css([150, 110, 255], 0));
+        cx.fillStyle = gr; cx.beginPath();
+        bot.forEach(([x, y], i) => i ? cx.lineTo(x, y) : cx.moveTo(x, y));
+        for (let i = top.length - 1; i >= 0; i--) cx.lineTo(top[i][0], top[i][1]);
+        cx.closePath(); cx.fill();
+      }
+      cx.restore();
+    }
+
+    // sola går ned bak fjella mens runden går
+    const p = clamp(t / 0.84, 0, 1);
+    const sunX = W * (0.22 + 0.56 * p);
+    const sunY = waterY - (H * 0.62) * Math.sin(Math.PI * (0.5 + 0.5 * p)) + H * 0.02;
+    const sunR = Math.max(22, Math.min(W, H) * 0.05);
+    if (p < 1) {
+      const glow = cx.createRadialGradient(sunX, sunY, sunR * 0.4, sunX, sunY, sunR * 5);
+      glow.addColorStop(0, css(P.sun, 0.55)); glow.addColorStop(1, css(P.sun, 0));
+      cx.fillStyle = glow; cx.fillRect(0, 0, W, waterY);
+      cx.fillStyle = css(P.sun); cx.beginPath(); cx.arc(sunX, sunY, sunR, 0, 6.2832); cx.fill();
+    }
+
+    // skyer om dagen
+    const ca = (1 - smooth(0.5, 0.8, t)) * 0.85;
+    if (ca > 0.01) {
+      const cc = mixRGB([255, 255, 255], [255, 205, 180], smooth(0.3, 0.7, t));
+      cx.fillStyle = css(cc, ca);
+      for (const c of CLOUDS) {
+        const x = (((c.x + time * c.v) % 1.3) - 0.15) * W, y = c.y * H, s = c.s * Math.max(40, W * 0.06);
+        cx.beginPath();
+        cx.ellipse(x, y, s * 1.6, s * 0.45, 0, 0, 6.2832);
+        cx.ellipse(x - s * 0.6, y - s * 0.15, s * 0.7, s * 0.45, 0, 0, 6.2832);
+        cx.ellipse(x + s * 0.4, y - s * 0.35, s * 0.8, s * 0.55, 0, 0, 6.2832);
+        cx.fill();
+      }
+    }
+
+    // fjell: snø på toppene langt bak
+    const snow = mixRGB([255, 255, 255], P.far, smooth(0.6, 1, t) * 0.7 + 0.15);
+    const fg = cx.createLinearGradient(0, H * (RIDGES.far.base - RIDGES.far.amp), 0, H * RIDGES.far.base);
+    fg.addColorStop(0, css(snow)); fg.addColorStop(0.35, css(P.far)); fg.addColorStop(1, css(P.far));
+    cx.fillStyle = fg; ridgePath(RIDGES.far, waterY); cx.fill();
+    cx.fillStyle = css(P.mid); ridgePath(RIDGES.mid, waterY); cx.fill();
+    cx.fillStyle = css(P.near); ridgePath(RIDGES.near, waterY); cx.fill();
+
+    // fjorden
+    const wg = cx.createLinearGradient(0, waterY, 0, H);
+    wg.addColorStop(0, css(P.water)); wg.addColorStop(1, css(mixRGB(P.water, [0, 0, 0], 0.45)));
+    cx.fillStyle = wg; cx.fillRect(0, waterY, W, H - waterY);
+    cx.save();
+    cx.translate(0, waterY * 2); cx.scale(1, -1);
+    cx.translate(0, waterY); cx.scale(1, 0.45); cx.translate(0, -waterY);
+    cx.globalAlpha = 0.35;
+    cx.fillStyle = css(P.mid); ridgePath(RIDGES.mid, waterY); cx.fill();
+    cx.fillStyle = css(P.near); ridgePath(RIDGES.near, waterY); cx.fill();
+    cx.restore();
+    cx.fillStyle = css(P.hor, 0.35);
+    for (const s of SHIMMER) {
+      const y = waterY + 4 + s.y * (H - waterY - 6);
+      const x = (s.x + 0.01 * Math.sin(time * 0.001 + s.p)) * W;
+      cx.fillRect(x, y, s.w * W, 1.5);
+    }
+
+    // naustet ved vannkanten, med lys i vinduet når det blir mørkt
+    const ns = clamp(W * 0.035, 20, 36), nx = W * 0.8, night = smooth(0.7, 0.95, t);
+    const wall = mixRGB([184, 56, 46], [70, 24, 32], night);
+    cx.fillStyle = css(wall);
+    cx.fillRect(nx, waterY - ns * 0.62, ns, ns * 0.62);
+    cx.fillStyle = css(mixRGB([60, 40, 40], [20, 14, 24], night));
+    cx.beginPath(); cx.moveTo(nx - ns * 0.12, waterY - ns * 0.6); cx.lineTo(nx + ns / 2, waterY - ns * 1.08); cx.lineTo(nx + ns * 1.12, waterY - ns * 0.6); cx.closePath(); cx.fill();
+    cx.fillStyle = css(mixRGB([90, 30, 26], [255, 196, 90], night));
+    cx.fillRect(nx + ns * 0.38, waterY - ns * 0.48, ns * 0.24, ns * 0.22);
+    if (night > 0.05) {
+      cx.fillStyle = css([255, 196, 90], 0.35 * night);
+      cx.fillRect(nx + ns * 0.4, waterY + 3, ns * 0.2, ns * 0.9);
+    }
+    cx.globalAlpha = 0.3; cx.fillStyle = css(wall);
+    cx.fillRect(nx, waterY + 1, ns, ns * 0.3); cx.globalAlpha = 1;
+  }
+
+  let needDraw = true, lastFrame = 0;
+  function frame(now) {
+    const dt = lastFrame ? Math.min(100, now - lastFrame) : 16; lastFrame = now;
+    gameTick(now);
+    const prevT = sky.t;
+    if (reduceMQ.matches) sky.t = sky.target;
+    else sky.t += (sky.target - sky.t) * Math.min(1, dt * 0.004);
+    if (!reduceMQ.matches || needDraw || Math.abs(prevT - sky.t) > 1e-4) {
+      drawSky(reduceMQ.matches ? 0 : now);
+      needDraw = false;
+    }
+    requestAnimationFrame(frame);
+  }
+  window.addEventListener("resize", resize);
+  resize();
+
+  // ---------- Startskjerm ----------
+  let nesteDemo = () => {}, demoTimer = 0;
+  // Viser et nytt eksempel straks og starter takten på nytt, så det nye eksempelet står like lenge som de andre
+  function startDemo() { clearInterval(demoTimer); nesteDemo(); demoTimer = setInterval(nesteDemo, 2400); }
+  (function startScreen() {
+    const bars = $("stolpar"), xs = $("stolpeX");
+    const max = KONFIG.poengEtterSekunderIgjen[10];
+    for (let used = 0; used < 10; used++) {
+      const pts = KONFIG.poengEtterSekunderIgjen[10 - used];
+      const col = document.createElement("div"); col.className = "stolpe";
+      const v = document.createElement("span"); v.className = "v"; v.textContent = String(pts);
+      const b = document.createElement("i"); b.style.height = `calc(${(pts / max) * 100}% - 16px)`;
+      col.append(v, b); bars.append(col);
+      const l = document.createElement("span"); l.textContent = used === 0 ? "<1" : String(used); xs.append(l);
+    }
+    // Eksempler der svaret er et annet ord enn det man får: bokmålsformen er feil på nynorsk, eller nynorskformen er ikke lov på bokmål.
+    const demo = {
+      nn: ORDLISTE.filter((o) => o.bokmalsform_godtas !== "ja" && o.bokmal.length <= 8),
+      bm: ORDLISTE.filter((o) => o.nynorskform_lov_pa_bokmal !== "ja" && o.nynorsk.length <= 8)
+    };
+    let di = 0;
+    const fra = $("demoBm"), til = $("demoNn");
+    nesteDemo = function () {
+      const d = demo[retning];
+      if ($("start").hidden || !d.length) return;
+      const o = d[(di = (di + 7) % d.length)];
+      fra.textContent = sporsmal(o); til.textContent = fasit(o);
+      if (!reduceMQ.matches) [fra, til].forEach((el, i) => { el.classList.remove("byt"); void el.offsetWidth; el.style.animationDelay = i ? ".25s" : "0s"; el.classList.add("byt"); });
+    };
+    brukSpraak();
+    startDemo();
+    renderBest();
+  })();
+
+  $("faktaOrd").textContent = fmt(ORDLISTE.length);
+
+  for (const el of document.querySelectorAll(".spelnamn")) el.textContent = KONFIG.navn;
+  document.title = KONFIG.navn;
+
+  function getBest() { const v = parseInt(store.get(REKORD_KEY[retning]) || "", 10); return Number.isFinite(v) ? v : null; }
+  function renderBest() {
+    const b = getBest(), el = $("startRekord");
+    if (b === null) { el.hidden = true; return; }
+    el.hidden = false; el.innerHTML = ""; el.append(T().rekord);
+    const strong = document.createElement("b"); strong.textContent = fmt(b) + " poeng"; el.append(strong);
+  }
+
+  // ---------- Spillet ----------
+  const S = { phase: "start", deck: [], idx: -1, cur: null, answers: [], score: 0, shownScore: 0,
+              roundStart: 0, wordStart: 0, waitUntil: 0, pauseAt: 0, streak: 0, bestStreak: 0, lastTick: null };
+  const RING_C = 2 * Math.PI * 27;
+  $("ringFram").style.strokeDasharray = String(RING_C);
+
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  // Stokker ordlista slik at omtrent KONFIG.andelLike av ordene er like på bokmål og nynorsk.
+  function lagStokk() {
+    const andel = KONFIG.andelLike;
+    if (andel == null) return shuffle(ORDLISTE.slice());
+    const like = shuffle(ORDLISTE.filter(erLik)), ulike = shuffle(ORDLISTE.filter((o) => !erLik(o)));
+    const stokk = [];
+    while (like.length || ulike.length) stokk.push((like.length && (!ulike.length || Math.random() < andel) ? like : ulike).pop());
+    return stokk;
+  }
+  function show(id) { for (const s of ["start", "spel", "resultat"]) $(s).hidden = s !== id; }
+
+  function startRound() {
+    audio(); sfx.start();
+    Object.assign(S, { phase: "play", deck: lagStokk(), idx: -1, answers: [], score: 0, shownScore: 0,
+                       streak: 0, bestStreak: 0, roundStart: performance.now() });
+    $("hudPoeng").textContent = "0"; $("hudRiktige").textContent = "0"; $("hudRekke").textContent = "0";
+    $("hudRekkeFelt").classList.remove("het"); $("hudTidFelt").classList.remove("lite");
+    $("tilbake").innerHTML = ""; $("delBoks").hidden = true;
+    show("spel");
+    nextWord(performance.now());
+    window.scrollTo(0, 0);
+  }
+
+  function nextWord(now) {
+    S.idx++;
+    if (S.idx >= S.deck.length) { S.deck = lagStokk(); S.idx = 0; }
+    S.cur = S.deck[S.idx];
+    S.wordStart = now; S.phase = "play"; S.lastTick = null;
+    const w = $("ordet");
+    w.textContent = sporsmal(S.cur);
+    $("ordklasse").textContent = S.cur.ordklasse;
+    if (!reduceMQ.matches) { w.classList.remove("inn"); void w.offsetWidth; w.classList.add("inn"); }
+    $("ordkort").classList.remove("feil", "rett");
+    if ($("tilbake").querySelector(".bad")) $("tilbake").innerHTML = "";
+    const inp = $("svarFelt"); inp.value = ""; inp.focus({ preventScroll: true });
+    updateWordTimer(now);
+  }
+
+  function updateWordTimer(now) {
+    const elapsed = now - S.wordStart, rest = Math.max(0, KONFIG.ordMs - elapsed), frac = rest / KONFIG.ordMs;
+    const secs = Math.ceil(rest / 1000);
+    const col = rest > 5000 ? "var(--ok)" : rest > 2500 ? "var(--gold-deep)" : "var(--bad)";
+    const card = $("ordkort");
+    card.style.setProperty("--igjen", frac.toFixed(4)); card.style.setProperty("--ring", col);
+    $("ringFram").style.strokeDashoffset = String(RING_C * (1 - frac));
+    $("ringTal").textContent = String(secs);
+    if (secs <= 3 && secs > 0 && S.lastTick !== secs) { S.lastTick = secs; sfx.tick(); }
+  }
+
+  function setFeedback(html, cls) {
+    const t = $("tilbake");
+    t.innerHTML = "";
+    const d = document.createElement("div"); d.className = "melding " + cls; d.innerHTML = html;
+    t.append(d);
+    return d;
+  }
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  function floatPoints(text, cls = "") {
+    if (reduceMQ.matches) return;
+    const card = $("ordkort"), fb = $("tilbake");
+    const f = document.createElement("span"); f.className = "flyt " + cls; f.textContent = text;
+    f.style.right = "24px"; f.style.top = (fb.offsetTop + 4) + "px";
+    card.append(f); f.addEventListener("animationend", () => f.remove());
+  }
+
+  function submit() {
+    if (S.phase === "pause" && performance.now() - S.pauseAt > 300) { nextWord(performance.now()); return; }
+    if (S.phase !== "play") return;
+    const inp = $("svarFelt"), raw = inp.value.trim();
+    if (!raw) { inp.classList.remove("rist"); void inp.offsetWidth; inp.classList.add("rist"); return; }
+    const now = performance.now(), elapsed = now - S.wordStart, o = S.cur;
+    if (o._ok[retning].has(norm(raw))) {
+      const pts = pointsFor(elapsed);
+      S.answers.push({ o, svar: raw, ok: true, timeout: false, pts, ms: elapsed });
+      S.score += pts; S.streak++; S.bestStreak = Math.max(S.bestStreak, S.streak);
+      sfx.ok(); floatPoints("+" + fmt(pts));
+      const d = setFeedback(`${ICON_OK}<span>${T().rett}</span>`, "ok");
+      d.classList.add("blekn");
+      updateHud(true);
+      nextWord(now);
+    } else {
+      wrong(now, raw, false);
+    }
+  }
+
+  function wrong(now, raw, timeout) {
+    const o = S.cur, elapsed = Math.min(now - S.wordStart, KONFIG.ordMs);
+    S.answers.push({ o, svar: raw, ok: false, timeout, pts: KONFIG.poengFeil, ms: elapsed });
+    S.score += KONFIG.poengFeil; S.streak = 0;
+    sfx.bad();
+    $("ordkort").classList.add("feil");
+    floatPoints("+" + fmt(KONFIG.poengFeil), "lite");
+    setFeedback(`${ICON_BAD}<span class="fasit">${esc(fasit(o))}</span>`, "bad");
+    S.phase = "pause"; S.pauseAt = now; S.waitUntil = now + KONFIG.feilVisMs;
+    updateHud(false);
+  }
+
+  function updateHud(bump) {
+    $("hudRiktige").textContent = String(S.answers.filter((a) => a.ok).length);
+    const rk = $("hudRekke"); rk.textContent = String(S.streak);
+    $("hudRekkeFelt").classList.toggle("het", S.streak >= 5);
+    if (bump && !reduceMQ.matches) { rk.classList.remove("dunk"); void rk.offsetWidth; rk.classList.add("dunk"); }
+  }
+
+  function gameTick(now) {
+    if (S.phase !== "play" && S.phase !== "pause") return;
+    const used = now - S.roundStart, left = Math.max(0, KONFIG.rundeMs - used);
+    const sec = Math.ceil(left / 1000);
+    $("hudTid").textContent = `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, "0")}`;
+    $("tidbar").style.transform = `scaleX(${(left / KONFIG.rundeMs).toFixed(4)})`;
+    $("hudTidFelt").classList.toggle("lite", left <= 10000);
+    sky.target = 0.06 + 0.9 * clamp(used / KONFIG.rundeMs, 0, 1);
+    const target = clamp(S.score, 0, KONFIG.maksScore ?? Infinity);
+    S.shownScore += (target - S.shownScore) * 0.18;
+    if (Math.abs(target - S.shownScore) < 1) S.shownScore = target;
+    $("hudPoeng").textContent = fmt(S.shownScore);
+
+    if (left <= 0) { endRound(); return; }
+    if (S.phase === "play") {
+      if (now - S.wordStart >= KONFIG.ordMs) { updateWordTimer(S.wordStart + KONFIG.ordMs); wrong(now, "", true); }
+      else updateWordTimer(now);
+    } else if (now >= S.waitUntil) {
+      nextWord(now);
+    }
+  }
+
+  function rank(score) {
+    const r = T().rang;
+    if (KONFIG.maksScore && score >= KONFIG.maksScore) return r[0]; // Ivar Aasen-nivå / Knud Knudsen-nivå
+    if (score >= 300000) return r[1];
+    if (score >= 150000) return r[2];
+    if (score >= 100000) return r[3];
+    if (score >= 60000) return r[4];
+    if (score >= 20000) return r[5];
+    return r[6];
+  }
+
+  function endRound() {
+    S.phase = "done";
+    S.score = clamp(S.score, 0, KONFIG.maksScore ?? Infinity);
+    $("svarFelt").blur();
+    sfx.end();
+    sky.target = 1;
+    const banner = $("sluttBanner");
+    banner.hidden = false;
+    setTimeout(() => { banner.hidden = true; showResults(); }, reduceMQ.matches ? 300 : 1400);
+  }
+
+  function showResults() {
+    const A = S.answers, right = A.filter((a) => a.ok), score = S.score;
+    const prevBest = getBest(), isBest = prevBest === null || score > prevBest;
+    if (isBest) store.set(REKORD_KEY[retning], String(score));
+
+    $("resRang").textContent = rank(score);
+    const rec = $("resRekord");
+    rec.className = "res-rekord" + (isBest && A.length ? " ny" : "");
+    rec.textContent = isBest && A.length ? (prevBest === null ? T().forsteRekord : T().nyRekord) : T().rekordenDin(fmt(prevBest ?? 0));
+    $("resRetning").textContent = T().retningKort;
+    $("statRiktige").textContent = String(right.length);
+    $("statFeil").textContent = String(A.length - right.length);
+    $("statSnitt").textContent = right.length ? fmtS(right.reduce((s, a) => s + a.ms, 0) / right.length) : "–";
+    $("statRekke").textContent = String(S.bestStreak);
+
+    const tb = $("svarRader"); tb.innerHTML = "";
+    A.forEach((a, i) => {
+      const tr = document.createElement("tr"); if (!a.ok) tr.className = "rad-feil";
+      tr.dataset.ok = a.ok ? "1" : "0";
+      const td = (cls) => { const c = document.createElement("td"); if (cls) c.className = cls; tr.append(c); return c; };
+      td("nr").textContent = String(i + 1);
+      const b = document.createElement("span"); b.className = "spurt"; b.lang = T().kjeldeLang; b.textContent = sporsmal(a.o); td().append(b);
+      const yours = document.createElement("span");
+      yours.className = "ditt" + (a.ok ? "" : a.svar ? " galt" : " tomt");
+      yours.textContent = a.svar || T().tidaGjekk; td().append(yours);
+      const fc = td();
+      const link = document.createElement("a"); link.className = "fasit-lenke"; link.href = fasitLenke(a.o); link.target = "_blank"; link.rel = "noopener";
+      link.textContent = fasit(a.o); link.title = T().slaaOpp; fc.append(link);
+      const [tag, tagOrd] = merkelapp(a.o);
+      if (tag) { const l = document.createElement("span"); l.className = "likt"; l.textContent = tag; fc.append(l); }
+      const kandidater = retning === "nn" ? (a.o.bokmalsform_godtas === "ja" ? [a.o.bokmal] : []).concat(a.o.godkjente_alternativer || []) : a.o._altBm;
+      const bort = [fasit(a.o), tagOrd].filter(Boolean).map(norm);
+      const alts = kandidater.filter((x, j) => !bort.includes(norm(x)) && kandidater.findIndex((y) => norm(y) === norm(x)) === j);
+      if (alts.length) { const s = document.createElement("span"); s.className = "alt"; s.textContent = T().ogsaaRett + alts.slice(0, 4).join(", "); fc.append(s); }
+      const rc = td();
+      rc.innerHTML = a.ok ? `<span class="chip ok">${ICON_OK}<span class="chip-tekst">${T().rett}</span></span>` : `<span class="chip bad">${ICON_BAD}<span class="chip-tekst">Feil</span></span>`;
+      tb.append(tr);
+    });
+    if (!A.length) {
+      const tr = document.createElement("tr"), c = document.createElement("td"); c.colSpan = 5; c.className = "tom-runde";
+      c.textContent = T().ingenOrd; tr.append(c); tb.append(tr);
+    }
+    $("oppsummering").textContent = T().avRette(right.length, A.length);
+    $("antAlle").textContent = String(A.length);
+    $("antRiktige").textContent = String(right.length);
+    $("antFeil").textContent = String(A.length - right.length);
+    setFilter("alle");
+
+    show("resultat");
+    window.scrollTo(0, 0);
+    countUp($("resScore"), score);
+    $("delKnapp").focus({ preventScroll: true });
+  }
+
+  // Filter i svaroversikten: alle, riktige eller feil
+  function setFilter(f) {
+    for (const b of $("filter").querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.filter === f));
+    let shown = 0;
+    for (const tr of $("svarRader").querySelectorAll("tr[data-ok]")) {
+      const vis = f === "alle" || (f === "riktige") === (tr.dataset.ok === "1");
+      tr.hidden = !vis; if (vis) shown++;
+    }
+    const tom = $("tomFilter"), total = S.answers.length;
+    tom.hidden = !(total && !shown);
+    tom.textContent = f === "riktige" ? T().ingenRette : T().ingenFeil;
+  }
+  $("filter").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setFilter(b.dataset.filter); });
+
+  function countUp(el, to) {
+    if (reduceMQ.matches) { el.textContent = fmt(to); return; }
+    const t0 = performance.now(), dur = 1600;
+    (function step(now) {
+      const f = clamp((now - t0) / dur, 0, 1), e = 1 - Math.pow(1 - f, 3);
+      el.textContent = fmt(to * e);
+      if (f < 1) requestAnimationFrame(step);
+    })(t0);
+  }
+
+  // ---------- Deling ----------
+  const lenke = () => KONFIG.spillUrl.startsWith("http") ? "\n" + KONFIG.spillUrl : "";
+  function shareText() {
+    const A = S.answers, right = A.filter((a) => a.ok).length;
+    return T().delTekst(fmt(S.score).replace(/\s/g, " "), right, A.length) + lenke();
+  }
+  let toastTimer = 0;
+  function toast(msg) {
+    const t = $("toast"); t.textContent = msg; t.hidden = false;
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 3200);
+  }
+  // Viser teksten i boksen, åpner delingsmenyen på mobil og kopierer ellers teksten
+  function del(text, boks, felt) {
+    const ta = $(felt);
+    ta.value = text; $(boks).hidden = false; ta.focus(); ta.select();
+    let copied;
+    try { copied = navigator.clipboard && navigator.clipboard.writeText ? navigator.clipboard.writeText(text) : Promise.reject(new Error("no clipboard")); }
+    catch (e) { copied = Promise.reject(e); }
+    copied.catch(() => {});
+    const copyFallback = () => {
+      copied.then(() => toast(T().kopiert))
+            .catch(() => {
+              let ok = false; try { ta.select(); ok = document.execCommand("copy"); } catch (e) {}
+              toast(ok ? T().kopiert : T().kopierSjolv);
+            });
+    };
+    const mobile = matchMedia("(pointer: coarse)").matches;
+    if (mobile && navigator.share) {
+      let p; try { p = navigator.share({ title: KONFIG.navn, text }); } catch (e) { p = Promise.reject(e); }
+      p.then(() => {}).catch((err) => { if (!err || err.name !== "AbortError") copyFallback(); });
+    } else copyFallback();
+  }
+  $("delKnapp").addEventListener("click", () => del(shareText(), "delBoks", "delTekst"));
+  $("delSpelKnapp").addEventListener("click", () => del(T().delSpelTekst + lenke(), "delSpelBoks", "delSpelTekst"));
+
+  // ---------- Kontroller ----------
+  $("startKnapp").addEventListener("click", startRound);
+  $("igjenKnapp").addEventListener("click", startRound);
+  $("tilStartKnapp").addEventListener("click", () => {
+    S.phase = "start"; sky.target = 0.06; $("delBoks").hidden = true; $("toast").hidden = true;
+    show("start"); renderBest(); startDemo(); window.scrollTo(0, 0);
+    $("startKnapp").focus({ preventScroll: true });
+  });
+  $("retning").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-retning]");
+    if (!b || b.dataset.retning === retning) return;
+    retning = b.dataset.retning; store.set(RETNING_KEY, retning); $("delSpelBoks").hidden = true;
+    brukSpraak(); renderBest(); startDemo();
+    if (!reduceMQ.matches) for (const el of [document.querySelector(".ingress"), document.querySelector(".start-panel")]) { el.classList.remove("byt-tekst"); void el.offsetWidth; el.classList.add("byt-tekst"); }
+    audio(); sfx.tick();
+  });
+  $("svarSkjema").addEventListener("submit", (e) => { e.preventDefault(); submit(); });
+  $("teikn").addEventListener("pointerdown", (e) => { if (e.target.closest("button")) e.preventDefault(); });
+  $("teikn").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    const inp = $("svarFelt"), s = inp.selectionStart ?? inp.value.length, en = inp.selectionEnd ?? inp.value.length;
+    inp.setRangeText(b.textContent, s, en, "end"); inp.focus({ preventScroll: true });
+  });
+  document.addEventListener("keydown", (e) => {
+    // Enter starter runden, også når fokus står på retningen som er valgt (Enter på den andre retningen bytter retning)
+    const el = document.activeElement, paaValgt = el?.closest?.("#retning button")?.dataset.retning === retning;
+    if (e.key === "Enter" && !e.repeat && S.phase === "start" && !$("start").hidden && (el?.tagName !== "BUTTON" || paaValgt)) { e.preventDefault(); startRound(); }
+  });
+
+  requestAnimationFrame(frame);
+})();
+</script>

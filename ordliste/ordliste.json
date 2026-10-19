@@ -1,0 +1,6313 @@
+[
+ {
+  "bokmal": "jeg",
+  "nynorsk": "eg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/13842",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ikke",
+  "nynorsk": "ikkje",
+  "godkjente_alternativer": [
+   "kje"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/33268",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hva",
+  "nynorsk": "kva",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/43122",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hvem",
+  "nynorsk": "kven",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/43455",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hvor",
+  "nynorsk": "kvar",
+  "godkjente_alternativer": [
+   "kor"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/43238",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Samme svar som «hver» (kvar)."
+ },
+ {
+  "bokmal": "hvorfor",
+  "nynorsk": "kvifor",
+  "godkjente_alternativer": [
+   "korfor",
+   "kvi"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/43519",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hvordan",
+  "nynorsk": "korleis",
+  "godkjente_alternativer": [
+   "koss",
+   "korso"
+  ],
+  "bokmal_alternativer": [
+   "hvorledes"
+  ],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/41311",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hvis",
+  "nynorsk": "viss",
+  "godkjente_alternativer": [
+   "om",
+   "dersom",
+   "i tilfelle"
+  ],
+  "bokmal_alternativer": [
+   "viss"
+  ],
+  "ordklasse": "subjunksjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/90565",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "noe",
+  "nynorsk": "noko",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/52899",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«noko» er inkjekjønnsformen av «nokon», ikke eget oppslagsord."
+ },
+ {
+  "bokmal": "mye",
+  "nynorsk": "mykje",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/51245",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "bare",
+  "nynorsk": "berre",
+  "godkjente_alternativer": [
+   "einast"
+  ],
+  "bokmal_alternativer": [
+   "kun"
+  ],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/5513",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«bare» finnes i Nynorskordboka, men bare som et annet ord (verb: strø med bar)."
+ },
+ {
+  "bokmal": "fra",
+  "nynorsk": "frå",
+  "godkjente_alternativer": [
+   "ifrå"
+  ],
+  "bokmal_alternativer": [
+   "ifra"
+  ],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/22617",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hun",
+  "nynorsk": "ho",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/31039",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«hun» finnes i Nynorskordboka, men som et annet ord (substantiv)."
+ },
+ {
+  "bokmal": "de",
+  "nynorsk": "dei",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/11141",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«de» er også nynorsk, men betyr «dere». Bokmål «de» (flertall) = «dei»."
+ },
+ {
+  "bokmal": "hennes",
+  "nynorsk": "hennar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/30238",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hver",
+  "nynorsk": "kvar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/43237",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Samme svar som «hvor» (kvar)."
+ },
+ {
+  "bokmal": "sammen",
+  "nynorsk": "saman",
+  "godkjente_alternativer": [
+   "i hop"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/63548",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sjelden",
+  "nynorsk": "sjeldan",
+  "godkjente_alternativer": [
+   "sjeldsynt"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/66233",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hjem",
+  "nynorsk": "heim",
+  "godkjente_alternativer": [
+   "heimatt"
+  ],
+  "bokmal_alternativer": [
+   "heim"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/29716",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hjemme",
+  "nynorsk": "heime",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "heime"
+  ],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/29744",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "uke",
+  "nynorsk": "veke",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/88343",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«uke» finnes i Nynorskordboka, men som et annet ord (verb: skubbe)."
+ },
+ {
+  "bokmal": "kirke",
+  "nynorsk": "kyrkje",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/43834",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "øye",
+  "nynorsk": "auge",
+  "godkjente_alternativer": [
+   "auga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/3103",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«øye» finnes i Nynorskordboka, men som et annet ord (verb: jamre)."
+ },
+ {
+  "bokmal": "datter",
+  "nynorsk": "dotter",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/12381",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sønn",
+  "nynorsk": "son",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/71787",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "vann",
+  "nynorsk": "vatn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "vatn"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/88000",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«vann» finnes i Nynorskordboka bare i uttrykket «dann og vann»."
+ },
+ {
+  "bokmal": "melk",
+  "nynorsk": "mjølk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "mjølk"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/50171",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "lærer",
+  "nynorsk": "lærar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/47349",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "viskelær",
+  "nynorsk": "viskeler",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/90540",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "fisker",
+  "nynorsk": "fiskar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/18247",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "baker",
+  "nynorsk": "bakar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/4125",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "vei",
+  "nynorsk": "veg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "veg"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/88138",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "verden",
+  "nynorsk": "verd",
+  "godkjente_alternativer": [
+   "verda"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/88932",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«verda» (bestemt form) godtas også."
+ },
+ {
+  "bokmal": "vindu",
+  "nynorsk": "vindauge",
+  "godkjente_alternativer": [
+   "vindauga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/90075",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "gulv",
+  "nynorsk": "golv",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "golv"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/26232",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "penger",
+  "nynorsk": "pengar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/56900",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Flertall av «peng/penge». Dinordbok har ingen egen oversettelse, men Nynorskordboka bekrefter «pengar»."
+ },
+ {
+  "bokmal": "sommer",
+  "nynorsk": "sommar",
+  "godkjente_alternativer": [
+   "sumar"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/71733",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "høst",
+  "nynorsk": "haust",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/29360",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "morgen",
+  "nynorsk": "morgon",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/50584",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "måned",
+  "nynorsk": "månad",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/51668",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "gave",
+  "nynorsk": "gåve",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/28065",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "lek",
+  "nynorsk": "leik",
+  "godkjente_alternativer": [
+   "spel"
+  ],
+  "bokmal_alternativer": [
+   "leik"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/45089",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«lek» finnes i Nynorskordboka, men som andre ord (lekk, lekmann, albansk mynt)."
+ },
+ {
+  "bokmal": "sang",
+  "nynorsk": "song",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/71809",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "nese",
+  "nynorsk": "nase",
+  "godkjente_alternativer": [
+   "nòs"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/51930",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hånd",
+  "nynorsk": "hand",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "hand"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/28743",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hode",
+  "nynorsk": "hovud",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/31477",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sykdom",
+  "nynorsk": "sjukdom",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "sjukdom"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/66365",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sykehus",
+  "nynorsk": "sjukehus",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "sjukehus"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/66382",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "kjærlighet",
+  "nynorsk": "kjærleik",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/38327",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ild",
+  "nynorsk": "eld",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/14720",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "gress",
+  "nynorsk": "gras",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "gras"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/26569",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "blomst",
+  "nynorsk": "blome",
+  "godkjente_alternativer": [
+   "blom"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/6900",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "grønnsak",
+  "nynorsk": "grønsak",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/27426",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "frokost",
+  "nynorsk": "frukost",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/22439",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "klær",
+  "nynorsk": "klede",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/38800",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "begynnelse",
+  "nynorsk": "byrjing",
+  "godkjente_alternativer": [
+   "begynning",
+   "fyrstning",
+   "førstning"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/9855",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "fortelling",
+  "nynorsk": "forteljing",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/21091",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "mening",
+  "nynorsk": "meining",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "meining"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/49006",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "oppgave",
+  "nynorsk": "oppgåve",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/54751",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "løsning",
+  "nynorsk": "løysing",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "løysing"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/47604",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "virkelighet",
+  "nynorsk": "verkelegheit",
+  "godkjente_alternativer": [
+   "røyndom",
+   "røynd"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/101749",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "mulighet",
+  "nynorsk": "moglegheit",
+  "godkjente_alternativer": [
+   "mogelegheit",
+   "mulegheit",
+   "høve"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/50337",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "frihet",
+  "nynorsk": "fridom",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/22083",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sannhet",
+  "nynorsk": "sanning",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/64074",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "seier",
+  "nynorsk": "siger",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/65529",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "vær",
+  "nynorsk": "ver",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/88893",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "tordenvær",
+  "nynorsk": "torever",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/80062",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "havn",
+  "nynorsk": "hamn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/28683",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sommerfugl",
+  "nynorsk": "sommarfugl",
+  "godkjente_alternativer": [
+   "sumarfugl",
+   "fivreld",
+   "fivrelde"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/71743",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "syk",
+  "nynorsk": "sjuk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "sjuk"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/66362",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sulten",
+  "nynorsk": "svolten",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/76200",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "fornøyd",
+  "nynorsk": "nøgd",
+  "godkjente_alternativer": [
+   "fornøgd"
+  ],
+  "bokmal_alternativer": [
+   "fornøgd"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/53699",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "høy",
+  "nynorsk": "høg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "høg"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/32480",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«høy» finnes i Nynorskordboka bare som substantiv (tørket gras)."
+ },
+ {
+  "bokmal": "lav",
+  "nynorsk": "låg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "låg"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/47621",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«lav» finnes i Nynorskordboka bare som plante."
+ },
+ {
+  "bokmal": "hvit",
+  "nynorsk": "kvit",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "kvit"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/43680",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "rød",
+  "nynorsk": "raud",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/60456",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "myk",
+  "nynorsk": "mjuk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "mjuk"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/50143",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "langsom",
+  "nynorsk": "langsam",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/44566",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "tidlig",
+  "nynorsk": "tidleg",
+  "godkjente_alternativer": [
+   "årle"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/78722",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sen",
+  "nynorsk": "sein",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "sein"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/64455",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«sen» finnes i Nynorskordboka bare som substantiv (sene, japansk mynt)."
+ },
+ {
+  "bokmal": "vanlig",
+  "nynorsk": "vanleg",
+  "godkjente_alternativer": [
+   "gjengs"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/87326",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "vanskelig",
+  "nynorsk": "vanskeleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/87346",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "farlig",
+  "nynorsk": "farleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/16691",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "morsom",
+  "nynorsk": "morosam",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/50635",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "kjedelig",
+  "nynorsk": "kjedeleg",
+  "godkjente_alternativer": [
+   "keisam"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/101519",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "herlig",
+  "nynorsk": "herleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/30318",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "nydelig",
+  "nynorsk": "nydeleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/53337",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hyggelig",
+  "nynorsk": "hyggeleg",
+  "godkjente_alternativer": [
+   "hyggjeleg"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/32207",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ærlig",
+  "nynorsk": "ærleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/91977",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "lykkelig",
+  "nynorsk": "lukkeleg",
+  "godkjente_alternativer": [
+   "lykkeleg"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/46741",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "annen",
+  "nynorsk": "annan",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/1716",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "mulig",
+  "nynorsk": "mogleg",
+  "godkjente_alternativer": [
+   "mogeleg",
+   "muleg"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/50335",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "umulig",
+  "nynorsk": "umogleg",
+  "godkjente_alternativer": [
+   "umogeleg",
+   "umuleg"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/84565",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "fremmed",
+  "nynorsk": "framand",
+  "godkjente_alternativer": [
+   "fremmend"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/21493",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "dyp",
+  "nynorsk": "djup",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "djup"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/12049",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "bred",
+  "nynorsk": "brei",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "brei"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/8155",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "skjev",
+  "nynorsk": "skeiv",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "skeiv"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/67288",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "en",
+  "nynorsk": "ein",
+  "godkjente_alternativer": [
+   "éin"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/14066",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "være",
+  "nynorsk": "vere",
+  "godkjente_alternativer": [
+   "vera"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/89137",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«være» finnes i Nynorskordboka bare som substantiv."
+ },
+ {
+  "bokmal": "spørre",
+  "nynorsk": "spørje",
+  "godkjente_alternativer": [
+   "spørja"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/72956",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "tegne",
+  "nynorsk": "teikne",
+  "godkjente_alternativer": [
+   "teikna"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/77904",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "leke",
+  "nynorsk": "leike",
+  "godkjente_alternativer": [
+   "leika"
+  ],
+  "bokmal_alternativer": [
+   "leike"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/45094",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«leke» finnes i Nynorskordboka, men betyr å lekke."
+ },
+ {
+  "bokmal": "spille",
+  "nynorsk": "spele",
+  "godkjente_alternativer": [
+   "spela"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/72232",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«spille» finnes i Nynorskordboka, men betyr å søle eller kaste bort."
+ },
+ {
+  "bokmal": "våkne",
+  "nynorsk": "vakne",
+  "godkjente_alternativer": [
+   "vakna"
+  ],
+  "bokmal_alternativer": [
+   "vakne"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/86980",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "selge",
+  "nynorsk": "selje",
+  "godkjente_alternativer": [
+   "selja"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/64672",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "lete",
+  "nynorsk": "leite",
+  "godkjente_alternativer": [
+   "leita",
+   "søkje"
+  ],
+  "bokmal_alternativer": [
+   "leite",
+   "søke"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/45148",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«lete» finnes i Nynorskordboka, men som andre ord (farge garn, latskap)."
+ },
+ {
+  "bokmal": "glemme",
+  "nynorsk": "gløyme",
+  "godkjente_alternativer": [
+   "gløyma",
+   "glømme",
+   "forgløyme"
+  ],
+  "bokmal_alternativer": [
+   "glømme",
+   "forglemme",
+   "forglømme"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/25911",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "kjøre",
+  "nynorsk": "køyre",
+  "godkjente_alternativer": [
+   "køyra",
+   "ake",
+   "aka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/38509",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "åpne",
+  "nynorsk": "opne",
+  "godkjente_alternativer": [
+   "opna"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/54642",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "høre",
+  "nynorsk": "høyre",
+  "godkjente_alternativer": [
+   "høyra"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/32752",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«høyre» er også et bokmålsord (side, parti)."
+ },
+ {
+  "bokmal": "fortelle",
+  "nynorsk": "fortelje",
+  "godkjente_alternativer": [
+   "fortelja"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/21085",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "mene",
+  "nynorsk": "meine",
+  "godkjente_alternativer": [
+   "meina"
+  ],
+  "bokmal_alternativer": [
+   "meine"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/48997",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "dø",
+  "nynorsk": "døy",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/13648",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "gjøre",
+  "nynorsk": "gjere",
+  "godkjente_alternativer": [
+   "gjera"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/25238",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hete",
+  "nynorsk": "heite",
+  "godkjente_alternativer": [
+   "heita"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/29904",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«hete» finnes i Nynorskordboka, men betyr varme."
+ },
+ {
+  "bokmal": "velge",
+  "nynorsk": "velje",
+  "godkjente_alternativer": [
+   "velja"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/88560",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "gjemme",
+  "nynorsk": "gøyme",
+  "godkjente_alternativer": [
+   "gøyma",
+   "gjømme"
+  ],
+  "bokmal_alternativer": [
+   "gjømme"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/27989",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "lyve",
+  "nynorsk": "ljuge",
+  "godkjente_alternativer": [
+   "lyge",
+   "ljuga",
+   "lyga"
+  ],
+  "bokmal_alternativer": [
+   "juge",
+   "ljuge",
+   "lyge"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/46245",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "stjele",
+  "nynorsk": "stele",
+  "godkjente_alternativer": [
+   "stela"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/73527",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hvete",
+  "nynorsk": "kveite",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kveite",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hval",
+  "nynorsk": "kval",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "kval"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kval",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "arbeider",
+  "nynorsk": "arbeidar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/arbeidar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "leser",
+  "nynorsk": "lesar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lesar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "forfatter",
+  "nynorsk": "forfattar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/forfattar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "dommer",
+  "nynorsk": "dommar",
+  "godkjente_alternativer": [
+   "domar"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dommar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "skuespiller",
+  "nynorsk": "skodespelar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/skodespelar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "spiller",
+  "nynorsk": "spelar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "speller"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/spelar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "vinner",
+  "nynorsk": "vinnar",
+  "godkjente_alternativer": [
+   "sigrar"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vinnar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "eier",
+  "nynorsk": "eigar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/eigar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "leder",
+  "nynorsk": "leiar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/leiar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hovedstad",
+  "nynorsk": "hovudstad",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hovudstad",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "gård",
+  "nynorsk": "gard",
+  "godkjente_alternativer": [
+   "bondegard"
+  ],
+  "bokmal_alternativer": [
+   "gard"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/gard",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "øre",
+  "nynorsk": "øyre",
+  "godkjente_alternativer": [
+   "øyra"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/øyre",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«øre» finnes i Nynorskordboka, men som andre ord (mynt)."
+ },
+ {
+  "bokmal": "albue",
+  "nynorsk": "olboge",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/olboge",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "håndledd",
+  "nynorsk": "handledd",
+  "godkjente_alternativer": [
+   "handled"
+  ],
+  "bokmal_alternativer": [
+   "handledd"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/handledd",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "speil",
+  "nynorsk": "spegel",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/spegel",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "stekepanne",
+  "nynorsk": "steikepanne",
+  "godkjente_alternativer": [
+   "steikjepanne"
+  ],
+  "bokmal_alternativer": [
+   "steikepanne"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/steikepanne",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ovn",
+  "nynorsk": "omn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/omn",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "støvsuger",
+  "nynorsk": "støvsugar",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/støvsugar",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "mel",
+  "nynorsk": "mjøl",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "mjøl"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mjøl",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«mel» finnes i Nynorskordboka, men betyr sandbakke."
+ },
+ {
+  "bokmal": "sult",
+  "nynorsk": "svolt",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/svolt",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "mandag",
+  "nynorsk": "måndag",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/måndag",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "tirsdag",
+  "nynorsk": "tysdag",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tysdag",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "lørdag",
+  "nynorsk": "laurdag",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/laurdag",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "regnbue",
+  "nynorsk": "regnboge",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "regnboge"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/regnboge",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "valg",
+  "nynorsk": "val",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/val",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "bryllup",
+  "nynorsk": "bryllaup",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/bryllaup",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "overraskelse",
+  "nynorsk": "overrasking",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/overrasking",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hendelse",
+  "nynorsk": "hending",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "hending",
+   "begivenhet"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hending",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "opplevelse",
+  "nynorsk": "oppleving",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "oppleving"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/oppleving",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "forståelse",
+  "nynorsk": "forståing",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/forståing",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hensyn",
+  "nynorsk": "omsyn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/omsyn",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sikkerhet",
+  "nynorsk": "tryggleik",
+  "godkjente_alternativer": [
+   "sikkerheit"
+  ],
+  "bokmal_alternativer": [
+   "trygghet"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tryggleik",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "kjæreste",
+  "nynorsk": "kjærast",
+  "godkjente_alternativer": [
+   "kjæraste"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kjærast",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ensomhet",
+  "nynorsk": "einsemd",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/einsemd",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "høyde",
+  "nynorsk": "høgd",
+  "godkjente_alternativer": [
+   "høgde"
+  ],
+  "bokmal_alternativer": [
+   "høgde"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/høgd",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«høgd» er lov på bokmål bare i betydningen bakke/høydedrag, ikke om hvor høyt noe er."
+ },
+ {
+  "bokmal": "bredde",
+  "nynorsk": "breidd",
+  "godkjente_alternativer": [
+   "breidde"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/breidd",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "bunn",
+  "nynorsk": "botn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "botn"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/botn",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hull",
+  "nynorsk": "hol",
+  "godkjente_alternativer": [
+   "hòl"
+  ],
+  "bokmal_alternativer": [
+   "høl"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hol",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«hull» finnes i Nynorskordboka, men betyr en sang uten ord."
+ },
+ {
+  "bokmal": "øyeblikk",
+  "nynorsk": "augeblink",
+  "godkjente_alternativer": [
+   "augneblink",
+   "augneblunk"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/augeblink",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "råtten",
+  "nynorsk": "roten",
+  "godkjente_alternativer": [
+   "ròten"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/roten",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ren",
+  "nynorsk": "rein",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "rein"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rein",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "løs",
+  "nynorsk": "laus",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "laus"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/laus",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "het",
+  "nynorsk": "heit",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "heit"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/heit",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "dårlig",
+  "nynorsk": "dårleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dårleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "nylig",
+  "nynorsk": "nyleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/nyleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "daglig",
+  "nynorsk": "dagleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dagleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "årlig",
+  "nynorsk": "årleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/årleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "alene",
+  "nynorsk": "åleine",
+  "godkjente_alternativer": [
+   "aleine"
+  ],
+  "bokmal_alternativer": [
+   "aleine"
+  ],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/åleine",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Nynorskordboka har «aleine» og «åleine» som likestilte former."
+ },
+ {
+  "bokmal": "merkelig",
+  "nynorsk": "merkeleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/merkeleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "underlig",
+  "nynorsk": "underleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/underleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "naturlig",
+  "nynorsk": "naturleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/naturleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "personlig",
+  "nynorsk": "personleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/personleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "offentlig",
+  "nynorsk": "offentleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/offentleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hemmelig",
+  "nynorsk": "hemmeleg",
+  "godkjente_alternativer": [
+   "løynleg"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hemmeleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ensom",
+  "nynorsk": "einsam",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/einsam",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ydmyk",
+  "nynorsk": "audmjuk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/audmjuk",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "høflig",
+  "nynorsk": "høfleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/høfleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "rolig",
+  "nynorsk": "roleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/roleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "fet",
+  "nynorsk": "feit",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "feit"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/feit",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "«fet» finnes i Nynorskordboka bare som substantiv."
+ },
+ {
+  "bokmal": "vennlig",
+  "nynorsk": "venleg",
+  "godkjente_alternativer": [
+   "vennleg"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/venleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "kjærlig",
+  "nynorsk": "kjærleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kjærleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "synlig",
+  "nynorsk": "synleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/synleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "sannsynlig",
+  "nynorsk": "sannsynleg",
+  "godkjente_alternativer": [
+   "truleg"
+  ],
+  "bokmal_alternativer": [
+   "trolig"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sannsynleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "tydelig",
+  "nynorsk": "tydeleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tydeleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "utrolig",
+  "nynorsk": "utruleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "utrulig"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/utruleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "flere",
+  "nynorsk": "fleire",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "fler"
+  ],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fleire",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "selv",
+  "nynorsk": "sjølv",
+  "godkjente_alternativer": [
+   "sjøl"
+  ],
+  "bokmal_alternativer": [
+   "sjøl"
+  ],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sjølv",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hverandre",
+  "nynorsk": "kvarandre",
+  "godkjente_alternativer": [
+   "einannan"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kvarandre",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "siden",
+  "nynorsk": "sidan",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [
+   "sia"
+  ],
+  "ordklasse": "subjunksjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sidan",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Gjelder både «siden» som tid og som årsak."
+ },
+ {
+  "bokmal": "fremdeles",
+  "nynorsk": "framleis",
+  "godkjente_alternativer": [
+   "enno"
+  ],
+  "bokmal_alternativer": [
+   "fortsatt",
+   "fortfarende"
+  ],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/framleis",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "utenfor",
+  "nynorsk": "utanfor",
+  "godkjente_alternativer": [
+   "utafor"
+  ],
+  "bokmal_alternativer": [
+   "utafor"
+  ],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/utanfor",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "innenfor",
+  "nynorsk": "innanfor",
+  "godkjente_alternativer": [
+   "innafor"
+  ],
+  "bokmal_alternativer": [
+   "innafor"
+  ],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/innanfor",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "disse",
+  "nynorsk": "desse",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/desse",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«disse» finnes i Nynorskordboka, men som verb (riste, huske)."
+ },
+ {
+  "bokmal": "noen",
+  "nynorsk": "nokon",
+  "godkjente_alternativer": [
+   "nokre"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/nokon",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«nokre» er flertallsformen og godtas også."
+ },
+ {
+  "bokmal": "drømme",
+  "nynorsk": "drøyme",
+  "godkjente_alternativer": [
+   "drøyma"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/drøyme",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "lykkes",
+  "nynorsk": "lukkast",
+  "godkjente_alternativer": [
+   "lykkast"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lukkast",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ødelegge",
+  "nynorsk": "øydeleggje",
+  "godkjente_alternativer": [
+   "øydelegge",
+   "øydeleggja",
+   "øydelegga"
+  ],
+  "bokmal_alternativer": [
+   "øydelegge"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/øydeleggje",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "eie",
+  "nynorsk": "eige",
+  "godkjente_alternativer": [
+   "eiga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/eige",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "tjene",
+  "nynorsk": "tene",
+  "godkjente_alternativer": [
+   "tena"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tene",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hilse",
+  "nynorsk": "helse",
+  "godkjente_alternativer": [
+   "helsa",
+   "helse på"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/helse",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«helse» er også et substantiv på nynorsk."
+ },
+ {
+  "bokmal": "hvile",
+  "nynorsk": "kvile",
+  "godkjente_alternativer": [
+   "kvila"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kvile",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "steke",
+  "nynorsk": "steikje",
+  "godkjente_alternativer": [
+   "steike",
+   "steikja",
+   "steika"
+  ],
+  "bokmal_alternativer": [
+   "steike"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/steikje",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "skjære",
+  "nynorsk": "skjere",
+  "godkjente_alternativer": [
+   "skjera"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/skjere",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«skjære» finnes i Nynorskordboka bare som substantiv (fugl)."
+ },
+ {
+  "bokmal": "slokke",
+  "nynorsk": "sløkkje",
+  "godkjente_alternativer": [
+   "sløkke",
+   "sløkkja",
+   "sløkka"
+  ],
+  "bokmal_alternativer": [
+   "slukke"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sløkkje",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "hviske",
+  "nynorsk": "kviskre",
+  "godkjente_alternativer": [
+   "kviskra"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kviskre",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "savne",
+  "nynorsk": "sakne",
+  "godkjente_alternativer": [
+   "sakna"
+  ],
+  "bokmal_alternativer": [
+   "sakne"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sakne",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "foretrekke",
+  "nynorsk": "føretrekkje",
+  "godkjente_alternativer": [
+   "føretrekke",
+   "føretrekkja",
+   "føretrekka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/føretrekkje",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "ligne",
+  "nynorsk": "likne",
+  "godkjente_alternativer": [
+   "likna"
+  ],
+  "bokmal_alternativer": [
+   "likne"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/likne",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "virke",
+  "nynorsk": "verke",
+  "godkjente_alternativer": [
+   "verka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/verke",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«virke» finnes i Nynorskordboka bare som substantiv."
+ },
+ {
+  "bokmal": "synes",
+  "nynorsk": "synast",
+  "godkjente_alternativer": [
+   "tykkje",
+   "tykke",
+   "tykkja",
+   "tykka"
+  ],
+  "bokmal_alternativer": [
+   "tykke"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/synast",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "finnes",
+  "nynorsk": "finnast",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/finnast",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "oversette",
+  "nynorsk": "omsetje",
+  "godkjente_alternativer": [
+   "omsette",
+   "omsetja",
+   "omsetta",
+   "setje om",
+   "setja om"
+  ],
+  "bokmal_alternativer": [
+   "omsette"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/omsetje",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "telle",
+  "nynorsk": "telje",
+  "godkjente_alternativer": [
+   "telja"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/telje",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«telle» finnes i Nynorskordboka bare som substantiv (ungt bartre)."
+ },
+ {
+  "bokmal": "huske",
+  "nynorsk": "hugse",
+  "godkjente_alternativer": [
+   "hugsa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hugse",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "«huske» finnes i Nynorskordboka, men betyr å gynge."
+ },
+ {
+  "bokmal": "høste",
+  "nynorsk": "hauste",
+  "godkjente_alternativer": [
+   "hausta"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hauste",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "vanne",
+  "nynorsk": "vatne",
+  "godkjente_alternativer": [
+   "vatna"
+  ],
+  "bokmal_alternativer": [
+   "vatne"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vatne",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "melke",
+  "nynorsk": "mjølke",
+  "godkjente_alternativer": [
+   "mjølka"
+  ],
+  "bokmal_alternativer": [
+   "mjølke"
+  ],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mjølke",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": ""
+ },
+ {
+  "bokmal": "usynlig",
+  "nynorsk": "usynleg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/usynleg",
+  "bokmalsform_godtas": "nei",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": ""
+ },
+ {
+  "bokmal": "nå",
+  "nynorsk": "no",
+  "godkjente_alternativer": [
+   "nå"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/52864",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «nå» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "søster",
+  "nynorsk": "syster",
+  "godkjente_alternativer": [
+   "søster"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/76586",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «søster» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "venn",
+  "nynorsk": "ven",
+  "godkjente_alternativer": [
+   "venn"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/88684",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «venn» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "skole",
+  "nynorsk": "skule",
+  "godkjente_alternativer": [
+   "skole"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/100431",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «skole» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "bilde",
+  "nynorsk": "bilete",
+  "godkjente_alternativer": [
+   "bilde"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/5949",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «bilde» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "ansikt",
+  "nynorsk": "andlet",
+  "godkjente_alternativer": [
+   "ansikt"
+  ],
+  "bokmal_alternativer": [
+   "andlet"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/1460",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Bokmålsformen «ansikt» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "vennskap",
+  "nynorsk": "venskap",
+  "godkjente_alternativer": [
+   "vennskap"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/88803",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «vennskap» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "tallerken",
+  "nynorsk": "tallerk",
+  "godkjente_alternativer": [
+   "tallerken"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/77401",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «tallerken» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "følelse",
+  "nynorsk": "kjensle",
+  "godkjente_alternativer": [
+   "følelse"
+  ],
+  "bokmal_alternativer": [
+   "kjensle"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/38149",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Bokmålsformen «følelse» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "bølge",
+  "nynorsk": "bølgje",
+  "godkjente_alternativer": [
+   "bølge",
+   "bylgje"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/10009",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «bølge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "deilig",
+  "nynorsk": "deileg",
+  "godkjente_alternativer": [
+   "deilig"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/124595",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «deilig» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "nødvendig",
+  "nynorsk": "naudsynt",
+  "godkjente_alternativer": [
+   "nødvendig"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/52218",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «nødvendig» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "komme",
+  "nynorsk": "kome",
+  "godkjente_alternativer": [
+   "komme",
+   "koma",
+   "komma"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/40202",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «komme» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "tenke",
+  "nynorsk": "tenkje",
+  "godkjente_alternativer": [
+   "tenke",
+   "tenkja",
+   "tenka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/78310",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «tenke» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "ønske",
+  "nynorsk": "ønskje",
+  "godkjente_alternativer": [
+   "ønske",
+   "ynskje",
+   "ynske",
+   "ønskja",
+   "ønska",
+   "ynskja",
+   "ynska"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/91685",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «ønske» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "bygge",
+  "nynorsk": "byggje",
+  "godkjente_alternativer": [
+   "bygge",
+   "byggja",
+   "bygga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/9664",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «bygge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "stenge",
+  "nynorsk": "stengje",
+  "godkjente_alternativer": [
+   "stenge",
+   "stengja",
+   "stenga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/73603",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «stenge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "begynne",
+  "nynorsk": "byrje",
+  "godkjente_alternativer": [
+   "begynne",
+   "byrja",
+   "begynna"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/9853",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «begynne» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "ligge",
+  "nynorsk": "liggje",
+  "godkjente_alternativer": [
+   "ligge",
+   "liggja",
+   "ligga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/45580",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «ligge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "legge",
+  "nynorsk": "leggje",
+  "godkjente_alternativer": [
+   "legge",
+   "leggja",
+   "legga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/45016",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «legge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "henge",
+  "nynorsk": "hengje",
+  "godkjente_alternativer": [
+   "henge",
+   "hengja",
+   "henga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/30218",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «henge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "trekke",
+  "nynorsk": "trekkje",
+  "godkjente_alternativer": [
+   "trekke",
+   "trekkja",
+   "trekka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/80782",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «trekke» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "følge",
+  "nynorsk": "følgje",
+  "godkjente_alternativer": [
+   "følge",
+   "fylgje",
+   "følgja",
+   "følga",
+   "fylgja"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/23326",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «følge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "svømme",
+  "nynorsk": "symje",
+  "godkjente_alternativer": [
+   "svømme",
+   "symja",
+   "svømma"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/76383",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «svømme» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "måke",
+  "nynorsk": "måse",
+  "godkjente_alternativer": [
+   "måke"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/måse",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Bokmålsformen «måke» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "søndag",
+  "nynorsk": "sundag",
+  "godkjente_alternativer": [
+   "søndag"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sundag",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «søndag» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "bevegelse",
+  "nynorsk": "rørsle",
+  "godkjente_alternativer": [
+   "bevegelse"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rørsle",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Bokmålsformen «bevegelse» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "oppførsel",
+  "nynorsk": "åtferd",
+  "godkjente_alternativer": [
+   "oppførsel"
+  ],
+  "bokmal_alternativer": [
+   "atferd",
+   "adferd"
+  ],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/åtferd",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «oppførsel» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "moden",
+  "nynorsk": "mogen",
+  "godkjente_alternativer": [
+   "moden"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mogen",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «moden» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "opptatt",
+  "nynorsk": "oppteken",
+  "godkjente_alternativer": [
+   "opptatt"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/oppteken",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «opptatt» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "mens",
+  "nynorsk": "medan",
+  "godkjente_alternativer": [
+   "mens"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "subjunksjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/medan",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «mens» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "derfor",
+  "nynorsk": "difor",
+  "godkjente_alternativer": [
+   "derfor"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/difor",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «derfor» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "svelge",
+  "nynorsk": "svelgje",
+  "godkjente_alternativer": [
+   "svelge",
+   "svelgja",
+   "svelga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/svelgje",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «svelge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "gjespe",
+  "nynorsk": "geispe",
+  "godkjente_alternativer": [
+   "gjespe",
+   "geispa",
+   "gjespa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/geispe",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «gjespe» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "undersøke",
+  "nynorsk": "undersøkje",
+  "godkjente_alternativer": [
+   "undersøke",
+   "undersøkja",
+   "undersøka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/undersøkje",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «undersøke» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "beskrive",
+  "nynorsk": "skildre",
+  "godkjente_alternativer": [
+   "beskrive",
+   "skildra",
+   "beskriva"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/skildre",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Bokmålsformen «beskrive» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "true",
+  "nynorsk": "truge",
+  "godkjente_alternativer": [
+   "true",
+   "truga",
+   "trua"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/truge",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «true» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "sørge",
+  "nynorsk": "sørgje",
+  "godkjente_alternativer": [
+   "sørge",
+   "syrgje",
+   "sørgja",
+   "sørga",
+   "syrgja"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sørgje",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «sørge» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "bety",
+  "nynorsk": "tyde",
+  "godkjente_alternativer": [
+   "bety",
+   "tyda"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tyde",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Bokmålsformen «bety» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "enda",
+  "nynorsk": "endå",
+  "godkjente_alternativer": [
+   "enda",
+   "enno"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/endå",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «enda» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "ennå",
+  "nynorsk": "enno",
+  "godkjente_alternativer": [
+   "ennå",
+   "endå"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/enno",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «ennå» er også riktig nynorsk (Nynorskordboka) og godtas."
+ },
+ {
+  "bokmal": "spise",
+  "nynorsk": "ete",
+  "godkjente_alternativer": [
+   "spise",
+   "eta"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/15798",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Bokmålsformen «spise» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "hjerte",
+  "nynorsk": "hjarte",
+  "godkjente_alternativer": [
+   "hjerte",
+   "hjarta"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/30754",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «hjerte» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "drøm",
+  "nynorsk": "draum",
+  "godkjente_alternativer": [
+   "drøm"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/12519",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «drøm» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "trøtt",
+  "nynorsk": "trøytt",
+  "godkjente_alternativer": [
+   "trøtt"
+  ],
+  "bokmal_alternativer": [
+   "trett"
+  ],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/81921",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «trøtt» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "uten",
+  "nynorsk": "utan",
+  "godkjente_alternativer": [
+   "uten"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/85692",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «uten» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "grønn",
+  "nynorsk": "grøn",
+  "godkjente_alternativer": [
+   "grønn"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/grøn",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «grønn» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "holde",
+  "nynorsk": "halde",
+  "godkjente_alternativer": [
+   "holde",
+   "halda"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/28248",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «holde» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "vokse",
+  "nynorsk": "vekse",
+  "godkjente_alternativer": [
+   "vokse",
+   "veksa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vekse",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «vokse» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "bære",
+  "nynorsk": "bere",
+  "godkjente_alternativer": [
+   "bære",
+   "bera"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/5353",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "nei",
+  "merknad": "Bokmålsformen «bære» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "egen",
+  "nynorsk": "eigen",
+  "godkjente_alternativer": [
+   "egen"
+  ],
+  "bokmal_alternativer": [
+   "eigen"
+  ],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/14000",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Bokmålsformen «egen» er også riktig nynorsk (dinordbok.no) og godtas."
+ },
+ {
+  "bokmal": "bil",
+  "nynorsk": "bil",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/bil",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "hus",
+  "nynorsk": "hus",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hus",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "katt",
+  "nynorsk": "katt",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/katt",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "hund",
+  "nynorsk": "hund",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hund",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fisk",
+  "nynorsk": "fisk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fisk",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sol",
+  "nynorsk": "sol",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sol",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "bord",
+  "nynorsk": "bord",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/bord",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ball",
+  "nynorsk": "ball",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ball",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "buss",
+  "nynorsk": "buss",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/buss",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "bok",
+  "nynorsk": "bok",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/bok",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "eple",
+  "nynorsk": "eple",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/eple",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "seng",
+  "nynorsk": "seng",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/seng",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "hest",
+  "nynorsk": "hest",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hest",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "jente",
+  "nynorsk": "jente",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/jente",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fjell",
+  "nynorsk": "fjell",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fjell",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "skog",
+  "nynorsk": "skog",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/skog",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "snø",
+  "nynorsk": "snø",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/snø",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "klokke",
+  "nynorsk": "klokke",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/klokke",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "onsdag",
+  "nynorsk": "onsdag",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/onsdag",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "torsdag",
+  "nynorsk": "torsdag",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/torsdag",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fredag",
+  "nynorsk": "fredag",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fredag",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sove",
+  "nynorsk": "sove",
+  "godkjente_alternativer": [
+   "sova"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sove",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lese",
+  "nynorsk": "lese",
+  "godkjente_alternativer": [
+   "lesa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lese",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "skrive",
+  "nynorsk": "skrive",
+  "godkjente_alternativer": [
+   "skriva"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/skrive",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "drikke",
+  "nynorsk": "drikke",
+  "godkjente_alternativer": [
+   "drikka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/drikke",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "hoppe",
+  "nynorsk": "hoppe",
+  "godkjente_alternativer": [
+   "hoppa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hoppe",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "danse",
+  "nynorsk": "danse",
+  "godkjente_alternativer": [
+   "dansa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/danse",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "bake",
+  "nynorsk": "bake",
+  "godkjente_alternativer": [
+   "baka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/bake",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vaske",
+  "nynorsk": "vaske",
+  "godkjente_alternativer": [
+   "vaska"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vaske",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kjøpe",
+  "nynorsk": "kjøpe",
+  "godkjente_alternativer": [
+   "kjøpa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kjøpe",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "svare",
+  "nynorsk": "svare",
+  "godkjente_alternativer": [
+   "svara"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/svare",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "hjelpe",
+  "nynorsk": "hjelpe",
+  "godkjente_alternativer": [
+   "hjelpa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hjelpe",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "stor",
+  "nynorsk": "stor",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/stor",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "glad",
+  "nynorsk": "glad",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/glad",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kald",
+  "nynorsk": "kald",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kald",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "varm",
+  "nynorsk": "varm",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/varm",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sterk",
+  "nynorsk": "sterk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sterk",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "snill",
+  "nynorsk": "snill",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/snill",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "blå",
+  "nynorsk": "blå",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/blå",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "svart",
+  "nynorsk": "svart",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/svart",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ofte",
+  "nynorsk": "ofte",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ofte",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "aldri",
+  "nynorsk": "aldri",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/aldri",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kanskje",
+  "nynorsk": "kanskje",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kanskje",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "på",
+  "nynorsk": "på",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/på",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "med",
+  "nynorsk": "med",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/med",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "båt",
+  "nynorsk": "båt",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/båt",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "tog",
+  "nynorsk": "tog",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tog",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fly",
+  "nynorsk": "fly",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fly",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sykkel",
+  "nynorsk": "sykkel",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sykkel",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "dør",
+  "nynorsk": "dør",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dør",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vegg",
+  "nynorsk": "vegg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vegg",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "tak",
+  "nynorsk": "tak",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tak",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "regn",
+  "nynorsk": "regn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/regn",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vind",
+  "nynorsk": "vind",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vind",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "storm",
+  "nynorsk": "storm",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/storm",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "natt",
+  "nynorsk": "natt",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/natt",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "dag",
+  "nynorsk": "dag",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dag",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "år",
+  "nynorsk": "år",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/år",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "time",
+  "nynorsk": "time",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/time",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "papir",
+  "nynorsk": "papir",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/papir",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "by",
+  "nynorsk": "by",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/by",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "land",
+  "nynorsk": "land",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/land",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "gate",
+  "nynorsk": "gate",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/gate",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "butikk",
+  "nynorsk": "butikk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/butikk",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "brev",
+  "nynorsk": "brev",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/brev",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "pakke",
+  "nynorsk": "pakke",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/pakke",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "stå",
+  "nynorsk": "stå",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/stå",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ha",
+  "nynorsk": "ha",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ha",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ta",
+  "nynorsk": "ta",
+  "godkjente_alternativer": [
+   "take",
+   "taka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ta",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kjenne",
+  "nynorsk": "kjenne",
+  "godkjente_alternativer": [
+   "kjenna"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kjenne",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "finne",
+  "nynorsk": "finne",
+  "godkjente_alternativer": [
+   "finna"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/finne",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ny",
+  "nynorsk": "ny",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ny",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "god",
+  "nynorsk": "god",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/god",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fin",
+  "nynorsk": "fin",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fin",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "pen",
+  "nynorsk": "pen",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/pen",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "rik",
+  "nynorsk": "rik",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rik",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fattig",
+  "nynorsk": "fattig",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fattig",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "billig",
+  "nynorsk": "billig",
+  "godkjente_alternativer": [
+   "billeg"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/billig",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "viktig",
+  "nynorsk": "viktig",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/viktig",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vakker",
+  "nynorsk": "vakker",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vakker",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "her",
+  "nynorsk": "her",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/her",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "der",
+  "nynorsk": "der",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/der",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "inn",
+  "nynorsk": "inn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/inn",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ut",
+  "nynorsk": "ut",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ut",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "stol",
+  "nynorsk": "stol",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/stol",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sko",
+  "nynorsk": "sko",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sko",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lue",
+  "nynorsk": "lue",
+  "godkjente_alternativer": [
+   "luve"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lue",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "skjorte",
+  "nynorsk": "skjorte",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/skjorte",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "bukse",
+  "nynorsk": "bukse",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/bukse",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kake",
+  "nynorsk": "kake",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kake",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ost",
+  "nynorsk": "ost",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ost",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vinter",
+  "nynorsk": "vinter",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vinter",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "arm",
+  "nynorsk": "arm",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/arm",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fot",
+  "nynorsk": "fot",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fot",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "finger",
+  "nynorsk": "finger",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/finger",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "munn",
+  "nynorsk": "munn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/munn",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "tann",
+  "nynorsk": "tann",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tann",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "hår",
+  "nynorsk": "hår",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hår",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fest",
+  "nynorsk": "fest",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fest",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "jul",
+  "nynorsk": "jul",
+  "godkjente_alternativer": [
+   "jol"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/jul",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "tid",
+  "nynorsk": "tid",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tid",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "liv",
+  "nynorsk": "liv",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/liv",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lys",
+  "nynorsk": "lys",
+  "godkjente_alternativer": [
+   "ljos"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lys",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "farge",
+  "nynorsk": "farge",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/farge",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lyd",
+  "nynorsk": "lyd",
+  "godkjente_alternativer": [
+   "ljod"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lyd",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vinne",
+  "nynorsk": "vinne",
+  "godkjente_alternativer": [
+   "vinna"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vinne",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "falle",
+  "nynorsk": "falle",
+  "godkjente_alternativer": [
+   "falla"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/falle",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sende",
+  "nynorsk": "sende",
+  "godkjente_alternativer": [
+   "senda"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sende",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "bruke",
+  "nynorsk": "bruke",
+  "godkjente_alternativer": [
+   "bruka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/bruke",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lage",
+  "nynorsk": "lage",
+  "godkjente_alternativer": [
+   "laga"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lage",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "prøve",
+  "nynorsk": "prøve",
+  "godkjente_alternativer": [
+   "prøva"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/prøve",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lang",
+  "nynorsk": "lang",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lang",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kort",
+  "nynorsk": "kort",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kort",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "tynn",
+  "nynorsk": "tynn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tynn",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "tung",
+  "nynorsk": "tung",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tung",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lett",
+  "nynorsk": "lett",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lett",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "full",
+  "nynorsk": "full",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/full",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "opp",
+  "nynorsk": "opp",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/opp",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ned",
+  "nynorsk": "ned",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ned",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "snart",
+  "nynorsk": "snart",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/snart",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "alltid",
+  "nynorsk": "alltid",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/alltid",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "igjen",
+  "nynorsk": "igjen",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/igjen",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "nesten",
+  "nynorsk": "nesten",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adverb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/nesten",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "veldig",
+  "nynorsk": "veldig",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/veldig",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "smør",
+  "nynorsk": "smør",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/smør",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "egg",
+  "nynorsk": "egg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/egg",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sukker",
+  "nynorsk": "sukker",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sukker",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "brød",
+  "nynorsk": "brød",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/brød",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "suppe",
+  "nynorsk": "suppe",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/suppe",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "mor",
+  "nynorsk": "mor",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mor",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "far",
+  "nynorsk": "far",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/far",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "mage",
+  "nynorsk": "mage",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mage",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "rygg",
+  "nynorsk": "rygg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rygg",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ku",
+  "nynorsk": "ku",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ku",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "gris",
+  "nynorsk": "gris",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/gris",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sau",
+  "nynorsk": "sau",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sau",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "mus",
+  "nynorsk": "mus",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mus",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ulv",
+  "nynorsk": "ulv",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ulv",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "musikk",
+  "nynorsk": "musikk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/musikk",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ord",
+  "nynorsk": "ord",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ord",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "språk",
+  "nynorsk": "språk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/språk",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "jobb",
+  "nynorsk": "jobb",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/jobb",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "rom",
+  "nynorsk": "rom",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rom",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "trapp",
+  "nynorsk": "trapp",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/trapp",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lære",
+  "nynorsk": "lære",
+  "godkjente_alternativer": [
+   "læra"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lære",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "stoppe",
+  "nynorsk": "stoppe",
+  "godkjente_alternativer": [
+   "stoppa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/stoppe",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vente",
+  "nynorsk": "vente",
+  "godkjente_alternativer": [
+   "venta"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vente",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lytte",
+  "nynorsk": "lytte",
+  "godkjente_alternativer": [
+   "lytta"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lytte",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fiske",
+  "nynorsk": "fiske",
+  "godkjente_alternativer": [
+   "fiska"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fiske",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "leve",
+  "nynorsk": "leve",
+  "godkjente_alternativer": [
+   "leva"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/leve",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "tom",
+  "nynorsk": "tom",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tom",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "våt",
+  "nynorsk": "våt",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/våt",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "tørr",
+  "nynorsk": "tørr",
+  "godkjente_alternativer": [
+   "turr"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/tørr",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "rask",
+  "nynorsk": "rask",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rask",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "trist",
+  "nynorsk": "trist",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/trist",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sint",
+  "nynorsk": "sint",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sint",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "redd",
+  "nynorsk": "redd",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/redd",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "til",
+  "nynorsk": "til",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/til",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "over",
+  "nynorsk": "over",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/over",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "under",
+  "nynorsk": "under",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/under",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "etter",
+  "nynorsk": "etter",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/etter",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "mot",
+  "nynorsk": "mot",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mot",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "mellom",
+  "nynorsk": "mellom",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "preposisjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mellom",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "du",
+  "nynorsk": "du",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/du",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "bror",
+  "nynorsk": "bror",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/bror",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "barn",
+  "nynorsk": "barn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/barn",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "mann",
+  "nynorsk": "mann",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mann",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "elev",
+  "nynorsk": "elev",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/elev",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lege",
+  "nynorsk": "lege",
+  "godkjente_alternativer": [
+   "lækjar"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lege",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "konge",
+  "nynorsk": "konge",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/konge",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "dronning",
+  "nynorsk": "dronning",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dronning",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "rev",
+  "nynorsk": "rev",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rev",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "elg",
+  "nynorsk": "elg",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/elg",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ørn",
+  "nynorsk": "ørn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ørn",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ugle",
+  "nynorsk": "ugle",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ugle",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "frosk",
+  "nynorsk": "frosk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/frosk",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "løve",
+  "nynorsk": "løve",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/løve",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ape",
+  "nynorsk": "ape",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ape",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lampe",
+  "nynorsk": "lampe",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lampe",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kopp",
+  "nynorsk": "kopp",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kopp",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kniv",
+  "nynorsk": "kniv",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kniv",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "gaffel",
+  "nynorsk": "gaffel",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/gaffel",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sekk",
+  "nynorsk": "sekk",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sekk",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "nøkkel",
+  "nynorsk": "nøkkel",
+  "godkjente_alternativer": [
+   "nykel"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/nøkkel",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "miste",
+  "nynorsk": "miste",
+  "godkjente_alternativer": [
+   "misse",
+   "mista",
+   "missa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/miste",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vise",
+  "nynorsk": "vise",
+  "godkjente_alternativer": [
+   "visa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vise",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "betale",
+  "nynorsk": "betale",
+  "godkjente_alternativer": [
+   "betala"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/betale",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "reise",
+  "nynorsk": "reise",
+  "godkjente_alternativer": [
+   "reisa"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/reise",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "smake",
+  "nynorsk": "smake",
+  "godkjente_alternativer": [
+   "smaka"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/smake",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "hente",
+  "nynorsk": "hente",
+  "godkjente_alternativer": [
+   "henta"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hente",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "rydde",
+  "nynorsk": "rydde",
+  "godkjente_alternativer": [
+   "rydje",
+   "rydda",
+   "rydja"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rydde",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "stille",
+  "nynorsk": "stille",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/stille",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "klar",
+  "nynorsk": "klar",
+  "godkjente_alternativer": [
+   "klår"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/klar",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sur",
+  "nynorsk": "sur",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sur",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "søt",
+  "nynorsk": "søt",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/søt",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "rund",
+  "nynorsk": "rund",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/rund",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "grå",
+  "nynorsk": "grå",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/grå",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "gul",
+  "nynorsk": "gul",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/gul",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "vi",
+  "nynorsk": "vi",
+  "godkjente_alternativer": [
+   "me"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/vi",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "han",
+  "nynorsk": "han",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "pronomen",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/han",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "og",
+  "nynorsk": "og",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "konjunksjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/og",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "men",
+  "nynorsk": "men",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "konjunksjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/men",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "eller",
+  "nynorsk": "eller",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "konjunksjon",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/eller",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "alle",
+  "nynorsk": "alle",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/alle",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "mange",
+  "nynorsk": "mange",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/mange",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "hav",
+  "nynorsk": "hav",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/hav",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "elv",
+  "nynorsk": "elv",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/elv",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fjord",
+  "nynorsk": "fjord",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fjord",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "strand",
+  "nynorsk": "strand",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/strand",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "øy",
+  "nynorsk": "øy",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/øy",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "dal",
+  "nynorsk": "dal",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dal",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "sky",
+  "nynorsk": "sky",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/sky",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "maur",
+  "nynorsk": "maur",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/maur",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "potet",
+  "nynorsk": "potet",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/potet",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "banan",
+  "nynorsk": "banan",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/banan",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "pære",
+  "nynorsk": "pære",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/pære",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "gulrot",
+  "nynorsk": "gulrot",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/gulrot",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "penn",
+  "nynorsk": "penn",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/penn",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "blyant",
+  "nynorsk": "blyant",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/blyant",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "telefon",
+  "nynorsk": "telefon",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/telefon",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "dyr",
+  "nynorsk": "dyr",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dyr",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "stein",
+  "nynorsk": "stein",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "substantiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/stein",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "kaste",
+  "nynorsk": "kaste",
+  "godkjente_alternativer": [
+   "kasta"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/kaste",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "smile",
+  "nynorsk": "smile",
+  "godkjente_alternativer": [
+   "smila"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/smile",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "gå",
+  "nynorsk": "gå",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/gå",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "dele",
+  "nynorsk": "dele",
+  "godkjente_alternativer": [
+   "dela"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dele",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "trene",
+  "nynorsk": "trene",
+  "godkjente_alternativer": [
+   "trena"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/trene",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "elske",
+  "nynorsk": "elske",
+  "godkjente_alternativer": [
+   "elska"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/elske",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "klatre",
+  "nynorsk": "klatre",
+  "godkjente_alternativer": [
+   "klatra"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/klatre",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "spare",
+  "nynorsk": "spare",
+  "godkjente_alternativer": [
+   "spara"
+  ],
+  "bokmal_alternativer": [],
+  "ordklasse": "verb",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/spare",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "liten",
+  "nynorsk": "liten",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/liten",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ung",
+  "nynorsk": "ung",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ung",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "brun",
+  "nynorsk": "brun",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/brun",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "svak",
+  "nynorsk": "svak",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/svak",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "modig",
+  "nynorsk": "modig",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/modig",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "flink",
+  "nynorsk": "flink",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/flink",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "dum",
+  "nynorsk": "dum",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/dum",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "klok",
+  "nynorsk": "klok",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/klok",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "lat",
+  "nynorsk": "lat",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "adjektiv",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/lat",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ingen",
+  "nynorsk": "ingen",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ingen",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fire",
+  "nynorsk": "fire",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fire",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "fem",
+  "nynorsk": "fem",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/fem",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "seks",
+  "nynorsk": "seks",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/seks",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "åtte",
+  "nynorsk": "åtte",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/åtte",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ },
+ {
+  "bokmal": "ti",
+  "nynorsk": "ti",
+  "godkjente_alternativer": [],
+  "bokmal_alternativer": [],
+  "ordklasse": "determinativ",
+  "nynorskordboka": "https://ordbokene.no/nno/nn/ti",
+  "bokmalsform_godtas": "ja",
+  "nynorskform_lov_pa_bokmal": "ja",
+  "merknad": "Skrives likt på bokmål og nynorsk."
+ }
+]
