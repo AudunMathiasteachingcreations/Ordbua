@@ -2,18 +2,21 @@
 
 Ordspill på tid: man får et ord og skriver det på den andre målformen. Spillet het «Nynorsk-spillet» til 19.10.2026.
 
-Spillet ligger publisert her: https://claude.ai/artifact/7iYUX62HsutPgYpndtfYmf
+Spillet ligger publisert to steder:
+- **GitHub Pages**: https://audunmathiasteachingcreations.github.io/Ordbua/ (fra 20.10.2026). Åpnes uten konto, og det er denne lenken Del-knappene i spillet deler. Kildekoden ligger i repoet https://github.com/AudunMathiasteachingcreations/Ordbua.
+- **Claude-artefakt**: https://claude.ai/artifact/7iYUX62HsutPgYpndtfYmf. Privat til eieren deler den.
 
 ## Filer
-- `mal.html`: selve spillet (HTML, CSS og JavaScript) uten ordliste. Poengtabell, tider, navn og lenke står i `KONFIG` øverst i skriptet, og all tekst står i `TEKST` like under.
-- `bygg.py`: legger ordlista fra `../ordliste/ordliste.json` inn i malen og skriver `ordbua.html`.
-- `ordbua.html`: ferdig bygget side, den som er publisert.
+- `mal.html`: selve spillet (HTML, CSS og JavaScript) uten ordliste. Poengtabell, tider, navn og lenke står i `KONFIG` øverst i skriptet, og all tekst står i `TEKST` like under. Malen har egen grunnstil (`[hidden]` og `body`-marg), så den ikke er avhengig av Claude-visningen.
+- `bygg.py`: legger ordlista fra `../ordliste/ordliste.json` inn i malen og skriver `ordbua.html`. Lenken i Del-knappene er GitHub Pages-adressen hvis ikke en annen gis.
+- `ordbua.html`: ferdig bygget, fullstendig nettside med `<!doctype html>`, tegnsett og viewport. Det er denne som ligger på GitHub Pages og som kan sendes til elever som fil. Fram til 20.10.2026 manglet fila dette, så den virket bare inne i Claude.
 
 ## Når ordlista endres
 Ordene redigeres enklest i `../ordliste/ordliste.xlsx`; kjør da først `python3 ordliste/fra_excel.py` (se `../ordliste/README.md`). Kjør så fra mappa som har både `spill/` og `ordliste/`:
 
-    python3 spill/bygg.py spill/ordbua.html https://claude.ai/artifact/7iYUX62HsutPgYpndtfYmf
-Publiser deretter `ordbua.html` på nytt til samme lenke (Artifact-verktøyet med `url` satt til lenka over).
+    python3 spill/bygg.py
+    python3 spill/bygg.py --artefakt <midlertidig fil>
+Den første lager `spill/ordbua.html`. Last den opp til `main` i repoet, så oppdaterer GitHub Pages seg selv. Den andre lager et sideutdrag uten `<!doctype>` for Artifact-verktøyet, som publiseres på nytt til artefaktlenken over.
 
 ## To retninger
 - På startskjermen velger man **Bokmål → nynorsk** (standard) eller **Nynorsk → bokmål**. Valget huskes i nettleseren.
