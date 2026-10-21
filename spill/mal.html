@@ -179,7 +179,11 @@ h1, h2, .ordet, .res-score, .res-tittel { font-family: var(--f-display); text-wr
 .utval-knappar button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(6, 12, 34, .16), inset 0 -3px 0 var(--gold); }
 .utval-knappar button span { font-family: var(--f-body); font-weight: 400; font-size: var(--t-xs); color: var(--ink-2); font-variant-numeric: tabular-nums; }
 /* To og to når fire knapper ikke får plass til «Substantiv»; em følger skriftstørrelsen brukeren har valgt */
-@media (max-width: 30em) { .utval-knappar { grid-auto-flow: row; grid-template-columns: 1fr 1fr; } }
+/* Fem valg får plass på én rad fra 600 px. Smalere blir det to kolonner, og «Alle ord» tar hele første rad når antallet er oddetall. */
+@media (max-width: 37.5em) {
+  .utval-knappar { grid-auto-flow: row; grid-template-columns: 1fr 1fr; }
+  .utval-knappar button:first-child:nth-last-child(odd) { grid-column: 1 / -1; }
+}
 /* Høykontrast i Windows fjerner skygger og bakgrunner, så valgte knapper får systemfargen for valgt */
 @media (forced-colors: active) {
   .retning button, .utval-knappar button, .filter button { border: 1px solid ButtonText; }
@@ -559,7 +563,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     maksScore: 500000,        // tak for poengsummen (vises ikke i spillet); null = ingen tak
     feilVisMs: 800,           // hvor lenge fasiten vises før neste ord (runde-klokka går)
     andelLike: 0.35,          // omtrent så stor del av ordene i en runde skrives likt på bokmål og nynorsk; null = helt tilfeldig
-    ordklasseValg: ["verb", "substantiv", "adjektiv"], // ordklassene spilleren kan velge å øve på, i tillegg til alle ord
+    ordklasseValg: ["verb", "substantiv", "adjektiv", "ulike"], // ordklassene spilleren kan velge å øve på, i tillegg til alle ord. "ulike" er ordene som ikke kan oversettes direkte (ulikt_ord i ordlista)
     spillUrl: "/*SPILL_URL*/", // lenka som er med når man deler
     app: /*APP*/false,        // true på GitHub Pages, der spillet kan installeres som app (bygg.py setter den); false i Claude-artefakten
     navn: "Ordbua"           // navnet på spillet (tittel, logo og delingstekst)
@@ -588,7 +592,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       akse: "Sekund du brukar på ordet",
       stolpe: (fra, til, p) => `${fra}–${til} sekund: ${p} poeng`,
       utval: "Kva ord vil du øve på?", alleOrd: "Alle ord", antOrd: (n) => `${n} ord`,
-      fleirtal: { preposisjon: "preposisjonar", konjunksjon: "konjunksjonar", subjunksjon: "subjunksjonar", interjeksjon: "interjeksjonar" }, // andre ordklasser er like i fleirtal
+      fleirtal: { preposisjon: "preposisjonar", konjunksjon: "konjunksjonar", subjunksjon: "subjunksjonar", interjeksjon: "interjeksjonar", ulike: "ulike ord" }, // andre ordklasser er like i fleirtal
+      namn: { ulike: "Ulike ord" }, ulikeForklaring: "Ord som ikkje kan omsetjast direkte, fordi nynorsk brukar eit anna ord (t.d. benytte → nytte, kjærlighet → kjærleik)", // andre ordklasser får namnet sitt med stor forbokstav
       faktaOrd: (k) => k ? `${k} i ordlista` : "ord i ordlista",
       rekord: (k) => k ? `Rekorden din på ${k}: ` : "Rekorden din: ",
       tidIgjen: "Tid att", riktige: "Rette",
@@ -627,7 +632,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       akse: "Sekunder du bruker på ordet",
       stolpe: (fra, til, p) => `${fra}–${til} sekunder: ${p} poeng`,
       utval: "Hvilke ord vil du øve på?", alleOrd: "Alle ord", antOrd: (n) => `${n} ord`,
-      fleirtal: { preposisjon: "preposisjoner", konjunksjon: "konjunksjoner", subjunksjon: "subjunksjoner", interjeksjon: "interjeksjoner" }, // andre ordklasser er like i flertall
+      fleirtal: { preposisjon: "preposisjoner", konjunksjon: "konjunksjoner", subjunksjon: "subjunksjoner", interjeksjon: "interjeksjoner", ulike: "ulike ord" }, // andre ordklasser er like i flertall
+      namn: { ulike: "Ulike ord" }, ulikeForklaring: "Ord som ikke kan oversettes direkte, fordi nynorsk bruker et annet ord (f.eks. nytte → benytte, kjærleik → kjærlighet)", // andre ordklasser får navnet sitt med stor forbokstav
       faktaOrd: (k) => k ? `${k} i ordlista` : "ord i ordlista",
       rekord: (k) => k ? `Rekorden din på ${k}: ` : "Rekorden din: ",
       tidIgjen: "Tid igjen", riktige: "Riktige",
@@ -705,13 +711,15 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
 
   // ---------- Ordklasse ----------
   // "alle" eller en av ordklassene i KONFIG.ordklasseValg som finnes i ordlista. Valget huskes i nettleseren.
-  const ORDKLASSER = KONFIG.ordklasseValg.filter((k) => ORDLISTE.some((o) => o.ordklasse === k));
+  // "ulike" er ikke en ordklasse, men ordene som har ulikt_ord «ja» i ordlista.
+  const iKlasse = (k) => k === "alle" ? ORDLISTE : ORDLISTE.filter((o) => k === "ulike" ? o.ulikt_ord === "ja" : o.ordklasse === k);
+  const ORDKLASSER = KONFIG.ordklasseValg.filter((k) => iKlasse(k).length);
   let ordklasse = ORDKLASSER.includes(store.get(ORDKLASSE_KEY)) ? store.get(ORDKLASSE_KEY) : "alle";
-  const iKlasse = (k) => k === "alle" ? ORDLISTE : ORDLISTE.filter((o) => o.ordklasse === k);
   const utval = () => iKlasse(ordklasse);
   // Ordklassen i flertall slik den står i setninger («110 verb i ordlista», «Rekorden din på preposisjonar»), eller null for alle ord
   const valgtKlasse = () => ordklasse === "alle" ? null : T().fleirtal[ordklasse] || ordklasse;
   const stor = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  const klasseNamn = (k) => T().namn[k] || stor(k);
   // Hver ordklasse har sin egen rekord i hver retning; alle ord beholder de gamle nøklene
   const rekordNokkel = () => ordklasse === "alle" ? REKORD_KEY[retning] : `ordbua.rekord.${retning}.${ordklasse}`;
   // Merket under fasiten i svaroversikten, og ordet merket nevner (så det ikke står to ganger)
@@ -747,7 +755,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     for (const k of ["alle", ...ORDKLASSER]) {
       const b = document.createElement("button"); b.type = "button"; b.dataset.ordklasse = k;
       const n = document.createElement("span"); n.textContent = T().antOrd(fmt(iKlasse(k).length));
-      b.append(k === "alle" ? T().alleOrd : stor(k), n); box.append(b);
+      if (k === "ulike") b.title = T().ulikeForklaring;
+      b.append(k === "alle" ? T().alleOrd : klasseNamn(k), n); box.append(b);
     }
     visOrdklasse();
   }
@@ -1208,7 +1217,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     const k = valgtKlasse();
     rec.textContent = isBest && A.length ? (prevBest === null ? T().forsteRekord(k) : T().nyRekord(k)) : T().rekordenDin(fmt(prevBest ?? 0), k);
     $("resRetning").textContent = T().retningKort;
-    const kl = $("resOrdklasse"); kl.hidden = !valgtKlasse(); kl.textContent = valgtKlasse() ? stor(ordklasse) : "";
+    const kl = $("resOrdklasse"); kl.hidden = !valgtKlasse(); kl.textContent = valgtKlasse() ? klasseNamn(ordklasse) : "";
     $("statRiktige").textContent = String(right.length);
     $("statFeil").textContent = String(A.length - right.length);
     $("statSnitt").textContent = right.length ? fmtS(right.reduce((s, a) => s + a.ms, 0) / right.length) : "–";

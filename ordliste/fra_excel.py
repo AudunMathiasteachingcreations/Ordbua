@@ -14,7 +14,7 @@ from openpyxl import load_workbook
 from lag_excel import KOLONNER, ORDKLASSER
 
 HER = Path(__file__).resolve().parent
-FELT = ["bokmal", "nynorsk", "godkjente_alternativer", "bokmal_alternativer", "ordklasse", "nynorskordboka", "bokmalsform_godtas", "nynorskform_lov_pa_bokmal", "merknad"]
+FELT = ["bokmal", "nynorsk", "godkjente_alternativer", "bokmal_alternativer", "ordklasse", "nynorskordboka", "bokmalsform_godtas", "nynorskform_lov_pa_bokmal", "merknad", "ulikt_ord"]
 LISTEFELT = {"godkjente_alternativer", "bokmal_alternativer"}
 
 
@@ -43,8 +43,8 @@ def les(fil):
             else:
                 o[felt] = v[felt]
         o["bokmal"], o["nynorsk"], o["ordklasse"] = o["bokmal"].lower(), o["nynorsk"].lower(), o["ordklasse"].lower()
-        for f in ("bokmalsform_godtas", "nynorskform_lov_pa_bokmal"):
-            o[f] = o[f].lower() or ("ja" if o["bokmal"] == o["nynorsk"] else "nei")  # tomt: ja for like ord, ellers nei
+        for f in ("bokmalsform_godtas", "nynorskform_lov_pa_bokmal", "ulikt_ord"):
+            o[f] = o[f].lower() or ("ja" if o["bokmal"] == o["nynorsk"] and f != "ulikt_ord" else "nei")  # tomt: ja for like ord, ellers nei
             if o[f] not in ("ja", "nei"):
                 feil.append(f"Rad {r}: «{v[f]}» skal være ja eller nei.")
         if not o["bokmal"] or not o["nynorsk"]:

@@ -1,516 +1,543 @@
-bokmal,nynorsk,godkjente_alternativer,bokmal_alternativer,ordklasse,nynorskordboka,bokmalsform_godtas,nynorskform_lov_pa_bokmal,merknad
-jeg,eg,,,pronomen,https://ordbokene.no/nno/nn/13842,nei,nei,
-ikke,ikkje,kje,,adverb,https://ordbokene.no/nno/nn/33268,nei,nei,
-hva,kva,,,pronomen,https://ordbokene.no/nno/nn/43122,nei,nei,
-hvem,kven,,,pronomen,https://ordbokene.no/nno/nn/43455,nei,nei,
-hvor,kvar,kor,,adverb,https://ordbokene.no/nno/nn/43238,nei,nei,Samme svar som «hver» (kvar).
-hvorfor,kvifor,korfor;kvi,,adverb,https://ordbokene.no/nno/nn/43519,nei,nei,
-hvordan,korleis,koss;korso,hvorledes,adverb,https://ordbokene.no/nno/nn/41311,nei,nei,
-hvis,viss,om;dersom;i tilfelle,viss,subjunksjon,https://ordbokene.no/nno/nn/90565,nei,ja,
-noe,noko,,,determinativ,https://ordbokene.no/nno/nn/52899,nei,nei,"«noko» er inkjekjønnsformen av «nokon», ikke eget oppslagsord."
-mye,mykje,,,adjektiv,https://ordbokene.no/nno/nn/51245,nei,nei,
-bare,berre,einast,kun,adverb,https://ordbokene.no/nno/nn/5513,nei,nei,"«bare» finnes i Nynorskordboka, men bare som et annet ord (verb: strø med bar)."
-fra,frå,ifrå,ifra,preposisjon,https://ordbokene.no/nno/nn/22617,nei,nei,
-hun,ho,,,pronomen,https://ordbokene.no/nno/nn/31039,nei,nei,"«hun» finnes i Nynorskordboka, men som et annet ord (substantiv)."
-de,dei,,,pronomen,https://ordbokene.no/nno/nn/11141,nei,nei,"«de» er også nynorsk, men betyr «dere». Bokmål «de» (flertall) = «dei»."
-hennes,hennar,,,determinativ,https://ordbokene.no/nno/nn/30238,nei,nei,
-hver,kvar,,,determinativ,https://ordbokene.no/nno/nn/43237,nei,nei,Samme svar som «hvor» (kvar).
-sammen,saman,i hop,,adverb,https://ordbokene.no/nno/nn/63548,nei,nei,
-sjelden,sjeldan,sjeldsynt,,adjektiv,https://ordbokene.no/nno/nn/66233,nei,nei,
-hjem,heim,heimatt,heim,substantiv,https://ordbokene.no/nno/nn/29716,nei,ja,
-hjemme,heime,,heime,adverb,https://ordbokene.no/nno/nn/29744,nei,ja,
-uke,veke,,,substantiv,https://ordbokene.no/nno/nn/88343,nei,nei,"«uke» finnes i Nynorskordboka, men som et annet ord (verb: skubbe)."
-kirke,kyrkje,,,substantiv,https://ordbokene.no/nno/nn/43834,nei,nei,
-øye,auge,auga,,substantiv,https://ordbokene.no/nno/nn/3103,nei,nei,"«øye» finnes i Nynorskordboka, men som et annet ord (verb: jamre)."
-datter,dotter,,,substantiv,https://ordbokene.no/nno/nn/12381,nei,nei,
-sønn,son,,,substantiv,https://ordbokene.no/nno/nn/71787,nei,nei,
-vann,vatn,,vatn,substantiv,https://ordbokene.no/nno/nn/88000,nei,ja,«vann» finnes i Nynorskordboka bare i uttrykket «dann og vann».
-melk,mjølk,,mjølk,substantiv,https://ordbokene.no/nno/nn/50171,nei,ja,
-lærer,lærar,,,substantiv,https://ordbokene.no/nno/nn/47349,nei,nei,
-viskelær,viskeler,,,substantiv,https://ordbokene.no/nno/nn/90540,nei,nei,
-fisker,fiskar,,,substantiv,https://ordbokene.no/nno/nn/18247,nei,nei,
-baker,bakar,,,substantiv,https://ordbokene.no/nno/nn/4125,nei,nei,
-vei,veg,,veg,substantiv,https://ordbokene.no/nno/nn/88138,nei,ja,
-verden,verd,verda,,substantiv,https://ordbokene.no/nno/nn/88932,nei,ja,«verda» (bestemt form) godtas også.
-vindu,vindauge,vindauga,,substantiv,https://ordbokene.no/nno/nn/90075,nei,nei,
-gulv,golv,,golv,substantiv,https://ordbokene.no/nno/nn/26232,nei,ja,
-penger,pengar,,,substantiv,https://ordbokene.no/nno/nn/56900,nei,nei,"Flertall av «peng/penge». Dinordbok har ingen egen oversettelse, men Nynorskordboka bekrefter «pengar»."
-sommer,sommar,sumar,,substantiv,https://ordbokene.no/nno/nn/71733,nei,nei,
-høst,haust,,,substantiv,https://ordbokene.no/nno/nn/29360,nei,nei,
-morgen,morgon,,,substantiv,https://ordbokene.no/nno/nn/50584,nei,nei,
-måned,månad,,,substantiv,https://ordbokene.no/nno/nn/51668,nei,nei,
-gave,gåve,,,substantiv,https://ordbokene.no/nno/nn/28065,nei,nei,
-lek,leik,spel,leik,substantiv,https://ordbokene.no/nno/nn/45089,nei,ja,"«lek» finnes i Nynorskordboka, men som andre ord (lekk, lekmann, albansk mynt)."
-sang,song,,,substantiv,https://ordbokene.no/nno/nn/71809,nei,nei,
-nese,nase,nòs,,substantiv,https://ordbokene.no/nno/nn/51930,nei,nei,
-hånd,hand,,hand,substantiv,https://ordbokene.no/nno/nn/28743,nei,ja,
-hode,hovud,,,substantiv,https://ordbokene.no/nno/nn/31477,nei,nei,
-sykdom,sjukdom,,sjukdom,substantiv,https://ordbokene.no/nno/nn/66365,nei,ja,
-sykehus,sjukehus,,sjukehus,substantiv,https://ordbokene.no/nno/nn/66382,nei,ja,
-kjærlighet,kjærleik,,,substantiv,https://ordbokene.no/nno/nn/38327,nei,ja,
-ild,eld,,,substantiv,https://ordbokene.no/nno/nn/14720,nei,nei,
-gress,gras,,gras,substantiv,https://ordbokene.no/nno/nn/26569,nei,ja,
-blomst,blome,blom,,substantiv,https://ordbokene.no/nno/nn/6900,nei,nei,
-grønnsak,grønsak,,,substantiv,https://ordbokene.no/nno/nn/27426,nei,nei,
-frokost,frukost,,,substantiv,https://ordbokene.no/nno/nn/22439,nei,nei,
-klær,klede,,,substantiv,https://ordbokene.no/nno/nn/38800,nei,nei,
-begynnelse,byrjing,begynning;fyrstning;førstning,,substantiv,https://ordbokene.no/nno/nn/9855,nei,nei,
-fortelling,forteljing,,,substantiv,https://ordbokene.no/nno/nn/21091,nei,nei,
-mening,meining,,meining,substantiv,https://ordbokene.no/nno/nn/49006,nei,ja,
-oppgave,oppgåve,,,substantiv,https://ordbokene.no/nno/nn/54751,nei,nei,
-løsning,løysing,,løysing,substantiv,https://ordbokene.no/nno/nn/47604,nei,ja,
-virkelighet,verkelegheit,røyndom;røynd,,substantiv,https://ordbokene.no/nno/nn/101749,nei,nei,
-mulighet,moglegheit,mogelegheit;mulegheit;høve,,substantiv,https://ordbokene.no/nno/nn/50337,nei,nei,
-frihet,fridom,,,substantiv,https://ordbokene.no/nno/nn/22083,nei,ja,
-sannhet,sanning,,,substantiv,https://ordbokene.no/nno/nn/64074,nei,ja,
-seier,siger,,,substantiv,https://ordbokene.no/nno/nn/65529,nei,nei,
-vær,ver,,,substantiv,https://ordbokene.no/nno/nn/88893,nei,nei,
-tordenvær,torever,,,substantiv,https://ordbokene.no/nno/nn/80062,nei,nei,
-havn,hamn,,,substantiv,https://ordbokene.no/nno/nn/28683,nei,nei,
-sommerfugl,sommarfugl,sumarfugl;fivreld;fivrelde,,substantiv,https://ordbokene.no/nno/nn/71743,nei,nei,
-syk,sjuk,,sjuk,adjektiv,https://ordbokene.no/nno/nn/66362,nei,ja,
-sulten,svolten,,,adjektiv,https://ordbokene.no/nno/nn/76200,nei,nei,
-fornøyd,nøgd,fornøgd,fornøgd,adjektiv,https://ordbokene.no/nno/nn/53699,nei,ja,
-høy,høg,,høg,adjektiv,https://ordbokene.no/nno/nn/32480,nei,ja,«høy» finnes i Nynorskordboka bare som substantiv (tørket gras).
-lav,låg,,låg,adjektiv,https://ordbokene.no/nno/nn/47621,nei,ja,«lav» finnes i Nynorskordboka bare som plante.
-hvit,kvit,,kvit,adjektiv,https://ordbokene.no/nno/nn/43680,nei,ja,
-rød,raud,,,adjektiv,https://ordbokene.no/nno/nn/60456,nei,nei,
-myk,mjuk,,mjuk,adjektiv,https://ordbokene.no/nno/nn/50143,nei,ja,
-langsom,langsam,,,adjektiv,https://ordbokene.no/nno/nn/44566,nei,nei,
-tidlig,tidleg,årle,,adjektiv,https://ordbokene.no/nno/nn/78722,nei,nei,
-sen,sein,,sein,adjektiv,https://ordbokene.no/nno/nn/64455,nei,ja,"«sen» finnes i Nynorskordboka bare som substantiv (sene, japansk mynt)."
-vanlig,vanleg,gjengs,,adjektiv,https://ordbokene.no/nno/nn/87326,nei,nei,
-vanskelig,vanskeleg,,,adjektiv,https://ordbokene.no/nno/nn/87346,nei,nei,
-farlig,farleg,,,adjektiv,https://ordbokene.no/nno/nn/16691,nei,nei,
-morsom,morosam,,,adjektiv,https://ordbokene.no/nno/nn/50635,nei,ja,
-kjedelig,kjedeleg,keisam,,adjektiv,https://ordbokene.no/nno/nn/101519,nei,nei,
-herlig,herleg,,,adjektiv,https://ordbokene.no/nno/nn/30318,nei,nei,
-nydelig,nydeleg,,,adjektiv,https://ordbokene.no/nno/nn/53337,nei,nei,
-hyggelig,hyggeleg,hyggjeleg,,adjektiv,https://ordbokene.no/nno/nn/32207,nei,nei,
-ærlig,ærleg,,,adjektiv,https://ordbokene.no/nno/nn/91977,nei,nei,
-lykkelig,lukkeleg,lykkeleg,,adjektiv,https://ordbokene.no/nno/nn/46741,nei,nei,
-annen,annan,,,determinativ,https://ordbokene.no/nno/nn/1716,nei,nei,
-mulig,mogleg,mogeleg;muleg,,adjektiv,https://ordbokene.no/nno/nn/50335,nei,nei,
-umulig,umogleg,umogeleg;umuleg,,adjektiv,https://ordbokene.no/nno/nn/84565,nei,nei,
-fremmed,framand,fremmend,,adjektiv,https://ordbokene.no/nno/nn/21493,nei,nei,
-dyp,djup,,djup,adjektiv,https://ordbokene.no/nno/nn/12049,nei,ja,
-bred,brei,,brei,adjektiv,https://ordbokene.no/nno/nn/8155,nei,ja,
-skjev,skeiv,,skeiv,adjektiv,https://ordbokene.no/nno/nn/67288,nei,ja,
-en,ein,éin,,determinativ,https://ordbokene.no/nno/nn/14066,nei,nei,
-være,vere,vera,,verb,https://ordbokene.no/nno/nn/89137,nei,nei,«være» finnes i Nynorskordboka bare som substantiv.
-spørre,spørje,spørja,,verb,https://ordbokene.no/nno/nn/72956,nei,nei,
-tegne,teikne,teikna,,verb,https://ordbokene.no/nno/nn/77904,nei,nei,
-leke,leike,leika,leike,verb,https://ordbokene.no/nno/nn/45094,nei,ja,"«leke» finnes i Nynorskordboka, men betyr å lekke."
-spille,spele,spela,,verb,https://ordbokene.no/nno/nn/72232,nei,nei,"«spille» finnes i Nynorskordboka, men betyr å søle eller kaste bort."
-våkne,vakne,vakna,vakne,verb,https://ordbokene.no/nno/nn/86980,nei,ja,
-selge,selje,selja,,verb,https://ordbokene.no/nno/nn/64672,nei,nei,
-lete,leite,leita;søkje,leite;søke,verb,https://ordbokene.no/nno/nn/45148,nei,ja,"«lete» finnes i Nynorskordboka, men som andre ord (farge garn, latskap)."
-glemme,gløyme,gløyma;glømme;forgløyme,glømme;forglemme;forglømme,verb,https://ordbokene.no/nno/nn/25911,nei,nei,
-kjøre,køyre,køyra;ake;aka,,verb,https://ordbokene.no/nno/nn/38509,nei,nei,
-åpne,opne,opna,,verb,https://ordbokene.no/nno/nn/54642,nei,nei,
-høre,høyre,høyra,,verb,https://ordbokene.no/nno/nn/32752,nei,nei,"«høyre» er også et bokmålsord (side, parti)."
-fortelle,fortelje,fortelja,,verb,https://ordbokene.no/nno/nn/21085,nei,nei,
-mene,meine,meina,meine,verb,https://ordbokene.no/nno/nn/48997,nei,ja,
-dø,døy,,,verb,https://ordbokene.no/nno/nn/13648,nei,nei,
-gjøre,gjere,gjera,,verb,https://ordbokene.no/nno/nn/25238,nei,nei,
-hete,heite,heita,,verb,https://ordbokene.no/nno/nn/29904,nei,nei,"«hete» finnes i Nynorskordboka, men betyr varme."
-velge,velje,velja,,verb,https://ordbokene.no/nno/nn/88560,nei,nei,
-gjemme,gøyme,gøyma;gjømme,gjømme,verb,https://ordbokene.no/nno/nn/27989,nei,nei,
-lyve,ljuge,lyge;ljuga;lyga,juge;ljuge;lyge,verb,https://ordbokene.no/nno/nn/46245,nei,ja,
-stjele,stele,stela,,verb,https://ordbokene.no/nno/nn/73527,nei,nei,
-hvete,kveite,,,substantiv,https://ordbokene.no/nno/nn/kveite,nei,nei,
-hval,kval,,kval,substantiv,https://ordbokene.no/nno/nn/kval,nei,ja,
-arbeider,arbeidar,,,substantiv,https://ordbokene.no/nno/nn/arbeidar,nei,nei,
-leser,lesar,,,substantiv,https://ordbokene.no/nno/nn/lesar,nei,nei,
-forfatter,forfattar,,,substantiv,https://ordbokene.no/nno/nn/forfattar,nei,nei,
-dommer,dommar,domar,,substantiv,https://ordbokene.no/nno/nn/dommar,nei,nei,
-skuespiller,skodespelar,,,substantiv,https://ordbokene.no/nno/nn/skodespelar,nei,nei,
-spiller,spelar,,speller,substantiv,https://ordbokene.no/nno/nn/spelar,nei,nei,
-vinner,vinnar,sigrar,,substantiv,https://ordbokene.no/nno/nn/vinnar,nei,nei,
-eier,eigar,,,substantiv,https://ordbokene.no/nno/nn/eigar,nei,nei,
-leder,leiar,,,substantiv,https://ordbokene.no/nno/nn/leiar,nei,nei,
-hovedstad,hovudstad,,,substantiv,https://ordbokene.no/nno/nn/hovudstad,nei,nei,
-gård,gard,bondegard,gard,substantiv,https://ordbokene.no/nno/nn/gard,nei,ja,
-øre,øyre,øyra,,substantiv,https://ordbokene.no/nno/nn/øyre,nei,nei,"«øre» finnes i Nynorskordboka, men som andre ord (mynt)."
-albue,olboge,,,substantiv,https://ordbokene.no/nno/nn/olboge,nei,nei,
-håndledd,handledd,handled,handledd,substantiv,https://ordbokene.no/nno/nn/handledd,nei,ja,
-speil,spegel,,,substantiv,https://ordbokene.no/nno/nn/spegel,nei,nei,
-stekepanne,steikepanne,steikjepanne,steikepanne,substantiv,https://ordbokene.no/nno/nn/steikepanne,nei,ja,
-ovn,omn,,,substantiv,https://ordbokene.no/nno/nn/omn,nei,nei,
-støvsuger,støvsugar,,,substantiv,https://ordbokene.no/nno/nn/støvsugar,nei,nei,
-mel,mjøl,,mjøl,substantiv,https://ordbokene.no/nno/nn/mjøl,nei,ja,"«mel» finnes i Nynorskordboka, men betyr sandbakke."
-sult,svolt,,,substantiv,https://ordbokene.no/nno/nn/svolt,nei,nei,
-mandag,måndag,,,substantiv,https://ordbokene.no/nno/nn/måndag,nei,nei,
-tirsdag,tysdag,,,substantiv,https://ordbokene.no/nno/nn/tysdag,nei,nei,
-lørdag,laurdag,,,substantiv,https://ordbokene.no/nno/nn/laurdag,nei,nei,
-regnbue,regnboge,,regnboge,substantiv,https://ordbokene.no/nno/nn/regnboge,nei,ja,
-valg,val,,,substantiv,https://ordbokene.no/nno/nn/val,nei,nei,
-bryllup,bryllaup,,,substantiv,https://ordbokene.no/nno/nn/bryllaup,nei,nei,
-overraskelse,overrasking,,,substantiv,https://ordbokene.no/nno/nn/overrasking,nei,nei,
-hendelse,hending,,hending;begivenhet,substantiv,https://ordbokene.no/nno/nn/hending,nei,ja,
-opplevelse,oppleving,,oppleving,substantiv,https://ordbokene.no/nno/nn/oppleving,nei,ja,
-forståelse,forståing,,,substantiv,https://ordbokene.no/nno/nn/forståing,nei,nei,
-hensyn,omsyn,,,substantiv,https://ordbokene.no/nno/nn/omsyn,nei,ja,
-sikkerhet,tryggleik,sikkerheit,trygghet,substantiv,https://ordbokene.no/nno/nn/tryggleik,nei,nei,
-kjæreste,kjærast,kjæraste,,substantiv,https://ordbokene.no/nno/nn/kjærast,nei,nei,
-ensomhet,einsemd,,,substantiv,https://ordbokene.no/nno/nn/einsemd,nei,nei,
-høyde,høgd,høgde,høgde,substantiv,https://ordbokene.no/nno/nn/høgd,nei,nei,"«høgd» er lov på bokmål bare i betydningen bakke/høydedrag, ikke om hvor høyt noe er."
-bredde,breidd,breidde,,substantiv,https://ordbokene.no/nno/nn/breidd,nei,nei,
-bunn,botn,,botn,substantiv,https://ordbokene.no/nno/nn/botn,nei,ja,
-hull,hol,hòl,høl,substantiv,https://ordbokene.no/nno/nn/hol,nei,nei,"«hull» finnes i Nynorskordboka, men betyr en sang uten ord."
-øyeblikk,augeblink,augneblink;augneblunk,,substantiv,https://ordbokene.no/nno/nn/augeblink,nei,nei,
-råtten,roten,ròten,,adjektiv,https://ordbokene.no/nno/nn/roten,nei,nei,
-ren,rein,,rein,adjektiv,https://ordbokene.no/nno/nn/rein,nei,ja,
-løs,laus,,laus,adjektiv,https://ordbokene.no/nno/nn/laus,nei,ja,
-het,heit,,heit,adjektiv,https://ordbokene.no/nno/nn/heit,nei,ja,
-dårlig,dårleg,,,adjektiv,https://ordbokene.no/nno/nn/dårleg,nei,nei,
-nylig,nyleg,,,adjektiv,https://ordbokene.no/nno/nn/nyleg,nei,nei,
-daglig,dagleg,,,adjektiv,https://ordbokene.no/nno/nn/dagleg,nei,nei,
-årlig,årleg,,,adjektiv,https://ordbokene.no/nno/nn/årleg,nei,nei,
-alene,åleine,aleine,aleine,adverb,https://ordbokene.no/nno/nn/åleine,nei,nei,Nynorskordboka har «aleine» og «åleine» som likestilte former.
-merkelig,merkeleg,,,adjektiv,https://ordbokene.no/nno/nn/merkeleg,nei,nei,
-underlig,underleg,,,adjektiv,https://ordbokene.no/nno/nn/underleg,nei,nei,
-naturlig,naturleg,,,adjektiv,https://ordbokene.no/nno/nn/naturleg,nei,nei,
-personlig,personleg,,,adjektiv,https://ordbokene.no/nno/nn/personleg,nei,nei,
-offentlig,offentleg,,,adjektiv,https://ordbokene.no/nno/nn/offentleg,nei,nei,
-hemmelig,hemmeleg,løynleg,,adjektiv,https://ordbokene.no/nno/nn/hemmeleg,nei,nei,
-ensom,einsam,,,adjektiv,https://ordbokene.no/nno/nn/einsam,nei,nei,
-ydmyk,audmjuk,,,adjektiv,https://ordbokene.no/nno/nn/audmjuk,nei,nei,
-høflig,høfleg,,,adjektiv,https://ordbokene.no/nno/nn/høfleg,nei,nei,
-rolig,roleg,,,adjektiv,https://ordbokene.no/nno/nn/roleg,nei,nei,
-fet,feit,,feit,adjektiv,https://ordbokene.no/nno/nn/feit,nei,ja,«fet» finnes i Nynorskordboka bare som substantiv.
-vennlig,venleg,vennleg,,adjektiv,https://ordbokene.no/nno/nn/venleg,nei,nei,
-kjærlig,kjærleg,,,adjektiv,https://ordbokene.no/nno/nn/kjærleg,nei,nei,
-synlig,synleg,,,adjektiv,https://ordbokene.no/nno/nn/synleg,nei,nei,
-sannsynlig,sannsynleg,truleg,trolig,adjektiv,https://ordbokene.no/nno/nn/sannsynleg,nei,nei,
-tydelig,tydeleg,,,adjektiv,https://ordbokene.no/nno/nn/tydeleg,nei,nei,
-utrolig,utruleg,,utrulig,adjektiv,https://ordbokene.no/nno/nn/utruleg,nei,nei,
-flere,fleire,,fler,determinativ,https://ordbokene.no/nno/nn/fleire,nei,nei,
-selv,sjølv,sjøl,sjøl,determinativ,https://ordbokene.no/nno/nn/sjølv,nei,nei,
-hverandre,kvarandre,einannan,,pronomen,https://ordbokene.no/nno/nn/kvarandre,nei,nei,
-siden,sidan,,sia,subjunksjon,https://ordbokene.no/nno/nn/sidan,nei,nei,Gjelder både «siden» som tid og som årsak.
-fremdeles,framleis,enno,fortsatt;fortfarende,adverb,https://ordbokene.no/nno/nn/framleis,nei,ja,
-utenfor,utanfor,utafor,utafor,preposisjon,https://ordbokene.no/nno/nn/utanfor,nei,nei,
-innenfor,innanfor,innafor,innafor,preposisjon,https://ordbokene.no/nno/nn/innanfor,nei,nei,
-disse,desse,,,determinativ,https://ordbokene.no/nno/nn/desse,nei,nei,"«disse» finnes i Nynorskordboka, men som verb (riste, huske)."
-noen,nokon,nokre,,determinativ,https://ordbokene.no/nno/nn/nokon,nei,nei,«nokre» er flertallsformen og godtas også.
-drømme,drøyme,drøyma,,verb,https://ordbokene.no/nno/nn/drøyme,nei,nei,
-lykkes,lukkast,lykkast,,verb,https://ordbokene.no/nno/nn/lukkast,nei,nei,
-ødelegge,øydeleggje,øydelegge;øydeleggja;øydelegga,øydelegge,verb,https://ordbokene.no/nno/nn/øydeleggje,nei,nei,
-eie,eige,eiga,,verb,https://ordbokene.no/nno/nn/eige,nei,nei,
-tjene,tene,tena,,verb,https://ordbokene.no/nno/nn/tene,nei,nei,
-hilse,helse,helsa;helse på,,verb,https://ordbokene.no/nno/nn/helse,nei,nei,«helse» er også et substantiv på nynorsk.
-hvile,kvile,kvila,,verb,https://ordbokene.no/nno/nn/kvile,nei,nei,
-steke,steikje,steike;steikja;steika,steike,verb,https://ordbokene.no/nno/nn/steikje,nei,nei,
-skjære,skjere,skjera,,verb,https://ordbokene.no/nno/nn/skjere,nei,nei,«skjære» finnes i Nynorskordboka bare som substantiv (fugl).
-slokke,sløkkje,sløkke;sløkkja;sløkka,slukke,verb,https://ordbokene.no/nno/nn/sløkkje,nei,nei,
-hviske,kviskre,kviskra,,verb,https://ordbokene.no/nno/nn/kviskre,nei,ja,
-savne,sakne,sakna,sakne,verb,https://ordbokene.no/nno/nn/sakne,nei,ja,
-foretrekke,føretrekkje,føretrekke;føretrekkja;føretrekka,,verb,https://ordbokene.no/nno/nn/føretrekkje,nei,nei,
-ligne,likne,likna,likne,verb,https://ordbokene.no/nno/nn/likne,nei,ja,
-virke,verke,verka,,verb,https://ordbokene.no/nno/nn/verke,nei,nei,«virke» finnes i Nynorskordboka bare som substantiv.
-synes,synast,tykkje;tykke;tykkja;tykka,tykke,verb,https://ordbokene.no/nno/nn/synast,nei,nei,
-finnes,finnast,,,verb,https://ordbokene.no/nno/nn/finnast,nei,nei,
-oversette,omsetje,omsette;omsetja;omsetta;setje om;setja om,omsette,verb,https://ordbokene.no/nno/nn/omsetje,nei,nei,
-telle,telje,telja,,verb,https://ordbokene.no/nno/nn/telje,nei,nei,«telle» finnes i Nynorskordboka bare som substantiv (ungt bartre).
-huske,hugse,hugsa,,verb,https://ordbokene.no/nno/nn/hugse,nei,nei,"«huske» finnes i Nynorskordboka, men betyr å gynge."
-høste,hauste,hausta,,verb,https://ordbokene.no/nno/nn/hauste,nei,nei,
-vanne,vatne,vatna,vatne,verb,https://ordbokene.no/nno/nn/vatne,nei,ja,
-melke,mjølke,mjølka,mjølke,verb,https://ordbokene.no/nno/nn/mjølke,nei,ja,
-usynlig,usynleg,,,adjektiv,https://ordbokene.no/nno/nn/usynleg,nei,nei,
-nå,no,nå,,adverb,https://ordbokene.no/nno/nn/52864,ja,nei,Bokmålsformen «nå» er også riktig nynorsk (Nynorskordboka) og godtas.
-søster,syster,søster,,substantiv,https://ordbokene.no/nno/nn/76586,ja,nei,Bokmålsformen «søster» er også riktig nynorsk (Nynorskordboka) og godtas.
-venn,ven,venn,,substantiv,https://ordbokene.no/nno/nn/88684,ja,nei,Bokmålsformen «venn» er også riktig nynorsk (Nynorskordboka) og godtas.
-skole,skule,skole,,substantiv,https://ordbokene.no/nno/nn/100431,ja,nei,Bokmålsformen «skole» er også riktig nynorsk (Nynorskordboka) og godtas.
-bilde,bilete,bilde,,substantiv,https://ordbokene.no/nno/nn/5949,ja,nei,Bokmålsformen «bilde» er også riktig nynorsk (Nynorskordboka) og godtas.
-ansikt,andlet,ansikt,andlet,substantiv,https://ordbokene.no/nno/nn/1460,ja,ja,Bokmålsformen «ansikt» er også riktig nynorsk (Nynorskordboka) og godtas.
-vennskap,venskap,vennskap,,substantiv,https://ordbokene.no/nno/nn/88803,ja,nei,Bokmålsformen «vennskap» er også riktig nynorsk (Nynorskordboka) og godtas.
-tallerken,tallerk,tallerken,,substantiv,https://ordbokene.no/nno/nn/77401,ja,nei,Bokmålsformen «tallerken» er også riktig nynorsk (Nynorskordboka) og godtas.
-følelse,kjensle,følelse,kjensle,substantiv,https://ordbokene.no/nno/nn/38149,ja,ja,Bokmålsformen «følelse» er også riktig nynorsk (Nynorskordboka) og godtas.
-bølge,bølgje,bølge;bylgje,,substantiv,https://ordbokene.no/nno/nn/10009,ja,nei,Bokmålsformen «bølge» er også riktig nynorsk (Nynorskordboka) og godtas.
-deilig,deileg,deilig,,adjektiv,https://ordbokene.no/nno/nn/124595,ja,nei,Bokmålsformen «deilig» er også riktig nynorsk (Nynorskordboka) og godtas.
-nødvendig,naudsynt,nødvendig,,adjektiv,https://ordbokene.no/nno/nn/52218,ja,nei,Bokmålsformen «nødvendig» er også riktig nynorsk (Nynorskordboka) og godtas.
-komme,kome,komme;koma;komma,,verb,https://ordbokene.no/nno/nn/40202,ja,nei,Bokmålsformen «komme» er også riktig nynorsk (Nynorskordboka) og godtas.
-tenke,tenkje,tenke;tenkja;tenka,,verb,https://ordbokene.no/nno/nn/78310,ja,nei,Bokmålsformen «tenke» er også riktig nynorsk (Nynorskordboka) og godtas.
-ønske,ønskje,ønske;ynskje;ynske;ønskja;ønska;ynskja;ynska,,verb,https://ordbokene.no/nno/nn/91685,ja,nei,Bokmålsformen «ønske» er også riktig nynorsk (Nynorskordboka) og godtas.
-bygge,byggje,bygge;byggja;bygga,,verb,https://ordbokene.no/nno/nn/9664,ja,nei,Bokmålsformen «bygge» er også riktig nynorsk (Nynorskordboka) og godtas.
-stenge,stengje,stenge;stengja;stenga,,verb,https://ordbokene.no/nno/nn/73603,ja,nei,Bokmålsformen «stenge» er også riktig nynorsk (Nynorskordboka) og godtas.
-begynne,byrje,begynne;byrja;begynna,,verb,https://ordbokene.no/nno/nn/9853,ja,nei,Bokmålsformen «begynne» er også riktig nynorsk (Nynorskordboka) og godtas.
-ligge,liggje,ligge;liggja;ligga,,verb,https://ordbokene.no/nno/nn/45580,ja,nei,Bokmålsformen «ligge» er også riktig nynorsk (Nynorskordboka) og godtas.
-legge,leggje,legge;leggja;legga,,verb,https://ordbokene.no/nno/nn/45016,ja,nei,Bokmålsformen «legge» er også riktig nynorsk (Nynorskordboka) og godtas.
-henge,hengje,henge;hengja;henga,,verb,https://ordbokene.no/nno/nn/30218,ja,nei,Bokmålsformen «henge» er også riktig nynorsk (Nynorskordboka) og godtas.
-trekke,trekkje,trekke;trekkja;trekka,,verb,https://ordbokene.no/nno/nn/80782,ja,nei,Bokmålsformen «trekke» er også riktig nynorsk (Nynorskordboka) og godtas.
-følge,følgje,følge;fylgje;følgja;følga;fylgja,,verb,https://ordbokene.no/nno/nn/23326,ja,nei,Bokmålsformen «følge» er også riktig nynorsk (Nynorskordboka) og godtas.
-svømme,symje,svømme;symja;svømma,,verb,https://ordbokene.no/nno/nn/76383,ja,nei,Bokmålsformen «svømme» er også riktig nynorsk (Nynorskordboka) og godtas.
-måke,måse,måke,,substantiv,https://ordbokene.no/nno/nn/måse,ja,ja,Bokmålsformen «måke» er også riktig nynorsk (Nynorskordboka) og godtas.
-søndag,sundag,søndag,,substantiv,https://ordbokene.no/nno/nn/sundag,ja,nei,Bokmålsformen «søndag» er også riktig nynorsk (Nynorskordboka) og godtas.
-bevegelse,rørsle,bevegelse,,substantiv,https://ordbokene.no/nno/nn/rørsle,ja,ja,Bokmålsformen «bevegelse» er også riktig nynorsk (Nynorskordboka) og godtas.
-oppførsel,åtferd,oppførsel,atferd;adferd,substantiv,https://ordbokene.no/nno/nn/åtferd,ja,nei,Bokmålsformen «oppførsel» er også riktig nynorsk (Nynorskordboka) og godtas.
-moden,mogen,moden,,adjektiv,https://ordbokene.no/nno/nn/mogen,ja,nei,Bokmålsformen «moden» er også riktig nynorsk (Nynorskordboka) og godtas.
-opptatt,oppteken,opptatt,,adjektiv,https://ordbokene.no/nno/nn/oppteken,ja,nei,Bokmålsformen «opptatt» er også riktig nynorsk (Nynorskordboka) og godtas.
-mens,medan,mens,,subjunksjon,https://ordbokene.no/nno/nn/medan,ja,nei,Bokmålsformen «mens» er også riktig nynorsk (Nynorskordboka) og godtas.
-derfor,difor,derfor,,adverb,https://ordbokene.no/nno/nn/difor,ja,nei,Bokmålsformen «derfor» er også riktig nynorsk (Nynorskordboka) og godtas.
-svelge,svelgje,svelge;svelgja;svelga,,verb,https://ordbokene.no/nno/nn/svelgje,ja,nei,Bokmålsformen «svelge» er også riktig nynorsk (Nynorskordboka) og godtas.
-gjespe,geispe,gjespe;geispa;gjespa,,verb,https://ordbokene.no/nno/nn/geispe,ja,nei,Bokmålsformen «gjespe» er også riktig nynorsk (Nynorskordboka) og godtas.
-undersøke,undersøkje,undersøke;undersøkja;undersøka,,verb,https://ordbokene.no/nno/nn/undersøkje,ja,nei,Bokmålsformen «undersøke» er også riktig nynorsk (Nynorskordboka) og godtas.
-beskrive,skildre,beskrive;skildra;beskriva,,verb,https://ordbokene.no/nno/nn/skildre,ja,ja,Bokmålsformen «beskrive» er også riktig nynorsk (Nynorskordboka) og godtas.
-true,truge,true;truga;trua,,verb,https://ordbokene.no/nno/nn/truge,ja,nei,Bokmålsformen «true» er også riktig nynorsk (Nynorskordboka) og godtas.
-sørge,sørgje,sørge;syrgje;sørgja;sørga;syrgja,,verb,https://ordbokene.no/nno/nn/sørgje,ja,nei,Bokmålsformen «sørge» er også riktig nynorsk (Nynorskordboka) og godtas.
-bety,tyde,bety;tyda,,verb,https://ordbokene.no/nno/nn/tyde,ja,ja,Bokmålsformen «bety» er også riktig nynorsk (Nynorskordboka) og godtas.
-enda,endå,enda;enno,,adverb,https://ordbokene.no/nno/nn/endå,ja,nei,Bokmålsformen «enda» er også riktig nynorsk (Nynorskordboka) og godtas.
-ennå,enno,ennå;endå,,adverb,https://ordbokene.no/nno/nn/enno,ja,nei,Bokmålsformen «ennå» er også riktig nynorsk (Nynorskordboka) og godtas.
-spise,ete,spise;eta,,verb,https://ordbokene.no/nno/nn/15798,ja,ja,Bokmålsformen «spise» er også riktig nynorsk (dinordbok.no) og godtas.
-hjerte,hjarte,hjerte;hjarta,,substantiv,https://ordbokene.no/nno/nn/30754,ja,nei,Bokmålsformen «hjerte» er også riktig nynorsk (dinordbok.no) og godtas.
-drøm,draum,drøm,,substantiv,https://ordbokene.no/nno/nn/12519,ja,nei,Bokmålsformen «drøm» er også riktig nynorsk (dinordbok.no) og godtas.
-trøtt,trøytt,trøtt,trett,adjektiv,https://ordbokene.no/nno/nn/81921,ja,nei,Bokmålsformen «trøtt» er også riktig nynorsk (dinordbok.no) og godtas.
-uten,utan,uten,,preposisjon,https://ordbokene.no/nno/nn/85692,ja,nei,Bokmålsformen «uten» er også riktig nynorsk (dinordbok.no) og godtas.
-grønn,grøn,grønn,,adjektiv,https://ordbokene.no/nno/nn/grøn,ja,nei,Bokmålsformen «grønn» er også riktig nynorsk (dinordbok.no) og godtas.
-holde,halde,holde;halda,,verb,https://ordbokene.no/nno/nn/28248,ja,nei,Bokmålsformen «holde» er også riktig nynorsk (dinordbok.no) og godtas.
-vokse,vekse,vokse;veksa,,verb,https://ordbokene.no/nno/nn/vekse,ja,nei,Bokmålsformen «vokse» er også riktig nynorsk (dinordbok.no) og godtas.
-bære,bere,bære;bera,,verb,https://ordbokene.no/nno/nn/5353,ja,nei,Bokmålsformen «bære» er også riktig nynorsk (dinordbok.no) og godtas.
-egen,eigen,egen,eigen,determinativ,https://ordbokene.no/nno/nn/14000,ja,ja,Bokmålsformen «egen» er også riktig nynorsk (dinordbok.no) og godtas.
-bil,bil,,,substantiv,https://ordbokene.no/nno/nn/bil,ja,ja,Skrives likt på bokmål og nynorsk.
-hus,hus,,,substantiv,https://ordbokene.no/nno/nn/hus,ja,ja,Skrives likt på bokmål og nynorsk.
-katt,katt,,,substantiv,https://ordbokene.no/nno/nn/katt,ja,ja,Skrives likt på bokmål og nynorsk.
-hund,hund,,,substantiv,https://ordbokene.no/nno/nn/hund,ja,ja,Skrives likt på bokmål og nynorsk.
-fisk,fisk,,,substantiv,https://ordbokene.no/nno/nn/fisk,ja,ja,Skrives likt på bokmål og nynorsk.
-sol,sol,,,substantiv,https://ordbokene.no/nno/nn/sol,ja,ja,Skrives likt på bokmål og nynorsk.
-bord,bord,,,substantiv,https://ordbokene.no/nno/nn/bord,ja,ja,Skrives likt på bokmål og nynorsk.
-ball,ball,,,substantiv,https://ordbokene.no/nno/nn/ball,ja,ja,Skrives likt på bokmål og nynorsk.
-buss,buss,,,substantiv,https://ordbokene.no/nno/nn/buss,ja,ja,Skrives likt på bokmål og nynorsk.
-bok,bok,,,substantiv,https://ordbokene.no/nno/nn/bok,ja,ja,Skrives likt på bokmål og nynorsk.
-eple,eple,,,substantiv,https://ordbokene.no/nno/nn/eple,ja,ja,Skrives likt på bokmål og nynorsk.
-seng,seng,,,substantiv,https://ordbokene.no/nno/nn/seng,ja,ja,Skrives likt på bokmål og nynorsk.
-hest,hest,,,substantiv,https://ordbokene.no/nno/nn/hest,ja,ja,Skrives likt på bokmål og nynorsk.
-jente,jente,,,substantiv,https://ordbokene.no/nno/nn/jente,ja,ja,Skrives likt på bokmål og nynorsk.
-fjell,fjell,,,substantiv,https://ordbokene.no/nno/nn/fjell,ja,ja,Skrives likt på bokmål og nynorsk.
-skog,skog,,,substantiv,https://ordbokene.no/nno/nn/skog,ja,ja,Skrives likt på bokmål og nynorsk.
-snø,snø,,,substantiv,https://ordbokene.no/nno/nn/snø,ja,ja,Skrives likt på bokmål og nynorsk.
-klokke,klokke,,,substantiv,https://ordbokene.no/nno/nn/klokke,ja,ja,Skrives likt på bokmål og nynorsk.
-onsdag,onsdag,,,substantiv,https://ordbokene.no/nno/nn/onsdag,ja,ja,Skrives likt på bokmål og nynorsk.
-torsdag,torsdag,,,substantiv,https://ordbokene.no/nno/nn/torsdag,ja,ja,Skrives likt på bokmål og nynorsk.
-fredag,fredag,,,substantiv,https://ordbokene.no/nno/nn/fredag,ja,ja,Skrives likt på bokmål og nynorsk.
-sove,sove,sova,,verb,https://ordbokene.no/nno/nn/sove,ja,ja,Skrives likt på bokmål og nynorsk.
-lese,lese,lesa,,verb,https://ordbokene.no/nno/nn/lese,ja,ja,Skrives likt på bokmål og nynorsk.
-skrive,skrive,skriva,,verb,https://ordbokene.no/nno/nn/skrive,ja,ja,Skrives likt på bokmål og nynorsk.
-drikke,drikke,drikka,,verb,https://ordbokene.no/nno/nn/drikke,ja,ja,Skrives likt på bokmål og nynorsk.
-hoppe,hoppe,hoppa,,verb,https://ordbokene.no/nno/nn/hoppe,ja,ja,Skrives likt på bokmål og nynorsk.
-danse,danse,dansa,,verb,https://ordbokene.no/nno/nn/danse,ja,ja,Skrives likt på bokmål og nynorsk.
-bake,bake,baka,,verb,https://ordbokene.no/nno/nn/bake,ja,ja,Skrives likt på bokmål og nynorsk.
-vaske,vaske,vaska,,verb,https://ordbokene.no/nno/nn/vaske,ja,ja,Skrives likt på bokmål og nynorsk.
-kjøpe,kjøpe,kjøpa,,verb,https://ordbokene.no/nno/nn/kjøpe,ja,ja,Skrives likt på bokmål og nynorsk.
-svare,svare,svara,,verb,https://ordbokene.no/nno/nn/svare,ja,ja,Skrives likt på bokmål og nynorsk.
-hjelpe,hjelpe,hjelpa,,verb,https://ordbokene.no/nno/nn/hjelpe,ja,ja,Skrives likt på bokmål og nynorsk.
-stor,stor,,,adjektiv,https://ordbokene.no/nno/nn/stor,ja,ja,Skrives likt på bokmål og nynorsk.
-glad,glad,,,adjektiv,https://ordbokene.no/nno/nn/glad,ja,ja,Skrives likt på bokmål og nynorsk.
-kald,kald,,,adjektiv,https://ordbokene.no/nno/nn/kald,ja,ja,Skrives likt på bokmål og nynorsk.
-varm,varm,,,adjektiv,https://ordbokene.no/nno/nn/varm,ja,ja,Skrives likt på bokmål og nynorsk.
-sterk,sterk,,,adjektiv,https://ordbokene.no/nno/nn/sterk,ja,ja,Skrives likt på bokmål og nynorsk.
-snill,snill,,,adjektiv,https://ordbokene.no/nno/nn/snill,ja,ja,Skrives likt på bokmål og nynorsk.
-blå,blå,,,adjektiv,https://ordbokene.no/nno/nn/blå,ja,ja,Skrives likt på bokmål og nynorsk.
-svart,svart,,,adjektiv,https://ordbokene.no/nno/nn/svart,ja,ja,Skrives likt på bokmål og nynorsk.
-ofte,ofte,,,adverb,https://ordbokene.no/nno/nn/ofte,ja,ja,Skrives likt på bokmål og nynorsk.
-aldri,aldri,,,adverb,https://ordbokene.no/nno/nn/aldri,ja,ja,Skrives likt på bokmål og nynorsk.
-kanskje,kanskje,,,adverb,https://ordbokene.no/nno/nn/kanskje,ja,ja,Skrives likt på bokmål og nynorsk.
-på,på,,,preposisjon,https://ordbokene.no/nno/nn/på,ja,ja,Skrives likt på bokmål og nynorsk.
-med,med,,,preposisjon,https://ordbokene.no/nno/nn/med,ja,ja,Skrives likt på bokmål og nynorsk.
-båt,båt,,,substantiv,https://ordbokene.no/nno/nn/båt,ja,ja,Skrives likt på bokmål og nynorsk.
-tog,tog,,,substantiv,https://ordbokene.no/nno/nn/tog,ja,ja,Skrives likt på bokmål og nynorsk.
-fly,fly,,,substantiv,https://ordbokene.no/nno/nn/fly,ja,ja,Skrives likt på bokmål og nynorsk.
-sykkel,sykkel,,,substantiv,https://ordbokene.no/nno/nn/sykkel,ja,ja,Skrives likt på bokmål og nynorsk.
-dør,dør,,,substantiv,https://ordbokene.no/nno/nn/dør,ja,ja,Skrives likt på bokmål og nynorsk.
-vegg,vegg,,,substantiv,https://ordbokene.no/nno/nn/vegg,ja,ja,Skrives likt på bokmål og nynorsk.
-tak,tak,,,substantiv,https://ordbokene.no/nno/nn/tak,ja,ja,Skrives likt på bokmål og nynorsk.
-regn,regn,,,substantiv,https://ordbokene.no/nno/nn/regn,ja,ja,Skrives likt på bokmål og nynorsk.
-vind,vind,,,substantiv,https://ordbokene.no/nno/nn/vind,ja,ja,Skrives likt på bokmål og nynorsk.
-storm,storm,,,substantiv,https://ordbokene.no/nno/nn/storm,ja,ja,Skrives likt på bokmål og nynorsk.
-natt,natt,,,substantiv,https://ordbokene.no/nno/nn/natt,ja,ja,Skrives likt på bokmål og nynorsk.
-dag,dag,,,substantiv,https://ordbokene.no/nno/nn/dag,ja,ja,Skrives likt på bokmål og nynorsk.
-år,år,,,substantiv,https://ordbokene.no/nno/nn/år,ja,ja,Skrives likt på bokmål og nynorsk.
-time,time,,,substantiv,https://ordbokene.no/nno/nn/time,ja,ja,Skrives likt på bokmål og nynorsk.
-papir,papir,,,substantiv,https://ordbokene.no/nno/nn/papir,ja,ja,Skrives likt på bokmål og nynorsk.
-by,by,,,substantiv,https://ordbokene.no/nno/nn/by,ja,ja,Skrives likt på bokmål og nynorsk.
-land,land,,,substantiv,https://ordbokene.no/nno/nn/land,ja,ja,Skrives likt på bokmål og nynorsk.
-gate,gate,,,substantiv,https://ordbokene.no/nno/nn/gate,ja,ja,Skrives likt på bokmål og nynorsk.
-butikk,butikk,,,substantiv,https://ordbokene.no/nno/nn/butikk,ja,ja,Skrives likt på bokmål og nynorsk.
-brev,brev,,,substantiv,https://ordbokene.no/nno/nn/brev,ja,ja,Skrives likt på bokmål og nynorsk.
-pakke,pakke,,,substantiv,https://ordbokene.no/nno/nn/pakke,ja,ja,Skrives likt på bokmål og nynorsk.
-stå,stå,,,verb,https://ordbokene.no/nno/nn/stå,ja,ja,Skrives likt på bokmål og nynorsk.
-ha,ha,,,verb,https://ordbokene.no/nno/nn/ha,ja,ja,Skrives likt på bokmål og nynorsk.
-ta,ta,take;taka,,verb,https://ordbokene.no/nno/nn/ta,ja,ja,Skrives likt på bokmål og nynorsk.
-kjenne,kjenne,kjenna,,verb,https://ordbokene.no/nno/nn/kjenne,ja,ja,Skrives likt på bokmål og nynorsk.
-finne,finne,finna,,verb,https://ordbokene.no/nno/nn/finne,ja,ja,Skrives likt på bokmål og nynorsk.
-ny,ny,,,adjektiv,https://ordbokene.no/nno/nn/ny,ja,ja,Skrives likt på bokmål og nynorsk.
-god,god,,,adjektiv,https://ordbokene.no/nno/nn/god,ja,ja,Skrives likt på bokmål og nynorsk.
-fin,fin,,,adjektiv,https://ordbokene.no/nno/nn/fin,ja,ja,Skrives likt på bokmål og nynorsk.
-pen,pen,,,adjektiv,https://ordbokene.no/nno/nn/pen,ja,ja,Skrives likt på bokmål og nynorsk.
-rik,rik,,,adjektiv,https://ordbokene.no/nno/nn/rik,ja,ja,Skrives likt på bokmål og nynorsk.
-fattig,fattig,,,adjektiv,https://ordbokene.no/nno/nn/fattig,ja,ja,Skrives likt på bokmål og nynorsk.
-billig,billig,billeg,,adjektiv,https://ordbokene.no/nno/nn/billig,ja,ja,Skrives likt på bokmål og nynorsk.
-viktig,viktig,,,adjektiv,https://ordbokene.no/nno/nn/viktig,ja,ja,Skrives likt på bokmål og nynorsk.
-vakker,vakker,,,adjektiv,https://ordbokene.no/nno/nn/vakker,ja,ja,Skrives likt på bokmål og nynorsk.
-her,her,,,adverb,https://ordbokene.no/nno/nn/her,ja,ja,Skrives likt på bokmål og nynorsk.
-der,der,,,adverb,https://ordbokene.no/nno/nn/der,ja,ja,Skrives likt på bokmål og nynorsk.
-inn,inn,,,adverb,https://ordbokene.no/nno/nn/inn,ja,ja,Skrives likt på bokmål og nynorsk.
-ut,ut,,,adverb,https://ordbokene.no/nno/nn/ut,ja,ja,Skrives likt på bokmål og nynorsk.
-stol,stol,,,substantiv,https://ordbokene.no/nno/nn/stol,ja,ja,Skrives likt på bokmål og nynorsk.
-sko,sko,,,substantiv,https://ordbokene.no/nno/nn/sko,ja,ja,Skrives likt på bokmål og nynorsk.
-lue,lue,luve,,substantiv,https://ordbokene.no/nno/nn/lue,ja,ja,Skrives likt på bokmål og nynorsk.
-skjorte,skjorte,,,substantiv,https://ordbokene.no/nno/nn/skjorte,ja,ja,Skrives likt på bokmål og nynorsk.
-bukse,bukse,,,substantiv,https://ordbokene.no/nno/nn/bukse,ja,ja,Skrives likt på bokmål og nynorsk.
-kake,kake,,,substantiv,https://ordbokene.no/nno/nn/kake,ja,ja,Skrives likt på bokmål og nynorsk.
-ost,ost,,,substantiv,https://ordbokene.no/nno/nn/ost,ja,ja,Skrives likt på bokmål og nynorsk.
-vinter,vinter,,,substantiv,https://ordbokene.no/nno/nn/vinter,ja,ja,Skrives likt på bokmål og nynorsk.
-arm,arm,,,substantiv,https://ordbokene.no/nno/nn/arm,ja,ja,Skrives likt på bokmål og nynorsk.
-fot,fot,,,substantiv,https://ordbokene.no/nno/nn/fot,ja,ja,Skrives likt på bokmål og nynorsk.
-finger,finger,,,substantiv,https://ordbokene.no/nno/nn/finger,ja,ja,Skrives likt på bokmål og nynorsk.
-munn,munn,,,substantiv,https://ordbokene.no/nno/nn/munn,ja,ja,Skrives likt på bokmål og nynorsk.
-tann,tann,,,substantiv,https://ordbokene.no/nno/nn/tann,ja,ja,Skrives likt på bokmål og nynorsk.
-hår,hår,,,substantiv,https://ordbokene.no/nno/nn/hår,ja,ja,Skrives likt på bokmål og nynorsk.
-fest,fest,,,substantiv,https://ordbokene.no/nno/nn/fest,ja,ja,Skrives likt på bokmål og nynorsk.
-jul,jul,jol,,substantiv,https://ordbokene.no/nno/nn/jul,ja,ja,Skrives likt på bokmål og nynorsk.
-tid,tid,,,substantiv,https://ordbokene.no/nno/nn/tid,ja,ja,Skrives likt på bokmål og nynorsk.
-liv,liv,,,substantiv,https://ordbokene.no/nno/nn/liv,ja,ja,Skrives likt på bokmål og nynorsk.
-lys,lys,ljos,,substantiv,https://ordbokene.no/nno/nn/lys,ja,ja,Skrives likt på bokmål og nynorsk.
-farge,farge,,,substantiv,https://ordbokene.no/nno/nn/farge,ja,ja,Skrives likt på bokmål og nynorsk.
-lyd,lyd,ljod,,substantiv,https://ordbokene.no/nno/nn/lyd,ja,ja,Skrives likt på bokmål og nynorsk.
-vinne,vinne,vinna,,verb,https://ordbokene.no/nno/nn/vinne,ja,ja,Skrives likt på bokmål og nynorsk.
-falle,falle,falla,,verb,https://ordbokene.no/nno/nn/falle,ja,ja,Skrives likt på bokmål og nynorsk.
-sende,sende,senda,,verb,https://ordbokene.no/nno/nn/sende,ja,ja,Skrives likt på bokmål og nynorsk.
-bruke,bruke,bruka,,verb,https://ordbokene.no/nno/nn/bruke,ja,ja,Skrives likt på bokmål og nynorsk.
-lage,lage,laga,,verb,https://ordbokene.no/nno/nn/lage,ja,ja,Skrives likt på bokmål og nynorsk.
-prøve,prøve,prøva,,verb,https://ordbokene.no/nno/nn/prøve,ja,ja,Skrives likt på bokmål og nynorsk.
-lang,lang,,,adjektiv,https://ordbokene.no/nno/nn/lang,ja,ja,Skrives likt på bokmål og nynorsk.
-kort,kort,,,adjektiv,https://ordbokene.no/nno/nn/kort,ja,ja,Skrives likt på bokmål og nynorsk.
-tynn,tynn,,,adjektiv,https://ordbokene.no/nno/nn/tynn,ja,ja,Skrives likt på bokmål og nynorsk.
-tung,tung,,,adjektiv,https://ordbokene.no/nno/nn/tung,ja,ja,Skrives likt på bokmål og nynorsk.
-lett,lett,,,adjektiv,https://ordbokene.no/nno/nn/lett,ja,ja,Skrives likt på bokmål og nynorsk.
-full,full,,,adjektiv,https://ordbokene.no/nno/nn/full,ja,ja,Skrives likt på bokmål og nynorsk.
-opp,opp,,,adverb,https://ordbokene.no/nno/nn/opp,ja,ja,Skrives likt på bokmål og nynorsk.
-ned,ned,,,adverb,https://ordbokene.no/nno/nn/ned,ja,ja,Skrives likt på bokmål og nynorsk.
-snart,snart,,,adverb,https://ordbokene.no/nno/nn/snart,ja,ja,Skrives likt på bokmål og nynorsk.
-alltid,alltid,,,adverb,https://ordbokene.no/nno/nn/alltid,ja,ja,Skrives likt på bokmål og nynorsk.
-igjen,igjen,,,adverb,https://ordbokene.no/nno/nn/igjen,ja,ja,Skrives likt på bokmål og nynorsk.
-nesten,nesten,,,adverb,https://ordbokene.no/nno/nn/nesten,ja,ja,Skrives likt på bokmål og nynorsk.
-veldig,veldig,,,adjektiv,https://ordbokene.no/nno/nn/veldig,ja,ja,Skrives likt på bokmål og nynorsk.
-smør,smør,,,substantiv,https://ordbokene.no/nno/nn/smør,ja,ja,Skrives likt på bokmål og nynorsk.
-egg,egg,,,substantiv,https://ordbokene.no/nno/nn/egg,ja,ja,Skrives likt på bokmål og nynorsk.
-sukker,sukker,,,substantiv,https://ordbokene.no/nno/nn/sukker,ja,ja,Skrives likt på bokmål og nynorsk.
-brød,brød,,,substantiv,https://ordbokene.no/nno/nn/brød,ja,ja,Skrives likt på bokmål og nynorsk.
-suppe,suppe,,,substantiv,https://ordbokene.no/nno/nn/suppe,ja,ja,Skrives likt på bokmål og nynorsk.
-mor,mor,,,substantiv,https://ordbokene.no/nno/nn/mor,ja,ja,Skrives likt på bokmål og nynorsk.
-far,far,,,substantiv,https://ordbokene.no/nno/nn/far,ja,ja,Skrives likt på bokmål og nynorsk.
-mage,mage,,,substantiv,https://ordbokene.no/nno/nn/mage,ja,ja,Skrives likt på bokmål og nynorsk.
-rygg,rygg,,,substantiv,https://ordbokene.no/nno/nn/rygg,ja,ja,Skrives likt på bokmål og nynorsk.
-ku,ku,,,substantiv,https://ordbokene.no/nno/nn/ku,ja,ja,Skrives likt på bokmål og nynorsk.
-gris,gris,,,substantiv,https://ordbokene.no/nno/nn/gris,ja,ja,Skrives likt på bokmål og nynorsk.
-sau,sau,,,substantiv,https://ordbokene.no/nno/nn/sau,ja,ja,Skrives likt på bokmål og nynorsk.
-mus,mus,,,substantiv,https://ordbokene.no/nno/nn/mus,ja,ja,Skrives likt på bokmål og nynorsk.
-ulv,ulv,,,substantiv,https://ordbokene.no/nno/nn/ulv,ja,ja,Skrives likt på bokmål og nynorsk.
-musikk,musikk,,,substantiv,https://ordbokene.no/nno/nn/musikk,ja,ja,Skrives likt på bokmål og nynorsk.
-ord,ord,,,substantiv,https://ordbokene.no/nno/nn/ord,ja,ja,Skrives likt på bokmål og nynorsk.
-språk,språk,,,substantiv,https://ordbokene.no/nno/nn/språk,ja,ja,Skrives likt på bokmål og nynorsk.
-jobb,jobb,,,substantiv,https://ordbokene.no/nno/nn/jobb,ja,ja,Skrives likt på bokmål og nynorsk.
-rom,rom,,,substantiv,https://ordbokene.no/nno/nn/rom,ja,ja,Skrives likt på bokmål og nynorsk.
-trapp,trapp,,,substantiv,https://ordbokene.no/nno/nn/trapp,ja,ja,Skrives likt på bokmål og nynorsk.
-lære,lære,læra,,verb,https://ordbokene.no/nno/nn/lære,ja,ja,Skrives likt på bokmål og nynorsk.
-stoppe,stoppe,stoppa,,verb,https://ordbokene.no/nno/nn/stoppe,ja,ja,Skrives likt på bokmål og nynorsk.
-vente,vente,venta,,verb,https://ordbokene.no/nno/nn/vente,ja,ja,Skrives likt på bokmål og nynorsk.
-lytte,lytte,lytta,,verb,https://ordbokene.no/nno/nn/lytte,ja,ja,Skrives likt på bokmål og nynorsk.
-fiske,fiske,fiska,,verb,https://ordbokene.no/nno/nn/fiske,ja,ja,Skrives likt på bokmål og nynorsk.
-leve,leve,leva,,verb,https://ordbokene.no/nno/nn/leve,ja,ja,Skrives likt på bokmål og nynorsk.
-tom,tom,,,adjektiv,https://ordbokene.no/nno/nn/tom,ja,ja,Skrives likt på bokmål og nynorsk.
-våt,våt,,,adjektiv,https://ordbokene.no/nno/nn/våt,ja,ja,Skrives likt på bokmål og nynorsk.
-tørr,tørr,turr,,adjektiv,https://ordbokene.no/nno/nn/tørr,ja,ja,Skrives likt på bokmål og nynorsk.
-rask,rask,,,adjektiv,https://ordbokene.no/nno/nn/rask,ja,ja,Skrives likt på bokmål og nynorsk.
-trist,trist,,,adjektiv,https://ordbokene.no/nno/nn/trist,ja,ja,Skrives likt på bokmål og nynorsk.
-sint,sint,,,adjektiv,https://ordbokene.no/nno/nn/sint,ja,ja,Skrives likt på bokmål og nynorsk.
-redd,redd,,,adjektiv,https://ordbokene.no/nno/nn/redd,ja,ja,Skrives likt på bokmål og nynorsk.
-til,til,,,preposisjon,https://ordbokene.no/nno/nn/til,ja,ja,Skrives likt på bokmål og nynorsk.
-over,over,,,preposisjon,https://ordbokene.no/nno/nn/over,ja,ja,Skrives likt på bokmål og nynorsk.
-under,under,,,preposisjon,https://ordbokene.no/nno/nn/under,ja,ja,Skrives likt på bokmål og nynorsk.
-etter,etter,,,preposisjon,https://ordbokene.no/nno/nn/etter,ja,ja,Skrives likt på bokmål og nynorsk.
-mot,mot,,,preposisjon,https://ordbokene.no/nno/nn/mot,ja,ja,Skrives likt på bokmål og nynorsk.
-mellom,mellom,,,preposisjon,https://ordbokene.no/nno/nn/mellom,ja,ja,Skrives likt på bokmål og nynorsk.
-du,du,,,pronomen,https://ordbokene.no/nno/nn/du,ja,ja,Skrives likt på bokmål og nynorsk.
-bror,bror,,,substantiv,https://ordbokene.no/nno/nn/bror,ja,ja,Skrives likt på bokmål og nynorsk.
-barn,barn,,,substantiv,https://ordbokene.no/nno/nn/barn,ja,ja,Skrives likt på bokmål og nynorsk.
-mann,mann,,,substantiv,https://ordbokene.no/nno/nn/mann,ja,ja,Skrives likt på bokmål og nynorsk.
-elev,elev,,,substantiv,https://ordbokene.no/nno/nn/elev,ja,ja,Skrives likt på bokmål og nynorsk.
-lege,lege,lækjar,,substantiv,https://ordbokene.no/nno/nn/lege,ja,ja,Skrives likt på bokmål og nynorsk.
-konge,konge,,,substantiv,https://ordbokene.no/nno/nn/konge,ja,ja,Skrives likt på bokmål og nynorsk.
-dronning,dronning,,,substantiv,https://ordbokene.no/nno/nn/dronning,ja,ja,Skrives likt på bokmål og nynorsk.
-rev,rev,,,substantiv,https://ordbokene.no/nno/nn/rev,ja,ja,Skrives likt på bokmål og nynorsk.
-elg,elg,,,substantiv,https://ordbokene.no/nno/nn/elg,ja,ja,Skrives likt på bokmål og nynorsk.
-ørn,ørn,,,substantiv,https://ordbokene.no/nno/nn/ørn,ja,ja,Skrives likt på bokmål og nynorsk.
-ugle,ugle,,,substantiv,https://ordbokene.no/nno/nn/ugle,ja,ja,Skrives likt på bokmål og nynorsk.
-frosk,frosk,,,substantiv,https://ordbokene.no/nno/nn/frosk,ja,ja,Skrives likt på bokmål og nynorsk.
-løve,løve,,,substantiv,https://ordbokene.no/nno/nn/løve,ja,ja,Skrives likt på bokmål og nynorsk.
-ape,ape,,,substantiv,https://ordbokene.no/nno/nn/ape,ja,ja,Skrives likt på bokmål og nynorsk.
-lampe,lampe,,,substantiv,https://ordbokene.no/nno/nn/lampe,ja,ja,Skrives likt på bokmål og nynorsk.
-kopp,kopp,,,substantiv,https://ordbokene.no/nno/nn/kopp,ja,ja,Skrives likt på bokmål og nynorsk.
-kniv,kniv,,,substantiv,https://ordbokene.no/nno/nn/kniv,ja,ja,Skrives likt på bokmål og nynorsk.
-gaffel,gaffel,,,substantiv,https://ordbokene.no/nno/nn/gaffel,ja,ja,Skrives likt på bokmål og nynorsk.
-sekk,sekk,,,substantiv,https://ordbokene.no/nno/nn/sekk,ja,ja,Skrives likt på bokmål og nynorsk.
-nøkkel,nøkkel,nykel,,substantiv,https://ordbokene.no/nno/nn/nøkkel,ja,ja,Skrives likt på bokmål og nynorsk.
-miste,miste,misse;mista;missa,,verb,https://ordbokene.no/nno/nn/miste,ja,ja,Skrives likt på bokmål og nynorsk.
-vise,vise,visa,,verb,https://ordbokene.no/nno/nn/vise,ja,ja,Skrives likt på bokmål og nynorsk.
-betale,betale,betala,,verb,https://ordbokene.no/nno/nn/betale,ja,ja,Skrives likt på bokmål og nynorsk.
-reise,reise,reisa,,verb,https://ordbokene.no/nno/nn/reise,ja,ja,Skrives likt på bokmål og nynorsk.
-smake,smake,smaka,,verb,https://ordbokene.no/nno/nn/smake,ja,ja,Skrives likt på bokmål og nynorsk.
-hente,hente,henta,,verb,https://ordbokene.no/nno/nn/hente,ja,ja,Skrives likt på bokmål og nynorsk.
-rydde,rydde,rydje;rydda;rydja,,verb,https://ordbokene.no/nno/nn/rydde,ja,ja,Skrives likt på bokmål og nynorsk.
-stille,stille,,,adjektiv,https://ordbokene.no/nno/nn/stille,ja,ja,Skrives likt på bokmål og nynorsk.
-klar,klar,klår,,adjektiv,https://ordbokene.no/nno/nn/klar,ja,ja,Skrives likt på bokmål og nynorsk.
-sur,sur,,,adjektiv,https://ordbokene.no/nno/nn/sur,ja,ja,Skrives likt på bokmål og nynorsk.
-søt,søt,,,adjektiv,https://ordbokene.no/nno/nn/søt,ja,ja,Skrives likt på bokmål og nynorsk.
-rund,rund,,,adjektiv,https://ordbokene.no/nno/nn/rund,ja,ja,Skrives likt på bokmål og nynorsk.
-grå,grå,,,adjektiv,https://ordbokene.no/nno/nn/grå,ja,ja,Skrives likt på bokmål og nynorsk.
-gul,gul,,,adjektiv,https://ordbokene.no/nno/nn/gul,ja,ja,Skrives likt på bokmål og nynorsk.
-vi,vi,me,,pronomen,https://ordbokene.no/nno/nn/vi,ja,ja,Skrives likt på bokmål og nynorsk.
-han,han,,,pronomen,https://ordbokene.no/nno/nn/han,ja,ja,Skrives likt på bokmål og nynorsk.
-og,og,,,konjunksjon,https://ordbokene.no/nno/nn/og,ja,ja,Skrives likt på bokmål og nynorsk.
-men,men,,,konjunksjon,https://ordbokene.no/nno/nn/men,ja,ja,Skrives likt på bokmål og nynorsk.
-eller,eller,,,konjunksjon,https://ordbokene.no/nno/nn/eller,ja,ja,Skrives likt på bokmål og nynorsk.
-alle,alle,,,determinativ,https://ordbokene.no/nno/nn/alle,ja,ja,Skrives likt på bokmål og nynorsk.
-mange,mange,,,determinativ,https://ordbokene.no/nno/nn/mange,ja,ja,Skrives likt på bokmål og nynorsk.
-hav,hav,,,substantiv,https://ordbokene.no/nno/nn/hav,ja,ja,Skrives likt på bokmål og nynorsk.
-elv,elv,,,substantiv,https://ordbokene.no/nno/nn/elv,ja,ja,Skrives likt på bokmål og nynorsk.
-fjord,fjord,,,substantiv,https://ordbokene.no/nno/nn/fjord,ja,ja,Skrives likt på bokmål og nynorsk.
-strand,strand,,,substantiv,https://ordbokene.no/nno/nn/strand,ja,ja,Skrives likt på bokmål og nynorsk.
-øy,øy,,,substantiv,https://ordbokene.no/nno/nn/øy,ja,ja,Skrives likt på bokmål og nynorsk.
-dal,dal,,,substantiv,https://ordbokene.no/nno/nn/dal,ja,ja,Skrives likt på bokmål og nynorsk.
-sky,sky,,,substantiv,https://ordbokene.no/nno/nn/sky,ja,ja,Skrives likt på bokmål og nynorsk.
-maur,maur,,,substantiv,https://ordbokene.no/nno/nn/maur,ja,ja,Skrives likt på bokmål og nynorsk.
-potet,potet,,,substantiv,https://ordbokene.no/nno/nn/potet,ja,ja,Skrives likt på bokmål og nynorsk.
-banan,banan,,,substantiv,https://ordbokene.no/nno/nn/banan,ja,ja,Skrives likt på bokmål og nynorsk.
-pære,pære,,,substantiv,https://ordbokene.no/nno/nn/pære,ja,ja,Skrives likt på bokmål og nynorsk.
-gulrot,gulrot,,,substantiv,https://ordbokene.no/nno/nn/gulrot,ja,ja,Skrives likt på bokmål og nynorsk.
-penn,penn,,,substantiv,https://ordbokene.no/nno/nn/penn,ja,ja,Skrives likt på bokmål og nynorsk.
-blyant,blyant,,,substantiv,https://ordbokene.no/nno/nn/blyant,ja,ja,Skrives likt på bokmål og nynorsk.
-telefon,telefon,,,substantiv,https://ordbokene.no/nno/nn/telefon,ja,ja,Skrives likt på bokmål og nynorsk.
-dyr,dyr,,,substantiv,https://ordbokene.no/nno/nn/dyr,ja,ja,Skrives likt på bokmål og nynorsk.
-stein,stein,,,substantiv,https://ordbokene.no/nno/nn/stein,ja,ja,Skrives likt på bokmål og nynorsk.
-kaste,kaste,kasta,,verb,https://ordbokene.no/nno/nn/kaste,ja,ja,Skrives likt på bokmål og nynorsk.
-smile,smile,smila,,verb,https://ordbokene.no/nno/nn/smile,ja,ja,Skrives likt på bokmål og nynorsk.
-gå,gå,,,verb,https://ordbokene.no/nno/nn/gå,ja,ja,Skrives likt på bokmål og nynorsk.
-dele,dele,dela,,verb,https://ordbokene.no/nno/nn/dele,ja,ja,Skrives likt på bokmål og nynorsk.
-trene,trene,trena,,verb,https://ordbokene.no/nno/nn/trene,ja,ja,Skrives likt på bokmål og nynorsk.
-elske,elske,elska,,verb,https://ordbokene.no/nno/nn/elske,ja,ja,Skrives likt på bokmål og nynorsk.
-klatre,klatre,klatra,,verb,https://ordbokene.no/nno/nn/klatre,ja,ja,Skrives likt på bokmål og nynorsk.
-spare,spare,spara,,verb,https://ordbokene.no/nno/nn/spare,ja,ja,Skrives likt på bokmål og nynorsk.
-liten,liten,,,adjektiv,https://ordbokene.no/nno/nn/liten,ja,ja,Skrives likt på bokmål og nynorsk.
-ung,ung,,,adjektiv,https://ordbokene.no/nno/nn/ung,ja,ja,Skrives likt på bokmål og nynorsk.
-brun,brun,,,adjektiv,https://ordbokene.no/nno/nn/brun,ja,ja,Skrives likt på bokmål og nynorsk.
-svak,svak,,,adjektiv,https://ordbokene.no/nno/nn/svak,ja,ja,Skrives likt på bokmål og nynorsk.
-modig,modig,,,adjektiv,https://ordbokene.no/nno/nn/modig,ja,ja,Skrives likt på bokmål og nynorsk.
-flink,flink,,,adjektiv,https://ordbokene.no/nno/nn/flink,ja,ja,Skrives likt på bokmål og nynorsk.
-dum,dum,,,adjektiv,https://ordbokene.no/nno/nn/dum,ja,ja,Skrives likt på bokmål og nynorsk.
-klok,klok,,,adjektiv,https://ordbokene.no/nno/nn/klok,ja,ja,Skrives likt på bokmål og nynorsk.
-lat,lat,,,adjektiv,https://ordbokene.no/nno/nn/lat,ja,ja,Skrives likt på bokmål og nynorsk.
-ingen,ingen,,,determinativ,https://ordbokene.no/nno/nn/ingen,ja,ja,Skrives likt på bokmål og nynorsk.
-fire,fire,,,determinativ,https://ordbokene.no/nno/nn/fire,ja,ja,Skrives likt på bokmål og nynorsk.
-fem,fem,,,determinativ,https://ordbokene.no/nno/nn/fem,ja,ja,Skrives likt på bokmål og nynorsk.
-seks,seks,,,determinativ,https://ordbokene.no/nno/nn/seks,ja,ja,Skrives likt på bokmål og nynorsk.
-åtte,åtte,,,determinativ,https://ordbokene.no/nno/nn/åtte,ja,ja,Skrives likt på bokmål og nynorsk.
-ti,ti,,,determinativ,https://ordbokene.no/nno/nn/ti,ja,ja,Skrives likt på bokmål og nynorsk.
+bokmal,nynorsk,godkjente_alternativer,bokmal_alternativer,ordklasse,nynorskordboka,bokmalsform_godtas,nynorskform_lov_pa_bokmal,merknad,ulikt_ord
+jeg,eg,,,pronomen,https://ordbokene.no/nno/nn/13842,nei,nei,,nei
+ikke,ikkje,kje,,adverb,https://ordbokene.no/nno/nn/33268,nei,nei,,nei
+hva,kva,,,pronomen,https://ordbokene.no/nno/nn/43122,nei,nei,,nei
+hvem,kven,,,pronomen,https://ordbokene.no/nno/nn/43455,nei,nei,,nei
+hvor,kvar,kor,,adverb,https://ordbokene.no/nno/nn/43238,nei,nei,Samme svar som «hver» (kvar).,nei
+hvorfor,kvifor,korfor;kvi,,adverb,https://ordbokene.no/nno/nn/43519,nei,nei,,nei
+hvordan,korleis,koss;korso,hvorledes,adverb,https://ordbokene.no/nno/nn/41311,nei,nei,,ja
+hvis,viss,om;dersom;i tilfelle,viss,subjunksjon,https://ordbokene.no/nno/nn/90565,nei,ja,,nei
+noe,noko,,,determinativ,https://ordbokene.no/nno/nn/52899,nei,nei,"«noko» er inkjekjønnsformen av «nokon», ikke eget oppslagsord.",nei
+mye,mykje,,,adjektiv,https://ordbokene.no/nno/nn/51245,nei,nei,,nei
+bare,berre,einast,kun,adverb,https://ordbokene.no/nno/nn/5513,nei,nei,"«bare» finnes i Nynorskordboka, men bare som et annet ord (verb: strø med bar).",nei
+fra,frå,ifrå,ifra,preposisjon,https://ordbokene.no/nno/nn/22617,nei,nei,,nei
+hun,ho,,,pronomen,https://ordbokene.no/nno/nn/31039,nei,nei,"«hun» finnes i Nynorskordboka, men som et annet ord (substantiv).",nei
+de,dei,,,pronomen,https://ordbokene.no/nno/nn/11141,nei,nei,"«de» er også nynorsk, men betyr «dere». Bokmål «de» (flertall) = «dei».",nei
+hennes,hennar,,,determinativ,https://ordbokene.no/nno/nn/30238,nei,nei,,nei
+hver,kvar,,,determinativ,https://ordbokene.no/nno/nn/43237,nei,nei,Samme svar som «hvor» (kvar).,nei
+sammen,saman,i hop,,adverb,https://ordbokene.no/nno/nn/63548,nei,nei,,nei
+sjelden,sjeldan,sjeldsynt,,adjektiv,https://ordbokene.no/nno/nn/66233,nei,nei,,nei
+hjem,heim,heimatt,heim,substantiv,https://ordbokene.no/nno/nn/29716,nei,ja,,nei
+hjemme,heime,,heime,adverb,https://ordbokene.no/nno/nn/29744,nei,ja,,nei
+uke,veke,,,substantiv,https://ordbokene.no/nno/nn/88343,nei,nei,"«uke» finnes i Nynorskordboka, men som et annet ord (verb: skubbe).",nei
+kirke,kyrkje,,,substantiv,https://ordbokene.no/nno/nn/43834,nei,nei,,nei
+øye,auge,auga,,substantiv,https://ordbokene.no/nno/nn/3103,nei,nei,"«øye» finnes i Nynorskordboka, men som et annet ord (verb: jamre).",nei
+datter,dotter,,,substantiv,https://ordbokene.no/nno/nn/12381,nei,nei,,nei
+sønn,son,,,substantiv,https://ordbokene.no/nno/nn/71787,nei,nei,,nei
+vann,vatn,,vatn,substantiv,https://ordbokene.no/nno/nn/88000,nei,ja,«vann» finnes i Nynorskordboka bare i uttrykket «dann og vann».,nei
+melk,mjølk,,mjølk,substantiv,https://ordbokene.no/nno/nn/50171,nei,ja,,nei
+lærer,lærar,,,substantiv,https://ordbokene.no/nno/nn/47349,nei,nei,,nei
+viskelær,viskeler,,,substantiv,https://ordbokene.no/nno/nn/90540,nei,nei,,nei
+fisker,fiskar,,,substantiv,https://ordbokene.no/nno/nn/18247,nei,nei,,nei
+baker,bakar,,,substantiv,https://ordbokene.no/nno/nn/4125,nei,nei,,nei
+vei,veg,,veg,substantiv,https://ordbokene.no/nno/nn/88138,nei,ja,,nei
+verden,verd,verda,,substantiv,https://ordbokene.no/nno/nn/88932,nei,ja,«verda» (bestemt form) godtas også.,nei
+vindu,vindauge,vindauga,,substantiv,https://ordbokene.no/nno/nn/90075,nei,nei,,nei
+gulv,golv,,golv,substantiv,https://ordbokene.no/nno/nn/26232,nei,ja,,nei
+penger,pengar,,,substantiv,https://ordbokene.no/nno/nn/56900,nei,nei,"Flertall av «peng/penge». Dinordbok har ingen egen oversettelse, men Nynorskordboka bekrefter «pengar».",nei
+sommer,sommar,sumar,,substantiv,https://ordbokene.no/nno/nn/71733,nei,nei,,nei
+høst,haust,,,substantiv,https://ordbokene.no/nno/nn/29360,nei,nei,,nei
+morgen,morgon,,,substantiv,https://ordbokene.no/nno/nn/50584,nei,nei,,nei
+måned,månad,,,substantiv,https://ordbokene.no/nno/nn/51668,nei,nei,,nei
+gave,gåve,,,substantiv,https://ordbokene.no/nno/nn/28065,nei,nei,,nei
+lek,leik,spel,leik,substantiv,https://ordbokene.no/nno/nn/45089,nei,ja,"«lek» finnes i Nynorskordboka, men som andre ord (lekk, lekmann, albansk mynt).",nei
+sang,song,,,substantiv,https://ordbokene.no/nno/nn/71809,nei,nei,,nei
+nese,nase,nòs,,substantiv,https://ordbokene.no/nno/nn/51930,nei,nei,,nei
+hånd,hand,,hand,substantiv,https://ordbokene.no/nno/nn/28743,nei,ja,,nei
+hode,hovud,,,substantiv,https://ordbokene.no/nno/nn/31477,nei,nei,,nei
+sykdom,sjukdom,,sjukdom,substantiv,https://ordbokene.no/nno/nn/66365,nei,ja,,nei
+sykehus,sjukehus,,sjukehus,substantiv,https://ordbokene.no/nno/nn/66382,nei,ja,,nei
+kjærlighet,kjærleik,,,substantiv,https://ordbokene.no/nno/nn/38327,nei,ja,,ja
+ild,eld,,,substantiv,https://ordbokene.no/nno/nn/14720,nei,nei,,nei
+gress,gras,,gras,substantiv,https://ordbokene.no/nno/nn/26569,nei,ja,,nei
+blomst,blome,blom,,substantiv,https://ordbokene.no/nno/nn/6900,nei,nei,,nei
+grønnsak,grønsak,,,substantiv,https://ordbokene.no/nno/nn/27426,nei,nei,,nei
+frokost,frukost,,,substantiv,https://ordbokene.no/nno/nn/22439,nei,nei,,nei
+klær,klede,,,substantiv,https://ordbokene.no/nno/nn/38800,nei,nei,,nei
+begynnelse,byrjing,begynning;fyrstning;førstning,,substantiv,https://ordbokene.no/nno/nn/9855,nei,nei,,ja
+fortelling,forteljing,,,substantiv,https://ordbokene.no/nno/nn/21091,nei,nei,,nei
+mening,meining,,meining,substantiv,https://ordbokene.no/nno/nn/49006,nei,ja,,nei
+oppgave,oppgåve,,,substantiv,https://ordbokene.no/nno/nn/54751,nei,nei,,nei
+løsning,løysing,,løysing,substantiv,https://ordbokene.no/nno/nn/47604,nei,ja,,nei
+virkelighet,verkelegheit,røyndom;røynd,,substantiv,https://ordbokene.no/nno/nn/101749,nei,nei,,nei
+mulighet,moglegheit,mogelegheit;mulegheit;høve,,substantiv,https://ordbokene.no/nno/nn/50337,nei,nei,,nei
+frihet,fridom,,,substantiv,https://ordbokene.no/nno/nn/22083,nei,ja,,ja
+sannhet,sanning,,,substantiv,https://ordbokene.no/nno/nn/64074,nei,ja,,ja
+seier,siger,,,substantiv,https://ordbokene.no/nno/nn/65529,nei,nei,,nei
+vær,ver,,,substantiv,https://ordbokene.no/nno/nn/88893,nei,nei,,nei
+tordenvær,torever,,,substantiv,https://ordbokene.no/nno/nn/80062,nei,nei,,nei
+havn,hamn,,,substantiv,https://ordbokene.no/nno/nn/28683,nei,nei,,nei
+sommerfugl,sommarfugl,sumarfugl;fivreld;fivrelde,,substantiv,https://ordbokene.no/nno/nn/71743,nei,nei,,nei
+syk,sjuk,,sjuk,adjektiv,https://ordbokene.no/nno/nn/66362,nei,ja,,nei
+sulten,svolten,,,adjektiv,https://ordbokene.no/nno/nn/76200,nei,nei,,nei
+fornøyd,nøgd,fornøgd,fornøgd,adjektiv,https://ordbokene.no/nno/nn/53699,nei,ja,,nei
+høy,høg,,høg,adjektiv,https://ordbokene.no/nno/nn/32480,nei,ja,«høy» finnes i Nynorskordboka bare som substantiv (tørket gras).,nei
+lav,låg,,låg,adjektiv,https://ordbokene.no/nno/nn/47621,nei,ja,«lav» finnes i Nynorskordboka bare som plante.,nei
+hvit,kvit,,kvit,adjektiv,https://ordbokene.no/nno/nn/43680,nei,ja,,nei
+rød,raud,,,adjektiv,https://ordbokene.no/nno/nn/60456,nei,nei,,nei
+myk,mjuk,,mjuk,adjektiv,https://ordbokene.no/nno/nn/50143,nei,ja,,nei
+langsom,langsam,,,adjektiv,https://ordbokene.no/nno/nn/44566,nei,nei,,nei
+tidlig,tidleg,årle,,adjektiv,https://ordbokene.no/nno/nn/78722,nei,nei,,nei
+sen,sein,,sein,adjektiv,https://ordbokene.no/nno/nn/64455,nei,ja,"«sen» finnes i Nynorskordboka bare som substantiv (sene, japansk mynt).",nei
+vanlig,vanleg,gjengs,,adjektiv,https://ordbokene.no/nno/nn/87326,nei,nei,,nei
+vanskelig,vanskeleg,,,adjektiv,https://ordbokene.no/nno/nn/87346,nei,nei,,nei
+farlig,farleg,,,adjektiv,https://ordbokene.no/nno/nn/16691,nei,nei,,nei
+morsom,morosam,,,adjektiv,https://ordbokene.no/nno/nn/50635,nei,ja,,nei
+kjedelig,kjedeleg,keisam,,adjektiv,https://ordbokene.no/nno/nn/101519,nei,nei,,nei
+herlig,herleg,,,adjektiv,https://ordbokene.no/nno/nn/30318,nei,nei,,nei
+nydelig,nydeleg,,,adjektiv,https://ordbokene.no/nno/nn/53337,nei,nei,,nei
+hyggelig,hyggeleg,hyggjeleg,,adjektiv,https://ordbokene.no/nno/nn/32207,nei,nei,,nei
+ærlig,ærleg,,,adjektiv,https://ordbokene.no/nno/nn/91977,nei,nei,,nei
+lykkelig,lukkeleg,lykkeleg,,adjektiv,https://ordbokene.no/nno/nn/46741,nei,nei,,nei
+annen,annan,,,determinativ,https://ordbokene.no/nno/nn/1716,nei,nei,,nei
+mulig,mogleg,mogeleg;muleg,,adjektiv,https://ordbokene.no/nno/nn/50335,nei,nei,,nei
+umulig,umogleg,umogeleg;umuleg,,adjektiv,https://ordbokene.no/nno/nn/84565,nei,nei,,nei
+fremmed,framand,fremmend,,adjektiv,https://ordbokene.no/nno/nn/21493,nei,nei,,nei
+dyp,djup,,djup,adjektiv,https://ordbokene.no/nno/nn/12049,nei,ja,,nei
+bred,brei,,brei,adjektiv,https://ordbokene.no/nno/nn/8155,nei,ja,,nei
+skjev,skeiv,,skeiv,adjektiv,https://ordbokene.no/nno/nn/67288,nei,ja,,nei
+en,ein,éin,,determinativ,https://ordbokene.no/nno/nn/14066,nei,nei,,nei
+være,vere,vera,,verb,https://ordbokene.no/nno/nn/89137,nei,nei,«være» finnes i Nynorskordboka bare som substantiv.,nei
+spørre,spørje,spørja,,verb,https://ordbokene.no/nno/nn/72956,nei,nei,,nei
+tegne,teikne,teikna,,verb,https://ordbokene.no/nno/nn/77904,nei,nei,,nei
+leke,leike,leika,leike,verb,https://ordbokene.no/nno/nn/45094,nei,ja,"«leke» finnes i Nynorskordboka, men betyr å lekke.",nei
+spille,spele,spela,,verb,https://ordbokene.no/nno/nn/72232,nei,nei,"«spille» finnes i Nynorskordboka, men betyr å søle eller kaste bort.",nei
+våkne,vakne,vakna,vakne,verb,https://ordbokene.no/nno/nn/86980,nei,ja,,nei
+selge,selje,selja,,verb,https://ordbokene.no/nno/nn/64672,nei,nei,,nei
+lete,leite,leita;søkje,leite;søke,verb,https://ordbokene.no/nno/nn/45148,nei,ja,"«lete» finnes i Nynorskordboka, men som andre ord (farge garn, latskap).",nei
+glemme,gløyme,gløyma;glømme;forgløyme,glømme;forglemme;forglømme,verb,https://ordbokene.no/nno/nn/25911,nei,nei,,nei
+kjøre,køyre,køyra;ake;aka,,verb,https://ordbokene.no/nno/nn/38509,nei,nei,,nei
+åpne,opne,opna,,verb,https://ordbokene.no/nno/nn/54642,nei,nei,,nei
+høre,høyre,høyra,,verb,https://ordbokene.no/nno/nn/32752,nei,nei,"«høyre» er også et bokmålsord (side, parti).",nei
+fortelle,fortelje,fortelja,,verb,https://ordbokene.no/nno/nn/21085,nei,nei,,nei
+mene,meine,meina,meine,verb,https://ordbokene.no/nno/nn/48997,nei,ja,,nei
+dø,døy,,,verb,https://ordbokene.no/nno/nn/13648,nei,nei,,nei
+gjøre,gjere,gjera,,verb,https://ordbokene.no/nno/nn/25238,nei,nei,,nei
+hete,heite,heita,,verb,https://ordbokene.no/nno/nn/29904,nei,nei,"«hete» finnes i Nynorskordboka, men betyr varme.",nei
+velge,velje,velja,,verb,https://ordbokene.no/nno/nn/88560,nei,nei,,nei
+gjemme,gøyme,gøyma;gjømme,gjømme,verb,https://ordbokene.no/nno/nn/27989,nei,nei,,nei
+lyve,ljuge,lyge;ljuga;lyga,juge;ljuge;lyge,verb,https://ordbokene.no/nno/nn/46245,nei,ja,,nei
+stjele,stele,stela,,verb,https://ordbokene.no/nno/nn/73527,nei,nei,,nei
+hvete,kveite,,,substantiv,https://ordbokene.no/nno/nn/kveite,nei,nei,,nei
+hval,kval,,kval,substantiv,https://ordbokene.no/nno/nn/kval,nei,ja,,nei
+arbeider,arbeidar,,,substantiv,https://ordbokene.no/nno/nn/arbeidar,nei,nei,,nei
+leser,lesar,,,substantiv,https://ordbokene.no/nno/nn/lesar,nei,nei,,nei
+forfatter,forfattar,,,substantiv,https://ordbokene.no/nno/nn/forfattar,nei,nei,,nei
+dommer,dommar,domar,,substantiv,https://ordbokene.no/nno/nn/dommar,nei,nei,,nei
+skuespiller,skodespelar,,,substantiv,https://ordbokene.no/nno/nn/skodespelar,nei,nei,,nei
+spiller,spelar,,speller,substantiv,https://ordbokene.no/nno/nn/spelar,nei,nei,,nei
+vinner,vinnar,sigrar,,substantiv,https://ordbokene.no/nno/nn/vinnar,nei,nei,,nei
+eier,eigar,,,substantiv,https://ordbokene.no/nno/nn/eigar,nei,nei,,nei
+leder,leiar,,,substantiv,https://ordbokene.no/nno/nn/leiar,nei,nei,,nei
+hovedstad,hovudstad,,,substantiv,https://ordbokene.no/nno/nn/hovudstad,nei,nei,,nei
+gård,gard,bondegard,gard,substantiv,https://ordbokene.no/nno/nn/gard,nei,ja,,nei
+øre,øyre,øyra,,substantiv,https://ordbokene.no/nno/nn/øyre,nei,nei,"«øre» finnes i Nynorskordboka, men som andre ord (mynt).",nei
+albue,olboge,,,substantiv,https://ordbokene.no/nno/nn/olboge,nei,nei,,nei
+håndledd,handledd,handled,handledd,substantiv,https://ordbokene.no/nno/nn/handledd,nei,ja,,nei
+speil,spegel,,,substantiv,https://ordbokene.no/nno/nn/spegel,nei,nei,,nei
+stekepanne,steikepanne,steikjepanne,steikepanne,substantiv,https://ordbokene.no/nno/nn/steikepanne,nei,ja,,nei
+ovn,omn,,,substantiv,https://ordbokene.no/nno/nn/omn,nei,nei,,nei
+støvsuger,støvsugar,,,substantiv,https://ordbokene.no/nno/nn/støvsugar,nei,nei,,nei
+mel,mjøl,,mjøl,substantiv,https://ordbokene.no/nno/nn/mjøl,nei,ja,"«mel» finnes i Nynorskordboka, men betyr sandbakke.",nei
+sult,svolt,,,substantiv,https://ordbokene.no/nno/nn/svolt,nei,nei,,nei
+mandag,måndag,,,substantiv,https://ordbokene.no/nno/nn/måndag,nei,nei,,nei
+tirsdag,tysdag,,,substantiv,https://ordbokene.no/nno/nn/tysdag,nei,nei,,nei
+lørdag,laurdag,,,substantiv,https://ordbokene.no/nno/nn/laurdag,nei,nei,,nei
+regnbue,regnboge,,regnboge,substantiv,https://ordbokene.no/nno/nn/regnboge,nei,ja,,nei
+valg,val,,,substantiv,https://ordbokene.no/nno/nn/val,nei,nei,,nei
+bryllup,bryllaup,,,substantiv,https://ordbokene.no/nno/nn/bryllaup,nei,nei,,nei
+overraskelse,overrasking,,,substantiv,https://ordbokene.no/nno/nn/overrasking,nei,nei,,ja
+hendelse,hending,,hending;begivenhet,substantiv,https://ordbokene.no/nno/nn/hending,nei,ja,,ja
+opplevelse,oppleving,,oppleving,substantiv,https://ordbokene.no/nno/nn/oppleving,nei,ja,,ja
+forståelse,forståing,,,substantiv,https://ordbokene.no/nno/nn/forståing,nei,nei,,ja
+hensyn,omsyn,,,substantiv,https://ordbokene.no/nno/nn/omsyn,nei,ja,,ja
+sikkerhet,tryggleik,sikkerheit,trygghet,substantiv,https://ordbokene.no/nno/nn/tryggleik,nei,nei,,nei
+kjæreste,kjærast,kjæraste,,substantiv,https://ordbokene.no/nno/nn/kjærast,nei,nei,,nei
+ensomhet,einsemd,,,substantiv,https://ordbokene.no/nno/nn/einsemd,nei,nei,,ja
+høyde,høgd,høgde,høgde,substantiv,https://ordbokene.no/nno/nn/høgd,nei,nei,"«høgd» er lov på bokmål bare i betydningen bakke/høydedrag, ikke om hvor høyt noe er.",nei
+bredde,breidd,breidde,,substantiv,https://ordbokene.no/nno/nn/breidd,nei,nei,,nei
+bunn,botn,,botn,substantiv,https://ordbokene.no/nno/nn/botn,nei,ja,,nei
+hull,hol,hòl,høl,substantiv,https://ordbokene.no/nno/nn/hol,nei,nei,"«hull» finnes i Nynorskordboka, men betyr en sang uten ord.",nei
+øyeblikk,augeblink,augneblink;augneblunk,,substantiv,https://ordbokene.no/nno/nn/augeblink,nei,nei,,nei
+råtten,roten,ròten,,adjektiv,https://ordbokene.no/nno/nn/roten,nei,nei,,nei
+ren,rein,,rein,adjektiv,https://ordbokene.no/nno/nn/rein,nei,ja,,nei
+løs,laus,,laus,adjektiv,https://ordbokene.no/nno/nn/laus,nei,ja,,nei
+het,heit,,heit,adjektiv,https://ordbokene.no/nno/nn/heit,nei,ja,,nei
+dårlig,dårleg,,,adjektiv,https://ordbokene.no/nno/nn/dårleg,nei,nei,,nei
+nylig,nyleg,,,adjektiv,https://ordbokene.no/nno/nn/nyleg,nei,nei,,nei
+daglig,dagleg,,,adjektiv,https://ordbokene.no/nno/nn/dagleg,nei,nei,,nei
+årlig,årleg,,,adjektiv,https://ordbokene.no/nno/nn/årleg,nei,nei,,nei
+alene,åleine,aleine,aleine,adverb,https://ordbokene.no/nno/nn/åleine,nei,nei,Nynorskordboka har «aleine» og «åleine» som likestilte former.,nei
+merkelig,merkeleg,,,adjektiv,https://ordbokene.no/nno/nn/merkeleg,nei,nei,,nei
+underlig,underleg,,,adjektiv,https://ordbokene.no/nno/nn/underleg,nei,nei,,nei
+naturlig,naturleg,,,adjektiv,https://ordbokene.no/nno/nn/naturleg,nei,nei,,nei
+personlig,personleg,,,adjektiv,https://ordbokene.no/nno/nn/personleg,nei,nei,,nei
+offentlig,offentleg,,,adjektiv,https://ordbokene.no/nno/nn/offentleg,nei,nei,,nei
+hemmelig,hemmeleg,løynleg,,adjektiv,https://ordbokene.no/nno/nn/hemmeleg,nei,nei,,nei
+ensom,einsam,,,adjektiv,https://ordbokene.no/nno/nn/einsam,nei,nei,,nei
+ydmyk,audmjuk,,,adjektiv,https://ordbokene.no/nno/nn/audmjuk,nei,nei,,nei
+høflig,høfleg,,,adjektiv,https://ordbokene.no/nno/nn/høfleg,nei,nei,,nei
+rolig,roleg,,,adjektiv,https://ordbokene.no/nno/nn/roleg,nei,nei,,nei
+fet,feit,,feit,adjektiv,https://ordbokene.no/nno/nn/feit,nei,ja,«fet» finnes i Nynorskordboka bare som substantiv.,nei
+vennlig,venleg,vennleg,,adjektiv,https://ordbokene.no/nno/nn/venleg,nei,nei,,nei
+kjærlig,kjærleg,,,adjektiv,https://ordbokene.no/nno/nn/kjærleg,nei,nei,,nei
+synlig,synleg,,,adjektiv,https://ordbokene.no/nno/nn/synleg,nei,nei,,nei
+sannsynlig,sannsynleg,truleg,trolig,adjektiv,https://ordbokene.no/nno/nn/sannsynleg,nei,nei,,nei
+tydelig,tydeleg,,,adjektiv,https://ordbokene.no/nno/nn/tydeleg,nei,nei,,nei
+utrolig,utruleg,,utrulig,adjektiv,https://ordbokene.no/nno/nn/utruleg,nei,nei,,nei
+flere,fleire,,fler,determinativ,https://ordbokene.no/nno/nn/fleire,nei,nei,,nei
+selv,sjølv,sjøl,sjøl,determinativ,https://ordbokene.no/nno/nn/sjølv,nei,nei,,nei
+hverandre,kvarandre,einannan,,pronomen,https://ordbokene.no/nno/nn/kvarandre,nei,nei,,nei
+siden,sidan,,sia,subjunksjon,https://ordbokene.no/nno/nn/sidan,nei,nei,Gjelder både «siden» som tid og som årsak.,nei
+fremdeles,framleis,enno,fortsatt;fortfarende,adverb,https://ordbokene.no/nno/nn/framleis,nei,ja,,ja
+utenfor,utanfor,utafor,utafor,preposisjon,https://ordbokene.no/nno/nn/utanfor,nei,nei,,nei
+innenfor,innanfor,innafor,innafor,preposisjon,https://ordbokene.no/nno/nn/innanfor,nei,nei,,nei
+disse,desse,,,determinativ,https://ordbokene.no/nno/nn/desse,nei,nei,"«disse» finnes i Nynorskordboka, men som verb (riste, huske).",nei
+noen,nokon,nokre,,determinativ,https://ordbokene.no/nno/nn/nokon,nei,nei,«nokre» er flertallsformen og godtas også.,nei
+drømme,drøyme,drøyma,,verb,https://ordbokene.no/nno/nn/drøyme,nei,nei,,nei
+lykkes,lukkast,lykkast,,verb,https://ordbokene.no/nno/nn/lukkast,nei,nei,,nei
+ødelegge,øydeleggje,øydelegge;øydeleggja;øydelegga,øydelegge,verb,https://ordbokene.no/nno/nn/øydeleggje,nei,nei,,nei
+eie,eige,eiga,,verb,https://ordbokene.no/nno/nn/eige,nei,nei,,nei
+tjene,tene,tena,,verb,https://ordbokene.no/nno/nn/tene,nei,nei,,nei
+hilse,helse,helsa;helse på,,verb,https://ordbokene.no/nno/nn/helse,nei,nei,«helse» er også et substantiv på nynorsk.,nei
+hvile,kvile,kvila,,verb,https://ordbokene.no/nno/nn/kvile,nei,nei,,nei
+steke,steikje,steike;steikja;steika,steike,verb,https://ordbokene.no/nno/nn/steikje,nei,nei,,nei
+skjære,skjere,skjera,,verb,https://ordbokene.no/nno/nn/skjere,nei,nei,«skjære» finnes i Nynorskordboka bare som substantiv (fugl).,nei
+slokke,sløkkje,sløkke;sløkkja;sløkka,slukke,verb,https://ordbokene.no/nno/nn/sløkkje,nei,nei,,nei
+hviske,kviskre,kviskra,,verb,https://ordbokene.no/nno/nn/kviskre,nei,ja,,nei
+savne,sakne,sakna,sakne,verb,https://ordbokene.no/nno/nn/sakne,nei,ja,,ja
+foretrekke,føretrekkje,føretrekke;føretrekkja;føretrekka,,verb,https://ordbokene.no/nno/nn/føretrekkje,nei,nei,,nei
+ligne,likne,likna,likne,verb,https://ordbokene.no/nno/nn/likne,nei,ja,,nei
+virke,verke,verka,,verb,https://ordbokene.no/nno/nn/verke,nei,nei,«virke» finnes i Nynorskordboka bare som substantiv.,nei
+synes,synast,tykkje;tykke;tykkja;tykka,tykke,verb,https://ordbokene.no/nno/nn/synast,nei,nei,,nei
+finnes,finnast,,,verb,https://ordbokene.no/nno/nn/finnast,nei,nei,,nei
+oversette,omsetje,omsette;omsetja;omsetta;setje om;setja om,omsette,verb,https://ordbokene.no/nno/nn/omsetje,nei,nei,,ja
+telle,telje,telja,,verb,https://ordbokene.no/nno/nn/telje,nei,nei,«telle» finnes i Nynorskordboka bare som substantiv (ungt bartre).,nei
+huske,hugse,hugsa,,verb,https://ordbokene.no/nno/nn/hugse,nei,nei,"«huske» finnes i Nynorskordboka, men betyr å gynge.",nei
+høste,hauste,hausta,,verb,https://ordbokene.no/nno/nn/hauste,nei,nei,,nei
+vanne,vatne,vatna,vatne,verb,https://ordbokene.no/nno/nn/vatne,nei,ja,,nei
+melke,mjølke,mjølka,mjølke,verb,https://ordbokene.no/nno/nn/mjølke,nei,ja,,nei
+usynlig,usynleg,,,adjektiv,https://ordbokene.no/nno/nn/usynleg,nei,nei,,nei
+nå,no,nå,,adverb,https://ordbokene.no/nno/nn/52864,ja,nei,Bokmålsformen «nå» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+søster,syster,søster,,substantiv,https://ordbokene.no/nno/nn/76586,ja,nei,Bokmålsformen «søster» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+venn,ven,venn,,substantiv,https://ordbokene.no/nno/nn/88684,ja,nei,Bokmålsformen «venn» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+skole,skule,skole,,substantiv,https://ordbokene.no/nno/nn/100431,ja,nei,Bokmålsformen «skole» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+bilde,bilete,bilde,,substantiv,https://ordbokene.no/nno/nn/5949,ja,nei,Bokmålsformen «bilde» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+ansikt,andlet,ansikt,andlet,substantiv,https://ordbokene.no/nno/nn/1460,ja,ja,Bokmålsformen «ansikt» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+vennskap,venskap,vennskap,,substantiv,https://ordbokene.no/nno/nn/88803,ja,nei,Bokmålsformen «vennskap» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+tallerken,tallerk,tallerken,,substantiv,https://ordbokene.no/nno/nn/77401,ja,nei,Bokmålsformen «tallerken» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+følelse,kjensle,følelse,kjensle,substantiv,https://ordbokene.no/nno/nn/38149,ja,ja,Bokmålsformen «følelse» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+bølge,bølgje,bølge;bylgje,,substantiv,https://ordbokene.no/nno/nn/10009,ja,nei,Bokmålsformen «bølge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+deilig,deileg,deilig,,adjektiv,https://ordbokene.no/nno/nn/124595,ja,nei,Bokmålsformen «deilig» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+nødvendig,naudsynt,nødvendig,,adjektiv,https://ordbokene.no/nno/nn/52218,ja,nei,Bokmålsformen «nødvendig» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+komme,kome,komme;koma;komma,,verb,https://ordbokene.no/nno/nn/40202,ja,nei,Bokmålsformen «komme» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+tenke,tenkje,tenke;tenkja;tenka,,verb,https://ordbokene.no/nno/nn/78310,ja,nei,Bokmålsformen «tenke» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+ønske,ønskje,ønske;ynskje;ynske;ønskja;ønska;ynskja;ynska,,verb,https://ordbokene.no/nno/nn/91685,ja,nei,Bokmålsformen «ønske» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+bygge,byggje,bygge;byggja;bygga,,verb,https://ordbokene.no/nno/nn/9664,ja,nei,Bokmålsformen «bygge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+stenge,stengje,stenge;stengja;stenga,,verb,https://ordbokene.no/nno/nn/73603,ja,nei,Bokmålsformen «stenge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+begynne,byrje,begynne;byrja;begynna,,verb,https://ordbokene.no/nno/nn/9853,ja,nei,Bokmålsformen «begynne» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+ligge,liggje,ligge;liggja;ligga,,verb,https://ordbokene.no/nno/nn/45580,ja,nei,Bokmålsformen «ligge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+legge,leggje,legge;leggja;legga,,verb,https://ordbokene.no/nno/nn/45016,ja,nei,Bokmålsformen «legge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+henge,hengje,henge;hengja;henga,,verb,https://ordbokene.no/nno/nn/30218,ja,nei,Bokmålsformen «henge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+trekke,trekkje,trekke;trekkja;trekka,,verb,https://ordbokene.no/nno/nn/80782,ja,nei,Bokmålsformen «trekke» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+følge,følgje,følge;fylgje;følgja;følga;fylgja,,verb,https://ordbokene.no/nno/nn/23326,ja,nei,Bokmålsformen «følge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+svømme,symje,svømme;symja;svømma,,verb,https://ordbokene.no/nno/nn/76383,ja,nei,Bokmålsformen «svømme» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+måke,måse,måke,,substantiv,https://ordbokene.no/nno/nn/måse,ja,ja,Bokmålsformen «måke» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+søndag,sundag,søndag,,substantiv,https://ordbokene.no/nno/nn/sundag,ja,nei,Bokmålsformen «søndag» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+bevegelse,rørsle,bevegelse,,substantiv,https://ordbokene.no/nno/nn/rørsle,ja,ja,Bokmålsformen «bevegelse» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+oppførsel,åtferd,oppførsel,atferd;adferd,substantiv,https://ordbokene.no/nno/nn/åtferd,ja,nei,Bokmålsformen «oppførsel» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+moden,mogen,moden,,adjektiv,https://ordbokene.no/nno/nn/mogen,ja,nei,Bokmålsformen «moden» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+opptatt,oppteken,opptatt,,adjektiv,https://ordbokene.no/nno/nn/oppteken,ja,nei,Bokmålsformen «opptatt» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+mens,medan,mens,,subjunksjon,https://ordbokene.no/nno/nn/medan,ja,nei,Bokmålsformen «mens» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+derfor,difor,derfor,,adverb,https://ordbokene.no/nno/nn/difor,ja,nei,Bokmålsformen «derfor» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+svelge,svelgje,svelge;svelgja;svelga,,verb,https://ordbokene.no/nno/nn/svelgje,ja,nei,Bokmålsformen «svelge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+gjespe,geispe,gjespe;geispa;gjespa,,verb,https://ordbokene.no/nno/nn/geispe,ja,nei,Bokmålsformen «gjespe» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+undersøke,undersøkje,undersøke;undersøkja;undersøka,,verb,https://ordbokene.no/nno/nn/undersøkje,ja,nei,Bokmålsformen «undersøke» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+beskrive,skildre,beskrive;skildra;beskriva,,verb,https://ordbokene.no/nno/nn/skildre,ja,ja,Bokmålsformen «beskrive» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+true,truge,true;truga;trua,,verb,https://ordbokene.no/nno/nn/truge,ja,nei,Bokmålsformen «true» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+sørge,sørgje,sørge;syrgje;sørgja;sørga;syrgja,,verb,https://ordbokene.no/nno/nn/sørgje,ja,nei,Bokmålsformen «sørge» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+bety,tyde,bety;tyda,,verb,https://ordbokene.no/nno/nn/tyde,ja,ja,Bokmålsformen «bety» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+enda,endå,enda;enno,,adverb,https://ordbokene.no/nno/nn/endå,ja,nei,Bokmålsformen «enda» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+ennå,enno,ennå;endå,,adverb,https://ordbokene.no/nno/nn/enno,ja,nei,Bokmålsformen «ennå» er også riktig nynorsk (Nynorskordboka) og godtas.,nei
+spise,ete,spise;eta,,verb,https://ordbokene.no/nno/nn/15798,ja,ja,Bokmålsformen «spise» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+hjerte,hjarte,hjerte;hjarta,,substantiv,https://ordbokene.no/nno/nn/30754,ja,nei,Bokmålsformen «hjerte» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+drøm,draum,drøm,,substantiv,https://ordbokene.no/nno/nn/12519,ja,nei,Bokmålsformen «drøm» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+trøtt,trøytt,trøtt,trett,adjektiv,https://ordbokene.no/nno/nn/81921,ja,nei,Bokmålsformen «trøtt» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+uten,utan,uten,,preposisjon,https://ordbokene.no/nno/nn/85692,ja,nei,Bokmålsformen «uten» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+grønn,grøn,grønn,,adjektiv,https://ordbokene.no/nno/nn/grøn,ja,nei,Bokmålsformen «grønn» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+holde,halde,holde;halda,,verb,https://ordbokene.no/nno/nn/28248,ja,nei,Bokmålsformen «holde» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+vokse,vekse,vokse;veksa,,verb,https://ordbokene.no/nno/nn/vekse,ja,nei,Bokmålsformen «vokse» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+bære,bere,bære;bera,,verb,https://ordbokene.no/nno/nn/5353,ja,nei,Bokmålsformen «bære» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+egen,eigen,egen,eigen,determinativ,https://ordbokene.no/nno/nn/14000,ja,ja,Bokmålsformen «egen» er også riktig nynorsk (dinordbok.no) og godtas.,nei
+bil,bil,,,substantiv,https://ordbokene.no/nno/nn/bil,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+hus,hus,,,substantiv,https://ordbokene.no/nno/nn/hus,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+katt,katt,,,substantiv,https://ordbokene.no/nno/nn/katt,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+hund,hund,,,substantiv,https://ordbokene.no/nno/nn/hund,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fisk,fisk,,,substantiv,https://ordbokene.no/nno/nn/fisk,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sol,sol,,,substantiv,https://ordbokene.no/nno/nn/sol,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+bord,bord,,,substantiv,https://ordbokene.no/nno/nn/bord,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ball,ball,,,substantiv,https://ordbokene.no/nno/nn/ball,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+buss,buss,,,substantiv,https://ordbokene.no/nno/nn/buss,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+bok,bok,,,substantiv,https://ordbokene.no/nno/nn/bok,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+eple,eple,,,substantiv,https://ordbokene.no/nno/nn/eple,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+seng,seng,,,substantiv,https://ordbokene.no/nno/nn/seng,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+hest,hest,,,substantiv,https://ordbokene.no/nno/nn/hest,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+jente,jente,,,substantiv,https://ordbokene.no/nno/nn/jente,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fjell,fjell,,,substantiv,https://ordbokene.no/nno/nn/fjell,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+skog,skog,,,substantiv,https://ordbokene.no/nno/nn/skog,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+snø,snø,,,substantiv,https://ordbokene.no/nno/nn/snø,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+klokke,klokke,,,substantiv,https://ordbokene.no/nno/nn/klokke,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+onsdag,onsdag,,,substantiv,https://ordbokene.no/nno/nn/onsdag,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+torsdag,torsdag,,,substantiv,https://ordbokene.no/nno/nn/torsdag,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fredag,fredag,,,substantiv,https://ordbokene.no/nno/nn/fredag,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sove,sove,sova,,verb,https://ordbokene.no/nno/nn/sove,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lese,lese,lesa,,verb,https://ordbokene.no/nno/nn/lese,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+skrive,skrive,skriva,,verb,https://ordbokene.no/nno/nn/skrive,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+drikke,drikke,drikka,,verb,https://ordbokene.no/nno/nn/drikke,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+hoppe,hoppe,hoppa,,verb,https://ordbokene.no/nno/nn/hoppe,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+danse,danse,dansa,,verb,https://ordbokene.no/nno/nn/danse,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+bake,bake,baka,,verb,https://ordbokene.no/nno/nn/bake,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vaske,vaske,vaska,,verb,https://ordbokene.no/nno/nn/vaske,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kjøpe,kjøpe,kjøpa,,verb,https://ordbokene.no/nno/nn/kjøpe,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+svare,svare,svara,,verb,https://ordbokene.no/nno/nn/svare,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+hjelpe,hjelpe,hjelpa,,verb,https://ordbokene.no/nno/nn/hjelpe,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+stor,stor,,,adjektiv,https://ordbokene.no/nno/nn/stor,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+glad,glad,,,adjektiv,https://ordbokene.no/nno/nn/glad,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kald,kald,,,adjektiv,https://ordbokene.no/nno/nn/kald,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+varm,varm,,,adjektiv,https://ordbokene.no/nno/nn/varm,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sterk,sterk,,,adjektiv,https://ordbokene.no/nno/nn/sterk,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+snill,snill,,,adjektiv,https://ordbokene.no/nno/nn/snill,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+blå,blå,,,adjektiv,https://ordbokene.no/nno/nn/blå,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+svart,svart,,,adjektiv,https://ordbokene.no/nno/nn/svart,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ofte,ofte,,,adverb,https://ordbokene.no/nno/nn/ofte,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+aldri,aldri,,,adverb,https://ordbokene.no/nno/nn/aldri,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kanskje,kanskje,,,adverb,https://ordbokene.no/nno/nn/kanskje,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+på,på,,,preposisjon,https://ordbokene.no/nno/nn/på,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+med,med,,,preposisjon,https://ordbokene.no/nno/nn/med,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+båt,båt,,,substantiv,https://ordbokene.no/nno/nn/båt,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+tog,tog,,,substantiv,https://ordbokene.no/nno/nn/tog,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fly,fly,,,substantiv,https://ordbokene.no/nno/nn/fly,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sykkel,sykkel,,,substantiv,https://ordbokene.no/nno/nn/sykkel,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+dør,dør,,,substantiv,https://ordbokene.no/nno/nn/dør,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vegg,vegg,,,substantiv,https://ordbokene.no/nno/nn/vegg,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+tak,tak,,,substantiv,https://ordbokene.no/nno/nn/tak,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+regn,regn,,,substantiv,https://ordbokene.no/nno/nn/regn,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vind,vind,,,substantiv,https://ordbokene.no/nno/nn/vind,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+storm,storm,,,substantiv,https://ordbokene.no/nno/nn/storm,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+natt,natt,,,substantiv,https://ordbokene.no/nno/nn/natt,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+dag,dag,,,substantiv,https://ordbokene.no/nno/nn/dag,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+år,år,,,substantiv,https://ordbokene.no/nno/nn/år,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+time,time,,,substantiv,https://ordbokene.no/nno/nn/time,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+papir,papir,,,substantiv,https://ordbokene.no/nno/nn/papir,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+by,by,,,substantiv,https://ordbokene.no/nno/nn/by,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+land,land,,,substantiv,https://ordbokene.no/nno/nn/land,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+gate,gate,,,substantiv,https://ordbokene.no/nno/nn/gate,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+butikk,butikk,,,substantiv,https://ordbokene.no/nno/nn/butikk,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+brev,brev,,,substantiv,https://ordbokene.no/nno/nn/brev,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+pakke,pakke,,,substantiv,https://ordbokene.no/nno/nn/pakke,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+stå,stå,,,verb,https://ordbokene.no/nno/nn/stå,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ha,ha,,,verb,https://ordbokene.no/nno/nn/ha,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ta,ta,take;taka,,verb,https://ordbokene.no/nno/nn/ta,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kjenne,kjenne,kjenna,,verb,https://ordbokene.no/nno/nn/kjenne,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+finne,finne,finna,,verb,https://ordbokene.no/nno/nn/finne,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ny,ny,,,adjektiv,https://ordbokene.no/nno/nn/ny,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+god,god,,,adjektiv,https://ordbokene.no/nno/nn/god,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fin,fin,,,adjektiv,https://ordbokene.no/nno/nn/fin,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+pen,pen,,,adjektiv,https://ordbokene.no/nno/nn/pen,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+rik,rik,,,adjektiv,https://ordbokene.no/nno/nn/rik,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fattig,fattig,,,adjektiv,https://ordbokene.no/nno/nn/fattig,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+billig,billig,billeg,,adjektiv,https://ordbokene.no/nno/nn/billig,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+viktig,viktig,,,adjektiv,https://ordbokene.no/nno/nn/viktig,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vakker,vakker,,,adjektiv,https://ordbokene.no/nno/nn/vakker,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+her,her,,,adverb,https://ordbokene.no/nno/nn/her,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+der,der,,,adverb,https://ordbokene.no/nno/nn/der,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+inn,inn,,,adverb,https://ordbokene.no/nno/nn/inn,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ut,ut,,,adverb,https://ordbokene.no/nno/nn/ut,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+stol,stol,,,substantiv,https://ordbokene.no/nno/nn/stol,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sko,sko,,,substantiv,https://ordbokene.no/nno/nn/sko,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lue,lue,luve,,substantiv,https://ordbokene.no/nno/nn/lue,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+skjorte,skjorte,,,substantiv,https://ordbokene.no/nno/nn/skjorte,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+bukse,bukse,,,substantiv,https://ordbokene.no/nno/nn/bukse,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kake,kake,,,substantiv,https://ordbokene.no/nno/nn/kake,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ost,ost,,,substantiv,https://ordbokene.no/nno/nn/ost,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vinter,vinter,,,substantiv,https://ordbokene.no/nno/nn/vinter,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+arm,arm,,,substantiv,https://ordbokene.no/nno/nn/arm,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fot,fot,,,substantiv,https://ordbokene.no/nno/nn/fot,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+finger,finger,,,substantiv,https://ordbokene.no/nno/nn/finger,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+munn,munn,,,substantiv,https://ordbokene.no/nno/nn/munn,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+tann,tann,,,substantiv,https://ordbokene.no/nno/nn/tann,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+hår,hår,,,substantiv,https://ordbokene.no/nno/nn/hår,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fest,fest,,,substantiv,https://ordbokene.no/nno/nn/fest,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+jul,jul,jol,,substantiv,https://ordbokene.no/nno/nn/jul,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+tid,tid,,,substantiv,https://ordbokene.no/nno/nn/tid,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+liv,liv,,,substantiv,https://ordbokene.no/nno/nn/liv,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lys,lys,ljos,,substantiv,https://ordbokene.no/nno/nn/lys,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+farge,farge,,,substantiv,https://ordbokene.no/nno/nn/farge,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lyd,lyd,ljod,,substantiv,https://ordbokene.no/nno/nn/lyd,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vinne,vinne,vinna,,verb,https://ordbokene.no/nno/nn/vinne,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+falle,falle,falla,,verb,https://ordbokene.no/nno/nn/falle,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sende,sende,senda,,verb,https://ordbokene.no/nno/nn/sende,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+bruke,bruke,bruka,,verb,https://ordbokene.no/nno/nn/bruke,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lage,lage,laga,,verb,https://ordbokene.no/nno/nn/lage,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+prøve,prøve,prøva,,verb,https://ordbokene.no/nno/nn/prøve,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lang,lang,,,adjektiv,https://ordbokene.no/nno/nn/lang,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kort,kort,,,adjektiv,https://ordbokene.no/nno/nn/kort,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+tynn,tynn,,,adjektiv,https://ordbokene.no/nno/nn/tynn,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+tung,tung,,,adjektiv,https://ordbokene.no/nno/nn/tung,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lett,lett,,,adjektiv,https://ordbokene.no/nno/nn/lett,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+full,full,,,adjektiv,https://ordbokene.no/nno/nn/full,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+opp,opp,,,adverb,https://ordbokene.no/nno/nn/opp,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ned,ned,,,adverb,https://ordbokene.no/nno/nn/ned,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+snart,snart,,,adverb,https://ordbokene.no/nno/nn/snart,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+alltid,alltid,,,adverb,https://ordbokene.no/nno/nn/alltid,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+igjen,igjen,,,adverb,https://ordbokene.no/nno/nn/igjen,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+nesten,nesten,,,adverb,https://ordbokene.no/nno/nn/nesten,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+veldig,veldig,,,adjektiv,https://ordbokene.no/nno/nn/veldig,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+smør,smør,,,substantiv,https://ordbokene.no/nno/nn/smør,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+egg,egg,,,substantiv,https://ordbokene.no/nno/nn/egg,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sukker,sukker,,,substantiv,https://ordbokene.no/nno/nn/sukker,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+brød,brød,,,substantiv,https://ordbokene.no/nno/nn/brød,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+suppe,suppe,,,substantiv,https://ordbokene.no/nno/nn/suppe,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+mor,mor,,,substantiv,https://ordbokene.no/nno/nn/mor,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+far,far,,,substantiv,https://ordbokene.no/nno/nn/far,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+mage,mage,,,substantiv,https://ordbokene.no/nno/nn/mage,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+rygg,rygg,,,substantiv,https://ordbokene.no/nno/nn/rygg,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ku,ku,,,substantiv,https://ordbokene.no/nno/nn/ku,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+gris,gris,,,substantiv,https://ordbokene.no/nno/nn/gris,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sau,sau,,,substantiv,https://ordbokene.no/nno/nn/sau,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+mus,mus,,,substantiv,https://ordbokene.no/nno/nn/mus,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ulv,ulv,,,substantiv,https://ordbokene.no/nno/nn/ulv,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+musikk,musikk,,,substantiv,https://ordbokene.no/nno/nn/musikk,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ord,ord,,,substantiv,https://ordbokene.no/nno/nn/ord,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+språk,språk,,,substantiv,https://ordbokene.no/nno/nn/språk,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+jobb,jobb,,,substantiv,https://ordbokene.no/nno/nn/jobb,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+rom,rom,,,substantiv,https://ordbokene.no/nno/nn/rom,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+trapp,trapp,,,substantiv,https://ordbokene.no/nno/nn/trapp,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lære,lære,læra,,verb,https://ordbokene.no/nno/nn/lære,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+stoppe,stoppe,stoppa,,verb,https://ordbokene.no/nno/nn/stoppe,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vente,vente,venta,,verb,https://ordbokene.no/nno/nn/vente,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lytte,lytte,lytta,,verb,https://ordbokene.no/nno/nn/lytte,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fiske,fiske,fiska,,verb,https://ordbokene.no/nno/nn/fiske,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+leve,leve,leva,,verb,https://ordbokene.no/nno/nn/leve,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+tom,tom,,,adjektiv,https://ordbokene.no/nno/nn/tom,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+våt,våt,,,adjektiv,https://ordbokene.no/nno/nn/våt,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+tørr,tørr,turr,,adjektiv,https://ordbokene.no/nno/nn/tørr,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+rask,rask,,,adjektiv,https://ordbokene.no/nno/nn/rask,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+trist,trist,,,adjektiv,https://ordbokene.no/nno/nn/trist,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sint,sint,,,adjektiv,https://ordbokene.no/nno/nn/sint,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+redd,redd,,,adjektiv,https://ordbokene.no/nno/nn/redd,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+til,til,,,preposisjon,https://ordbokene.no/nno/nn/til,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+over,over,,,preposisjon,https://ordbokene.no/nno/nn/over,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+under,under,,,preposisjon,https://ordbokene.no/nno/nn/under,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+etter,etter,,,preposisjon,https://ordbokene.no/nno/nn/etter,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+mot,mot,,,preposisjon,https://ordbokene.no/nno/nn/mot,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+mellom,mellom,,,preposisjon,https://ordbokene.no/nno/nn/mellom,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+du,du,,,pronomen,https://ordbokene.no/nno/nn/du,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+bror,bror,,,substantiv,https://ordbokene.no/nno/nn/bror,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+barn,barn,,,substantiv,https://ordbokene.no/nno/nn/barn,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+mann,mann,,,substantiv,https://ordbokene.no/nno/nn/mann,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+elev,elev,,,substantiv,https://ordbokene.no/nno/nn/elev,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lege,lege,lækjar,,substantiv,https://ordbokene.no/nno/nn/lege,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+konge,konge,,,substantiv,https://ordbokene.no/nno/nn/konge,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+dronning,dronning,,,substantiv,https://ordbokene.no/nno/nn/dronning,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+rev,rev,,,substantiv,https://ordbokene.no/nno/nn/rev,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+elg,elg,,,substantiv,https://ordbokene.no/nno/nn/elg,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ørn,ørn,,,substantiv,https://ordbokene.no/nno/nn/ørn,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ugle,ugle,,,substantiv,https://ordbokene.no/nno/nn/ugle,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+frosk,frosk,,,substantiv,https://ordbokene.no/nno/nn/frosk,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+løve,løve,,,substantiv,https://ordbokene.no/nno/nn/løve,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ape,ape,,,substantiv,https://ordbokene.no/nno/nn/ape,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lampe,lampe,,,substantiv,https://ordbokene.no/nno/nn/lampe,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kopp,kopp,,,substantiv,https://ordbokene.no/nno/nn/kopp,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kniv,kniv,,,substantiv,https://ordbokene.no/nno/nn/kniv,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+gaffel,gaffel,,,substantiv,https://ordbokene.no/nno/nn/gaffel,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sekk,sekk,,,substantiv,https://ordbokene.no/nno/nn/sekk,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+nøkkel,nøkkel,nykel,,substantiv,https://ordbokene.no/nno/nn/nøkkel,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+miste,miste,misse;mista;missa,,verb,https://ordbokene.no/nno/nn/miste,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vise,vise,visa,,verb,https://ordbokene.no/nno/nn/vise,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+betale,betale,betala,,verb,https://ordbokene.no/nno/nn/betale,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+reise,reise,reisa,,verb,https://ordbokene.no/nno/nn/reise,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+smake,smake,smaka,,verb,https://ordbokene.no/nno/nn/smake,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+hente,hente,henta,,verb,https://ordbokene.no/nno/nn/hente,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+rydde,rydde,rydje;rydda;rydja,,verb,https://ordbokene.no/nno/nn/rydde,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+stille,stille,,,adjektiv,https://ordbokene.no/nno/nn/stille,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+klar,klar,klår,,adjektiv,https://ordbokene.no/nno/nn/klar,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sur,sur,,,adjektiv,https://ordbokene.no/nno/nn/sur,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+søt,søt,,,adjektiv,https://ordbokene.no/nno/nn/søt,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+rund,rund,,,adjektiv,https://ordbokene.no/nno/nn/rund,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+grå,grå,,,adjektiv,https://ordbokene.no/nno/nn/grå,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+gul,gul,,,adjektiv,https://ordbokene.no/nno/nn/gul,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+vi,vi,me,,pronomen,https://ordbokene.no/nno/nn/vi,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+han,han,,,pronomen,https://ordbokene.no/nno/nn/han,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+og,og,,,konjunksjon,https://ordbokene.no/nno/nn/og,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+men,men,,,konjunksjon,https://ordbokene.no/nno/nn/men,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+eller,eller,,,konjunksjon,https://ordbokene.no/nno/nn/eller,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+alle,alle,,,determinativ,https://ordbokene.no/nno/nn/alle,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+mange,mange,,,determinativ,https://ordbokene.no/nno/nn/mange,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+hav,hav,,,substantiv,https://ordbokene.no/nno/nn/hav,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+elv,elv,,,substantiv,https://ordbokene.no/nno/nn/elv,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fjord,fjord,,,substantiv,https://ordbokene.no/nno/nn/fjord,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+strand,strand,,,substantiv,https://ordbokene.no/nno/nn/strand,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+øy,øy,,,substantiv,https://ordbokene.no/nno/nn/øy,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+dal,dal,,,substantiv,https://ordbokene.no/nno/nn/dal,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+sky,sky,,,substantiv,https://ordbokene.no/nno/nn/sky,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+maur,maur,,,substantiv,https://ordbokene.no/nno/nn/maur,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+potet,potet,,,substantiv,https://ordbokene.no/nno/nn/potet,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+banan,banan,,,substantiv,https://ordbokene.no/nno/nn/banan,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+pære,pære,,,substantiv,https://ordbokene.no/nno/nn/pære,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+gulrot,gulrot,,,substantiv,https://ordbokene.no/nno/nn/gulrot,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+penn,penn,,,substantiv,https://ordbokene.no/nno/nn/penn,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+blyant,blyant,,,substantiv,https://ordbokene.no/nno/nn/blyant,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+telefon,telefon,,,substantiv,https://ordbokene.no/nno/nn/telefon,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+dyr,dyr,,,substantiv,https://ordbokene.no/nno/nn/dyr,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+stein,stein,,,substantiv,https://ordbokene.no/nno/nn/stein,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+kaste,kaste,kasta,,verb,https://ordbokene.no/nno/nn/kaste,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+smile,smile,smila,,verb,https://ordbokene.no/nno/nn/smile,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+gå,gå,,,verb,https://ordbokene.no/nno/nn/gå,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+dele,dele,dela,,verb,https://ordbokene.no/nno/nn/dele,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+trene,trene,trena,,verb,https://ordbokene.no/nno/nn/trene,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+elske,elske,elska,,verb,https://ordbokene.no/nno/nn/elske,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+klatre,klatre,klatra,,verb,https://ordbokene.no/nno/nn/klatre,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+spare,spare,spara,,verb,https://ordbokene.no/nno/nn/spare,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+liten,liten,,,adjektiv,https://ordbokene.no/nno/nn/liten,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ung,ung,,,adjektiv,https://ordbokene.no/nno/nn/ung,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+brun,brun,,,adjektiv,https://ordbokene.no/nno/nn/brun,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+svak,svak,,,adjektiv,https://ordbokene.no/nno/nn/svak,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+modig,modig,,,adjektiv,https://ordbokene.no/nno/nn/modig,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+flink,flink,,,adjektiv,https://ordbokene.no/nno/nn/flink,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+dum,dum,,,adjektiv,https://ordbokene.no/nno/nn/dum,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+klok,klok,,,adjektiv,https://ordbokene.no/nno/nn/klok,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+lat,lat,,,adjektiv,https://ordbokene.no/nno/nn/lat,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ingen,ingen,,,determinativ,https://ordbokene.no/nno/nn/ingen,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fire,fire,,,determinativ,https://ordbokene.no/nno/nn/fire,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+fem,fem,,,determinativ,https://ordbokene.no/nno/nn/fem,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+seks,seks,,,determinativ,https://ordbokene.no/nno/nn/seks,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+åtte,åtte,,,determinativ,https://ordbokene.no/nno/nn/åtte,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+ti,ti,,,determinativ,https://ordbokene.no/nno/nn/ti,ja,ja,Skrives likt på bokmål og nynorsk.,nei
+benytte,nytte,nytta;bruke;bruka,,verb,https://ordbokene.no/nno/nn/nytte,nei,ja,Annet ord på nynorsk: «benytte» står ikke i Nynorskordboka.,ja
+ansette,tilsetje,tilsetja;tilsette;tilsetta,,verb,https://ordbokene.no/nno/nn/79127,nei,nei,Annet ord på nynorsk: «ansette» står ikke i Nynorskordboka.,ja
+befri,frigjere,frigjera,,verb,https://ordbokene.no/nno/nn/22119,nei,nei,Annet ord på nynorsk: «befri» står ikke i Nynorskordboka.,ja
+begrense,avgrense,avgrensa,,verb,https://ordbokene.no/nno/nn/3534,nei,ja,Annet ord på nynorsk: «begrense» står ikke i Nynorskordboka.,ja
+berolige,roe,roa;trøyste;trøysta,,verb,https://ordbokene.no/nno/nn/roe,nei,ja,Annet ord på nynorsk: «berolige» står ikke i Nynorskordboka.,ja
+belønne,løne,løna;påskjøne;påskjøna,,verb,https://ordbokene.no/nno/nn/47440,nei,nei,Annet ord på nynorsk: «belønne» står ikke i Nynorskordboka.,ja
+beskylde,skulde,skulda;skylde;skylda;skuldgje;skyldgje,,verb,https://ordbokene.no/nno/nn/69064,nei,nei,Annet ord på nynorsk: «beskylde» står ikke i Nynorskordboka.,ja
+likhet,likskap,,,substantiv,https://ordbokene.no/nno/nn/45673,nei,ja,Annet ord på nynorsk: «likhet» står ikke i Nynorskordboka.,ja
+tålmodighet,tolmod,,,substantiv,https://ordbokene.no/nno/nn/79824,nei,nei,Annet ord på nynorsk: «tålmodighet» står ikke i Nynorskordboka.,ja
+avgjørelse,avgjerd,avgjersle,,substantiv,https://ordbokene.no/nno/nn/3526,nei,ja,Annet ord på nynorsk: «avgjørelse» står ikke i Nynorskordboka.,ja
+beskrivelse,skildring,beskriving;omtale,,substantiv,https://ordbokene.no/nno/nn/67387,nei,ja,Annet ord på nynorsk: «beskrivelse» står ikke i Nynorskordboka.,ja
+tillatelse,løyve,tillating;lov,,substantiv,https://ordbokene.no/nno/nn/løyve,nei,ja,Annet ord på nynorsk: «tillatelse» står ikke i Nynorskordboka.,ja
+fortsettelse,framhald,fortsetjing,,substantiv,https://ordbokene.no/nno/nn/21593,nei,ja,Annet ord på nynorsk: «fortsettelse» står ikke i Nynorskordboka.,ja
+forbrytelse,brotsverk,lovbrot,,substantiv,https://ordbokene.no/nno/nn/8658,nei,nei,Annet ord på nynorsk: «forbrytelse» står ikke i Nynorskordboka.,ja
+oppmerksomhet,merksemd,oppmerksemd,,substantiv,https://ordbokene.no/nno/nn/49371,nei,nei,Annet ord på nynorsk: «oppmerksomhet» står ikke i Nynorskordboka.,ja
+virksomhet,verksemd,,,substantiv,https://ordbokene.no/nno/nn/89221,nei,nei,Annet ord på nynorsk: «virksomhet» står ikke i Nynorskordboka.,ja
+utdannelse,utdanning,,,substantiv,https://ordbokene.no/nno/nn/85869,nei,ja,Annet ord på nynorsk: «utdannelse» står ikke i Nynorskordboka.,ja
+hilsen,helsing,,,substantiv,https://ordbokene.no/nno/nn/30093,nei,ja,Annet ord på nynorsk: «hilsen» står ikke i Nynorskordboka.,ja
+tilgivelse,tilgjeving,tilgiving,,substantiv,https://ordbokene.no/nno/nn/78991,nei,nei,Annet ord på nynorsk: «tilgivelse» står ikke i Nynorskordboka.,ja
+begivenhet,hending,storhending,,substantiv,https://ordbokene.no/nno/nn/hending,nei,ja,Annet ord på nynorsk: «begivenhet» står ikke i Nynorskordboka.,ja
+betingelse,vilkår,føresetnad,,substantiv,https://ordbokene.no/nno/nn/89944,nei,ja,Annet ord på nynorsk: «betingelse» står ikke i Nynorskordboka.,ja
+virkning,verknad,,,substantiv,https://ordbokene.no/nno/nn/89211,nei,ja,Annet ord på nynorsk: «virkning» står ikke i Nynorskordboka.,ja
+forutsetning,føresetnad,vilkår,,substantiv,https://ordbokene.no/nno/nn/23477,nei,nei,Annet ord på nynorsk: «forutsetning» står ikke i Nynorskordboka.,ja
+bevissthet,medvit,,,substantiv,https://ordbokene.no/nno/nn/48958,nei,nei,Annet ord på nynorsk: «bevissthet» står ikke i Nynorskordboka.,ja
+hensynsløs,omsynslaus,,,adjektiv,https://ordbokene.no/nno/nn/54496,nei,nei,Annet ord på nynorsk: «hensynsløs» står ikke i Nynorskordboka.,ja
+begavet,evnerik,gåverik,,adjektiv,https://ordbokene.no/nno/nn/16141,nei,ja,Annet ord på nynorsk: «begavet» står ikke i Nynorskordboka.,ja
+bekvem,makeleg,makleg;komfortabel;lagleg;lettvint;tenleg,,adjektiv,https://ordbokene.no/nno/nn/47902,nei,nei,Annet ord på nynorsk: «bekvem» står ikke i Nynorskordboka.,ja

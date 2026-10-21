@@ -15,7 +15,7 @@ from urllib.parse import quote
 HER = Path(__file__).resolve().parent
 ORDLISTE = HER.parent / "ordliste" / "ordliste.json"
 SPILL_URL = "https://audunmathiasteachingcreations.github.io/Ordbua/"
-FELT = ["bokmal", "nynorsk", "godkjente_alternativer", "bokmal_alternativer", "ordklasse", "nynorskordboka", "bokmalsform_godtas", "nynorskform_lov_pa_bokmal"]
+FELT = ["bokmal", "nynorsk", "godkjente_alternativer", "bokmal_alternativer", "ordklasse", "nynorskordboka", "bokmalsform_godtas", "nynorskform_lov_pa_bokmal", "ulikt_ord"]
 LISTEFELT = {"godkjente_alternativer", "bokmal_alternativer"}
 # Fanen i nettleseren får appikonet. Det ligger inne i fila, så det virker også når fila er lastet ned.
 IKON = ("<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='#2a72b8'/>"

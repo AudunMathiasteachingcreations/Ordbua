@@ -26,6 +26,7 @@ KOLONNER = [
     ("Ordklasse", "ordklasse", 14, "Vises på ordkortet i spillet. Velg fra lista."),
     ("Bokmålsordet godtas på nynorsk", "bokmalsform_godtas", 16, "ja hvis bokmålsordet også er riktig nynorsk med samme betydning (f.eks. tenke). Da godtas det som svar på nynorsk."),
     ("Nynorskordet er lov på bokmål", "nynorskform_lov_pa_bokmal", 16, "ja hvis nynorskordet også er tillatt på bokmål (f.eks. heim). Da godtas det som svar på bokmål."),
+    ("Annet ord på nynorsk", "ulikt_ord", 16, "ja hvis bokmålsordet ikke kan oversettes direkte: nynorsk bruker et annet ord eller en annen ending, og bokmålsordet står ikke i Nynorskordboka (f.eks. benytte → nytte, kjærlighet → kjærleik). Ordene får en egen kategori i spillet."),
     ("Lenke til Nynorskordboka", "nynorskordboka", 34, "Fasiten i spillet lenker hit. Står den tom, lager spillet en lenke til oppslaget i Nynorskordboka."),
     ("Merknad", "merknad", 46, "Fritt notat. Vises ikke i spillet."),
 ]
@@ -71,7 +72,7 @@ def lag(utfil=HER / "ordliste.xlsx"):
     ws.add_data_validation(dv_klasse)
     ws.add_data_validation(dv_jn)
     dv_klasse.add(f"E2:E{RADER}")
-    dv_jn.add(f"F2:G{RADER}")
+    dv_jn.add(f"F2:H{RADER}")
 
     # ---------- Slik bruker du arket ----------
     hj = wb.create_sheet("Slik bruker du arket")
@@ -104,7 +105,7 @@ def lag(utfil=HER / "ordliste.xlsx"):
     skriv("Slik gjør du", fet=True, storrelse=12)
     for a, b in [
         ("Endre et ord", "Skriv rett i cellen. Store og små bokstaver spiller ingen rolle i spillet."),
-        ("Legge til et ord", "Skriv i første tomme rad under tabellen. Tabellen utvider seg selv. Bokmål, Nynorsk og Ordklasse må fylles ut, og de to ja/nei-kolonnene får nei hvis de står tomme (ja hvis ordet er likt på begge)."),
+        ("Legge til et ord", "Skriv i første tomme rad under tabellen. Tabellen utvider seg selv. Bokmål, Nynorsk og Ordklasse må fylles ut, og de tre ja/nei-kolonnene får nei hvis de står tomme (de to første får ja hvis ordet er likt på begge)."),
         ("Slette et ord", "Høyreklikk på raden og velg Slett > Tabellrader."),
         ("Flere riktige svar", "Skriv dem i kolonnene «Andre riktige nynorskformer» eller «Andre riktige bokmålsformer», skilt med semikolon (;)."),
         ("Ord som er like", "Skriv samme ord i Bokmål og Nynorsk (f.eks. bil og bil). Spillet merker det som likt på bokmål og nynorsk, og omtrent hvert tredje ord i en runde er et slikt ord."),
@@ -117,7 +118,7 @@ def lag(utfil=HER / "ordliste.xlsx"):
     rad += 1
 
     skriv("Eksempel på en rad", fet=True, storrelse=12)
-    eksempel = ["hvordan", "korleis", "", "hvorledes", "adverb", "nei", "nei", "https://ordbokene.no/nno/nn/korleis", ""]
+    eksempel = ["hvordan", "korleis", "", "hvorledes", "adverb", "nei", "nei", "ja", "https://ordbokene.no/nno/nn/korleis", ""]
     for (navn, _, _, _), v in zip(KOLONNER, eksempel):
         skriv(navn, v or "(tom)", farge="4B5D75")
     rad += 1
@@ -127,7 +128,8 @@ def lag(utfil=HER / "ordliste.xlsx"):
     skriv("Skrives likt på bokmål og nynorsk", '=SUMPRODUCT((Ordliste!A2:A5000<>"")*(LOWER(TRIM(Ordliste!A2:A5000))=LOWER(TRIM(Ordliste!B2:B5000))))')
     skriv("Bokmålsordet godtas på nynorsk", '=COUNTIF(Ordliste!F2:F5000,"ja")')
     skriv("Nynorskordet er lov på bokmål", '=COUNTIF(Ordliste!G2:G5000,"ja")')
-    for r in range(rad - 4, rad):
+    skriv("Annet ord på nynorsk", '=COUNTIF(Ordliste!H2:H5000,"ja")')
+    for r in range(rad - 5, rad):
         hj.cell(row=r, column=2).alignment = Alignment(horizontal="left")
 
     wb.calculation.fullCalcOnLoad = True  # Excel regner ut tallene i «Ordlista nå» når fila åpnes
