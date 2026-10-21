@@ -22,6 +22,7 @@ Den første lager `spill/ordbua.html`. Last den opp til `main` i repoet, så opp
 - På startskjermen velger man **Bokmål → nynorsk** (standard) eller **Nynorsk → bokmål**. Valget huskes i nettleseren.
 - All tekst i spillet står på målformen man øver på: nynorsk når man oversetter til nynorsk, bokmål når man oversetter til bokmål. Tekstene står i `TEKST.nn` og `TEKST.bm` i `mal.html`. Nynorsken er lest av to uavhengige kontrollører og bokmålen av én (19.10.2026).
 - Etter runden kan man spille igjen eller gå tilbake til start for å bytte retning.
+- På startskjermen velger man også hvilke ord man vil øve på (lagt inn 21.10.2026): **Alle ord**, eller bare **Verb**, **Substantiv** eller **Adjektiv**. Runden, eksemplene og antallet ord i faktaboksen følger valget, og valget huskes i nettleseren. Hver ordklasse har sin egen rekord i hver retning (`ordbua.rekord.<retning>.<ordklasse>`), mens «Alle ord» beholder de gamle rekordene. Resultatsiden og delingsteksten nevner ordklassen. Hvilke ordklasser man kan velge står i `ordklasseValg` i `KONFIG`; en ordklasse uten ord i ordlista blir ikke vist.
 - Startskjermen har en Del-knapp (lagt inn 20.10.2026) som deler lenken til spillet med en kort tekst på målformen som er valgt. På mobil åpnes delingsmenyen, på PC kopieres teksten. Resultatsiden har sin egen Del-knapp som deler poengsummen.
 - Hver retning har sin egen rekord og sine egne rangtitler (Nynorsklegende/Bokmålslegende, Ivar Aasen-nivå/Knud Knudsen-nivå osv.).
 

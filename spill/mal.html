@@ -161,6 +161,22 @@ h1, h2, .ordet, .res-score, .res-tittel { font-family: var(--f-display); text-wr
 .demo-ord.byt { animation: byt .5s ease both; }
 @keyframes byt { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
+/* Ordklassevalg: alle ord, eller bare én ordklasse, så spilleren kan øve på det de trenger */
+.utval { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 8px; }
+.utval-lbl { margin: 0; font-weight: 700; font-size: var(--t-sm); }
+.utval-knappar { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 4px; padding: 4px; background: var(--frost); border-radius: 14px; }
+.utval-knappar button {
+  appearance: none; border: 0; cursor: pointer; min-width: 0;
+  display: flex; flex-direction: column; align-items: center; gap: 1px;
+  font-family: var(--f-display); font-weight: 700; font-size: var(--t-md); line-height: 1.2; color: var(--ink-2);
+  background: transparent; padding: 9px 6px; border-radius: 10px;
+  transition: background-color .15s ease, color .15s ease, box-shadow .15s ease;
+  touch-action: manipulation;
+}
+.utval-knappar button:hover { color: var(--ink); background: rgba(255, 255, 255, .55); }
+.utval-knappar button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(6, 12, 34, .16), inset 0 -3px 0 var(--gold); }
+.utval-knappar button span { font-family: var(--f-body); font-weight: 400; font-size: var(--t-xs); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
 .fakta { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .fakta li { display: flex; align-items: baseline; gap: 10px; padding: 10px 14px; background: var(--frost); border-radius: 12px; }
 .fakta b { font-family: var(--f-display); font-size: var(--t-xl); font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; min-width: 4.2ch; white-space: nowrap; }
@@ -337,6 +353,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   .retning { align-self: stretch; display: grid; grid-template-columns: 1fr 1fr; }
   .retning button { padding: 10px 6px; gap: 5px; font-size: .9rem; }
   .retning svg { width: 15px; height: 15px; }
+  .utval-knappar { grid-auto-flow: row; grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
   .start-panel { grid-template-columns: 1fr; padding: 18px; gap: 18px; }
@@ -399,10 +416,14 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           <div class="demo-side"><span class="demo-lbl" id="demoTilLbl">Nynorsk</span><span class="demo-ord demo-nn" id="demoNn">ikkje</span></div>
         </div>
+        <div class="utval">
+          <p class="utval-lbl" id="utvalLbl" data-t="utval">Kva ord vil du øve på?</p>
+          <div class="utval-knappar" id="utvalKnappar" role="group" aria-labelledby="utvalLbl"></div>
+        </div>
         <ul class="fakta">
           <li><b>2 min</b><span>per runde</span></li>
           <li><b>10 s</b><span>per ord</span></li>
-          <li><b id="faktaOrd">515</b><span>ord i ordlista</span></li>
+          <li><b id="faktaOrd">515</b><span id="faktaOrdTekst">ord i ordlista</span></li>
         </ul>
         <figure class="poengkurve">
           <figcaption data-t="kurve"></figcaption>
@@ -454,7 +475,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     <!-- RESULTAT -->
     <section id="resultat" class="skjerm" hidden>
       <div class="res-hero">
-        <p class="eyebrow-sky"><span data-t="rundenOver">Runden er over</span><span class="res-retning" id="resRetning"></span></p>
+        <p class="eyebrow-sky"><span data-t="rundenOver">Runden er over</span><span class="res-retning" id="resRetning"></span><span class="res-retning" id="resOrdklasse" hidden></span></p>
         <p class="res-tittel" id="resRang"></p>
         <p class="res-score"><span class="tal" id="resScore">0</span><span class="res-av">poeng</span></p>
         <p class="res-rekord" id="resRekord"></p>
@@ -519,6 +540,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     maksScore: 500000,        // tak for poengsummen (vises ikke i spillet); null = ingen tak
     feilVisMs: 800,           // hvor lenge fasiten vises før neste ord (runde-klokka går)
     andelLike: 0.35,          // omtrent så stor del av ordene i en runde skrives likt på bokmål og nynorsk; null = helt tilfeldig
+    ordklasseValg: ["verb", "substantiv", "adjektiv"], // ordklassene spilleren kan velge å øve på, i tillegg til alle ord
     spillUrl: "/*SPILL_URL*/", // lenka som er med når man deler
     navn: "Ordbua"           // navnet på spillet (tittel, logo og delingstekst)
   };
@@ -545,7 +567,9 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       akse: "Sekund du brukar på ordet",
       stolpe: (fra, til, p) => `${fra}–${til} sekund: ${p} poeng`,
       feilInfo: `Feil svar, eller ikkje noko svar på 10 sekund: <b>${KONFIG.poengFeil} poeng</b>.`,
-      rekord: "Rekorden din: ",
+      utval: "Kva ord vil du øve på?", alleOrd: "Alle ord", antOrd: (n) => `${n} ord`,
+      faktaOrd: (k) => k ? `${k} i ordlista` : "ord i ordlista",
+      rekord: (k) => k ? `Rekorden din på ${k}: ` : "Rekorden din: ",
       tidIgjen: "Tid att", riktige: "Rette",
       svarLabel: "Skriv ordet på nynorsk", skrivPaa: "Skriv på nynorsk",
       manglar: "Manglar du teiknet?", teikn: ["æ", "ø", "å"], // ikke ê: ordlista bruker ver, viskeler og torever uten ê (20.10.2026)
@@ -564,9 +588,10 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       ingenOrd: "Du svarte ikkje på noko ord i denne runden.",
       ingenRette: "Ingen rette svar i denne runden.", ingenFeil: "Ingen feil i denne runden.",
       avRette: (r, n) => `${r} av ${n} rette`,
-      forsteRekord: "Den første rekorden din!", nyRekord: "Ny personleg rekord!", rekordenDin: (p) => `Rekorden din er ${p} poeng.`,
+      forsteRekord: "Den første rekorden din!", nyRekord: "Ny personleg rekord!",
+      rekordenDin: (p, k) => k ? `Rekorden din på ${k} er ${p} poeng.` : `Rekorden din er ${p} poeng.`,
       kopiert: "Teksten er kopiert. Lim han inn der du vil dele han.", kopierSjolv: "Merk teksten i boksen og kopier han.",
-      delTekst: (p, r, n) => `Eg fekk ${p} poeng og ${r} av ${n} rette frå bokmål til nynorsk i ${KONFIG.navn}! Klarer du å slå meg?`,
+      delTekst: (p, r, n, k) => `Eg fekk ${p} poeng og ${r} av ${n} rette${k ? ` på ${k}` : ""} frå bokmål til nynorsk i ${KONFIG.navn}! Klarer du å slå meg?`,
       rang: ["Ivar Aasen-nivå!", "Nynorsklegende", "Ordmeister", "Nynorskproff", "Stø i nynorsk", "På rett veg", "Godt i gang"]
     },
     bm: {
@@ -578,7 +603,9 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       akse: "Sekunder du bruker på ordet",
       stolpe: (fra, til, p) => `${fra}–${til} sekunder: ${p} poeng`,
       feilInfo: `Feil svar, eller ikke noe svar på 10 sekunder: <b>${KONFIG.poengFeil} poeng</b>.`,
-      rekord: "Rekorden din: ",
+      utval: "Hvilke ord vil du øve på?", alleOrd: "Alle ord", antOrd: (n) => `${n} ord`,
+      faktaOrd: (k) => k ? `${k} i ordlista` : "ord i ordlista",
+      rekord: (k) => k ? `Rekorden din på ${k}: ` : "Rekorden din: ",
       tidIgjen: "Tid igjen", riktige: "Riktige",
       svarLabel: "Skriv ordet på bokmål", skrivPaa: "Skriv på bokmål",
       manglar: "Mangler du tegnet?", teikn: ["æ", "ø", "å"],
@@ -598,9 +625,10 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       ingenOrd: "Du svarte ikke på noen ord i denne runden.",
       ingenRette: "Ingen riktige svar i denne runden.", ingenFeil: "Ingen feil i denne runden.",
       avRette: (r, n) => `${r} av ${n} riktige`,
-      forsteRekord: "Din første rekord!", nyRekord: "Ny personlig rekord!", rekordenDin: (p) => `Rekorden din er ${p} poeng.`,
+      forsteRekord: "Din første rekord!", nyRekord: "Ny personlig rekord!",
+      rekordenDin: (p, k) => k ? `Rekorden din på ${k} er ${p} poeng.` : `Rekorden din er ${p} poeng.`,
       kopiert: "Teksten er kopiert. Lim den inn der du vil dele den.", kopierSjolv: "Merk teksten i boksen og kopier den.",
-      delTekst: (p, r, n) => `Jeg fikk ${p} poeng og ${r} av ${n} riktige fra nynorsk til bokmål i ${KONFIG.navn}! Klarer du å slå meg?`,
+      delTekst: (p, r, n, k) => `Jeg fikk ${p} poeng og ${r} av ${n} riktige${k ? ` på ${k}` : ""} fra nynorsk til bokmål i ${KONFIG.navn}! Klarer du å slå meg?`,
       rang: ["Knud Knudsen-nivå!", "Bokmålslegende", "Ordmester", "Bokmålsproff", "Stø i bokmål", "På rett vei", "Godt i gang"]
     }
   };
@@ -638,6 +666,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   const REKORD_KEY = { nn: "nynorskspillet.rekord.v2", bm: "nynorskspillet.rekord.bokmal.v1" }; // nn: ny nøkkel 18.10.2026, rekorder fra den gamle, høyere poengtabellen gjelder ikke
   const LYD_KEY = "nynorskspillet.lyd";
   const RETNING_KEY = "nynorskspillet.retning";
+  const ORDKLASSE_KEY = "ordbua.ordklasse";
 
   // ---------- Retning ----------
   // "nn" = bokmål til nynorsk (standard), "bm" = nynorsk til bokmål
@@ -646,6 +675,17 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   const sporsmal = (o) => retning === "nn" ? o.bokmal : o.nynorsk;
   const fasit = (o) => retning === "nn" ? o.nynorsk : o.bokmal;
   const fasitLenke = (o) => retning === "nn" ? o.nynorskordboka : "https://ordbokene.no/nob/bm/" + encodeURIComponent(o.bokmal);
+
+  // ---------- Ordklasse ----------
+  // "alle" eller en av ordklassene i KONFIG.ordklasseValg som finnes i ordlista. Valget huskes i nettleseren.
+  const ORDKLASSER = KONFIG.ordklasseValg.filter((k) => ORDLISTE.some((o) => o.ordklasse === k));
+  let ordklasse = ORDKLASSER.includes(store.get(ORDKLASSE_KEY)) ? store.get(ORDKLASSE_KEY) : "alle";
+  const iKlasse = (k) => k === "alle" ? ORDLISTE : ORDLISTE.filter((o) => o.ordklasse === k);
+  const utval = () => iKlasse(ordklasse);
+  const valgtKlasse = () => ordklasse === "alle" ? null : ordklasse;
+  const stor = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  // Hver ordklasse har sin egen rekord i hver retning; alle ord beholder de gamle nøklene
+  const rekordNokkel = () => ordklasse === "alle" ? REKORD_KEY[retning] : `ordbua.rekord.${retning}.${ordklasse}`;
   // Merket under fasiten i svaroversikten, og ordet merket nevner (så det ikke står to ganger)
   function merkelapp(o) {
     const t = T();
@@ -670,6 +710,23 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     const lbl = document.createElement("span"); lbl.textContent = t.manglar; teikn.append(lbl);
     for (const c of t.teikn) { const b = document.createElement("button"); b.type = "button"; b.tabIndex = -1; b.textContent = c; teikn.append(b); }
     for (const [i, col] of [...$("stolpar").children].entries()) col.title = t.stolpe(i, i + 1, fmt(KONFIG.poengEtterSekunderIgjen[10 - i]));
+    lagUtval();
+  }
+
+  // Knappene for alle ord og hver ordklasse, med antall ord i hver
+  function lagUtval() {
+    const box = $("utvalKnappar"); box.innerHTML = "";
+    for (const k of ["alle", ...ORDKLASSER]) {
+      const b = document.createElement("button"); b.type = "button"; b.dataset.ordklasse = k;
+      const n = document.createElement("span"); n.textContent = T().antOrd(fmt(iKlasse(k).length));
+      b.append(k === "alle" ? T().alleOrd : stor(k), n); box.append(b);
+    }
+    visOrdklasse();
+  }
+  function visOrdklasse() {
+    for (const b of $("utvalKnappar").querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.ordklasse === ordklasse));
+    $("faktaOrd").textContent = fmt(utval().length);
+    $("faktaOrdTekst").textContent = T().faktaOrd(valgtKlasse());
   }
 
   // ---------- Lyd ----------
@@ -920,15 +977,15 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       col.append(v, b); bars.append(col);
       const l = document.createElement("span"); l.textContent = used === 0 ? "<1" : String(used); xs.append(l);
     }
-    // Eksempler der svaret er et annet ord enn det man får: bokmålsformen er feil på nynorsk, eller nynorskformen er ikke lov på bokmål.
-    const demo = {
-      nn: ORDLISTE.filter((o) => o.bokmalsform_godtas !== "ja" && o.bokmal.length <= 8),
-      bm: ORDLISTE.filter((o) => o.nynorskform_lov_pa_bokmal !== "ja" && o.nynorsk.length <= 8)
-    };
+    // Eksempler fra ordklassen som er valgt, der svaret er et annet ord enn det man får:
+    // bokmålsformen er feil på nynorsk, eller nynorskformen er ikke lov på bokmål.
+    const demoOrd = () => utval().filter((o) => retning === "nn"
+      ? o.bokmalsform_godtas !== "ja" && o.bokmal.length <= 8
+      : o.nynorskform_lov_pa_bokmal !== "ja" && o.nynorsk.length <= 8);
     let di = 0;
     const fra = $("demoBm"), til = $("demoNn");
     nesteDemo = function () {
-      const d = demo[retning];
+      const d = demoOrd();
       if ($("start").hidden || !d.length) return;
       const o = d[(di = (di + 7) % d.length)];
       fra.textContent = sporsmal(o); til.textContent = fasit(o);
@@ -939,16 +996,14 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     renderBest();
   })();
 
-  $("faktaOrd").textContent = fmt(ORDLISTE.length);
-
   for (const el of document.querySelectorAll(".spelnamn")) el.textContent = KONFIG.navn;
   document.title = KONFIG.navn;
 
-  function getBest() { const v = parseInt(store.get(REKORD_KEY[retning]) || "", 10); return Number.isFinite(v) ? v : null; }
+  function getBest() { const v = parseInt(store.get(rekordNokkel()) || "", 10); return Number.isFinite(v) ? v : null; }
   function renderBest() {
     const b = getBest(), el = $("startRekord");
     if (b === null) { el.hidden = true; return; }
-    el.hidden = false; el.innerHTML = ""; el.append(T().rekord);
+    el.hidden = false; el.innerHTML = ""; el.append(T().rekord(valgtKlasse()));
     const strong = document.createElement("b"); strong.textContent = fmt(b) + " poeng"; el.append(strong);
   }
 
@@ -959,11 +1014,11 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   $("ringFram").style.strokeDasharray = String(RING_C);
 
   function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
-  // Stokker ordlista slik at omtrent KONFIG.andelLike av ordene er like på bokmål og nynorsk.
+  // Stokker ordene i ordklassen som er valgt, slik at omtrent KONFIG.andelLike av dem er like på bokmål og nynorsk.
   function lagStokk() {
-    const andel = KONFIG.andelLike;
-    if (andel == null) return shuffle(ORDLISTE.slice());
-    const like = shuffle(ORDLISTE.filter(erLik)), ulike = shuffle(ORDLISTE.filter((o) => !erLik(o)));
+    const andel = KONFIG.andelLike, liste = utval();
+    if (andel == null) return shuffle(liste.slice());
+    const like = shuffle(liste.filter(erLik)), ulike = shuffle(liste.filter((o) => !erLik(o)));
     const stokk = [];
     while (like.length || ulike.length) stokk.push((like.length && (!ulike.length || Math.random() < andel) ? like : ulike).pop());
     return stokk;
@@ -1111,13 +1166,14 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   function showResults() {
     const A = S.answers, right = A.filter((a) => a.ok), score = S.score;
     const prevBest = getBest(), isBest = prevBest === null || score > prevBest;
-    if (isBest) store.set(REKORD_KEY[retning], String(score));
+    if (isBest) store.set(rekordNokkel(), String(score));
 
     $("resRang").textContent = rank(score);
     const rec = $("resRekord");
     rec.className = "res-rekord" + (isBest && A.length ? " ny" : "");
-    rec.textContent = isBest && A.length ? (prevBest === null ? T().forsteRekord : T().nyRekord) : T().rekordenDin(fmt(prevBest ?? 0));
+    rec.textContent = isBest && A.length ? (prevBest === null ? T().forsteRekord : T().nyRekord) : T().rekordenDin(fmt(prevBest ?? 0), valgtKlasse());
     $("resRetning").textContent = T().retningKort;
+    const kl = $("resOrdklasse"); kl.hidden = !valgtKlasse(); kl.textContent = valgtKlasse() ? stor(ordklasse) : "";
     $("statRiktige").textContent = String(right.length);
     $("statFeil").textContent = String(A.length - right.length);
     $("statSnitt").textContent = right.length ? fmtS(right.reduce((s, a) => s + a.ms, 0) / right.length) : "–";
@@ -1190,7 +1246,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   const lenke = () => KONFIG.spillUrl.startsWith("http") ? "\n" + KONFIG.spillUrl : "";
   function shareText() {
     const A = S.answers, right = A.filter((a) => a.ok).length;
-    return T().delTekst(fmt(S.score).replace(/\s/g, " "), right, A.length) + lenke();
+    return T().delTekst(fmt(S.score).replace(/\s/g, " "), right, A.length, valgtKlasse()) + lenke();
   }
   let toastTimer = 0;
   function toast(msg) {
@@ -1237,6 +1293,13 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     if (!reduceMQ.matches) for (const el of [document.querySelector(".ingress"), document.querySelector(".start-panel")]) { el.classList.remove("byt-tekst"); void el.offsetWidth; el.classList.add("byt-tekst"); }
     audio(); sfx.tick();
   });
+  $("utvalKnappar").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-ordklasse]");
+    if (!b || b.dataset.ordklasse === ordklasse) return;
+    ordklasse = b.dataset.ordklasse; store.set(ORDKLASSE_KEY, ordklasse);
+    visOrdklasse(); renderBest(); startDemo();
+    audio(); sfx.tick();
+  });
   $("svarSkjema").addEventListener("submit", (e) => { e.preventDefault(); submit(); });
   $("teikn").addEventListener("pointerdown", (e) => { if (e.target.closest("button")) e.preventDefault(); });
   $("teikn").addEventListener("click", (e) => {
@@ -1245,8 +1308,9 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     inp.setRangeText(b.textContent, s, en, "end"); inp.focus({ preventScroll: true });
   });
   document.addEventListener("keydown", (e) => {
-    // Enter starter runden, også når fokus står på retningen som er valgt (Enter på den andre retningen bytter retning)
-    const el = document.activeElement, paaValgt = el?.closest?.("#retning button")?.dataset.retning === retning;
+    // Enter starter runden, også når fokus står på retningen eller ordklassen som er valgt (Enter på et annet valg bytter til det)
+    const el = document.activeElement, valg = el?.closest?.("#retning button, #utvalKnappar button");
+    const paaValgt = !!valg && (valg.dataset.retning ? valg.dataset.retning === retning : valg.dataset.ordklasse === ordklasse);
     if (e.key === "Enter" && !e.repeat && S.phase === "start" && !$("start").hidden && (el?.tagName !== "BUTTON" || paaValgt)) { e.preventDefault(); startRound(); }
   });
 

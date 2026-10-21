@@ -5,7 +5,7 @@ Et ordspill på tid for bokmål og nynorsk. Spilleren velger retning, får et or
 - **Bokmål → nynorsk**: man får et ord på bokmål og skriver det på nynorsk. All tekst i spillet står på nynorsk.
 - **Nynorsk → bokmål**: man får et ord på nynorsk og skriver det på bokmål. All tekst i spillet står på bokmål.
 
-En runde varer i 2 minutter, og hvert ord har 10 sekunder. Raske riktige svar gir mest poeng. Etter runden kan spilleren se alle svarene med fasit og lenke til ordboka, filtrere på riktige og feil, og dele poengsummen.
+Spilleren kan øve på alle ordene, eller bare på verb, substantiv eller adjektiv. En runde varer i 2 minutter, og hvert ord har 10 sekunder. Raske riktige svar gir mest poeng. Etter runden kan spilleren se alle svarene med fasit og lenke til ordboka, filtrere på riktige og feil, og dele poengsummen.
 
 ## Spille
 Spillet ligger på **https://audunmathiasteachingcreations.github.io/Ordbua/** og åpnes i alle nettlesere, uten konto.
