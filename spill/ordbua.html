@@ -832,7 +832,9 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   }
 
   function resize() {
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    // Himmelen er myke fargeoverganger, så den tegnes med høyst 1,5 punkt per CSS-piksel og høyst 2 millioner punkter totalt.
+    // Med full oppløsning ble nettbrett og mobiler så belastet at nettleseren lukket spillet etter en stund (21.10.2026).
+    const dpr = Math.min(1.5, window.devicePixelRatio || 1, Math.sqrt(2e6 / Math.max(1, window.innerWidth * window.innerHeight)));
     W = window.innerWidth; H = window.innerHeight;
     cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
     cx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -964,16 +966,19 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     cx.fillRect(nx, waterY + 1, ns, ns * 0.3); cx.globalAlpha = 1;
   }
 
-  let needDraw = true, lastFrame = 0;
+  // Klokka og poengene oppdateres hvert bilde, men himmelen tegnes høyst 30 ganger i sekundet for å spare nettbrett og mobiler
+  const HIMMEL_MS = 1000 / 30;
+  let needDraw = true, lastFrame = 0, lastDraw = -Infinity;
   function frame(now) {
     const dt = lastFrame ? Math.min(100, now - lastFrame) : 16; lastFrame = now;
     gameTick(now);
     const prevT = sky.t;
     if (reduceMQ.matches) sky.t = sky.target;
     else sky.t += (sky.target - sky.t) * Math.min(1, dt * 0.004);
-    if (!reduceMQ.matches || needDraw || Math.abs(prevT - sky.t) > 1e-4) {
+    if (Math.abs(prevT - sky.t) > 1e-4) needDraw = true;
+    if ((needDraw || !reduceMQ.matches) && now - lastDraw >= HIMMEL_MS - 2) {
       drawSky(reduceMQ.matches ? 0 : now);
-      needDraw = false;
+      needDraw = false; lastDraw = now;
     }
     requestAnimationFrame(frame);
   }

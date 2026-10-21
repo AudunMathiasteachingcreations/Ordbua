@@ -26,6 +26,9 @@ Den første lager `spill/ordbua.html`. Last den opp til `main` i repoet, så opp
 - Startskjermen har en Del-knapp (lagt inn 20.10.2026) som deler lenken til spillet med en kort tekst på målformen som er valgt. På mobil åpnes delingsmenyen, på PC kopieres teksten. Resultatsiden har sin egen Del-knapp som deler poengsummen.
 - Hver retning har sin egen rekord og sine egne rangtitler (Nynorsklegende/Bokmålslegende, Ivar Aasen-nivå/Knud Knudsen-nivå osv.).
 
+## Ytelse
+- Bakgrunnshimmelen tegnes høyst 30 ganger i sekundet og med høyst 1,5 punkt per CSS-piksel (høyst 2 millioner punkter). Før 21.10.2026 ble den tegnet i full oppløsning 60 ganger i sekundet hele tiden, også på startsiden, og det er den sannsynlige grunnen til at spillet lukket seg etter en stund på nettbrett og mobil. En test med åtte runder etter hverandre viste ingen minnelekkasje.
+
 ## Regler slik de er bygget inn
 - 2 minutter per runde, 10 sekunder per ord. Ordene kommer i tilfeldig rekkefølge uten gjentak, men omtrent hvert tredje ord er et ord som skrives likt på bokmål og nynorsk (`andelLike` i `KONFIG`, nå 0,35; `null` gir helt tilfeldig trekning).
 - Riktig svar: poeng etter hele sekunder igjen (10: 6 000, 9: 5 000, 8: 4 200, 7: 3 500, 6: 2 900, 5: 2 400, 4: 2 000, 3: 1 600, 2: 1 300, 1: 1 000). Tabellen ble senket 18.10.2026 for at høye summer skal bli vanskeligere; før var den 8 000 til 2 000, med spillregeldokumentets 6 000, 3 700 og 2 000 ved 8, 5 og 1 sekund igjen. Svar etter rundt 2 sekunder gir nå omtrent 230 000 poeng i en runde (før omtrent 310 000).
