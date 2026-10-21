@@ -199,7 +199,6 @@ h1, h2, .ordet, .res-score, .res-tittel { font-family: var(--f-display); text-wr
 .stolpe .v { font-size: 10px; color: var(--ink-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
 .stolpe-x { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; font-size: 11px; color: var(--ink-2); text-align: center; font-variant-numeric: tabular-nums; }
 .akse-tekst { font-size: var(--t-xs); color: var(--ink-2); margin: 0; }
-.feil-info { margin: 0; font-size: var(--t-sm); color: var(--ink-2); }
 
 .start-handling { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; }
 .hint { color: var(--ink-2); font-size: var(--t-sm); }
@@ -286,7 +285,6 @@ h1, h2, .ordet, .res-score, .res-tittel { font-family: var(--f-display); text-wr
   text-shadow: 0 2px 0 #fff;
   animation: flyt 1s cubic-bezier(.2, .7, .3, 1) forwards;
 }
-.flyt.lite { color: var(--ink-2); font-size: 1.25rem; }
 @keyframes flyt { from { opacity: 0; transform: translateY(6px) scale(.8); } 20% { opacity: 1; transform: translateY(-6px) scale(1.1); } to { opacity: 0; transform: translateY(-60px) scale(1); } }
 
 .slutt-banner {
@@ -444,7 +442,6 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
           <div class="stolpar" id="stolpar"></div>
           <div class="stolpe-x" id="stolpeX"></div>
           <p class="akse-tekst" data-t="akse"></p>
-          <p class="feil-info" data-t-html="feilInfo"></p>
         </figure>
         <div class="start-handling">
           <button id="startKnapp" class="knapp hoved stor" type="button">Start runden</button>
@@ -581,7 +578,6 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       kurve: "Poeng for rett svar, etter kor raskt du svarar",
       akse: "Sekund du brukar på ordet",
       stolpe: (fra, til, p) => `${fra}–${til} sekund: ${p} poeng`,
-      feilInfo: `Feil svar, eller ikkje noko svar på 10 sekund: <b>${KONFIG.poengFeil} poeng</b>.`,
       utval: "Kva ord vil du øve på?", alleOrd: "Alle ord", antOrd: (n) => `${n} ord`,
       fleirtal: { preposisjon: "preposisjonar", konjunksjon: "konjunksjonar", subjunksjon: "subjunksjonar", interjeksjon: "interjeksjonar" }, // andre ordklasser er like i fleirtal
       faktaOrd: (k) => k ? `${k} i ordlista` : "ord i ordlista",
@@ -619,7 +615,6 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       kurve: "Poeng for riktig svar, etter hvor raskt du svarer",
       akse: "Sekunder du bruker på ordet",
       stolpe: (fra, til, p) => `${fra}–${til} sekunder: ${p} poeng`,
-      feilInfo: `Feil svar, eller ikke noe svar på 10 sekunder: <b>${KONFIG.poengFeil} poeng</b>.`,
       utval: "Hvilke ord vil du øve på?", alleOrd: "Alle ord", antOrd: (n) => `${n} ord`,
       fleirtal: { preposisjon: "preposisjoner", konjunksjon: "konjunksjoner", subjunksjon: "subjunksjoner", interjeksjon: "interjeksjoner" }, // andre ordklasser er like i flertall
       faktaOrd: (k) => k ? `${k} i ordlista` : "ord i ordlista",
@@ -1127,8 +1122,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     S.answers.push({ o, svar: raw, ok: false, timeout, pts: KONFIG.poengFeil, ms: elapsed });
     S.score += KONFIG.poengFeil; S.streak = 0;
     sfx.bad();
-    $("ordkort").classList.add("feil");
-    floatPoints("+" + fmt(KONFIG.poengFeil), "lite");
+    $("ordkort").classList.add("feil"); // poengene for feil svar vises ikke, så spilleren ikke vet om dem (21.10.2026)
     setFeedback(`${ICON_BAD}<span class="fasit">${esc(fasit(o))}</span>`, "bad");
     S.phase = "pause"; S.pauseAt = now; S.waitUntil = now + KONFIG.feilVisMs;
     updateHud(false);
