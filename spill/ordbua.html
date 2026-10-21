@@ -144,7 +144,8 @@ h1, h2, .ordet, .res-score, .res-tittel { font-family: var(--f-display); text-wr
 .retning button[aria-pressed="true"] { background: var(--gold); color: var(--ink); box-shadow: 0 3px 0 var(--gold-deep); }
 .retning svg { width: 17px; height: 17px; flex: none; }
 .byt-tekst { animation: byt .45s ease both; }
-.res-retning { margin-left: 10px; padding: 2px 9px; border-radius: 999px; background: rgba(255, 255, 255, .16); letter-spacing: .06em; }
+.res-hero .eyebrow-sky { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.res-retning { padding: 2px 9px; border-radius: 999px; background: rgba(255, 255, 255, .16); letter-spacing: .06em; white-space: nowrap; }
 
 .start-panel { padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
 .start-panel > * { min-width: 0; }
@@ -172,13 +173,21 @@ h1, h2, .ordet, .res-score, .res-tittel { font-family: var(--f-display); text-wr
   appearance: none; border: 0; cursor: pointer; min-width: 0;
   display: flex; flex-direction: column; align-items: center; gap: 1px;
   font-family: var(--f-display); font-weight: 700; font-size: var(--t-md); line-height: 1.2; color: var(--ink-2);
-  background: transparent; padding: 9px 6px; border-radius: 10px;
+  background: transparent; padding: 9px 6px; border-radius: 10px; overflow-wrap: anywhere;
   transition: background-color .15s ease, color .15s ease, box-shadow .15s ease;
   touch-action: manipulation;
 }
 .utval-knappar button:hover { color: var(--ink); background: rgba(255, 255, 255, .55); }
 .utval-knappar button[aria-pressed="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(6, 12, 34, .16), inset 0 -3px 0 var(--gold); }
 .utval-knappar button span { font-family: var(--f-body); font-weight: 400; font-size: var(--t-xs); color: var(--ink-2); font-variant-numeric: tabular-nums; }
+/* To og to når fire knapper ikke får plass til «Substantiv»; em følger skriftstørrelsen brukeren har valgt */
+@media (max-width: 30em) { .utval-knappar { grid-auto-flow: row; grid-template-columns: 1fr 1fr; } }
+/* Høykontrast i Windows fjerner skygger og bakgrunner, så valgte knapper får systemfargen for valgt */
+@media (forced-colors: active) {
+  .retning button, .utval-knappar button, .filter button { border: 1px solid ButtonText; }
+  .retning button[aria-pressed="true"], .utval-knappar button[aria-pressed="true"], .filter button[aria-pressed="true"] { forced-color-adjust: none; background: SelectedItem; color: SelectedItemText; box-shadow: none; }
+  .utval-knappar button[aria-pressed="true"] span, .filter button[aria-pressed="true"] span { color: inherit; }
+}
 
 .fakta { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .fakta li { display: flex; align-items: baseline; gap: 10px; padding: 10px 14px; background: var(--frost); border-radius: 12px; }
@@ -356,7 +365,12 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   .retning { align-self: stretch; display: grid; grid-template-columns: 1fr 1fr; }
   .retning button { padding: 10px 6px; gap: 5px; font-size: .9rem; }
   .retning svg { width: 15px; height: 15px; }
-  .utval-knappar { grid-auto-flow: row; grid-template-columns: 1fr 1fr; }
+}
+/* Svært smale telefoner (320 px): retningsknappene må krympe litt for å få plass */
+@media (max-width: 359px) {
+  .retning { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .retning button { padding: 10px 3px; gap: 3px; font-size: .8rem; }
+  .retning svg { width: 13px; height: 13px; }
 }
 @media (max-width: 640px) {
   .start-panel { grid-template-columns: 1fr; padding: 18px; gap: 18px; }
@@ -554,6 +568,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   const fmtS = (ms) => (ms / 1000).toLocaleString("nb-NO", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + " s";
   const reduceMQ = matchMedia("(prefers-reduced-motion: reduce)");
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const gcd = (a, b) => b ? gcd(b, a % b) : a;
 
   const ICON_OK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
   const ICON_BAD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>';
@@ -571,6 +586,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       stolpe: (fra, til, p) => `${fra}–${til} sekund: ${p} poeng`,
       feilInfo: `Feil svar, eller ikkje noko svar på 10 sekund: <b>${KONFIG.poengFeil} poeng</b>.`,
       utval: "Kva ord vil du øve på?", alleOrd: "Alle ord", antOrd: (n) => `${n} ord`,
+      fleirtal: { preposisjon: "preposisjonar", konjunksjon: "konjunksjonar", subjunksjon: "subjunksjonar", interjeksjon: "interjeksjonar" }, // andre ordklasser er like i fleirtal
       faktaOrd: (k) => k ? `${k} i ordlista` : "ord i ordlista",
       rekord: (k) => k ? `Rekorden din på ${k}: ` : "Rekorden din: ",
       tidIgjen: "Tid att", riktige: "Rette",
@@ -591,7 +607,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       ingenOrd: "Du svarte ikkje på noko ord i denne runden.",
       ingenRette: "Ingen rette svar i denne runden.", ingenFeil: "Ingen feil i denne runden.",
       avRette: (r, n) => `${r} av ${n} rette`,
-      forsteRekord: "Den første rekorden din!", nyRekord: "Ny personleg rekord!",
+      forsteRekord: (k) => k ? `Den første rekorden din på ${k}!` : "Den første rekorden din!",
+      nyRekord: (k) => k ? `Ny personleg rekord på ${k}!` : "Ny personleg rekord!",
       rekordenDin: (p, k) => k ? `Rekorden din på ${k} er ${p} poeng.` : `Rekorden din er ${p} poeng.`,
       kopiert: "Teksten er kopiert. Lim han inn der du vil dele han.", kopierSjolv: "Merk teksten i boksen og kopier han.",
       delTekst: (p, r, n, k) => `Eg fekk ${p} poeng og ${r} av ${n} rette${k ? ` på ${k}` : ""} frå bokmål til nynorsk i ${KONFIG.navn}! Klarer du å slå meg?`,
@@ -607,6 +624,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       stolpe: (fra, til, p) => `${fra}–${til} sekunder: ${p} poeng`,
       feilInfo: `Feil svar, eller ikke noe svar på 10 sekunder: <b>${KONFIG.poengFeil} poeng</b>.`,
       utval: "Hvilke ord vil du øve på?", alleOrd: "Alle ord", antOrd: (n) => `${n} ord`,
+      fleirtal: { preposisjon: "preposisjoner", konjunksjon: "konjunksjoner", subjunksjon: "subjunksjoner", interjeksjon: "interjeksjoner" }, // andre ordklasser er like i flertall
       faktaOrd: (k) => k ? `${k} i ordlista` : "ord i ordlista",
       rekord: (k) => k ? `Rekorden din på ${k}: ` : "Rekorden din: ",
       tidIgjen: "Tid igjen", riktige: "Riktige",
@@ -628,7 +646,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       ingenOrd: "Du svarte ikke på noen ord i denne runden.",
       ingenRette: "Ingen riktige svar i denne runden.", ingenFeil: "Ingen feil i denne runden.",
       avRette: (r, n) => `${r} av ${n} riktige`,
-      forsteRekord: "Din første rekord!", nyRekord: "Ny personlig rekord!",
+      forsteRekord: (k) => k ? `Din første rekord på ${k}!` : "Din første rekord!",
+      nyRekord: (k) => k ? `Ny personlig rekord på ${k}!` : "Ny personlig rekord!",
       rekordenDin: (p, k) => k ? `Rekorden din på ${k} er ${p} poeng.` : `Rekorden din er ${p} poeng.`,
       kopiert: "Teksten er kopiert. Lim den inn der du vil dele den.", kopierSjolv: "Merk teksten i boksen og kopier den.",
       delTekst: (p, r, n, k) => `Jeg fikk ${p} poeng og ${r} av ${n} riktige${k ? ` på ${k}` : ""} fra nynorsk til bokmål i ${KONFIG.navn}! Klarer du å slå meg?`,
@@ -685,7 +704,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   let ordklasse = ORDKLASSER.includes(store.get(ORDKLASSE_KEY)) ? store.get(ORDKLASSE_KEY) : "alle";
   const iKlasse = (k) => k === "alle" ? ORDLISTE : ORDLISTE.filter((o) => o.ordklasse === k);
   const utval = () => iKlasse(ordklasse);
-  const valgtKlasse = () => ordklasse === "alle" ? null : ordklasse;
+  // Ordklassen i flertall slik den står i setninger («110 verb i ordlista», «Rekorden din på preposisjonar»), eller null for alle ord
+  const valgtKlasse = () => ordklasse === "alle" ? null : T().fleirtal[ordklasse] || ordklasse;
   const stor = (s) => s.charAt(0).toUpperCase() + s.slice(1);
   // Hver ordklasse har sin egen rekord i hver retning; alle ord beholder de gamle nøklene
   const rekordNokkel = () => ordklasse === "alle" ? REKORD_KEY[retning] : `ordbua.rekord.${retning}.${ordklasse}`;
@@ -990,7 +1010,9 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     nesteDemo = function () {
       const d = demoOrd();
       if ($("start").hidden || !d.length) return;
-      const o = d[(di = (di + 7) % d.length)];
+      // Hopper 7 ord om gangen, men med et steg uten felles faktor med lengden, så alle eksemplene kommer etter tur
+      let steg = 7; while (gcd(steg, d.length) !== 1) steg++;
+      const o = d[(di = (di + steg) % d.length)];
       fra.textContent = sporsmal(o); til.textContent = fasit(o);
       if (!reduceMQ.matches) [fra, til].forEach((el, i) => { el.classList.remove("byt"); void el.offsetWidth; el.style.animationDelay = i ? ".25s" : "0s"; el.classList.add("byt"); });
     };
@@ -1174,7 +1196,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     $("resRang").textContent = rank(score);
     const rec = $("resRekord");
     rec.className = "res-rekord" + (isBest && A.length ? " ny" : "");
-    rec.textContent = isBest && A.length ? (prevBest === null ? T().forsteRekord : T().nyRekord) : T().rekordenDin(fmt(prevBest ?? 0), valgtKlasse());
+    const k = valgtKlasse();
+    rec.textContent = isBest && A.length ? (prevBest === null ? T().forsteRekord(k) : T().nyRekord(k)) : T().rekordenDin(fmt(prevBest ?? 0), k);
     $("resRetning").textContent = T().retningKort;
     const kl = $("resOrdklasse"); kl.hidden = !valgtKlasse(); kl.textContent = valgtKlasse() ? stor(ordklasse) : "";
     $("statRiktige").textContent = String(right.length);
