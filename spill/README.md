@@ -3,12 +3,12 @@
 Ordspill på tid: man får et ord og skriver det på den andre målformen. Spillet het «Nynorsk-spillet» til 19.10.2026.
 
 Spillet ligger publisert to steder:
-- **GitHub Pages**: https://audunmathiasteachingcreations.github.io/Ordbua/ (fra 20.10.2026). Åpnes uten konto, og det er denne lenken Del-knappene i spillet deler. Kildekoden ligger i repoet https://github.com/AudunMathiasteachingcreations/Ordbua.
+- **GitHub Pages**: https://audunmathiasteachingcreations.github.io/Ordbua/ (fra 20.10.2026). Åpnes uten konto, og det er denne lenken Del-knappene i spillet deler. Herfra kan spillet også installeres som app (se «Som app» under). Kildekoden ligger i repoet https://github.com/AudunMathiasteachingcreations/Ordbua.
 - **Claude-artefakt**: https://claude.ai/artifact/7iYUX62HsutPgYpndtfYmf. Privat til eieren deler den.
 
 ## Filer
 - `mal.html`: selve spillet (HTML, CSS og JavaScript) uten ordliste. Poengtabell, tider, navn og lenke står i `KONFIG` øverst i skriptet, og all tekst står i `TEKST` like under. Malen har egen grunnstil (`[hidden]` og `body`-marg), så den ikke er avhengig av Claude-visningen.
-- `bygg.py`: legger ordlista fra `../ordliste/ordliste.json` inn i malen og skriver `ordbua.html`. Lenken i Del-knappene er GitHub Pages-adressen hvis ikke en annen gis.
+- `bygg.py`: legger ordlista fra `../ordliste/ordliste.json` inn i malen og skriver `ordbua.html`. Lenken i Del-knappene er GitHub Pages-adressen hvis ikke en annen gis. I den fullstendige nettsiden legger skriptet også til fanikon, appfarge og appnavn, og slår på app-delen (`app` i `KONFIG`).
 - `ordbua.html`: ferdig bygget, fullstendig nettside med `<!doctype html>`, tegnsett og viewport. Det er denne som ligger på GitHub Pages og som kan sendes til elever som fil. Fram til 20.10.2026 manglet fila dette, så den virket bare inne i Claude.
 
 ## Når ordlista endres
@@ -25,6 +25,23 @@ Den første lager `spill/ordbua.html`. Last den opp til `main` i repoet, så opp
 - På startskjermen velger man også hvilke ord man vil øve på (lagt inn 21.10.2026): **Alle ord**, eller bare **Verb**, **Substantiv** eller **Adjektiv**. Runden, eksemplene og antallet ord i faktaboksen følger valget, og valget huskes i nettleseren. Hver ordklasse har sin egen rekord i hver retning (`ordbua.rekord.<retning>.<ordklasse>`), mens «Alle ord» beholder de gamle rekordene. Resultatsiden og delingsteksten nevner ordklassen. Hvilke ordklasser man kan velge står i `ordklasseValg` i `KONFIG`; en ordklasse uten ord i ordlista blir ikke vist.
 - Startskjermen har en Del-knapp (lagt inn 20.10.2026) som deler lenken til spillet med en kort tekst på målformen som er valgt. På mobil åpnes delingsmenyen, på PC kopieres teksten. Resultatsiden har sin egen Del-knapp som deler poengsummen.
 - Hver retning har sin egen rekord og sine egne rangtitler (Nynorsklegende/Bokmålslegende, Ivar Aasen-nivå/Knud Knudsen-nivå osv.).
+
+## Som app
+Fra 21.10.2026 kan spillet installeres som app fra GitHub Pages, med eget ikon, uten nettleserlinjer og med spill uten nett. Det bruker den samme adressen og trenger ikke noe eget domene.
+- Appfilene ligger i repoets rot, én mappe over `spill/`: `manifest.webmanifest` (navn, ikon, farger og hvilken side appen åpner), `sw.js` (lagrer spillet for bruk uten nett) og `ikon/` (PNG-ikonene og SVG-kildene deres).
+- Spillet legger til manifestet og app-ikonet og starter `sw.js` bare når det er åpnet fra en nettadresse, ikke er bygget inn i en annen side (iframe) og `app` i `KONFIG` er sann, altså på GitHub Pages. Som nedlastet fil, i Claude-artefakten og innebygd i for eksempel Google Sites er app-delen av.
+- `sw.js` henter spillet fra nettet først, så endringer når elevene neste gang de åpner det. Er nettet borte, treigere enn 3 sekunder eller svarer med en feil, brukes den lagrede kopien. Skriftene fra Google Fonts lagres også, så spillet ser likt ut uten nett.
+- Endre `VERSJON` øverst i `sw.js` når ikonene eller fillista der endres, så appen lagrer dem på nytt. Nye utgaver av spillet trenger ikke det.
+- Alle GitHub Pages-sidene på kontoen deler ett lager i nettleseren. `sw.js` sletter derfor bare lagre som begynner med `ordbua-`, og en annen app på kontoen bør på samme måte bruke sitt eget prefiks.
+- På startskjermen kommer knappen **Installer appen** ved siden av Del-knappen når nettleseren kan installere spillet (Chrome og Edge på PC, Chromebook og Android). På iPhone og iPad viser knappen en kort forklaring i stedet. Knappen vises ikke når spillet allerede kjører som app.
+
+Slik installerer man:
+- **iPhone og iPad**: åpne lenken i Safari, trykk på Del-knappen (eventuelt under •••) og velg «Legg til på Hjem-skjerm».
+- **Android**: trykk på «Installer appen» på startskjermen i spillet, eller velg ⋮ › «Installer og opprett snarvei» › «Installer» i Chrome (eldre Chrome-versjoner kaller det «Installer app» eller «Legg til på startskjermen»).
+- **PC og Chromebook**: trykk på «Installer appen» på startskjermen i spillet, eller på installeringsikonet til høyre i adressefeltet i Chrome eller Edge.
+- **Mac med Safari**: Arkiv-menyen › «Legg til i Dock».
+
+Appen må åpnes med nett én gang før den virker uten nett.
 
 ## Ytelse
 - Bakgrunnshimmelen tegnes høyst 30 ganger i sekundet og med høyst 1,5 punkt per CSS-piksel (høyst 2 millioner punkter). Før 21.10.2026 ble den tegnet i full oppløsning 60 ganger i sekundet hele tiden, også på startsiden, og det er den sannsynlige grunnen til at spillet lukket seg etter en stund på nettbrett og mobil. En test med åtte runder etter hverandre viste ingen minnelekkasje.

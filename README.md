@@ -10,11 +10,17 @@ Spilleren kan øve på alle ordene, eller bare på verb, substantiv eller adjekt
 ## Spille
 Spillet ligger på **https://audunmathiasteachingcreations.github.io/Ordbua/** og åpnes i alle nettlesere, uten konto.
 
+Spillet kan også installeres som app fra den samme lenken, med eget ikon og spill uten nett:
+- **iPhone og iPad**: åpne lenken i Safari, trykk på Del-knappen (eventuelt under •••) og velg «Legg til på Hjem-skjerm».
+- **Android**: trykk på «Installer appen» på startskjermen i spillet, eller velg ⋮ › «Installer og opprett snarvei» › «Installer» i Chrome.
+- **PC og Chromebook**: trykk på «Installer appen» på startskjermen i spillet, eller på installeringsikonet til høyre i adressefeltet i Chrome eller Edge.
+
 Man kan også laste ned `spill/ordbua.html` og åpne den direkte i en nettleser. Fila er selvstendig og trenger ikke server. Uten internett brukes standardskrifter i stedet for spillets egne.
 
 ## Innhold
 - `spill/`: malen (`mal.html`), byggeskriptet (`bygg.py`) og den ferdige siden (`ordbua.html`). Se `spill/README.md` for regler og innstillinger.
 - `index.html`: forsiden på GitHub Pages, som sender videre til `spill/ordbua.html`. `.nojekyll` gjør at GitHub Pages viser filene slik de er.
+- `manifest.webmanifest`, `sw.js` og `ikon/`: det som gjør spillet til en app som kan installeres og spilles uten nett. Se «Som app» i `spill/README.md`.
 - `ordliste/`: 515 ordpar bokmål–nynorsk i JSON og CSV, med godkjente svar begge veier, kontrollert mot Nynorskordboka, Bokmålsordboka og dinordbok.no. Se `ordliste/README.md`.
 
 ## Bygge på nytt etter endringer

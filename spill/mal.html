@@ -55,7 +55,8 @@ body {
   display: flex; flex-direction: column; gap: 18px;
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
-  padding-block: 14px 40px;
+  padding-top: calc(14px + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(40px + env(safe-area-inset-bottom, 0px));
 }
 .topp {
   width: 100%; max-width: 780px; margin: 0 auto;
@@ -204,9 +205,12 @@ h1, h2, .ordet, .res-score, .res-tittel { font-family: var(--f-display); text-wr
 .hint { color: var(--ink-2); font-size: var(--t-sm); }
 .rekord-merke { margin-left: auto; font-size: var(--t-sm); color: var(--ink-2); }
 .rekord-merke b { color: var(--ink); font-variant-numeric: tabular-nums; }
-.del-spel { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; }
-.del-spel svg { width: 19px; height: 19px; flex: none; }
+.del-spel, .app-knapp { display: inline-flex; align-items: center; gap: 8px; padding: 11px 18px; }
+.del-spel svg, .app-knapp svg { width: 19px; height: 19px; flex: none; }
+.start-ekstra { display: flex; flex-wrap: wrap; gap: 14px 18px; } /* Del og Installer holder sammen når raden brytes */
 .start-del { grid-column: 1 / -1; }
+.app-hint { margin: 0; display: flex; align-items: flex-start; gap: 10px; padding: 12px 14px; background: var(--frost); border-radius: 12px; font-size: var(--t-sm); }
+.app-hint svg { width: 20px; height: 20px; flex: none; margin-top: 1px; color: var(--focus); }
 
 /* ---------- Spill ---------- */
 .hud { display: grid; grid-template-columns: 1.4fr 1.2fr 1fr 1fr; gap: 4px; padding: 10px 12px; }
@@ -447,8 +451,12 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
           <button id="startKnapp" class="knapp hoved stor" type="button">Start runden</button>
           <span class="hint">eller trykk Enter</span>
           <span class="rekord-merke" id="startRekord" hidden></span>
+          <span class="start-ekstra">
           <button id="delSpelKnapp" class="knapp sekundar del-spel" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><span data-t="delSpel">Del spelet</span></button>
+          <button id="appKnapp" class="knapp sekundar app-knapp" type="button" aria-controls="appHint" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 15v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"/></svg><span data-t="appKnapp">Installer appen</span></button>
+          </span>
         </div>
+        <p class="app-hint start-del" id="appHint" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><span data-t="appHint"></span></p>
         <div class="del-boks start-del" id="delSpelBoks" hidden>
           <label for="delSpelTekst">Teksten du deler</label>
           <textarea id="delSpelTekst" rows="2" readonly></textarea>
@@ -553,6 +561,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     andelLike: 0.35,          // omtrent så stor del av ordene i en runde skrives likt på bokmål og nynorsk; null = helt tilfeldig
     ordklasseValg: ["verb", "substantiv", "adjektiv"], // ordklassene spilleren kan velge å øve på, i tillegg til alle ord
     spillUrl: "/*SPILL_URL*/", // lenka som er med når man deler
+    app: /*APP*/false,        // true på GitHub Pages, der spillet kan installeres som app (bygg.py setter den); false i Claude-artefakten
     navn: "Ordbua"           // navnet på spillet (tittel, logo og delingstekst)
   };
 
@@ -591,6 +600,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       statRiktige: "rette", statSnitt: "snittid på rette",
       igjen: "Spel igjen", tilStart: "Tilbake til start",
       delSpel: "Del spelet", delSpelTekst: `Prøv ${KONFIG.navn}, eit ordspel på tid mellom bokmål og nynorsk!`,
+      appKnapp: "Installer appen",
+      appHint: "Trykk på Del-knappen i nettlesaren (ikkje «Del spelet» her på sida) og vel «Legg til på Hjem-skjerm». Ser du ikkje Del-knappen i nettlesaren, trykk på ••• først.",
       svarTittel: "Svara dine", filterRiktige: "Rette",
       thSvar: "Svaret ditt", thFasit: "Fasit (nynorsk)",
       tidaGjekk: "(tida gjekk ut)", slaaOpp: "Slå opp i Nynorskordboka",
@@ -628,6 +639,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       statRiktige: "riktige", statSnitt: "snittid på riktige",
       igjen: "Spill igjen", tilStart: "Tilbake til start",
       delSpel: "Del spillet", delSpelTekst: `Prøv ${KONFIG.navn}, et ordspill på tid mellom bokmål og nynorsk!`,
+      appKnapp: "Installer appen",
+      appHint: "Trykk på Del-knappen i nettleseren (ikke «Del spillet» her på siden) og velg «Legg til på Hjem-skjerm». Ser du ikke Del-knappen i nettleseren, trykk på ••• først.",
       svarTittel: "Svarene dine", filterRiktige: "Riktige",
       thSvar: "Ditt svar", thFasit: "Fasit (bokmål)",
       tidaGjekk: "(tiden gikk ut)", slaaOpp: "Slå opp i Bokmålsordboka",
@@ -1334,6 +1347,52 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     const el = document.activeElement, valg = el?.closest?.("#retning button, #utvalKnappar button");
     const paaValgt = !!valg && (valg.dataset.retning ? valg.dataset.retning === retning : valg.dataset.ordklasse === ordklasse);
     if (e.key === "Enter" && !e.repeat && S.phase === "start" && !$("start").hidden && (el?.tagName !== "BUTTON" || paaValgt)) { e.preventDefault(); startRound(); }
+  });
+
+  // ---------- App ----------
+  // På GitHub Pages kan spillet installeres som app (lagt inn 21.10.2026). Appfilene ligger i repoets rot, én mappe over spill/:
+  // manifest.webmanifest (navn, ikon og farger) og sw.js (gjør at spillet åpner uten nett). Som nedlastet fil, i Claude og når
+  // spillet er bygget inn i en annen side (iframe) er dette av, for der ville appen blitt den andre siden.
+  const APP = KONFIG.app && /^https?:$/.test(location.protocol) && window.top === window.self;
+  const iOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const somApp = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+  let installering = null; // hendelsen Chrome og Edge gir når spillet kan installeres; iPhone og iPad får i stedet en forklaring
+  function visApp() {
+    const b = $("appKnapp");
+    b.hidden = !APP || somApp || !(installering || iOS);
+    if (!installering && iOS) b.setAttribute("aria-expanded", String(!$("appHint").hidden)); else b.removeAttribute("aria-expanded");
+  }
+  if (APP) {
+    for (const [rel, href] of [["manifest", "../manifest.webmanifest"], ["apple-touch-icon", "../ikon/apple-touch-icon.png"]]) {
+      const l = document.createElement("link"); l.rel = rel; l.href = href; document.head.append(l);
+    }
+    if ("serviceWorker" in navigator) addEventListener("load", () => {
+      navigator.serviceWorker.register("../sw.js")
+        .then(() => navigator.serviceWorker.ready)
+        .then((reg) => {
+          // Skriftene ble lastet før sw.js tok over, så den får adressen til stilarket og lagrer skriftene til bruk uten nett
+          const skrift = [...document.querySelectorAll('link[rel="stylesheet"]')].map((l) => l.href).filter((u) => u.startsWith("https://fonts.googleapis.com/"));
+          if (reg.active) reg.active.postMessage({ skrift });
+        })
+        .catch(() => {});
+    });
+    addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installering = e; visApp(); });
+    addEventListener("appinstalled", () => { installering = null; visApp(); });
+  } else {
+    // En kopi lagret fra nettsiden har med seg knappen, forklaringen og app-lenkene slik de var da den ble lagret
+    $("appHint").hidden = true;
+    for (const l of document.querySelectorAll('link[rel="manifest"], link[rel="apple-touch-icon"]')) l.remove();
+  }
+  visApp();
+  $("appKnapp").addEventListener("click", () => {
+    if (installering) {
+      // Hendelsen kan bare brukes én gang, så knappen forsvinner til neste gang nettleseren tilbyr installering
+      const e = installering; installering = null;
+      try { e.prompt().catch(() => {}); } catch (err) {}
+      visApp();
+    } else {
+      $("appHint").hidden = !$("appHint").hidden; visApp();
+    }
   });
 
   requestAnimationFrame(frame);
