@@ -367,6 +367,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
 .oppgave-tekst .eyebrow { color: var(--gold-deep); }
 .oppgave-tekst b { font-family: var(--f-display); font-size: var(--t-xl); font-weight: 800; line-height: 1.15; overflow-wrap: anywhere; }
 .oppgave-tekst span:last-child { color: var(--ink-2); font-size: var(--t-sm); }
+.oppgave-lenker { display: flex; flex-wrap: wrap; gap: 4px 16px; }
 .oppgave a { color: var(--ink-2); font-size: var(--t-sm); text-underline-offset: 3px; }
 .med-oppgave .retning, .med-oppgave .utval { display: none; }
 
@@ -464,7 +465,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
             <b id="oppgaveTittel"></b>
             <span id="oppgaveInfo"></span>
           </div>
-          <a href="#" id="spelFritt" data-t="spelFritt">Spel utan oppgåva</a>
+          <span class="oppgave-lenker"><a href="#" id="tilLaerar" data-t="tilLaerar" hidden>Lærarsida</a><a href="#" id="spelFritt" data-t="spelFritt">Spel utan oppgåva</a></span>
         </div>
         <div class="demo" aria-hidden="true">
           <div class="demo-side"><span class="demo-lbl" id="demoFraLbl">Bokmål</span><span class="demo-ord" id="demoBm">ikke</span></div>
@@ -669,7 +670,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       kopiert: "Teksten er kopiert. Lim han inn der du vil dele han.", kopierSjolv: "Merk teksten i boksen og kopier han.",
       delTekst: (p, r, n, k) => `Eg fekk ${p} poeng og ${r} av ${n} rette${k ? ` på ${k}` : ""} frå bokmål til nynorsk i ${KONFIG.navn}! Klarer du å slå meg?`,
       oppgaveFra: "Oppgåve frå læraren", paaOppgava: "oppgåva", ordIOppgava: "ord i oppgåva", frist: (d) => `Frist ${d}`,
-      spelFritt: "Spel utan oppgåva", oppgaveFeil: "Oppgåva kunne ikkje opnast. Be læraren om å sende ho på nytt.",
+      tilLaerar: "← Lærarsida", spelFritt: "Spel utan oppgåva", oppgaveFeil: "Oppgåva kunne ikkje opnast. Be læraren om å sende ho på nytt.",
       leverTittel: "Lever til læraren",
       leverIngress: "Skriv namnet ditt og lag ein kode. Lim koden inn der læraren vil at du skal levere, til dømes i Teams eller på e-post. Du kan levere kvar runde du spelar.",
       namnLabel: "Namnet ditt", lagKode: "Lag innleveringskode", kodeLabel: "Innleveringskoden din",
@@ -717,7 +718,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       kopiert: "Teksten er kopiert. Lim den inn der du vil dele den.", kopierSjolv: "Merk teksten i boksen og kopier den.",
       delTekst: (p, r, n, k) => `Jeg fikk ${p} poeng og ${r} av ${n} riktige${k ? ` på ${k}` : ""} fra nynorsk til bokmål i ${KONFIG.navn}! Klarer du å slå meg?`,
       oppgaveFra: "Oppgave fra læreren", paaOppgava: "oppgaven", ordIOppgava: "ord i oppgaven", frist: (d) => `Frist ${d}`,
-      spelFritt: "Spill uten oppgaven", oppgaveFeil: "Oppgaven kunne ikke åpnes. Be læreren om å sende den på nytt.",
+      tilLaerar: "← Lærersiden", spelFritt: "Spill uten oppgaven", oppgaveFeil: "Oppgaven kunne ikke åpnes. Be læreren om å sende den på nytt.",
       leverTittel: "Lever til læreren",
       leverIngress: "Skriv navnet ditt og lag en kode. Lim koden inn der læreren vil at du skal levere, for eksempel i Teams eller på e-post. Du kan levere hver runde du spiller.",
       namnLabel: "Navnet ditt", lagKode: "Lag innleveringskode", kodeLabel: "Innleveringskoden din",
@@ -1140,6 +1141,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     $("oppgaveTittel").textContent = oppgave.tittel || T().oppgaveFra;
     const frist = oppgave.frist && new Date(oppgave.frist + "T12:00").toLocaleDateString("nb-NO", { day: "numeric", month: "long" });
     $("oppgaveInfo").textContent = [oppgave.klasse, T().retningKort, T().antOrd(fmt(utval().length)), frist && T().frist(frist)].filter(Boolean).join(" · ");
+    // «Prøv selv» på lærersiden legger &prov til lenka. Da kommer en lenke tilbake til lærersiden, som ligger ved siden av spillet.
+    if (/[#&]prov(&|$)/.test(location.hash)) { $("tilLaerar").hidden = false; $("tilLaerar").href = "laerar.html"; }
   }
   $("spelFritt").addEventListener("click", (e) => {
     e.preventDefault();
@@ -1327,6 +1330,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     const kl = $("resOrdklasse"); kl.hidden = !valgtKlasse(); kl.textContent = oppgave ? oppgave.tittel || T().oppgaveFra : valgtKlasse() ? klasseNamn(ordklasse) : "";
     $("leverPanel").hidden = !oppgave;
     $("namnFelt").value = store.get(NAMN_KEY) || "";
+    if (oppgave) lagKodeNaa();
     $("statRiktige").textContent = String(right.length);
     $("statFeil").textContent = String(A.length - right.length);
     $("statSnitt").textContent = right.length ? fmtS(right.reduce((s, a) => s + a.ms, 0) / right.length) : "–";
@@ -1460,14 +1464,27 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       return { kode: `ORDBUA.${versjon}.${data}.${fnv(data)}` };
     }
   };
+  // Koden lages mens eleven skriver navnet, så den er klar når knappen trykkes. Safari på iPad og iPhone lar bare siden
+  // kopiere og dele rett i trykket, ikke etter at noe annet er ventet på.
+  const lesNamn = () => $("namnFelt").value.replace(/\s+/g, " ").trim();
+  let klarKode = null;
+  function lagKodeNaa() {
+    const namn = lesNamn(), runde = S.answers;
+    klarKode = null;
+    if (!oppgave || !namn) return Promise.resolve(null);
+    return Levering.lever(rundeData(namn)).then(({ kode }) => {
+      if (lesNamn() === namn && S.answers === runde) klarKode = { namn, kode };
+      return kode;
+    });
+  }
   $("leverKnapp").addEventListener("click", async () => {
-    const felt = $("namnFelt"), namn = felt.value.replace(/\s+/g, " ").trim();
+    const felt = $("namnFelt"), namn = lesNamn();
     if (!namn) { felt.classList.remove("rist"); void felt.offsetWidth; felt.classList.add("rist"); felt.focus(); toast(T().manglarNamn); return; }
     store.set(NAMN_KEY, namn);
-    const { kode } = await Levering.lever(rundeData(namn));
+    const kode = klarKode && klarKode.namn === namn ? klarKode.kode : await lagKodeNaa();
     del(T().kodeTekst(oppgave.tittel, kode), "leverBoks", "leverTekst", T().kodeKopiert);
   });
-  $("namnFelt").addEventListener("input", (e) => e.target.classList.remove("rist"));
+  $("namnFelt").addEventListener("input", (e) => { e.target.classList.remove("rist"); lagKodeNaa(); });
   $("namnFelt").addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); $("leverKnapp").click(); } });
 
   // ---------- Kontroller ----------

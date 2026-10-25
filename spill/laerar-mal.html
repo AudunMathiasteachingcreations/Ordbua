@@ -1,4 +1,4 @@
-<title>Ordbua for lærere</title>
+<title>Ordbua lærerside</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -191,6 +191,13 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
 .data-panel ul { margin: 0; padding-left: 1.2em; color: var(--ink-2); font-size: var(--t-sm); display: flex; flex-direction: column; gap: 4px; }
 .skolear { background: var(--gold-tint); border-radius: 12px; padding: 12px 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
 
+.knapp.fare { background: var(--bad); color: #fff; box-shadow: 0 3px 0 #8c2219; }
+.knapp.fare:hover { background: #a92c20; }
+/* Egen bekreftelsesboks: confirm() og prompt() virker ikke overalt (f.eks. inne i Teams eller Claude) */
+.dialog-bak { position: fixed; inset: 0; z-index: 7; display: grid; place-items: center; padding: 16px; background: rgba(11, 18, 48, .45); }
+.dialog { background: var(--snow); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; width: min(100%, 440px); display: flex; flex-direction: column; gap: 14px; }
+.dialog p { font-weight: 700; }
+
 .toast {
   position: fixed; z-index: 6; left: 50%; transform: translateX(-50%);
   bottom: calc(20px + env(safe-area-inset-bottom, 0px)); max-width: min(92vw, 460px);
@@ -253,6 +260,13 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
     </div>
   </section>
 </main>
+<div class="dialog-bak" id="dialog" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTekst">
+    <p id="dialogTekst"></p>
+    <input type="text" id="dialogFelt" maxlength="40" autocomplete="off" aria-labelledby="dialogTekst" hidden>
+    <div class="knapper"><button class="knapp hoved" type="button" id="dialogJa">OK</button><button class="knapp sekundar" type="button" id="dialogNei">Avbryt</button></div>
+  </div>
+</div>
 <div class="toast" id="toast" role="status" hidden></div>
 
 <!-- Ordlista settes inn her av bygg.py fra ordliste/ordliste.json -->
@@ -342,6 +356,8 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
     const base = new URL(KONFIG.spillUrl, location.href); base.hash = "";
     return base.href + "#oppgave=" + bytesTilB64(new TextEncoder().encode(JSON.stringify(d)));
   }
+  // Med en fullstendig adresse åpnes spillet i ny fane. En testutgave med spillet ved siden av (f.eks. i Claude) åpner det i samme vindu.
+  const nyFane = /^https?:/.test(KONFIG.spillUrl);
   const antOrd = (op) => op.utval === "eigne" ? op.ord.length : iKlasse(op.utval).length;
 
   // ---------- Innleveringskoder ----------
@@ -480,7 +496,7 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
       </div>
       <div class="knapper">
         <button class="knapp sekundar liten" type="button" data-h="resultater" data-id="${esc(op.id)}">Se resultater</button>
-        <a class="knapp sekundar liten" href="${esc(l)}" target="_blank" rel="noopener">Prøv selv</a>
+        <a class="knapp sekundar liten" href="${esc(l)}&amp;prov"${nyFane ? ' target="_blank" rel="noopener"' : ""}>Prøv selv</a>
         <button class="lenkeknapp fare" type="button" data-h="slett-oppgave" data-id="${esc(op.id)}">Slett oppgaven</button>
       </div>
     </article>`;
@@ -550,7 +566,7 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
     if (s.nye.length) {
       const per = new Map();
       for (const i of s.nye) per.set(i.oppgave, [...(per.get(i.oppgave) || []), i.navn]);
-      linjer.push(`<p class="ok">${s.nye.length} ${s.nye.length === 1 ? "ny innlevering" : "nye innleveringer"}: ${[...per].map(([id, n]) => `${esc(oppgave(id).tittel)} (${esc(n.join(", "))})`).join("; ")}</p>`);
+      linjer.push(`<p class="ok">${s.nye.length} ${s.nye.length === 1 ? "ny innlevering" : "nye innleveringer"}: ${[...per].map(([id, n]) => `${esc(oppgave(id)?.tittel || "slettet oppgave")} (${esc(n.join(", "))})`).join("; ")}</p>`);
     }
     if (s.hadde) linjer.push(`<p class="info">${s.hadde} ${s.hadde === 1 ? "kode var" : "koder var"} lagt inn fra før.</p>`);
     if (s.odelagt) linjer.push(`<p class="bad">${s.odelagt} ${s.odelagt === 1 ? "kode kunne" : "koder kunne"} ikke leses. Kanskje en del av koden manglet da den ble kopiert. Be eleven sende den på nytt.</p>`);
@@ -682,22 +698,43 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
     ta.remove(); return ok;
   }
 
+  // Spør læreren i en boks på siden. Med felt (en tekst) får læreren skrive, og svaret er teksten eller null.
+  function sporBruker(tekst, { ja = "Slett", felt = null } = {}) {
+    return new Promise((svar) => {
+      const d = $("dialog"), inp = $("dialogFelt"), jaKnapp = $("dialogJa"), neiKnapp = $("dialogNei");
+      const forrige = document.activeElement;
+      $("dialogTekst").textContent = tekst; jaKnapp.textContent = ja;
+      jaKnapp.classList.toggle("fare", felt === null); jaKnapp.classList.toggle("hoved", felt !== null);
+      inp.hidden = felt === null; inp.value = felt ?? "";
+      d.hidden = false; (felt === null ? neiKnapp : inp).focus(); if (felt !== null) inp.select();
+      const ferdig = (v) => { d.hidden = true; d.onkeydown = jaKnapp.onclick = neiKnapp.onclick = d.onclick = null; forrige?.focus?.(); svar(v); };
+      jaKnapp.onclick = () => ferdig(felt === null ? true : inp.value.trim() || null);
+      neiKnapp.onclick = () => ferdig(felt === null ? false : null);
+      d.onclick = (e) => { if (e.target === d) neiKnapp.click(); };
+      d.onkeydown = (e) => {
+        if (e.key === "Escape") neiKnapp.click();
+        if (e.key === "Enter" && felt !== null) { e.preventDefault(); jaKnapp.click(); }
+      };
+    });
+  }
+  const bekreft = (tekst) => sporBruker(tekst);
+
   const HANDLING = {
     "ny-klasse"() { V.nyKlasse = !V.nyKlasse; renderKlasser(); $("klasseSkjema")?.elements.navn.focus(); },
     "avbryt-klasse"() { V.nyKlasse = false; renderKlasser(); },
     "velg-klasse"(b) { V.klasse = b.dataset.id; V.oppgave = null; V.nyOppgave = false; V.limSvar = null; render(); },
-    "gi-navn"() {
-      const k = klasse(V.klasse), n = prompt("Nytt navn på klassen", k.navn);
+    async "gi-navn"() {
+      const k = klasse(V.klasse), n = await sporBruker("Nytt navn på klassen", { ja: "Lagre", felt: k.navn });
       if (n && n.trim()) { k.navn = n.trim().slice(0, 40); lagre(); render(); toast("Lenker du har delt før, viser fortsatt det gamle navnet."); }
     },
-    "slett-klasse"() {
+    async "slett-klasse"() {
       const k = klasse(V.klasse), ops = D.oppgaver.filter((o) => o.klasse === k.id).map((o) => o.id);
       const n = D.innleveringer.filter((i) => ops.includes(i.oppgave)).length;
-      if (!confirm(`Slette ${k.navn} med ${ops.length} oppgaver og ${n} innleveringer? Dette kan ikke angres.`)) return;
+      if (!await bekreft(`Slette ${k.navn} med ${ops.length} ${ops.length === 1 ? "oppgave" : "oppgaver"} og ${n} ${n === 1 ? "innlevering" : "innleveringer"}? Dette kan ikke angres.`)) return;
       D.innleveringer = D.innleveringer.filter((i) => !ops.includes(i.oppgave));
       D.oppgaver = D.oppgaver.filter((o) => o.klasse !== k.id);
       D.klasser = D.klasser.filter((x) => x.id !== k.id);
-      V.klasse = null; lagre(); render();
+      V.klasse = null; V.limSvar = null; lagre(); render();
     },
     "ny-oppgave"() { V.nyOppgave = true; V.velger = { valgte: new Set(), sok: "", klasse: "alle" }; render(); $("oppgaveSkjema").elements.tittel.focus(); },
     "avbryt-oppgave"() { V.nyOppgave = false; render(); },
@@ -713,12 +750,12 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
     merk(b) { b.select(); },
     resultater(b) { V.oppgave = b.dataset.id; V.apneElever.clear(); V.visAlleOrd = false; render(); scrollTo(0, 0); },
     tilbake() { V.oppgave = null; render(); },
-    "slett-oppgave"(b) {
+    async "slett-oppgave"(b) {
       const op = oppgave(b.dataset.id), n = levertTil(op.id).length;
-      if (!confirm(`Slette «${op.tittel}»${n ? ` og ${n} innleveringer` : ""}? Elever som har lenka, kan fortsatt spille, men kodene deres kan ikke legges inn her.`)) return;
+      if (!await bekreft(`Slette «${op.tittel}»${n ? ` og ${n} ${n === 1 ? "innlevering" : "innleveringer"}` : ""}? Elever som har lenka, kan fortsatt spille, men kodene deres kan ikke legges inn her.`)) return;
       D.oppgaver = D.oppgaver.filter((o) => o.id !== op.id);
       D.innleveringer = D.innleveringer.filter((i) => i.oppgave !== op.id);
-      lagre(); render();
+      V.limSvar = null; lagre(); render();
     },
     async "legg-inn"() {
       const ta = $("limInn"), tekst = ta.value;
@@ -727,13 +764,13 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
       if (!V.limSvar.funnet || V.limSvar.odelagt) $("limInn").value = tekst; // behold teksten så læreren ser hva som var galt
     },
     "vis-elev"(b) { const k = b.dataset.id; V.apneElever.has(k) ? V.apneElever.delete(k) : V.apneElever.add(k); render(); },
-    "slett-runde"(b) {
-      if (!confirm("Slette denne runden?")) return;
+    async "slett-runde"(b) {
+      if (!await bekreft("Slette denne runden?")) return;
       D.innleveringer = D.innleveringer.filter((i) => i.id !== b.dataset.id); lagre(); render();
     },
-    "slett-elev"(b) {
+    async "slett-elev"(b) {
       const inn = levertTil(V.oppgave).filter((i) => navnNokkel(i.navn) === b.dataset.id);
-      if (!confirm(`Slette ${inn.length} ${inn.length === 1 ? "runde" : "runder"} fra ${inn[0].navn}?`)) return;
+      if (!await bekreft(`Slette ${inn.length} ${inn.length === 1 ? "runde" : "runder"} fra ${inn[0].navn}?`)) return;
       const ids = new Set(inn.map((i) => i.id));
       D.innleveringer = D.innleveringer.filter((i) => !ids.has(i.id)); lagre(); render();
     },
@@ -753,14 +790,14 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
       lastNed(`ordbua-laerer-${dato}.json`, JSON.stringify(D, null, 1), "application/json");
     },
     hent() { $("hentFil").click(); },
-    "slett-alt"() {
-      if (!confirm("Slette alle klasser, oppgaver og innleveringer på denne maskinen? Dette kan ikke angres.")) return;
-      D = tomData(); V.klasse = V.oppgave = null; lagre(); render(); toast("Alt er slettet.");
+    async "slett-alt"() {
+      if (!await bekreft("Slette alle klasser, oppgaver og innleveringer på denne maskinen? Dette kan ikke angres.")) return;
+      D = tomData(); V.klasse = V.oppgave = V.limSvar = null; lagre(); render(); toast("Alt er slettet.");
     },
-    "slett-gamle"() {
+    async "slett-gamle"() {
       const na = new Date(), aug = new Date(na.getFullYear() - (na.getMonth() < 7 ? 1 : 0), 7, 1).getTime() / 1000;
       const n = D.innleveringer.filter((i) => i.spilt < aug).length;
-      if (!confirm(`Slette ${n} innleveringer fra før 1. august? Klassene og oppgavene blir stående.`)) return;
+      if (!await bekreft(`Slette ${n} ${n === 1 ? "innlevering" : "innleveringer"} fra før 1. august? Klassene og oppgavene blir stående.`)) return;
       D.innleveringer = D.innleveringer.filter((i) => i.spilt >= aug); lagre(); render();
     }
   };
