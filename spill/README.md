@@ -58,6 +58,8 @@ Første del av lærerversjonen, bygget så langt det går uten Feide, server og 
 4. Etter runden skriver eleven navnet sitt og trykker «Lag innleveringskode». Koden (rundt 300 tegn) kopieres, og eleven limer den inn der læreren vil, f.eks. som innlevering i Teams.
 5. Læreren limer inn kodene på lærersiden (mange på en gang, også med annen tekst rundt). Siden viser elevene med beste runde, alle rundene, og «ord klassen strever med». Runder og ordstatistikk kan lastes ned som CSV for Excel.
 
+«Prøv selv» på lærersiden legger `&prov` til lenka, og da viser spillet en lenke tilbake til `laerar.html`. Bekreftelser bruker en boks på siden, fordi `confirm()` og `prompt()` ikke virker i Teams-faner og i Claude. En testutgave med begge sidene ligger som Claude-artefakt: https://claude.ai/artifact/PqrusCzqhMG9As8gBzeHAQ (der virker ikke nedlasting av CSV og sikkerhetskopi).
+
 **Hvor dataene er**
 - Oppgaven står i selve lenka. Delen etter `#` sendes ikke til GitHub, så ingen server ser den.
 - Klasser, oppgaver og innleveringer lagres bare i nettleseren til læreren (`localStorage`, nøkkel `ordbua.laerer.v1`). Siden har knapper for sikkerhetskopi (JSON), henting fra sikkerhetskopi (slås sammen med det som finnes) og sletting. Etter 1. august minner siden om å slette innleveringer fra forrige skoleår.
