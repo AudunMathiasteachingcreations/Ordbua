@@ -1,7 +1,8 @@
-"""Bygger ordbua.html (spillet Ordbua) fra mal.html og ordlista.
+"""Bygger ordbua.html (spillet Ordbua) fra mal.html og laerar.html (lærersiden) fra laerar-mal.html, begge med ordlista.
 
-Bruk:  python3 bygg.py [--artefakt] [utfil] [spill-url]
-Standard utfil er ordbua.html ved siden av dette skriptet, og standard spill-url er adressen på GitHub Pages.
+Bruk:  python3 bygg.py [--artefakt] [--laerar] [utfil] [spill-url]
+Uten utfil skrives både ordbua.html og laerar.html ved siden av dette skriptet. Med utfil skrives bare spillet,
+eller bare lærersiden med --laerar. Standard spill-url er adressen på GitHub Pages; lærersiden lager oppgavelenker til den.
 Uten --artefakt blir fila en fullstendig nettside som virker alene, i Teams og på GitHub Pages,
 og som kan installeres som app når den ligger på GitHub Pages sammen med manifest.webmanifest, sw.js og ikon/ i repoets rot.
 Med --artefakt blir den et sideutdrag for Artifact-verktøyet til Claude, som legger til resten selv.
@@ -36,11 +37,19 @@ TOPP = f"""<!doctype html>
 <link rel="icon" href="data:image/svg+xml,{quote(IKON, safe=" '=/:.,-()")}">
 """
 
+# Lærersiden er på bokmål og skal ikke installeres som app
+TOPP_LAERAR = TOPP.replace('<html lang="nn">', '<html lang="nb">').replace('content="Ordbua"', 'content="Ordbua for lærere"')
+TOPP_LAERAR = "\n".join(l for l in TOPP_LAERAR.split("\n") if "mobile-web-app" not in l and "status-bar-style" not in l)
+
 argv = sys.argv[1:]
 artefakt = "--artefakt" in argv
-argv = [a for a in argv if a != "--artefakt"]
-ut = Path(argv[0]) if len(argv) > 0 else HER / "ordbua.html"
+laerar = "--laerar" in argv
+argv = [a for a in argv if a not in ("--artefakt", "--laerar")]
 url = argv[1] if len(argv) > 1 else SPILL_URL
+if argv:
+    jobber = [("laerar-mal.html" if laerar else "mal.html", Path(argv[0]))]
+else:
+    jobber = [("mal.html", HER / "ordbua.html"), ("laerar-mal.html", HER / "laerar.html")]
 
 ord_ = json.loads(ORDLISTE.read_text(encoding="utf-8"))
 for o in ord_:
@@ -50,10 +59,12 @@ for o in ord_:
 data = [{f: o.get(f, [] if f in LISTEFELT else "") for f in FELT} for o in ord_]
 data_json = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
 
-mal = (HER / "mal.html").read_text(encoding="utf-8")
-assert "/*ORDLISTE*/" in mal and "/*SPILL_URL*/" in mal and "/*APP*/false" in mal
-side = mal.replace("/*ORDLISTE*/", data_json).replace("/*SPILL_URL*/", url.replace('"', ""))
-if not artefakt:
-    side = TOPP + side.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', "").replace("/*APP*/false", "true")
-ut.write_text(side, encoding="utf-8")
-print(f"Skrev {ut} med {len(data)} ord ({'sideutdrag for Claude' if artefakt else 'fullstendig nettside'})")
+for malnavn, ut in jobber:
+    mal = (HER / malnavn).read_text(encoding="utf-8")
+    spill = malnavn == "mal.html"
+    assert "/*ORDLISTE*/" in mal and "/*SPILL_URL*/" in mal and ("/*APP*/false" in mal or not spill)
+    side = mal.replace("/*ORDLISTE*/", data_json).replace("/*SPILL_URL*/", url.replace('"', ""))
+    if not artefakt:
+        side = (TOPP if spill else TOPP_LAERAR) + side.replace('<meta name="claude:viewport-fit-sides" content="cover">\n', "").replace("/*APP*/false", "true")
+    ut.write_text(side, encoding="utf-8")
+    print(f"Skrev {ut} med {len(data)} ord ({'sideutdrag for Claude' if artefakt else 'fullstendig nettside'})")
