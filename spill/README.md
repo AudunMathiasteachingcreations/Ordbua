@@ -60,6 +60,8 @@ Første del av lærerversjonen, bygget så langt det går uten Feide, server og 
 
 «Prøv selv» på lærersiden legger `&prov` til lenka, og da viser spillet en lenke tilbake til `laerar.html`. Bekreftelser bruker en boks på siden, fordi `confirm()` og `prompt()` ikke virker i Teams-faner og i Claude. En testutgave med begge sidene ligger som Claude-artefakt: https://claude.ai/artifact/PqrusCzqhMG9As8gBzeHAQ (der virker ikke nedlasting av CSV og sikkerhetskopi).
 
+**Egne ord fra læreren** (fra 26.10.2026): under «Velg ord selv» kan læreren også skrive eller lime inn egne ord og bøyningsformer, ett per linje: `bokmål ; nynorsk ; andre riktige svar ; merknad` (eller kolonner fra Excel). Andre riktige svar gjelder språket eleven skriver på, og merknaden (f.eks. «verb, preteritum») vises for eleven der ordklassen ellers står. Ordene står i lenka (`e` i oppgaven), så de virker uten server. I innleveringskoden heter de `~0`, `~1` osv. Lærersiden lenker hvert nynorskord til Nynorskordboka, så læreren kan sjekke det.
+
 **Hvor dataene er**
 - Oppgaven står i selve lenka. Delen etter `#` sendes ikke til GitHub, så ingen server ser den.
 - Klasser, oppgaver og innleveringer lagres bare i nettleseren til læreren (`localStorage`, nøkkel `ordbua.laerer.v1`). Siden har knapper for sikkerhetskopi (JSON), henting fra sikkerhetskopi (slås sammen med det som finnes) og sletting. Etter 1. august minner siden om å slette innleveringer fra forrige skoleår.

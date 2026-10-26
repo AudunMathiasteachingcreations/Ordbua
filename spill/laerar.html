@@ -145,6 +145,10 @@ legend { font-weight: 700; font-size: var(--t-sm); padding: 0; margin-bottom: 6p
 .velger-liste input { flex: none; accent-color: var(--fjord); }
 .velger-liste b { font-weight: 700; }
 .velger-liste small { color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.egne-ord { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.egne-ord textarea { font-size: var(--t-sm); }
+.egne-ord table { font-size: var(--t-sm); }
+.egne-ord td, .egne-ord th { padding: 5px 8px; }
 .velger-bunn { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center; font-size: var(--t-sm); }
 
 /* Oppgavekort */
@@ -341,7 +345,7 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
 
   // Visningen: hvilken klasse og oppgave som er åpen, og skjemaet for ny oppgave
   const V = { klasse: null, oppgave: null, nyKlasse: false, nyOppgave: false, limSvar: null, apneElever: new Set(), visAlleOrd: false,
-              velger: { valgte: new Set(), sok: "", klasse: "alle" } };
+              velger: { valgte: new Set(), sok: "", klasse: "alle", egneTekst: "" } };
   try { V.klasse = sessionStorage.getItem("ordbua.laerer.klasse"); } catch (e) {}
 
   const klasse = (id) => D.klasser.find((k) => k.id === id);
@@ -357,13 +361,20 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
   function lenke(op) {
     const d = { v: 1, id: op.id, t: op.tittel, kl: klasse(op.klasse)?.navn || "", r: op.retning, u: op.utval };
     if (op.utval === "eigne") d.o = op.ord;
+    if (op.egne?.length) d.e = op.egne.map((w) => { const x = [w.b, w.n, w.a, w.m]; while (x.length > 2 && !(x[x.length - 1]?.length)) x.pop(); return x; });
     if (op.frist) d.fr = op.frist;
     const base = new URL(KONFIG.spillUrl, location.href); base.hash = "";
     return base.href + "#oppgave=" + bytesTilB64(new TextEncoder().encode(JSON.stringify(d)));
   }
   // Med en fullstendig adresse åpnes spillet i ny fane. En testutgave med spillet ved siden av (f.eks. i Claude) åpner det i samme vindu.
   const nyFane = /^https?:/.test(KONFIG.spillUrl);
-  const antOrd = (op) => op.utval === "eigne" ? op.ord.length : iKlasse(op.utval).length;
+  const antOrd = (op) => op.utval === "eigne" ? op.ord.length + (op.egne?.length || 0) : iKlasse(op.utval).length;
+  // Et ord i en innlevering: fra ordlista, eller «~3» for lærerens egne ord nr. 3 i oppgaven
+  function finnOrd(op, k) {
+    if (!k.startsWith("~")) return ORD.get(k);
+    const w = op.egne?.[Number(k.slice(1))];
+    return w && { bokmal: w.b, nynorsk: w.n, ordklasse: w.m || "eget ord", nynorskordboka: "https://ordbokene.no/nno/nn/" + encodeURIComponent(w.n) };
+  }
 
   // ---------- Innleveringskoder ----------
   // Lager spillet (se «Innlevering til læreren» i mal.html): ORDBUA.<versjon>.<data>.<sjekksum>
@@ -540,6 +551,12 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
             <button class="lenkeknapp" type="button" data-h="velg-ingen">Fjern alle</button>
           </span>
         </div>
+        <div class="egne-ord">
+          <label class="felt" for="egneOrd">Dine egne ord og bøyningsformer
+            <small>Ett ord per linje: bokmål ; nynorsk ; andre riktige svar (valgfritt, skill med komma) ; merknad (valgfritt, vises for eleven). Du kan også lime inn kolonner fra Excel. Sjekk nynorsken i Nynorskordboka.</small></label>
+          <textarea id="egneOrd" rows="5" placeholder="kastet ; kasta ; ; verb, preteritum&#10;husene ; husa ; ; substantiv, bestemt flertall&#10;ikke ; ikkje ; kje">${esc(V.velger.egneTekst)}</textarea>
+          <div id="egneForhand"></div>
+        </div>
       </div>
       <div class="knapper"><button class="knapp hoved" type="submit">Lag oppgaven</button><button class="lenkeknapp" type="button" data-h="avbryt-oppgave">Avbryt</button></div>
     </form>`;
@@ -560,9 +577,30 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
       const k = ordNokkel(o);
       return `<label><input type="checkbox" data-k="${esc(k)}"${V.velger.valgte.has(k) ? " checked" : ""}><b>${esc(o.bokmal)}</b><small>→ ${esc(o.nynorsk)} · ${esc(o.ordklasse)}</small></label>`;
     }).join("") : `<p class="dempet liten">Ingen ord passer søket.</p>`;
+    tegnEgne();
+  }
+  // Lærerens egne ord: «bokmål ; nynorsk ; andre riktige svar ; merknad», eller kolonner fra Excel (tabulator).
+  // De står i oppgavelenka, så de virker uten server. Andre riktige svar gjelder språket eleven skriver på.
+  function lesEgneOrd(tekst) {
+    const ord = [], feil = [];
+    for (const [i, linje] of tekst.split(/\r?\n/).entries()) {
+      if (!linje.trim()) continue;
+      const [b = "", n = "", alt = "", m = ""] = linje.split(linje.includes("\t") ? "\t" : ";").map((x) => x.replace(/\s+/g, " ").trim());
+      if (!b || !n) { feil.push(i + 1); continue; }
+      ord.push({ b: b.slice(0, 40), n: n.slice(0, 40), a: alt.split(/[,/]/).map((x) => x.trim()).filter(Boolean).slice(0, 10).map((x) => x.slice(0, 40)), m: m.slice(0, 40) });
+    }
+    return { ord: ord.slice(0, 200), feil };
+  }
+  function tegnEgne() {
+    const el = $("egneForhand"); if (!el) return;
+    const { ord, feil } = lesEgneOrd(V.velger.egneTekst);
+    el.innerHTML = (ord.length ? `<div class="tabell-rull"><table><thead><tr><th>Bokmål</th><th>Nynorsk</th><th>Også riktig</th><th>Merknad</th></tr></thead><tbody>${ord.map((w) =>
+      `<tr><td><b>${esc(w.b)}</b></td><td><a href="https://ordbokene.no/nno/nn/${encodeURIComponent(w.n)}" target="_blank" rel="noopener" title="Slå opp i Nynorskordboka">${esc(w.n)}</a></td><td>${esc(w.a.join(", "))}</td><td>${esc(w.m)}</td></tr>`).join("")}</tbody></table></div>` : "")
+      + (feil.length ? `<p class="dempet liten">Linje ${feil.join(", ")} mangler bokmål eller nynorsk og blir ikke med.</p>` : "");
     tellVelger();
   }
-  function tellVelger() { const n = V.velger.valgte.size; $("velgerTeller").innerHTML = `<b>${n}</b> ${n === 1 ? "ord" : "ord"} valgt${n && n < 10 ? " (minst 10 gir bedre runder)" : ""}`; }
+
+  function tellVelger() { const n = V.velger.valgte.size + lesEgneOrd(V.velger.egneTekst).ord.length; $("velgerTeller").innerHTML = `<b>${n}</b> ${n === 1 ? "ord" : "ord"} valgt${n && n < 10 ? " (minst 10 gir bedre runder)" : ""}`; }
 
   function limSvar(s) {
     const linjer = [];
@@ -613,7 +651,7 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
     const ordStat = ordStatistikk(inn), strever = ordStat.filter((s) => s.feil && s.forsok >= KONFIG.minsteForsok);
     const visOrd = V.visAlleOrd ? strever : strever.slice(0, 15);
     const ordCelle = (k) => {
-      const o = ORD.get(k);
+      const o = finnOrd(op, k);
       if (!o) return `<td>${esc(k)}</td><td class="dempet">(ikke i ordlista lenger)</td>`;
       return `<td><b>${esc(spurt(o, r))}</b></td><td><a class="fasit" href="${esc(fasitLenke(o, r))}" target="_blank" rel="noopener">${esc(fasit(o, r))}</a></td>`;
     };
@@ -741,7 +779,7 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
       D.klasser = D.klasser.filter((x) => x.id !== k.id);
       V.klasse = null; V.limSvar = null; lagre(); render();
     },
-    "ny-oppgave"() { V.nyOppgave = true; V.velger = { valgte: new Set(), sok: "", klasse: "alle" }; render(); $("oppgaveSkjema").elements.tittel.focus(); },
+    "ny-oppgave"() { V.nyOppgave = true; V.velger = { valgte: new Set(), sok: "", klasse: "alle", egneTekst: "" }; render(); $("oppgaveSkjema").elements.tittel.focus(); },
     "avbryt-oppgave"() { V.nyOppgave = false; render(); },
     "velg-synlige"() { for (const o of synligeOrd()) V.velger.valgte.add(ordNokkel(o)); tegnVelger(); },
     "velg-tilfeldige"() {
@@ -788,7 +826,7 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
     "csv-ord"() {
       const op = oppgave(V.oppgave), r = op.retning;
       lastNed(filnavn(op, "ord"), csv([[r === "nn" ? "Bokmål" : "Nynorsk", "Fasit", "Ordklasse", "Forsøk", "Feil", "Andel feil (%)"],
-        ...ordStatistikk(levertTil(op.id)).map((s) => { const o = ORD.get(s.k); return [o ? spurt(o, r) : s.k, o ? fasit(o, r) : "", o?.ordklasse || "", s.forsok, s.feil, Math.round(100 * s.andel)]; })]), "text/csv;charset=utf-8");
+        ...ordStatistikk(levertTil(op.id)).map((s) => { const o = finnOrd(op, s.k); return [o ? spurt(o, r) : s.k, o ? fasit(o, r) : "", o?.ordklasse || "", s.forsok, s.feil, Math.round(100 * s.andel)]; })]), "text/csv;charset=utf-8");
     },
     "last-ned"() {
       const d = new Date(), dato = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -822,9 +860,10 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
     if (f.id === "oppgaveSkjema") {
       const el = f.elements, tittel = el.tittel.value.trim(), utval = el.utval.value;
       if (!tittel) { el.tittel.focus(); return; }
-      if (utval === "eigne" && !V.velger.valgte.size) { toast("Velg minst ett ord, eller velg en ordgruppe."); return; }
+      const egne = utval === "eigne" ? lesEgneOrd(V.velger.egneTekst).ord : [];
+      if (utval === "eigne" && !V.velger.valgte.size && !egne.length) { toast("Velg minst ett ord eller skriv inn egne ord, eller velg en ordgruppe."); return; }
       const op = { id: nyId(), klasse: V.klasse, tittel: tittel.slice(0, 80), retning: el.retning.value, utval,
-                   ord: utval === "eigne" ? [...V.velger.valgte] : [], frist: el.frist.value || null, laget: Date.now() };
+                   ord: utval === "eigne" ? [...V.velger.valgte] : [], egne, frist: el.frist.value || null, laget: Date.now() };
       D.oppgaver.push(op); V.nyOppgave = false; lagre(); render();
       $("op-" + op.id)?.scrollIntoView({ block: "center", behavior: "smooth" });
       toast("Oppgaven er laget. Kopier lenka og del den med elevene.");
@@ -850,7 +889,10 @@ tr.detaljer table { background: #fff; border-radius: 10px; }
         .finally(() => { t.value = ""; });
     }
   });
-  document.addEventListener("input", (e) => { if (e.target.id === "velgerSok") { V.velger.sok = e.target.value; tegnVelger(); } });
+  document.addEventListener("input", (e) => {
+    if (e.target.id === "velgerSok") { V.velger.sok = e.target.value; tegnVelger(); }
+    if (e.target.id === "egneOrd") { V.velger.egneTekst = e.target.value; tegnEgne(); }
+  });
 
   render();
 })();

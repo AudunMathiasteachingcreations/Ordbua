@@ -772,7 +772,21 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
   const b64TilBytes = (s) => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/")), (c) => c.charCodeAt(0));
   const bokmalTal = new Map();
   for (const o of ORDLISTE) bokmalTal.set(o.bokmal, (bokmalTal.get(o.bokmal) || 0) + 1);
-  const ordNokkel = (o) => bokmalTal.get(o.bokmal) > 1 ? `${o.bokmal}|${o.nynorsk}` : o.bokmal;
+  const ordNokkel = (o) => o._nokkel || (bokmalTal.get(o.bokmal) > 1 ? `${o.bokmal}|${o.nynorsk}` : o.bokmal);
+  // Lærerens egne ord i oppgaven: [bokmål, nynorsk, andre riktige svar, merknad]. Andre riktige svar gjelder språket eleven skriver på.
+  // I innleveringskoden heter de «~0», «~1» osv. etter plassen i oppgaven.
+  function egetOrd(w, i, r) {
+    if (!Array.isArray(w)) return null;
+    const tekst = (x) => String(x ?? "").replace(/\s+/g, " ").trim().slice(0, 40);
+    const b = tekst(w[0]), n = tekst(w[1]), alt = (Array.isArray(w[2]) ? w[2] : []).map(tekst).filter(Boolean).slice(0, 10);
+    if (!b || !n) return null;
+    const o = { bokmal: b, nynorsk: n, godkjente_alternativer: r === "nn" ? alt : [], bokmal_alternativer: r === "bm" ? alt : [],
+                ordklasse: tekst(w[3]), nynorskordboka: "https://ordbokene.no/nno/nn/" + encodeURIComponent(n),
+                bokmalsform_godtas: "nei", nynorskform_lov_pa_bokmal: "nei", ulikt_ord: "nei", _nokkel: "~" + i };
+    o._altBm = [b, ...o.bokmal_alternativer];
+    o._ok = { nn: new Set([n, ...o.godkjente_alternativer].map(norm)), bm: new Set(o._altBm.map(norm)) };
+    return o;
+  }
   const ORD_ETTER_NOKKEL = new Map(ORDLISTE.map((o) => [ordNokkel(o), o]));
   // null = ingen oppgave, "feil" = lenka kunne ikke leses (spillet går da som vanlig)
   const OPPGAVE = (function lesOppgave() {
@@ -782,7 +796,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       const d = JSON.parse(new TextDecoder().decode(b64TilBytes(m[1])));
       const utval = d.u === "eigne" || d.u === "alle" || KONFIG.ordklasseValg.includes(d.u) ? d.u : null;
       if (d.v !== 1 || typeof d.id !== "string" || !["nn", "bm"].includes(d.r) || !utval) throw new Error("ukjent oppgave");
-      const ord = utval === "eigne" ? [...new Set(d.o || [])].map((k) => ORD_ETTER_NOKKEL.get(k)).filter(Boolean) : null;
+      const ord = utval === "eigne" ? [...new Set(d.o || [])].map((k) => ORD_ETTER_NOKKEL.get(k)).filter(Boolean)
+        .concat((Array.isArray(d.e) ? d.e.slice(0, 200) : []).map((w, i) => egetOrd(w, i, d.r)).filter(Boolean)) : null;
       if (ord && !ord.length) throw new Error("ingen kjente ord");
       return { id: d.id.slice(0, 40), tittel: String(d.t || "").slice(0, 80), klasse: String(d.kl || "").slice(0, 40), retning: d.r, utval, ord, frist: /^\d{4}-\d\d-\d\d$/.test(d.fr || "") ? d.fr : null };
     } catch (e) { return "feil"; }
@@ -1198,7 +1213,7 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
     S.wordStart = now; S.phase = "play"; S.lastTick = null;
     const w = $("ordet");
     w.textContent = sporsmal(S.cur);
-    $("ordklasse").textContent = S.cur.ordklasse;
+    $("ordklasse").textContent = S.cur.ordklasse; $("ordklasse").hidden = !S.cur.ordklasse;
     if (!reduceMQ.matches) { w.classList.remove("inn"); void w.offsetWidth; w.classList.add("inn"); }
     $("ordkort").classList.remove("feil", "rett");
     if ($("tilbake").querySelector(".bad")) $("tilbake").innerHTML = "";
