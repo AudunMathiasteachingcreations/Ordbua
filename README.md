@@ -18,6 +18,7 @@ Spillet kan også installeres som app fra den samme lenken, med eget ikon og spi
 Man kan også laste ned `spill/ordbua.html` og åpne den direkte i en nettleser. Fila er selvstendig og trenger ikke server. Uten internett brukes standardskrifter i stedet for spillets egne.
 
 ## Innhold
+- `OVERSIKT.md`: hvor alt om Ordbua ligger (nettside, lærerside, GitHub, OneDrive og Claude).
 - `spill/`: malen (`mal.html`), byggeskriptet (`bygg.py`) og den ferdige siden (`ordbua.html`). Se `spill/README.md` for regler og innstillinger.
 - `index.html`: forsiden på GitHub Pages, som sender videre til `spill/ordbua.html`. `.nojekyll` gjør at GitHub Pages viser filene slik de er.
 - `manifest.webmanifest`, `sw.js` og `ikon/`: det som gjør spillet til en app som kan installeres og spilles uten nett. Se «Som app» i `spill/README.md`.
