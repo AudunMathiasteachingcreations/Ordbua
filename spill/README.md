@@ -9,6 +9,8 @@ Spillet ligger publisert to steder:
 ## Filer
 - `mal.html`: selve spillet (HTML, CSS og JavaScript) uten ordliste. Poengtabell, tider, navn og lenke står i `KONFIG` øverst i skriptet, og all tekst står i `TEKST` like under. Malen har egen grunnstil (`[hidden]` og `body`-marg), så den ikke er avhengig av Claude-visningen.
 - `bygg.py`: legger ordlista fra `../ordliste/ordliste.json` inn i malen og skriver `ordbua.html`. Lenken i Del-knappene er GitHub Pages-adressen hvis ikke en annen gis. I den fullstendige nettsiden legger skriptet også til fanikon, appfarge og appnavn, og slår på app-delen (`app` i `KONFIG`).
+- `laerar-mal.html`: lærersiden (lagt inn 25.10.2026), uten ordliste. Se «Lærerversjon uten Feide» under.
+- `laerar.html`: lærersiden ferdig bygget av `bygg.py`. Legges i repoet ved siden av spillet.
 - `ordbua.html`: ferdig bygget, fullstendig nettside med `<!doctype html>`, tegnsett og viewport. Det er denne som ligger på GitHub Pages og som kan sendes til elever som fil. Fram til 20.10.2026 manglet fila dette, så den virket bare inne i Claude.
 
 ## Når ordlista endres
@@ -16,7 +18,8 @@ Ordene redigeres enklest i `../ordliste/ordliste.xlsx`; kjør da først `python3
 
     python3 spill/bygg.py
     python3 spill/bygg.py --artefakt <midlertidig fil>
-Den første lager `spill/ordbua.html`. Last den opp til `main` i repoet, så oppdaterer GitHub Pages seg selv. Den andre lager et sideutdrag uten `<!doctype>` for Artifact-verktøyet, som publiseres på nytt til artefaktlenken over.
+    python3 spill/bygg.py --laerar --artefakt <midlertidig fil>
+Den første lager `spill/ordbua.html` og `spill/laerar.html`. Last den opp til `main` i repoet, så oppdaterer GitHub Pages seg selv. Den andre lager et sideutdrag uten `<!doctype>` for Artifact-verktøyet, som publiseres på nytt til artefaktlenken over.
 
 ## To retninger
 - På startskjermen velger man **Bokmål → nynorsk** (standard) eller **Nynorsk → bokmål**. Valget huskes i nettleseren.
@@ -43,6 +46,42 @@ Slik installerer man:
 - **Mac med Safari**: Arkiv-menyen › «Legg til i Dock».
 
 Appen må åpnes med nett én gang før den virker uten nett.
+
+## Lærerversjon uten Feide (fra 25.10.2026)
+
+Første del av lærerversjonen, bygget så langt det går uten Feide, server og avtaler. Planen for hele lærerversjonen står i `../kommersialisering/02-feide-teknisk-plan.md`.
+
+**Adresse:** https://audunmathiasteachingcreations.github.io/Ordbua/laerer/ (sender videre til `spill/laerar.html`). Siden er åpen for alle, men hver lærer ser bare det som er lagret i sin egen nettleser.
+
+**Slik virker det**
+1. Læreren åpner `laerar.html`, lager en klasse (bare et navn, f.eks. 8A) og en oppgave: tittel, retning, ordutvalg (alle ord, en ordklasse, ulike ord eller ord læreren krysser av selv) og eventuelt frist.
+2. Lærersiden lager en lenke til spillet som slutter på `#oppgave=...`. Læreren deler den i Teams, Classroom e.l.
+3. Eleven åpner lenka. Spillet viser oppgaven øverst, låser retning og ordutvalg og spiller vanlige runder (samme regler og poeng). Hver oppgave har sin egen rekord (`ordbua.rekord.oppgave.<id>`). «Spel utan oppgåva» tar eleven til det vanlige spillet.
+4. Etter runden skriver eleven navnet sitt og trykker «Lag innleveringskode». Koden (rundt 300 tegn) kopieres, og eleven limer den inn der læreren vil, f.eks. som innlevering i Teams.
+5. Læreren limer inn kodene på lærersiden (mange på en gang, også med annen tekst rundt). Siden viser elevene med beste runde, alle rundene, og «ord klassen strever med». Runder og ordstatistikk kan lastes ned som CSV for Excel.
+
+«Prøv selv» på lærersiden legger `&prov` til lenka, og da viser spillet en lenke tilbake til `laerar.html`. Bekreftelser bruker en boks på siden, fordi `confirm()` og `prompt()` ikke virker i Teams-faner og i Claude. En testutgave med begge sidene ligger som Claude-artefakt: https://claude.ai/artifact/PqrusCzqhMG9As8gBzeHAQ (der virker ikke nedlasting av CSV og sikkerhetskopi).
+
+**Egne ord fra læreren** (fra 26.10.2026): under «Velg ord selv» kan læreren også skrive eller lime inn egne ord og bøyningsformer, ett per linje: `bokmål ; nynorsk ; andre riktige svar ; merknad` (eller kolonner fra Excel). Andre riktige svar gjelder språket eleven skriver på, og merknaden (f.eks. «verb, preteritum») vises for eleven der ordklassen ellers står. Ordene står i lenka (`e` i oppgaven), så de virker uten server. I innleveringskoden heter de `~0`, `~1` osv. Lærersiden lenker hvert nynorskord til Nynorskordboka, så læreren kan sjekke det.
+
+**Hvor dataene er**
+- Oppgaven står i selve lenka. Delen etter `#` sendes ikke til GitHub, så ingen server ser den.
+- Klasser, oppgaver og innleveringer lagres bare i nettleseren til læreren (`localStorage`, nøkkel `ordbua.laerer.v1`). Siden har knapper for sikkerhetskopi (JSON), henting fra sikkerhetskopi (slås sammen med det som finnes) og sletting. Etter 1. august minner siden om å slette innleveringer fra forrige skoleår.
+- Koden har navnet eleven skriver, tidspunkt, retning, ordutvalg, poeng og for hvert ord: hvilket ord, rett/feil og sekunder igjen. Det eleven skrev (fritekst) er ikke med, som i planen.
+- Eleven husker navnet sitt i egen nettleser (`ordbua.namn`).
+
+**Kodeformat:** `ORDBUA.<versjon>.<data>.<sjekksum>`. Data er JSON i base64url, komprimert med `deflate-raw` (versjon 2) eller ukomprimert (versjon 1) i nettlesere uten `CompressionStream`. Sjekksummen (FNV-1a) fanger opp koder som er klippet av. Lærersiden regner poengene ut fra svarene på nytt og merker runden «sjekk» hvis de ikke stemmer. Det hindrer ikke en elev som vil jukse og kan programmere; først serverversjonen gjør det. Poengtabellen i `laerar-mal.html` (`KONFIG`) må derfor være lik den i `mal.html`.
+
+**Ord i lenker og koder** pekes til med bokmålsordet (alle 542 er unike nå), eller `bokmål|nynorsk` hvis samme bokmålsord kommer flere ganger. Fjernes et ord fra ordlista, hopper spillet over det i oppgaver med egne ord, og lærersiden viser det som «ikke i ordlista lenger».
+
+**Plugger for Feide** (merket `PLUGG FOR FEIDE` i koden):
+- `Lagring` i `laerar-mal.html`: bytt `last()`/`lagre()` med kall mot API-et. Klasser skal da komme fra Feides Groups API i stedet for å lages for hånd.
+- `Innlogging` i `laerar-mal.html` og knappen «Logg inn med Feide» øverst, som blir lenke til `/auth/feide/login`.
+- `Levering.lever()` i `mal.html`: send runden til serveren (`/api/runder`) i stedet for å lage kode. `rundeData()` har allerede feltene fra tabellene `runde` og `svar` i planen.
+
+**Før den legges ut:** last opp `laerar.html` sammen med ny `ordbua.html`. Lenkene peker til spill-adressen i `bygg.py` (GitHub Pages-roten). Sjekk at en oppgavelenke åpner spillet med oppgaven, altså at roten viser spillet og at `#oppgave=...` blir med.
+
+**Neste steg uten Feide:** QR-kode til tavla, flere oppgaver per lenke (ukeplan), og oversikt over en elev på tvers av oppgaver.
 
 ## Ytelse
 - Bakgrunnshimmelen tegnes høyst 30 ganger i sekundet og med høyst 1,5 punkt per CSS-piksel (høyst 2 millioner punkter). Før 21.10.2026 ble den tegnet i full oppløsning 60 ganger i sekundet hele tiden, også på startsiden, og det er den sannsynlige grunnen til at spillet lukket seg etter en stund på nettbrett og mobil. En test med åtte runder etter hverandre viste ingen minnelekkasje.

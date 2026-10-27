@@ -1,0 +1,894 @@
+<title>Ordbua lærerside</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Lærersiden: samme farger og skrift som spillet, men rolig og lys, uten himmelen. Én kolonne med paneler. */
+:root {
+  color-scheme: light;
+  --ink: #13243c;
+  --ink-2: #4b5d75;
+  --snow: #ffffff;
+  --frost: #e7eef6;
+  --bakgrunn: #f1f5fa;
+  --line: #d3dde8;
+  --gold: #f4b53f;
+  --gold-deep: #c98a12;
+  --gold-tint: #fdf0d2;
+  --ok: #157a4b;
+  --ok-tint: #dcf3e7;
+  --bad: #bf3426;
+  --bad-tint: #fbe4e0;
+  --night: #0b1230;
+  --fjord: #2a72b8;
+  --focus: #2e78bd;
+  --shadow: 0 10px 30px -18px rgba(6, 12, 34, .45), 0 1px 3px rgba(6, 12, 34, .08);
+
+  --f-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  --t-xs: .75rem;
+  --t-sm: .875rem;
+  --t-md: 1rem;
+  --t-lg: 1.25rem;
+  --t-xl: 1.75rem;
+  --radius: 18px;
+}
+[hidden] { display: none !important; }
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  margin: 0; background: var(--bakgrunn); color: var(--ink);
+  font-family: var(--f-body); font-size: var(--t-md); line-height: 1.5;
+  overflow-x: hidden;
+}
+h1, h2, h3 { font-family: var(--f-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.4rem); font-weight: 800; letter-spacing: -.01em; }
+h2 { font-size: var(--t-lg); font-weight: 800; }
+h3 { font-size: var(--t-lg); font-weight: 700; }
+p { margin: 0; }
+a { color: var(--fjord); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.eyebrow { font-size: var(--t-xs); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+.dempet { color: var(--ink-2); }
+.liten { font-size: var(--t-sm); }
+.tal { font-variant-numeric: tabular-nums; }
+
+/* Toppen: mørk fjordstripe med merket og lagringsstatus */
+.topp {
+  background: linear-gradient(180deg, #0b1230, #1d3a6b); color: #fff;
+  padding: calc(14px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 14px max(16px, env(safe-area-inset-left, 0px));
+}
+.topp-inn { max-width: 1040px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
+.merke { display: flex; align-items: center; gap: 10px; font-family: var(--f-display); font-weight: 700; font-size: var(--t-lg); }
+.merke svg { width: 32px; height: 32px; flex: none; }
+.merke small { font-family: var(--f-body); font-weight: 400; font-size: var(--t-sm); color: rgba(255, 255, 255, .75); padding-left: 10px; border-left: 1px solid rgba(255, 255, 255, .3); }
+.topp-hoyre { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.status { display: inline-flex; align-items: center; gap: 6px; font-size: var(--t-sm); color: rgba(255, 255, 255, .85); text-decoration: none; }
+.status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #6fd39c; }
+.status.feil::before { background: #ff8a7a; }
+.feide { display: inline-flex; align-items: center; gap: 8px; font: inherit; font-size: var(--t-sm); font-weight: 700; color: rgba(255, 255, 255, .7); background: rgba(255, 255, 255, .08); border: 1px dashed rgba(255, 255, 255, .35); border-radius: 10px; padding: 6px 12px; cursor: not-allowed; }
+.feide i { font-style: normal; font-weight: 400; font-size: var(--t-xs); background: rgba(255, 255, 255, .15); padding: 1px 7px; border-radius: 999px; }
+
+.innhold { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.side { max-width: 1040px; margin: 0 auto; padding: 20px max(16px, env(safe-area-inset-right, 0px)) calc(48px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-direction: column; gap: 18px; }
+
+/* Klassefaner */
+.klasser { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.klasser button {
+  appearance: none; cursor: pointer; font-family: var(--f-display); font-weight: 700; font-size: var(--t-md);
+  color: var(--ink-2); background: var(--snow); border: 1px solid var(--line); border-radius: 12px; padding: 8px 14px;
+  display: inline-flex; align-items: baseline; gap: 8px;
+}
+.klasser button span { font-family: var(--f-body); font-weight: 400; font-size: var(--t-xs); }
+.klasser button:hover { color: var(--ink); border-color: #b9c8d8; }
+.klasser button[aria-current="true"] { color: var(--ink); background: var(--gold-tint); border-color: var(--gold); box-shadow: inset 0 -3px 0 var(--gold); }
+.klasser .ny { border-style: dashed; }
+
+.panel { background: var(--snow); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.panel-topp { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
+.overskrift { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 16px; }
+.overskrift > div:first-child { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+
+/* Knapper som i spillet */
+.knapp {
+  appearance: none; border: 0; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  font-family: var(--f-display); font-weight: 700; font-size: var(--t-md); color: var(--ink);
+  border-radius: 12px; padding: 10px 18px; white-space: nowrap;
+  transition: transform .08s ease, box-shadow .08s ease, background-color .15s ease;
+  touch-action: manipulation;
+}
+.knapp.hoved { background: var(--gold); box-shadow: 0 3px 0 var(--gold-deep); }
+.knapp.hoved:hover { background: #f7c35e; }
+.knapp.sekundar { background: var(--frost); box-shadow: 0 3px 0 var(--line); }
+.knapp.sekundar:hover { background: #dde7f1; }
+.knapp:active { transform: translateY(2px); box-shadow: none; }
+.knapp.liten { font-size: var(--t-sm); padding: 7px 12px; }
+.lenkeknapp { appearance: none; border: 0; background: none; padding: 4px 2px; cursor: pointer; font: inherit; font-size: var(--t-sm); color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
+.lenkeknapp:hover { color: var(--ink); }
+.lenkeknapp.fare:hover { color: var(--bad); }
+.knapper { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+/* Skjema */
+.skjema { display: flex; flex-direction: column; gap: 16px; padding: 18px; background: var(--bakgrunn); border-radius: 14px; border: 1px solid var(--line); }
+.felt { display: flex; flex-direction: column; gap: 5px; font-weight: 700; font-size: var(--t-sm); }
+.felt small { font-weight: 400; color: var(--ink-2); }
+input[type="text"], input[type="search"], input[type="date"], select, textarea {
+  font-family: var(--f-body); font-size: var(--t-md); color: var(--ink); background: #fff;
+  border: 2px solid var(--line); border-radius: 12px; padding: 9px 12px; min-width: 0; width: 100%;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--focus); box-shadow: 0 0 0 4px rgba(46, 120, 189, .18); }
+textarea { resize: vertical; }
+fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+legend { font-weight: 700; font-size: var(--t-sm); padding: 0; margin-bottom: 6px; }
+.valg { display: flex; flex-wrap: wrap; gap: 6px; }
+.valg label { position: relative; cursor: pointer; }
+.valg input { position: absolute; opacity: 0; pointer-events: none; }
+.valg span { display: inline-flex; align-items: baseline; gap: 6px; padding: 8px 12px; border-radius: 10px; background: #fff; border: 1px solid var(--line); font-weight: 700; font-size: var(--t-sm); }
+.valg span small { font-weight: 400; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.valg input:checked + span { background: var(--gold-tint); border-color: var(--gold); box-shadow: inset 0 -3px 0 var(--gold); }
+.valg input:focus-visible + span { outline: 3px solid var(--focus); outline-offset: 2px; }
+.rad2 { display: grid; grid-template-columns: 2fr 1fr; gap: 14px; }
+
+/* Ordvelger for egne ord */
+.ordvelger { display: flex; flex-direction: column; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px; }
+.velger-topp { display: grid; grid-template-columns: 1fr 180px; gap: 8px; }
+.velger-liste { max-height: 320px; overflow-y: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 2px 10px; padding: 2px; }
+.velger-liste label { display: flex; align-items: baseline; gap: 8px; padding: 5px 6px; border-radius: 8px; cursor: pointer; font-size: var(--t-sm); min-width: 0; }
+.velger-liste label:hover { background: var(--bakgrunn); }
+.velger-liste input { flex: none; accent-color: var(--fjord); }
+.velger-liste b { font-weight: 700; }
+.velger-liste small { color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.egne-ord { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.egne-ord textarea { font-size: var(--t-sm); }
+.egne-ord table { font-size: var(--t-sm); }
+.egne-ord td, .egne-ord th { padding: 5px 8px; }
+.velger-bunn { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; align-items: center; font-size: var(--t-sm); }
+
+/* Oppgavekort */
+.oppgaver { display: flex; flex-direction: column; gap: 12px; }
+.kort { border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.kort-topp { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; }
+.kort-topp > div { min-width: 0; }
+.meta { color: var(--ink-2); font-size: var(--t-sm); }
+.teller { font-size: var(--t-sm); color: var(--ink-2); white-space: nowrap; }
+.teller b { color: var(--ink); font-family: var(--f-display); font-size: var(--t-lg); }
+.lenke-rad { display: flex; gap: 8px; }
+.lenke-rad input { font-size: var(--t-sm); color: var(--ink-2); background: var(--bakgrunn); }
+.tomt { color: var(--ink-2); padding: 18px; text-align: center; border: 1px dashed var(--line); border-radius: 14px; }
+
+/* Innlevering */
+.lim-svar { display: flex; flex-direction: column; gap: 6px; font-size: var(--t-sm); }
+.lim-svar p { padding: 8px 12px; border-radius: 10px; }
+.lim-svar .ok { background: var(--ok-tint); color: #0f5c38; }
+.lim-svar .bad { background: var(--bad-tint); color: #8c2219; }
+.lim-svar .info { background: var(--frost); }
+
+/* Velkomst */
+.steg { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; counter-reset: steg; }
+.steg li { background: var(--bakgrunn); border-radius: 14px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; counter-increment: steg; }
+.steg li::before { content: counter(steg); font-family: var(--f-display); font-weight: 800; font-size: var(--t-xl); color: var(--gold-deep); line-height: 1; }
+.steg b { font-family: var(--f-display); }
+.steg span { color: var(--ink-2); font-size: var(--t-sm); }
+
+/* Resultater */
+.nokkeltal { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.nokkeltal li { background: var(--snow); border-radius: 14px; box-shadow: var(--shadow); padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.nokkeltal b { font-family: var(--f-display); font-size: var(--t-xl); font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.nokkeltal span { font-size: var(--t-sm); color: var(--ink-2); }
+.tabell-rull { overflow-x: auto; margin: 0 -6px; padding: 0 6px; }
+table { width: 100%; border-collapse: collapse; font-size: var(--t-sm); }
+th { text-align: left; font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-2); font-weight: 700; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.navn { font-weight: 700; }
+tr.detaljer > td { background: var(--bakgrunn); padding: 6px 10px 12px; }
+tr.detaljer table { background: #fff; border-radius: 10px; }
+.varsel { display: inline-block; margin-left: 6px; font-size: var(--t-xs); font-weight: 700; color: #8c5a00; background: var(--gold-tint); border-radius: 6px; padding: 1px 6px; cursor: help; }
+.stolpe { display: flex; align-items: center; gap: 8px; min-width: 130px; }
+.stolpe i { display: block; height: 10px; border-radius: 5px; background: var(--bad); flex: none; }
+.stolpe span { font-variant-numeric: tabular-nums; }
+.fasit { font-weight: 700; color: var(--ink); }
+
+.data-panel { background: transparent; box-shadow: none; border: 1px solid var(--line); }
+.data-panel ul { margin: 0; padding-left: 1.2em; color: var(--ink-2); font-size: var(--t-sm); display: flex; flex-direction: column; gap: 4px; }
+.skolear { background: var(--gold-tint); border-radius: 12px; padding: 12px 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+
+.knapp.fare { background: var(--bad); color: #fff; box-shadow: 0 3px 0 #8c2219; }
+.knapp.fare:hover { background: #a92c20; }
+/* Egen bekreftelsesboks: confirm() og prompt() virker ikke overalt (f.eks. inne i Teams eller Claude) */
+.dialog-bak { position: fixed; inset: 0; z-index: 7; display: grid; place-items: center; padding: 16px; background: rgba(11, 18, 48, .45); }
+.dialog { background: var(--snow); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px 22px; width: min(100%, 440px); display: flex; flex-direction: column; gap: 14px; }
+.dialog p { font-weight: 700; }
+
+.toast {
+  position: fixed; z-index: 6; left: 50%; transform: translateX(-50%);
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px)); max-width: min(92vw, 460px);
+  background: var(--ink); color: #fff; padding: 12px 18px; border-radius: 14px; font-weight: 700; box-shadow: var(--shadow);
+}
+
+@media (max-width: 720px) {
+  .steg, .nokkeltal { grid-template-columns: 1fr 1fr; }
+  .rad2, .velger-topp { grid-template-columns: 1fr; }
+  .panel { padding: 16px; }
+  th, td { padding: 8px 6px; }
+  .skjul-smal { display: none; }
+}
+@media (max-width: 440px) {
+  .steg { grid-template-columns: 1fr; }
+  .lenke-rad { flex-direction: column; }
+  .merke small { display: none; }
+  .stolpe { min-width: 0; }
+  .stolpe i { max-width: 36px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .001ms !important; } }
+</style>
+
+<header class="topp">
+  <div class="topp-inn">
+    <div class="merke">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="22" cy="10" r="5" fill="#f4b53f"/>
+        <path d="M1 27 L10 12 L15 19 L20 13 L31 27 Z" fill="#f7fafd"/>
+        <path d="M10 12 L13 17 L11 16 L8.6 14.4 Z M20 13 L23 17 L21 16.4 L18.6 15 Z" fill="#c9d8e8"/>
+      </svg>
+      <span>Ordbua</span><small>for lærere</small>
+    </div>
+    <div class="topp-hoyre">
+      <a class="status" id="lagringStatus" href="#data">Lagres bare på denne maskinen</a>
+      <!-- PLUGG FOR FEIDE: knappen blir lenke til /auth/feide/login når serveren finnes -->
+      <button class="feide" type="button" disabled title="Feide-innlogging er ikke laget ennå. Til da lagres alt bare i denne nettleseren.">Logg inn med Feide <i>kommer</i></button>
+    </div>
+  </div>
+</header>
+
+<main class="side">
+  <nav class="klasser" id="klasser" aria-label="Klasser"></nav>
+  <div id="innhold" class="innhold"></div>
+
+  <section class="panel data-panel" id="data">
+    <h2>Data og personvern</h2>
+    <ul>
+      <li>Alt du legger inn her, lagres bare i denne nettleseren på denne maskinen. Ingenting sendes til Ordbua eller andre.</li>
+      <li>Elevene skriver navnet sitt selv når de lager innleveringskoden. Koden har navnet, tidspunkt, poeng og hvilke ord som var rett eller feil, ikke det eleven skrev.</li>
+      <li>Sletter du nettleserdata eller bytter maskin, er dataene borte. Last ned en sikkerhetskopi innimellom, og lagre den på et sted skolen godkjenner.</li>
+      <li>Med Feide-innlogging (kommer) logger elevene inn, resultatene kommer hit uten koder, og klassene hentes fra Feide.</li>
+    </ul>
+    <div class="skolear" id="skolear" hidden></div>
+    <div class="knapper">
+      <button class="knapp sekundar liten" type="button" data-h="last-ned">Last ned sikkerhetskopi</button>
+      <button class="knapp sekundar liten" type="button" data-h="hent">Hent fra sikkerhetskopi</button>
+      <input type="file" id="hentFil" accept=".json,application/json" hidden>
+      <button class="lenkeknapp fare" type="button" data-h="slett-alt">Slett alt på denne maskinen</button>
+    </div>
+  </section>
+</main>
+<div class="dialog-bak" id="dialog" hidden>
+  <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialogTekst">
+    <p id="dialogTekst"></p>
+    <input type="text" id="dialogFelt" maxlength="40" autocomplete="off" aria-labelledby="dialogTekst" hidden>
+    <div class="knapper"><button class="knapp hoved" type="button" id="dialogJa">OK</button><button class="knapp sekundar" type="button" id="dialogNei">Avbryt</button></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<!-- Ordlista settes inn her av bygg.py fra ordliste/ordliste.json -->
+<script type="application/json" id="ordliste">/*ORDLISTE*/</script>
+
+<script>
+(() => {
+  "use strict";
+
+  // ---------- Innstillinger ----------
+  // Poengtabellen må være lik den i spillet (mal.html), ellers blir rundene merket med «poengene stemmer ikke».
+  const KONFIG = {
+    spillUrl: "/*SPILL_URL*/",  // spillet oppgavelenkene peker til (bygg.py setter den)
+    navn: "Ordbua",
+    poengEtterSekunderIgjen: { 10: 6000, 9: 5000, 8: 4200, 7: 3500, 6: 2900, 5: 2400, 4: 2000, 3: 1600, 2: 1300, 1: 1000 },
+    poengFeil: 300,
+    maksScore: 500000,
+    ordklasseValg: ["verb", "substantiv", "adjektiv", "ulike"], // som i spillet
+    minsteForsok: 2          // ord med færre forsøk vises ikke i «ord klassen strever med»
+  };
+
+  const ORDLISTE = JSON.parse(document.getElementById("ordliste").textContent);
+  const $ = (id) => document.getElementById(id);
+  const fmt = (n) => Math.round(n).toLocaleString("nb-NO");
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const nyId = () => Array.from(crypto.getRandomValues(new Uint8Array(6)), (b) => (b % 36).toString(36)).join("");
+  const fmtDato = (sek) => new Date(sek * 1000).toLocaleString("nb-NO", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+  const fmtFrist = (d) => new Date(d + "T12:00").toLocaleDateString("nb-NO", { day: "numeric", month: "long" });
+
+  // ---------- Ordlista ----------
+  // Ord pekes til med bokmålsordet, eller «bokmål|nynorsk» hvis bokmålsordet står flere ganger. Spillet bruker samme regel.
+  const bokmalTal = new Map();
+  for (const o of ORDLISTE) bokmalTal.set(o.bokmal, (bokmalTal.get(o.bokmal) || 0) + 1);
+  const ordNokkel = (o) => bokmalTal.get(o.bokmal) > 1 ? `${o.bokmal}|${o.nynorsk}` : o.bokmal;
+  const ORD = new Map(ORDLISTE.map((o) => [ordNokkel(o), o]));
+  const iKlasse = (k) => k === "alle" ? ORDLISTE : ORDLISTE.filter((o) => k === "ulike" ? o.ulikt_ord === "ja" : o.ordklasse === k);
+  const UTVAL = ["alle", ...KONFIG.ordklasseValg.filter((k) => iKlasse(k).length), "eigne"];
+  const UTVAL_NAVN = { alle: "Alle ord", ulike: "Ulike ord", eigne: "Velg ord selv" };
+  const utvalNavn = (k) => UTVAL_NAVN[k] || k.charAt(0).toUpperCase() + k.slice(1);
+  const RETNING_NAVN = { nn: "Bokmål → nynorsk", bm: "Nynorsk → bokmål" };
+  const ORDKLASSER = [...new Set(ORDLISTE.map((o) => o.ordklasse))].sort((a, b) => iKlasse(b).length - iKlasse(a).length);
+  const spurt = (o, r) => r === "nn" ? o.bokmal : o.nynorsk;
+  const fasit = (o, r) => r === "nn" ? o.nynorsk : o.bokmal;
+  const fasitLenke = (o, r) => r === "nn" ? o.nynorskordboka : "https://ordbokene.no/nob/bm/" + encodeURIComponent(o.bokmal);
+
+  // ---------- Lagring ----------
+  // PLUGG FOR FEIDE: Nå ligger klasser, oppgaver og innleveringer bare i nettleseren til læreren (localStorage).
+  // I serverversjonen (kommersialisering/02-feide-teknisk-plan.md) bytter Lagring til kall mot API-et, klassene kommer fra
+  // Feides Groups API, og innleveringene kommer rett fra elevenes spill. Resten av siden bruker bare last() og lagre().
+  const NOKKEL = "ordbua.laerer.v1";
+  const tomData = () => ({ versjon: 1, klasser: [], oppgaver: [], innleveringer: [] });
+  const Lagring = {
+    virker: (() => { try { localStorage.setItem("ordbua.test", "1"); localStorage.removeItem("ordbua.test"); return true; } catch (e) { return false; } })(),
+    last() {
+      try { const d = JSON.parse(localStorage.getItem(NOKKEL)); if (d && d.versjon === 1) return Object.assign(tomData(), d); } catch (e) {}
+      return tomData();
+    },
+    lagre(d) { try { localStorage.setItem(NOKKEL, JSON.stringify(d)); return true; } catch (e) { return false; } }
+  };
+  // PLUGG FOR FEIDE: innlogget lærer (sub, navn, klasser fra Feide). Null så lenge det ikke finnes innlogging.
+  const Innlogging = { bruker: null };
+
+  let D = Lagring.last();
+  function lagre() { if (!Lagring.lagre(D)) toast("Kunne ikke lagre i nettleseren. Last ned en sikkerhetskopi før du lukker siden."); }
+  if (!Lagring.virker) { const s = $("lagringStatus"); s.classList.add("feil"); s.textContent = "Nettleseren lagrer ikke. Alt forsvinner når siden lukkes."; }
+
+  // Visningen: hvilken klasse og oppgave som er åpen, og skjemaet for ny oppgave
+  const V = { klasse: null, oppgave: null, nyKlasse: false, nyOppgave: false, limSvar: null, apneElever: new Set(), visAlleOrd: false,
+              velger: { valgte: new Set(), sok: "", klasse: "alle", egneTekst: "" } };
+  try { V.klasse = sessionStorage.getItem("ordbua.laerer.klasse"); } catch (e) {}
+
+  const klasse = (id) => D.klasser.find((k) => k.id === id);
+  const oppgave = (id) => D.oppgaver.find((o) => o.id === id);
+  const levertTil = (oppgaveId) => D.innleveringer.filter((i) => i.oppgave === oppgaveId);
+  const navnNokkel = (n) => n.toLocaleLowerCase("nb-NO").replace(/\s+/g, " ").trim();
+  const antElever = (inn) => new Set(inn.map((i) => navnNokkel(i.navn))).size;
+
+  // ---------- Oppgavelenke ----------
+  // Spillet leser #oppgave=... (JSON i base64url). Alt spillet trenger står i lenka, så den virker uten server.
+  const bytesTilB64 = (b) => { let t = ""; for (const x of b) t += String.fromCharCode(x); return btoa(t).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, ""); };
+  const b64TilBytes = (s) => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/")), (c) => c.charCodeAt(0));
+  function lenke(op) {
+    const d = { v: 1, id: op.id, t: op.tittel, kl: klasse(op.klasse)?.navn || "", r: op.retning, u: op.utval };
+    if (op.utval === "eigne") d.o = op.ord;
+    if (op.egne?.length) d.e = op.egne.map((w) => { const x = [w.b, w.n, w.a, w.m]; while (x.length > 2 && !(x[x.length - 1]?.length)) x.pop(); return x; });
+    if (op.frist) d.fr = op.frist;
+    const base = new URL(KONFIG.spillUrl, location.href); base.hash = "";
+    return base.href + "#oppgave=" + bytesTilB64(new TextEncoder().encode(JSON.stringify(d)));
+  }
+  // Med en fullstendig adresse åpnes spillet i ny fane. En testutgave med spillet ved siden av (f.eks. i Claude) åpner det i samme vindu.
+  const nyFane = /^https?:/.test(KONFIG.spillUrl);
+  const antOrd = (op) => op.utval === "eigne" ? op.ord.length + (op.egne?.length || 0) : iKlasse(op.utval).length;
+  // Et ord i en innlevering: fra ordlista, eller «~3» for lærerens egne ord nr. 3 i oppgaven
+  function finnOrd(op, k) {
+    if (!k.startsWith("~")) return ORD.get(k);
+    const w = op.egne?.[Number(k.slice(1))];
+    return w && { bokmal: w.b, nynorsk: w.n, ordklasse: w.m || "eget ord", nynorskordboka: "https://ordbokene.no/nno/nn/" + encodeURIComponent(w.n) };
+  }
+
+  // ---------- Innleveringskoder ----------
+  // Lager spillet (se «Innlevering til læreren» i mal.html): ORDBUA.<versjon>.<data>.<sjekksum>
+  const KODE = /ORDBUA\.([12])\.([A-Za-z0-9_-]+)\.([0-9a-z]+)/g;
+  const fnv = (s) => { let h = 0x811c9dc5; for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193); } return (h >>> 0).toString(36); };
+  async function pakkUt(versjon, data) {
+    const bytes = b64TilBytes(data);
+    if (versjon === "1") return new TextDecoder().decode(bytes);
+    const strom = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("deflate-raw"));
+    return new TextDecoder().decode(await new Response(strom).arrayBuffer());
+  }
+  // Regner poengene ut fra svarene på nytt. Avvik betyr at koden er endret, eller at poengtabellen er endret siden.
+  function regnPoeng(s) {
+    const p = s.reduce((sum, [, ok, sek]) => sum + (ok ? KONFIG.poengEtterSekunderIgjen[clamp(sek, 1, 10)] : KONFIG.poengFeil), 0);
+    return clamp(p, 0, KONFIG.maksScore ?? Infinity);
+  }
+  async function lesKode(versjon, data, sjekk) {
+    if (fnv(data) !== sjekk) return { feil: "odelagt" };
+    let r;
+    try { r = JSON.parse(await pakkUt(versjon, data)); } catch (e) { return { feil: "odelagt" }; }
+    const gyldig = r && r.v === 1 && typeof r.a === "string" && typeof r.n === "string" && r.n.trim() && Number.isFinite(r.d) && Number.isFinite(r.p)
+      && ["nn", "bm"].includes(r.r) && Array.isArray(r.s)
+      && r.s.every((x) => Array.isArray(x) && typeof x[0] === "string" && (x[1] === 0 || x[1] === 1) && Number.isInteger(x[2]) && x[2] >= 0 && x[2] <= 10);
+    if (!gyldig) return { feil: "odelagt" };
+    return {
+      inn: { id: sjekk + "." + data.length, oppgave: r.a, navn: r.n.replace(/\s+/g, " ").trim().slice(0, 40), spilt: r.d, retning: r.r,
+             poeng: r.p, avvik: regnPoeng(r.s) !== r.p, svar: r.s.slice(0, 200), mottatt: Math.round(Date.now() / 1000) }
+    };
+  }
+  async function leggInn(tekst) {
+    const funnet = [...tekst.matchAll(KODE)];
+    const svar = { nye: [], hadde: 0, odelagt: 0, ukjent: 0, funnet: funnet.length };
+    if (funnet.length && typeof DecompressionStream !== "function" && funnet.some((m) => m[1] === "2")) {
+      svar.gammelNettleser = true; return svar;
+    }
+    // Koder som er klippet av, mangler sjekksummen og blir ikke funnet over; de telles som ødelagte
+    svar.odelagt = Math.max(0, (tekst.match(/ORDBUA\.[12]\./g) || []).length - funnet.length);
+    if (!svar.funnet && svar.odelagt) svar.funnet = svar.odelagt;
+    const kjent = new Set(D.innleveringer.map((i) => i.id));
+    for (const [, versjon, data, sjekk] of funnet) {
+      const { inn, feil } = await lesKode(versjon, data, sjekk);
+      if (feil) { svar.odelagt++; continue; }
+      if (kjent.has(inn.id)) { svar.hadde++; continue; }
+      if (!oppgave(inn.oppgave)) { svar.ukjent++; continue; }
+      kjent.add(inn.id); D.innleveringer.push(inn); svar.nye.push(inn);
+    }
+    if (svar.nye.length) lagre();
+    return svar;
+  }
+
+  // ---------- Visning ----------
+  function render() {
+    if (V.klasse && !klasse(V.klasse)) V.klasse = null;
+    if (!V.klasse && D.klasser.length) V.klasse = D.klasser[0].id;
+    if (V.oppgave && !oppgave(V.oppgave)) V.oppgave = null;
+    try { if (V.klasse) sessionStorage.setItem("ordbua.laerer.klasse", V.klasse); } catch (e) {}
+    renderKlasser();
+    const inn = $("innhold");
+    if (!D.klasser.length) inn.innerHTML = velkomst();
+    else if (V.oppgave) inn.innerHTML = resultater(oppgave(V.oppgave));
+    else inn.innerHTML = klasseside(klasse(V.klasse));
+    if (V.nyOppgave) tegnVelger();
+    renderSkolear();
+  }
+
+  function renderKlasser() {
+    const nav = $("klasser");
+    if (!D.klasser.length) { nav.hidden = true; return; }
+    nav.hidden = false;
+    nav.innerHTML = D.klasser.map((k) => {
+      const n = D.oppgaver.filter((o) => o.klasse === k.id).length;
+      return `<button type="button" data-h="velg-klasse" data-id="${esc(k.id)}" aria-current="${k.id === V.klasse && !V.oppgave}">${esc(k.navn)}<span>${n} ${n === 1 ? "oppgave" : "oppgaver"}</span></button>`;
+    }).join("") + `<button type="button" class="ny" data-h="ny-klasse">+ Ny klasse</button>`
+      + (V.nyKlasse ? nyKlasseSkjema() : "");
+  }
+
+  const nyKlasseSkjema = (forste) => `
+    <form class="skjema" id="klasseSkjema" style="flex-basis:100%">
+      <label class="felt">Navn på klassen <small>For eksempel 8A eller 10B norsk. Du kan endre det senere.</small>
+        <input type="text" name="navn" maxlength="40" required autocomplete="off"></label>
+      <div class="knapper"><button class="knapp hoved" type="submit">Lag klassen</button>${forste ? "" : `<button class="lenkeknapp" type="button" data-h="avbryt-klasse">Avbryt</button>`}</div>
+    </form>`;
+
+  function velkomst() {
+    return `
+    <section class="panel">
+      <div><p class="eyebrow">Velkommen</p><h1>Gi klassen ordoppgaver i Ordbua</h1></div>
+      <p class="dempet">Lag en oppgave, del lenka med elevene og se hvordan det gikk. Elevene spiller vanlige runder på 2 minutter, med de ordene og den retningen du har valgt.</p>
+      <ol class="steg">
+        <li><b>Lag en klasse</b><span>Bare et navn, for eksempel 9B. Ingen elevlister.</span></li>
+        <li><b>Lag en oppgave</b><span>Velg retning og ord, og del lenka i Teams, Classroom eller på tavla.</span></li>
+        <li><b>Lim inn kodene</b><span>Elevene får en innleveringskode etter runden. Lim kodene inn her, så ser du resultatene og ordene klassen bommer på.</span></li>
+      </ol>
+      ${nyKlasseSkjema(true)}
+    </section>`;
+  }
+
+  function klasseside(k) {
+    const ops = D.oppgaver.filter((o) => o.klasse === k.id).sort((a, b) => b.laget - a.laget);
+    return `
+    <div class="overskrift">
+      <div><p class="eyebrow">Klasse</p><h1>${esc(k.navn)}</h1></div>
+      <div class="knapper"><button class="lenkeknapp" type="button" data-h="gi-navn">Gi nytt navn</button><button class="lenkeknapp fare" type="button" data-h="slett-klasse">Slett klassen</button></div>
+    </div>
+    <section class="panel">
+      <div class="panel-topp"><h2>Oppgaver</h2>${V.nyOppgave ? "" : `<button class="knapp hoved" type="button" data-h="ny-oppgave">Ny oppgave</button>`}</div>
+      ${V.nyOppgave ? oppgaveSkjema() : ""}
+      <div class="oppgaver">${ops.length ? ops.map(oppgaveKort).join("") : V.nyOppgave ? "" : `<p class="tomt">Ingen oppgaver ennå. Trykk «Ny oppgave» for å lage den første.</p>`}</div>
+    </section>
+    <section class="panel">
+      <div><h2>Legg inn innleveringer</h2>
+      <p class="dempet liten">Lim inn det elevene har levert. Du kan lime inn mange koder på en gang, også med annen tekst rundt, for eksempel alt fra en innlevering i Teams. Koder som er lagt inn fra før, hoppes over.</p></div>
+      <textarea id="limInn" rows="4" placeholder="ORDBUA.2.…"></textarea>
+      <div class="knapper"><button class="knapp hoved" type="button" data-h="legg-inn">Legg inn</button></div>
+      ${V.limSvar ? limSvar(V.limSvar) : ""}
+    </section>`;
+  }
+
+  function oppgaveMeta(op) {
+    const utval = op.utval === "eigne" ? "Egne ord" : utvalNavn(op.utval);
+    return [RETNING_NAVN[op.retning], `${utval} (${fmt(antOrd(op))} ord)`, op.frist && `Frist ${fmtFrist(op.frist)}`].filter(Boolean).join(" · ");
+  }
+
+  function oppgaveKort(op) {
+    const inn = levertTil(op.id), l = lenke(op);
+    return `
+    <article class="kort" id="op-${esc(op.id)}">
+      <div class="kort-topp">
+        <div><h3>${esc(op.tittel)}</h3><p class="meta">${esc(oppgaveMeta(op))}</p></div>
+        <p class="teller"><b>${inn.length}</b> ${inn.length === 1 ? "innlevering" : "innleveringer"} · <b>${antElever(inn)}</b> ${antElever(inn) === 1 ? "elev" : "elever"}</p>
+      </div>
+      <div class="lenke-rad">
+        <input type="text" readonly value="${esc(l)}" aria-label="Lenke til oppgaven" data-h="merk">
+        <button class="knapp hoved liten" type="button" data-h="kopier" data-id="${esc(op.id)}">Kopier lenka</button>
+      </div>
+      <div class="knapper">
+        <button class="knapp sekundar liten" type="button" data-h="resultater" data-id="${esc(op.id)}">Se resultater</button>
+        <a class="knapp sekundar liten" href="${esc(l)}&amp;prov"${nyFane ? ' target="_blank" rel="noopener"' : ""}>Prøv selv</a>
+        <button class="lenkeknapp fare" type="button" data-h="slett-oppgave" data-id="${esc(op.id)}">Slett oppgaven</button>
+      </div>
+    </article>`;
+  }
+
+  function oppgaveSkjema() {
+    return `
+    <form class="skjema" id="oppgaveSkjema">
+      <div class="rad2">
+        <label class="felt">Tittel <small>Elevene ser tittelen øverst i spillet.</small>
+          <input type="text" name="tittel" maxlength="80" required autocomplete="off" placeholder="For eksempel Uke 44: verb"></label>
+        <label class="felt">Frist <small>Valgfri. Vises for elevene.</small>
+          <input type="date" name="frist"></label>
+      </div>
+      <fieldset><legend>Retning</legend><div class="valg">
+        ${Object.entries(RETNING_NAVN).map(([r, n], i) => `<label><input type="radio" name="retning" value="${r}"${i ? "" : " checked"}><span>${n}</span></label>`).join("")}
+      </div></fieldset>
+      <fieldset><legend>Ord</legend><div class="valg" id="utvalValg">
+        ${UTVAL.map((u, i) => `<label><input type="radio" name="utval" value="${u}"${i ? "" : " checked"}><span>${esc(utvalNavn(u))}${u === "eigne" ? "" : `<small>${fmt(iKlasse(u).length)}</small>`}</span></label>`).join("")}
+      </div></fieldset>
+      <div class="ordvelger" id="ordvelger" hidden>
+        <div class="velger-topp">
+          <input type="search" id="velgerSok" placeholder="Søk på bokmål eller nynorsk" aria-label="Søk i ordlista" value="${esc(V.velger.sok)}">
+          <select id="velgerKlasse" aria-label="Ordklasse">
+            <option value="alle">Alle ordklasser</option>
+            <option value="ulike"${V.velger.klasse === "ulike" ? " selected" : ""}>Ulike ord</option>
+            ${ORDKLASSER.map((k) => `<option value="${esc(k)}"${V.velger.klasse === k ? " selected" : ""}>${esc(utvalNavn(k))}</option>`).join("")}
+          </select>
+        </div>
+        <div class="velger-liste" id="velgerListe"></div>
+        <div class="velger-bunn">
+          <span id="velgerTeller"></span>
+          <span class="knapper">
+            <button class="lenkeknapp" type="button" data-h="velg-synlige">Velg alle som vises</button>
+            <button class="lenkeknapp" type="button" data-h="velg-tilfeldige">Velg 20 tilfeldige av dem</button>
+            <button class="lenkeknapp" type="button" data-h="velg-ingen">Fjern alle</button>
+          </span>
+        </div>
+        <div class="egne-ord">
+          <label class="felt" for="egneOrd">Dine egne ord og bøyningsformer
+            <small>Ett ord per linje: bokmål ; nynorsk ; andre riktige svar (valgfritt, skill med komma) ; merknad (valgfritt, vises for eleven). Du kan også lime inn kolonner fra Excel. Sjekk nynorsken i Nynorskordboka.</small></label>
+          <textarea id="egneOrd" rows="5" placeholder="kastet ; kasta ; ; verb, preteritum&#10;husene ; husa ; ; substantiv, bestemt flertall&#10;ikke ; ikkje ; kje">${esc(V.velger.egneTekst)}</textarea>
+          <div id="egneForhand"></div>
+        </div>
+      </div>
+      <div class="knapper"><button class="knapp hoved" type="submit">Lag oppgaven</button><button class="lenkeknapp" type="button" data-h="avbryt-oppgave">Avbryt</button></div>
+    </form>`;
+  }
+
+  // Ordvelgeren tegnes for seg, så skjemaet ikke nullstilles når læreren søker eller krysser av
+  function synligeOrd() {
+    const sok = V.velger.sok.toLocaleLowerCase("nb-NO").trim();
+    return iKlasse(V.velger.klasse === "alle" ? "alle" : V.velger.klasse).filter((o) => !sok || o.bokmal.toLocaleLowerCase("nb-NO").includes(sok) || o.nynorsk.toLocaleLowerCase("nb-NO").includes(sok));
+  }
+  function tegnVelger() {
+    const skjema = $("oppgaveSkjema"); if (!skjema) return;
+    const egne = skjema.elements.utval.value === "eigne";
+    $("ordvelger").hidden = !egne;
+    if (!egne) return;
+    const ord = synligeOrd();
+    $("velgerListe").innerHTML = ord.length ? ord.map((o) => {
+      const k = ordNokkel(o);
+      return `<label><input type="checkbox" data-k="${esc(k)}"${V.velger.valgte.has(k) ? " checked" : ""}><b>${esc(o.bokmal)}</b><small>→ ${esc(o.nynorsk)} · ${esc(o.ordklasse)}</small></label>`;
+    }).join("") : `<p class="dempet liten">Ingen ord passer søket.</p>`;
+    tegnEgne();
+  }
+  // Lærerens egne ord: «bokmål ; nynorsk ; andre riktige svar ; merknad», eller kolonner fra Excel (tabulator).
+  // De står i oppgavelenka, så de virker uten server. Andre riktige svar gjelder språket eleven skriver på.
+  function lesEgneOrd(tekst) {
+    const ord = [], feil = [];
+    for (const [i, linje] of tekst.split(/\r?\n/).entries()) {
+      if (!linje.trim()) continue;
+      const [b = "", n = "", alt = "", m = ""] = linje.split(linje.includes("\t") ? "\t" : ";").map((x) => x.replace(/\s+/g, " ").trim());
+      if (!b || !n) { feil.push(i + 1); continue; }
+      ord.push({ b: b.slice(0, 40), n: n.slice(0, 40), a: alt.split(/[,/]/).map((x) => x.trim()).filter(Boolean).slice(0, 10).map((x) => x.slice(0, 40)), m: m.slice(0, 40) });
+    }
+    return { ord: ord.slice(0, 200), feil };
+  }
+  function tegnEgne() {
+    const el = $("egneForhand"); if (!el) return;
+    const { ord, feil } = lesEgneOrd(V.velger.egneTekst);
+    el.innerHTML = (ord.length ? `<div class="tabell-rull"><table><thead><tr><th>Bokmål</th><th>Nynorsk</th><th>Også riktig</th><th>Merknad</th></tr></thead><tbody>${ord.map((w) =>
+      `<tr><td><b>${esc(w.b)}</b></td><td><a href="https://ordbokene.no/nno/nn/${encodeURIComponent(w.n)}" target="_blank" rel="noopener" title="Slå opp i Nynorskordboka">${esc(w.n)}</a></td><td>${esc(w.a.join(", "))}</td><td>${esc(w.m)}</td></tr>`).join("")}</tbody></table></div>` : "")
+      + (feil.length ? `<p class="dempet liten">Linje ${feil.join(", ")} mangler bokmål eller nynorsk og blir ikke med.</p>` : "");
+    tellVelger();
+  }
+
+  function tellVelger() { const n = V.velger.valgte.size + lesEgneOrd(V.velger.egneTekst).ord.length; $("velgerTeller").innerHTML = `<b>${n}</b> ${n === 1 ? "ord" : "ord"} valgt${n && n < 10 ? " (minst 10 gir bedre runder)" : ""}`; }
+
+  function limSvar(s) {
+    const linjer = [];
+    if (s.gammelNettleser) return `<div class="lim-svar"><p class="bad">Denne nettleseren kan ikke lese kodene. Bruk en nyere utgave av Chrome, Edge, Firefox eller Safari.</p></div>`;
+    if (!s.funnet) return `<div class="lim-svar"><p class="bad">Fant ingen koder. En innleveringskode begynner med ORDBUA.</p></div>`;
+    if (s.nye.length) {
+      const per = new Map();
+      for (const i of s.nye) per.set(i.oppgave, [...(per.get(i.oppgave) || []), i.navn]);
+      linjer.push(`<p class="ok">${s.nye.length} ${s.nye.length === 1 ? "ny innlevering" : "nye innleveringer"}: ${[...per].map(([id, n]) => `${esc(oppgave(id)?.tittel || "slettet oppgave")} (${esc(n.join(", "))})`).join("; ")}</p>`);
+    }
+    if (s.hadde) linjer.push(`<p class="info">${s.hadde} ${s.hadde === 1 ? "kode var" : "koder var"} lagt inn fra før.</p>`);
+    if (s.odelagt) linjer.push(`<p class="bad">${s.odelagt} ${s.odelagt === 1 ? "kode kunne" : "koder kunne"} ikke leses. Kanskje en del av koden manglet da den ble kopiert. Be eleven sende den på nytt.</p>`);
+    if (s.ukjent) linjer.push(`<p class="bad">${s.ukjent} ${s.ukjent === 1 ? "kode hører" : "koder hører"} til en oppgave som ikke finnes her. Oppgaven er kanskje laget på en annen maskin eller slettet.</p>`);
+    return `<div class="lim-svar">${linjer.join("")}</div>`;
+  }
+
+  // ---------- Resultater for én oppgave ----------
+  function eleverI(inn) {
+    const per = new Map();
+    for (const i of [...inn].sort((a, b) => a.spilt - b.spilt)) {
+      const k = navnNokkel(i.navn);
+      if (!per.has(k)) per.set(k, { nokkel: k, navn: i.navn, runder: [] });
+      const e = per.get(k); e.navn = i.navn; e.runder.push(i);
+    }
+    for (const e of per.values()) {
+      e.beste = e.runder.reduce((b, r) => r.poeng > b.poeng ? r : b);
+      e.siste = e.runder[e.runder.length - 1];
+      e.avvik = e.runder.some((r) => r.avvik);
+    }
+    return [...per.values()].sort((a, b) => b.beste.poeng - a.beste.poeng);
+  }
+  const rette = (r) => r.svar.filter((s) => s[1]).length;
+
+  function ordStatistikk(inn) {
+    const per = new Map();
+    for (const i of inn) for (const [k, ok] of i.svar) {
+      const s = per.get(k) || { k, forsok: 0, feil: 0 };
+      s.forsok++; if (!ok) s.feil++; per.set(k, s);
+    }
+    return [...per.values()].map((s) => ({ ...s, andel: s.feil / s.forsok }))
+      .sort((a, b) => b.andel - a.andel || b.feil - a.feil || a.k.localeCompare(b.k, "nb"));
+  }
+
+  function resultater(op) {
+    const inn = levertTil(op.id), elever = eleverI(inn), r = op.retning;
+    const alleSvar = inn.reduce((n, i) => n + i.svar.length, 0), alleRette = inn.reduce((n, i) => n + rette(i), 0);
+    const snittBeste = elever.length ? elever.reduce((s, e) => s + e.beste.poeng, 0) / elever.length : 0;
+    const ordStat = ordStatistikk(inn), strever = ordStat.filter((s) => s.feil && s.forsok >= KONFIG.minsteForsok);
+    const visOrd = V.visAlleOrd ? strever : strever.slice(0, 15);
+    const ordCelle = (k) => {
+      const o = finnOrd(op, k);
+      if (!o) return `<td>${esc(k)}</td><td class="dempet">(ikke i ordlista lenger)</td>`;
+      return `<td><b>${esc(spurt(o, r))}</b></td><td><a class="fasit" href="${esc(fasitLenke(o, r))}" target="_blank" rel="noopener">${esc(fasit(o, r))}</a></td>`;
+    };
+    const elevRader = elever.map((e) => {
+      const apen = V.apneElever.has(e.nokkel);
+      const rad = `<tr>
+        <td class="navn">${esc(e.navn)}${e.avvik ? `<span class="varsel" title="Poengsummen i minst én kode stemmer ikke med svarene. Koden kan være endret.">sjekk</span>` : ""}</td>
+        <td class="n">${e.runder.length}</td>
+        <td class="n">${fmt(e.beste.poeng)}</td>
+        <td class="n">${rette(e.beste)} av ${e.beste.svar.length}</td>
+        <td class="n skjul-smal">${fmtDato(e.siste.spilt)}</td>
+        <td class="n"><button class="lenkeknapp" type="button" data-h="vis-elev" data-id="${esc(e.nokkel)}" aria-expanded="${apen}">${apen ? "Skjul" : "Runder"}</button></td>
+      </tr>`;
+      if (!apen) return rad;
+      return rad + `<tr class="detaljer"><td colspan="6"><table>
+        <thead><tr><th>Spilt</th><th class="n">Poeng</th><th class="n">Rette</th><th class="n">Feil</th><th></th></tr></thead>
+        <tbody>${[...e.runder].reverse().map((x) => `<tr><td>${fmtDato(x.spilt)}${x.avvik ? ` <span class="varsel" title="Poengsummen i koden stemmer ikke med svarene.">sjekk</span>` : ""}</td><td class="n">${fmt(x.poeng)}</td><td class="n">${rette(x)}</td><td class="n">${x.svar.length - rette(x)}</td>
+          <td class="n"><button class="lenkeknapp fare" type="button" data-h="slett-runde" data-id="${esc(x.id)}">Slett</button></td></tr>`).join("")}</tbody>
+        </table>
+        <p style="margin-top:8px"><button class="lenkeknapp fare" type="button" data-h="slett-elev" data-id="${esc(e.nokkel)}">Slett alle rundene til ${esc(e.navn)} i denne oppgaven</button></p></td></tr>`;
+    }).join("");
+    return `
+    <div><button class="lenkeknapp" type="button" data-h="tilbake">← ${esc(klasse(op.klasse)?.navn || "Tilbake")}</button></div>
+    <div class="overskrift">
+      <div><p class="eyebrow">Resultater</p><h1>${esc(op.tittel)}</h1><p class="meta">${esc(oppgaveMeta(op))}</p></div>
+      <div class="knapper">
+        <button class="knapp sekundar liten" type="button" data-h="kopier" data-id="${esc(op.id)}">Kopier lenka</button>
+        <button class="knapp sekundar liten" type="button" data-h="csv-runder"${inn.length ? "" : " disabled"}>Runder til Excel</button>
+        <button class="knapp sekundar liten" type="button" data-h="csv-ord"${inn.length ? "" : " disabled"}>Ord til Excel</button>
+      </div>
+    </div>
+    <ul class="nokkeltal">
+      <li><b>${elever.length}</b><span>${elever.length === 1 ? "elev har levert" : "elever har levert"}</span></li>
+      <li><b>${inn.length}</b><span>${inn.length === 1 ? "runde" : "runder"} totalt</span></li>
+      <li><b>${elever.length ? fmt(snittBeste) : "–"}</b><span>beste poeng i snitt</span></li>
+      <li><b>${alleSvar ? Math.round(100 * alleRette / alleSvar) + " %" : "–"}</b><span>av ordene riktige</span></li>
+    </ul>
+    ${inn.length ? `
+    <section class="panel">
+      <div><h2>Elevene</h2><p class="dempet liten">Sortert etter beste runde. «Rette» er fra den beste runden.</p></div>
+      <div class="tabell-rull"><table>
+        <thead><tr><th>Navn</th><th class="n">Runder</th><th class="n">Beste</th><th class="n">Rette</th><th class="n skjul-smal">Sist levert</th><th></th></tr></thead>
+        <tbody>${elevRader}</tbody>
+      </table></div>
+    </section>
+    <section class="panel">
+      <div><h2>Ord klassen strever med</h2><p class="dempet liten">Ord med minst ${KONFIG.minsteForsok} forsøk og minst én feil, flest feil først. Tiden som gikk ut, teller som feil.</p></div>
+      ${strever.length ? `<div class="tabell-rull"><table>
+        <thead><tr><th>${r === "nn" ? "Bokmål" : "Nynorsk"}</th><th>Fasit</th><th class="n">Forsøk</th><th>Feil</th></tr></thead>
+        <tbody>${visOrd.map((s) => `<tr>${ordCelle(s.k)}<td class="n">${s.forsok}</td><td><span class="stolpe"><i style="width:${Math.max(4, Math.round(80 * s.andel))}px"></i><span>${s.feil} (${Math.round(100 * s.andel)} %)</span></span></td></tr>`).join("")}</tbody>
+      </table></div>
+      ${strever.length > 15 ? `<p><button class="lenkeknapp" type="button" data-h="alle-ord">${V.visAlleOrd ? "Vis bare de 15 første" : `Vis alle ${strever.length}`}</button></p>` : ""}`
+      : `<p class="tomt">Ingen ord har flere feil ennå.</p>`}
+      <p class="dempet liten">${ordStat.length} forskjellige ord er brukt i rundene, og ${ordStat.filter((s) => !s.feil).length} av dem har bare riktige svar.</p>
+    </section>` : `<p class="tomt">Ingen innleveringer ennå. Del lenka med elevene, og lim inn kodene de leverer på siden til klassen.</p>`}`;
+  }
+
+  // ---------- Skoleåret ----------
+  // Planen for lærerversjonen er at elevdata slettes 1. august. Her minner siden læreren på det i stedet.
+  function renderSkolear() {
+    const na = new Date(), aug = new Date(na.getFullYear() - (na.getMonth() < 7 ? 1 : 0), 7, 1).getTime() / 1000;
+    const gamle = D.innleveringer.filter((i) => i.spilt < aug);
+    const el = $("skolear");
+    el.hidden = !gamle.length;
+    if (gamle.length) el.innerHTML = `<span>Du har ${gamle.length} ${gamle.length === 1 ? "innlevering" : "innleveringer"} fra før 1. august i år. Elevdata bør slettes når skoleåret er slutt.</span><button class="knapp sekundar liten" type="button" data-h="slett-gamle">Slett dem</button>`;
+  }
+
+  // ---------- Eksport ----------
+  function lastNed(navn, innhold, type) {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([innhold], { type }));
+    a.download = navn; document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  }
+  // Semikolon og BOM, så norsk Excel åpner fila riktig med æ, ø og å
+  const csv = (rader) => "﻿" + rader.map((r) => r.map((c) => { const s = String(c ?? ""); return /[;"\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; }).join(";")).join("\r\n");
+  const filnavn = (op, del) => `ordbua-${(op.tittel || "oppgave").toLocaleLowerCase("nb-NO").replace(/[^a-z0-9æøå]+/g, "-").replace(/^-|-$/g, "")}-${del}.csv`;
+  const isoDato = (sek) => { const d = new Date(sek * 1000); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")} ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`; };
+
+  // ---------- Hendelser ----------
+  let toastTimer = 0;
+  function toast(msg) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => { t.hidden = true; }, 3600); }
+  async function kopier(tekst) {
+    try { await navigator.clipboard.writeText(tekst); return true; } catch (e) {}
+    const ta = document.createElement("textarea"); ta.value = tekst; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.append(ta); ta.select();
+    let ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+    ta.remove(); return ok;
+  }
+
+  // Spør læreren i en boks på siden. Med felt (en tekst) får læreren skrive, og svaret er teksten eller null.
+  function sporBruker(tekst, { ja = "Slett", felt = null } = {}) {
+    return new Promise((svar) => {
+      const d = $("dialog"), inp = $("dialogFelt"), jaKnapp = $("dialogJa"), neiKnapp = $("dialogNei");
+      const forrige = document.activeElement;
+      $("dialogTekst").textContent = tekst; jaKnapp.textContent = ja;
+      jaKnapp.classList.toggle("fare", felt === null); jaKnapp.classList.toggle("hoved", felt !== null);
+      inp.hidden = felt === null; inp.value = felt ?? "";
+      d.hidden = false; (felt === null ? neiKnapp : inp).focus(); if (felt !== null) inp.select();
+      const ferdig = (v) => { d.hidden = true; d.onkeydown = jaKnapp.onclick = neiKnapp.onclick = d.onclick = null; forrige?.focus?.(); svar(v); };
+      jaKnapp.onclick = () => ferdig(felt === null ? true : inp.value.trim() || null);
+      neiKnapp.onclick = () => ferdig(felt === null ? false : null);
+      d.onclick = (e) => { if (e.target === d) neiKnapp.click(); };
+      d.onkeydown = (e) => {
+        if (e.key === "Escape") neiKnapp.click();
+        if (e.key === "Enter" && felt !== null) { e.preventDefault(); jaKnapp.click(); }
+      };
+    });
+  }
+  const bekreft = (tekst) => sporBruker(tekst);
+
+  const HANDLING = {
+    "ny-klasse"() { V.nyKlasse = !V.nyKlasse; renderKlasser(); $("klasseSkjema")?.elements.navn.focus(); },
+    "avbryt-klasse"() { V.nyKlasse = false; renderKlasser(); },
+    "velg-klasse"(b) { V.klasse = b.dataset.id; V.oppgave = null; V.nyOppgave = false; V.limSvar = null; render(); },
+    async "gi-navn"() {
+      const k = klasse(V.klasse), n = await sporBruker("Nytt navn på klassen", { ja: "Lagre", felt: k.navn });
+      if (n && n.trim()) { k.navn = n.trim().slice(0, 40); lagre(); render(); toast("Lenker du har delt før, viser fortsatt det gamle navnet."); }
+    },
+    async "slett-klasse"() {
+      const k = klasse(V.klasse), ops = D.oppgaver.filter((o) => o.klasse === k.id).map((o) => o.id);
+      const n = D.innleveringer.filter((i) => ops.includes(i.oppgave)).length;
+      if (!await bekreft(`Slette ${k.navn} med ${ops.length} ${ops.length === 1 ? "oppgave" : "oppgaver"} og ${n} ${n === 1 ? "innlevering" : "innleveringer"}? Dette kan ikke angres.`)) return;
+      D.innleveringer = D.innleveringer.filter((i) => !ops.includes(i.oppgave));
+      D.oppgaver = D.oppgaver.filter((o) => o.klasse !== k.id);
+      D.klasser = D.klasser.filter((x) => x.id !== k.id);
+      V.klasse = null; V.limSvar = null; lagre(); render();
+    },
+    "ny-oppgave"() { V.nyOppgave = true; V.velger = { valgte: new Set(), sok: "", klasse: "alle", egneTekst: "" }; render(); $("oppgaveSkjema").elements.tittel.focus(); },
+    "avbryt-oppgave"() { V.nyOppgave = false; render(); },
+    "velg-synlige"() { for (const o of synligeOrd()) V.velger.valgte.add(ordNokkel(o)); tegnVelger(); },
+    "velg-tilfeldige"() {
+      const ord = synligeOrd().map(ordNokkel).filter((k) => !V.velger.valgte.has(k));
+      for (let i = ord.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [ord[i], ord[j]] = [ord[j], ord[i]]; }
+      for (const k of ord.slice(0, 20)) V.velger.valgte.add(k);
+      tegnVelger();
+    },
+    "velg-ingen"() { V.velger.valgte.clear(); tegnVelger(); },
+    async kopier(b) { toast(await kopier(lenke(oppgave(b.dataset.id))) ? "Lenka er kopiert. Lim den inn der elevene skal finne den." : "Merk lenka og kopier den selv."); },
+    merk(b) { b.select(); },
+    resultater(b) { V.oppgave = b.dataset.id; V.apneElever.clear(); V.visAlleOrd = false; render(); scrollTo(0, 0); },
+    tilbake() { V.oppgave = null; render(); },
+    async "slett-oppgave"(b) {
+      const op = oppgave(b.dataset.id), n = levertTil(op.id).length;
+      if (!await bekreft(`Slette «${op.tittel}»${n ? ` og ${n} ${n === 1 ? "innlevering" : "innleveringer"}` : ""}? Elever som har lenka, kan fortsatt spille, men kodene deres kan ikke legges inn her.`)) return;
+      D.oppgaver = D.oppgaver.filter((o) => o.id !== op.id);
+      D.innleveringer = D.innleveringer.filter((i) => i.oppgave !== op.id);
+      V.limSvar = null; lagre(); render();
+    },
+    async "legg-inn"() {
+      const ta = $("limInn"), tekst = ta.value;
+      V.limSvar = await leggInn(tekst);
+      render();
+      if (!V.limSvar.funnet || V.limSvar.odelagt) $("limInn").value = tekst; // behold teksten så læreren ser hva som var galt
+    },
+    "vis-elev"(b) { const k = b.dataset.id; V.apneElever.has(k) ? V.apneElever.delete(k) : V.apneElever.add(k); render(); },
+    async "slett-runde"(b) {
+      if (!await bekreft("Slette denne runden?")) return;
+      D.innleveringer = D.innleveringer.filter((i) => i.id !== b.dataset.id); lagre(); render();
+    },
+    async "slett-elev"(b) {
+      const inn = levertTil(V.oppgave).filter((i) => navnNokkel(i.navn) === b.dataset.id);
+      if (!await bekreft(`Slette ${inn.length} ${inn.length === 1 ? "runde" : "runder"} fra ${inn[0].navn}?`)) return;
+      const ids = new Set(inn.map((i) => i.id));
+      D.innleveringer = D.innleveringer.filter((i) => !ids.has(i.id)); lagre(); render();
+    },
+    "alle-ord"() { V.visAlleOrd = !V.visAlleOrd; render(); },
+    "csv-runder"() {
+      const op = oppgave(V.oppgave), inn = [...levertTil(op.id)].sort((a, b) => a.navn.localeCompare(b.navn, "nb") || a.spilt - b.spilt);
+      lastNed(filnavn(op, "runder"), csv([["Navn", "Spilt", "Poeng", "Rette", "Feil", "Ord totalt", "Merknad"],
+        ...inn.map((i) => [i.navn, isoDato(i.spilt), i.poeng, rette(i), i.svar.length - rette(i), i.svar.length, i.avvik ? "Poengene stemmer ikke med svarene" : ""])]), "text/csv;charset=utf-8");
+    },
+    "csv-ord"() {
+      const op = oppgave(V.oppgave), r = op.retning;
+      lastNed(filnavn(op, "ord"), csv([[r === "nn" ? "Bokmål" : "Nynorsk", "Fasit", "Ordklasse", "Forsøk", "Feil", "Andel feil (%)"],
+        ...ordStatistikk(levertTil(op.id)).map((s) => { const o = finnOrd(op, s.k); return [o ? spurt(o, r) : s.k, o ? fasit(o, r) : "", o?.ordklasse || "", s.forsok, s.feil, Math.round(100 * s.andel)]; })]), "text/csv;charset=utf-8");
+    },
+    "last-ned"() {
+      const d = new Date(), dato = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+      lastNed(`ordbua-laerer-${dato}.json`, JSON.stringify(D, null, 1), "application/json");
+    },
+    hent() { $("hentFil").click(); },
+    async "slett-alt"() {
+      if (!await bekreft("Slette alle klasser, oppgaver og innleveringer på denne maskinen? Dette kan ikke angres.")) return;
+      D = tomData(); V.klasse = V.oppgave = V.limSvar = null; lagre(); render(); toast("Alt er slettet.");
+    },
+    async "slett-gamle"() {
+      const na = new Date(), aug = new Date(na.getFullYear() - (na.getMonth() < 7 ? 1 : 0), 7, 1).getTime() / 1000;
+      const n = D.innleveringer.filter((i) => i.spilt < aug).length;
+      if (!await bekreft(`Slette ${n} ${n === 1 ? "innlevering" : "innleveringer"} fra før 1. august? Klassene og oppgavene blir stående.`)) return;
+      D.innleveringer = D.innleveringer.filter((i) => i.spilt >= aug); lagre(); render();
+    }
+  };
+
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-h]");
+    if (!b || b.tagName === "INPUT" && b.dataset.h !== "merk") return;
+    const f = HANDLING[b.dataset.h]; if (f) f(b);
+  });
+  document.addEventListener("submit", (e) => {
+    const f = e.target; e.preventDefault();
+    if (f.id === "klasseSkjema") {
+      const navn = f.elements.navn.value.trim(); if (!navn) return;
+      const k = { id: nyId(), navn: navn.slice(0, 40), laget: Date.now() };
+      D.klasser.push(k); V.klasse = k.id; V.nyKlasse = false; V.oppgave = null; lagre(); render();
+    }
+    if (f.id === "oppgaveSkjema") {
+      const el = f.elements, tittel = el.tittel.value.trim(), utval = el.utval.value;
+      if (!tittel) { el.tittel.focus(); return; }
+      const egne = utval === "eigne" ? lesEgneOrd(V.velger.egneTekst).ord : [];
+      if (utval === "eigne" && !V.velger.valgte.size && !egne.length) { toast("Velg minst ett ord eller skriv inn egne ord, eller velg en ordgruppe."); return; }
+      const op = { id: nyId(), klasse: V.klasse, tittel: tittel.slice(0, 80), retning: el.retning.value, utval,
+                   ord: utval === "eigne" ? [...V.velger.valgte] : [], egne, frist: el.frist.value || null, laget: Date.now() };
+      D.oppgaver.push(op); V.nyOppgave = false; lagre(); render();
+      $("op-" + op.id)?.scrollIntoView({ block: "center", behavior: "smooth" });
+      toast("Oppgaven er laget. Kopier lenka og del den med elevene.");
+    }
+  });
+  document.addEventListener("change", (e) => {
+    const t = e.target;
+    if (t.name === "utval") tegnVelger();
+    if (t.id === "velgerKlasse") { V.velger.klasse = t.value; tegnVelger(); }
+    if (t.matches("#velgerListe input[type=checkbox]")) { t.checked ? V.velger.valgte.add(t.dataset.k) : V.velger.valgte.delete(t.dataset.k); tellVelger(); }
+    if (t.id === "hentFil" && t.files[0]) {
+      t.files[0].text().then((tekst) => {
+        const ny = JSON.parse(tekst);
+        if (!ny || ny.versjon !== 1 || !Array.isArray(ny.klasser) || !Array.isArray(ny.oppgaver) || !Array.isArray(ny.innleveringer)) throw new Error("ukjent fil");
+        // Slår sammen: det som finnes her fra før, beholdes, og det som mangler, legges til
+        let n = 0;
+        for (const del of ["klasser", "oppgaver", "innleveringer"]) {
+          const har = new Set(D[del].map((x) => x.id));
+          for (const x of ny[del]) if (x && x.id && !har.has(x.id)) { D[del].push(x); n++; }
+        }
+        lagre(); render(); toast(n ? `Hentet ${n} ting fra sikkerhetskopien.` : "Alt i sikkerhetskopien fantes her fra før.");
+      }).catch(() => toast("Fila kunne ikke leses. Velg en sikkerhetskopi fra Ordbua (.json)."))
+        .finally(() => { t.value = ""; });
+    }
+  });
+  document.addEventListener("input", (e) => {
+    if (e.target.id === "velgerSok") { V.velger.sok = e.target.value; tegnVelger(); }
+    if (e.target.id === "egneOrd") { V.velger.egneTekst = e.target.value; tegnEgne(); }
+  });
+
+  render();
+})();
+</script>
