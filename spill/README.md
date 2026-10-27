@@ -51,6 +51,8 @@ Appen må åpnes med nett én gang før den virker uten nett.
 
 Første del av lærerversjonen, bygget så langt det går uten Feide, server og avtaler. Planen for hele lærerversjonen står i `../kommersialisering/02-feide-teknisk-plan.md`.
 
+**Adresse:** https://audunmathiasteachingcreations.github.io/Ordbua/laerer/ (sender videre til `spill/laerar.html`). Siden er åpen for alle, men hver lærer ser bare det som er lagret i sin egen nettleser.
+
 **Slik virker det**
 1. Læreren åpner `laerar.html`, lager en klasse (bare et navn, f.eks. 8A) og en oppgave: tittel, retning, ordutvalg (alle ord, en ordklasse, ulike ord eller ord læreren krysser av selv) og eventuelt frist.
 2. Lærersiden lager en lenke til spillet som slutter på `#oppgave=...`. Læreren deler den i Teams, Classroom e.l.
