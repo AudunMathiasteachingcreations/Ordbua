@@ -29,3 +29,6 @@ Kjør fra denne mappa:
     python3 spill/bygg.py
 
 Skriptet legger `ordliste/ordliste.json` inn i `spill/mal.html` og skriver den ferdige siden `spill/ordbua.html`, med adressen på GitHub Pages i Del-knappene. Når endringen er lastet opp til `main`, oppdaterer GitHub Pages spillet av seg selv etter et par minutter.
+
+## Vilkår
+Ordbua er gratis å bruke i undervisning, men koden, ordlista og grafikken er ikke fri til å kopieres, publiseres på nytt eller selges. Se [LICENSE](LICENSE).

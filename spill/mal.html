@@ -79,6 +79,9 @@ body {
 .lyd svg { width: 22px; height: 22px; }
 
 main { width: 100%; max-width: 780px; margin: 0 auto; }
+.botn { width: 100%; max-width: 780px; margin: 6px auto 0; color: var(--on-sky-2); font-size: var(--t-xs); line-height: 1.5; text-align: center; text-shadow: 0 1px 8px rgba(6, 20, 48, .4); }
+.botn p { margin: 0; }
+.botn a { color: inherit; text-underline-offset: 3px; }
 .skjerm { display: flex; flex-direction: column; gap: 18px; }
 
 .panel {
@@ -588,6 +591,10 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       </div>
     </section>
   </main>
+
+  <footer class="botn">
+    <p><span data-t="opphav"></span> <a href="https://github.com/AudunMathiasteachingcreations/Ordbua/blob/main/LICENSE" target="_blank" rel="noopener" data-t="vilkaar">Vilkår</a></p>
+  </footer>
 </div>
 
 <div class="slutt-banner" id="sluttBanner" data-t="slutt" hidden>Tida er ute!</div>
@@ -676,6 +683,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       namnLabel: "Namnet ditt", lagKode: "Lag innleveringskode", kodeLabel: "Innleveringskoden din",
       manglarNamn: "Skriv namnet ditt først.", kodeKopiert: "Koden er kopiert. Lim han inn der du skal levere.",
       kodeTekst: (t, k) => `Innlevering i ${KONFIG.navn}${t ? ": " + t : ""}\n${k}`,
+      opphav: "© 2026 Audun Mathias. Ordbua er gratis for elevar, lærarar og skular. Det er ikkje lov å kopiere, publisere på nytt eller selje spelet, koden eller ordlista utan løyve. Orda er kontrollerte mot Nynorskordboka.",
+      vilkaar: "Vilkår",
       rang: ["Ivar Aasen-nivå!", "Nynorsklegende", "Ordmeister", "Nynorskproff", "Stø i nynorsk", "På rett veg", "Godt i gang"]
     },
     bm: {
@@ -724,6 +733,8 @@ tr.rad-feil td { background: rgba(251, 228, 224, .35); }
       namnLabel: "Navnet ditt", lagKode: "Lag innleveringskode", kodeLabel: "Innleveringskoden din",
       manglarNamn: "Skriv navnet ditt først.", kodeKopiert: "Koden er kopiert. Lim den inn der du skal levere.",
       kodeTekst: (t, k) => `Innlevering i ${KONFIG.navn}${t ? ": " + t : ""}\n${k}`,
+      opphav: "© 2026 Audun Mathias. Ordbua er gratis for elever, lærere og skoler. Det er ikke lov å kopiere, publisere på nytt eller selge spillet, koden eller ordlista uten tillatelse. Ordene er kontrollert mot Nynorskordboka.",
+      vilkaar: "Vilkår",
       rang: ["Knud Knudsen-nivå!", "Bokmålslegende", "Ordmester", "Bokmålsproff", "Stø i bokmål", "På rett vei", "Godt i gang"]
     }
   };
